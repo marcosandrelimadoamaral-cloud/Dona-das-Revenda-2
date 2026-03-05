@@ -100,9 +100,9 @@ export function HeroSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative hidden lg:block perspective-1000"
+          className="relative block perspective-1000 mt-8 lg:mt-0"
         >
-          <div className="relative w-full aspect-square max-w-[600px] mx-auto transform-3d rotate-y-[-5deg] rotate-x-[5deg] hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-700">
+          <div className="relative w-full aspect-square max-w-[600px] mx-auto transform-3d rotate-y-[-5deg] rotate-x-[5deg] hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-700 scale-90 sm:scale-100 origin-center lg:origin-right">
             {/* Main Dashboard Mockup — forced ALWAYS LIGHT (it's a UI simulation) */}
             <div className="absolute inset-0 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col [color-scheme:light]">
               <div className="h-12 border-b bg-gray-50 flex items-center px-4 gap-2">
@@ -113,7 +113,7 @@ export function HeroSection() {
                 </div>
               </div>
               <div className="p-6 flex-1 bg-gray-50/50">
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                   <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
                     <div className="text-sm text-gray-500 mb-1">Vendas Hoje</div>
                     <div className="text-2xl font-bold text-gray-900">R$ 845,00</div>
@@ -151,7 +151,7 @@ export function HeroSection() {
             <motion.div
               animate={{ y: [-10, 10, -10] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -right-12 top-20 bg-white text-gray-900 p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3"
+              className="absolute -right-4 sm:-right-12 top-10 sm:top-20 bg-white text-gray-900 p-3 sm:p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3 scale-90 sm:scale-100"
             >
               <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                 💰
@@ -166,7 +166,7 @@ export function HeroSection() {
             <motion.div
               animate={{ y: [10, -10, 10] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-              className="absolute -left-8 bottom-32 bg-white text-gray-900 p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3"
+              className="absolute -left-2 sm:-left-8 bottom-20 sm:bottom-32 bg-white text-gray-900 p-3 sm:p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3 scale-90 sm:scale-100"
             >
               <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
                 📦
