@@ -44,6 +44,7 @@ import {
 import { logout } from "@/app/actions/auth/logout"
 import { getLowStockProducts } from "@/app/actions/inventory/getLowStockProducts"
 import { InstallPrompt } from "@/components/pwa/InstallPrompt"
+import { MobileBottomNav } from "@/components/dashboard/MobileBottomNav"
 
 const navItems = [
     { href: "/dashboard", label: "Início", icon: LayoutDashboard },
@@ -458,7 +459,7 @@ export function DashboardLayoutClient({
                     </header>
 
                     {/* Page Content */}
-                    <main className="flex-1 overflow-y-auto p-4 lg:p-8 bg-gray-50 dark:bg-gray-950">
+                    <main className="flex-1 overflow-y-auto p-4 lg:p-8 pb-20 lg:pb-8 bg-gray-50 dark:bg-gray-950">
                         <div className="max-w-7xl mx-auto w-full">{children}</div>
                     </main>
                 </div>
@@ -466,7 +467,9 @@ export function DashboardLayoutClient({
 
             {/* PWA Install Prompt */}
             <InstallPrompt />
+
+            {/* Mobile Bottom Navigation */}
+            <MobileBottomNav />
         </>
     )
 }
-
