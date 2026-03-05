@@ -1,0 +1,1832 @@
+{
+    "products": [
+        {
+            "id": "hnd-001",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Empire",
+            "name": "Empire Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 89.95,
+            "suggested_price": 179.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Empire"
+            },
+            "popular": true,
+            "image_keyword": "hinode-empire"
+        },
+        {
+            "id": "hnd-002",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Inebriante",
+            "name": "Inebriante Eau de Parfum 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 124.95,
+            "suggested_price": 249.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "line": "Inebriante"
+            },
+            "popular": true,
+            "image_keyword": "hinode-inebriante"
+        },
+        {
+            "id": "hnd-003",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Corps",
+            "name": "Gel Modelador Corps Lignea 500g",
+            "category": "corporal",
+            "subcategory": "gel-modelador",
+            "base_price": 32.45,
+            "suggested_price": 64.90,
+            "attributes": {
+                "volume": "500g",
+                "type": "gel-modelador",
+                "line": "Corps Lignea"
+            },
+            "popular": true,
+            "image_keyword": "hinode-corps-gel-modelador"
+        },
+        {
+            "id": "hnd-004",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Grace",
+            "name": "Grace Midnight Desodorante Colônia",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 79.95,
+            "suggested_price": 159.90,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "fragrance": "midnight",
+                "line": "Grace"
+            },
+            "popular": true,
+            "image_keyword": "hinode-grace-midnight"
+        },
+        {
+            "id": "hnd-005",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Dazzle",
+            "name": "Batom Líquido Matte Dazzle",
+            "category": "maquiagem",
+            "subcategory": "batom-liquido",
+            "base_price": 21.45,
+            "suggested_price": 42.90,
+            "attributes": {
+                "type": "batom-liquido",
+                "finish": "mate",
+                "line": "Dazzle"
+            },
+            "popular": true,
+            "image_keyword": "hinode-dazzle-batom-matte"
+        },
+        {
+            "id": "hnd-006",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "H-Men",
+            "name": "H-Men Icy Desodorante Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 59.95,
+            "suggested_price": 119.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "fragrance": "icy",
+                "gender": "masculino",
+                "line": "H-Men"
+            },
+            "popular": true,
+            "image_keyword": "hinode-h-men-icy"
+        },
+        {
+            "id": "hnd-007",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Sens",
+            "name": "Hidratante Corporal Sens Floralis 290g",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 27.50,
+            "suggested_price": 55.00,
+            "attributes": {
+                "volume": "290g",
+                "type": "creme",
+                "fragrance": "floralis",
+                "line": "Sens"
+            },
+            "popular": true,
+            "image_keyword": "hinode-sens-hidratante-floralis"
+        },
+        {
+            "id": "hnd-008",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Routine",
+            "name": "Gel de Limpeza Facial Routine 150g",
+            "category": "facial",
+            "subcategory": "gel-limpeza",
+            "base_price": 23.00,
+            "suggested_price": 46.00,
+            "attributes": {
+                "volume": "150g",
+                "type": "gel-limpeza",
+                "line": "Routine"
+            },
+            "popular": true,
+            "image_keyword": "hinode-routine-gel-limpeza"
+        },
+        {
+            "id": "hnd-009",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Ella",
+            "name": "Ella Pérolas Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 69.95,
+            "suggested_price": 139.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Ella"
+            },
+            "popular": true,
+            "image_keyword": "hinode-ella-perolas"
+        },
+        {
+            "id": "hnd-010",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "HND",
+            "name": "Chá HND Limão (Pó 150g)",
+            "category": "bem-estar",
+            "subcategory": "cha",
+            "base_price": 47.45,
+            "suggested_price": 94.90,
+            "attributes": {
+                "volume": "150g",
+                "type": "cha-po",
+                "flavor": "limao",
+                "line": "HND"
+            },
+            "popular": true,
+            "image_keyword": "hinode-hnd-cha-limao"
+        },
+        {
+            "id": "hnd-011",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Inebriante",
+            "name": "Inebriante Zayd Elixir For Him 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 184.95,
+            "suggested_price": 369.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "elixir",
+                "gender": "masculino",
+                "line": "Inebriante"
+            },
+            "popular": true,
+            "image_keyword": "hinode-inebriante-zayd"
+        },
+        {
+            "id": "hnd-012",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Empire",
+            "name": "Empire Gold Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 89.95,
+            "suggested_price": 179.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Empire"
+            },
+            "popular": true,
+            "image_keyword": "hinode-empire-gold"
+        },
+        {
+            "id": "hnd-013",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Dazzle",
+            "name": "Base Líquida Cover+ HD Dazzle",
+            "category": "maquiagem",
+            "subcategory": "base",
+            "base_price": 39.95,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "base-liquida",
+                "coverage": "hd",
+                "line": "Dazzle"
+            },
+            "popular": true,
+            "image_keyword": "hinode-dazzle-base-hd"
+        },
+        {
+            "id": "hnd-014",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Corps",
+            "name": "Creme Esfoliante Corps Lignea 200g",
+            "category": "corporal",
+            "subcategory": "esfoliante-corporal",
+            "base_price": 29.95,
+            "suggested_price": 59.90,
+            "attributes": {
+                "volume": "200g",
+                "type": "creme-esfoliante",
+                "line": "Corps Lignea"
+            },
+            "popular": true,
+            "image_keyword": "hinode-corps-esfoliante"
+        },
+        {
+            "id": "hnd-015",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Eterna",
+            "name": "Eterna Blue Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 74.95,
+            "suggested_price": 149.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "fragrance": "blue",
+                "line": "Eterna"
+            },
+            "popular": true,
+            "image_keyword": "hinode-eterna-blue"
+        },
+        {
+            "id": "hnd-016",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "H-Men",
+            "name": "Balm Pós-Barba H-Men 100g",
+            "category": "homem",
+            "subcategory": "pos-barba",
+            "base_price": 23.45,
+            "suggested_price": 46.90,
+            "attributes": {
+                "volume": "100g",
+                "type": "balm",
+                "gender": "masculino",
+                "line": "H-Men"
+            },
+            "popular": true,
+            "image_keyword": "hinode-h-men-balm-pos-barba"
+        },
+        {
+            "id": "hnd-017",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Routine",
+            "name": "Sérum Facial Anti-idade Routine",
+            "category": "facial",
+            "subcategory": "serum",
+            "base_price": 59.50,
+            "suggested_price": 119.00,
+            "attributes": {
+                "type": "serum",
+                "function": "anti-idade",
+                "line": "Routine"
+            },
+            "popular": true,
+            "image_keyword": "hinode-routine-serum"
+        },
+        {
+            "id": "hnd-018",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Sens",
+            "name": "Creme de Mãos Sens Pure 50g",
+            "category": "maos",
+            "subcategory": "creme-maos",
+            "base_price": 12.50,
+            "suggested_price": 25.00,
+            "attributes": {
+                "volume": "50g",
+                "type": "creme",
+                "fragrance": "pure",
+                "line": "Sens"
+            },
+            "popular": true,
+            "image_keyword": "hinode-sens-creme-maos"
+        },
+        {
+            "id": "hnd-019",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Latitude",
+            "name": "Latitude Origini Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 74.95,
+            "suggested_price": 149.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "line": "Latitude"
+            },
+            "popular": true,
+            "image_keyword": "hinode-latitude-origini"
+        },
+        {
+            "id": "hnd-020",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Dazzle",
+            "name": "Máscara de Cílios Eyemazing",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 29.95,
+            "suggested_price": 59.90,
+            "attributes": {
+                "type": "mascara",
+                "line": "Dazzle"
+            },
+            "popular": true,
+            "image_keyword": "hinode-dazzle-mascara-eyemazing"
+        },
+        {
+            "id": "hnd-021",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Inebriante",
+            "name": "Inebriante Oasis Elixir For Her",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 184.95,
+            "suggested_price": 369.90,
+            "attributes": {
+                "type": "elixir",
+                "gender": "feminino",
+                "line": "Inebriante"
+            },
+            "popular": true,
+            "image_keyword": "hinode-inebriante-oasis"
+        },
+        {
+            "id": "hnd-022",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Empire",
+            "name": "Empire Intense Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 89.95,
+            "suggested_price": 179.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "fragrance": "intense",
+                "line": "Empire"
+            },
+            "popular": true,
+            "image_keyword": "hinode-empire-intense"
+        },
+        {
+            "id": "hnd-023",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Corps",
+            "name": "Creme de Massagem Corps Lignea 200g",
+            "category": "corporal",
+            "subcategory": "creme-massagem",
+            "base_price": 36.00,
+            "suggested_price": 72.00,
+            "attributes": {
+                "volume": "200g",
+                "type": "creme-massagem",
+                "line": "Corps Lignea"
+            },
+            "popular": true,
+            "image_keyword": "hinode-corps-creme-massagem"
+        },
+        {
+            "id": "hnd-024",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Feelin",
+            "name": "Feelin Sexy For Her Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 84.95,
+            "suggested_price": 169.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Feelin"
+            },
+            "popular": true,
+            "image_keyword": "hinode-feelin-sexy"
+        },
+        {
+            "id": "hnd-025",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "HND",
+            "name": "Shake HND Chocolate 450g",
+            "category": "bem-estar",
+            "subcategory": "shake",
+            "base_price": 62.45,
+            "suggested_price": 124.90,
+            "attributes": {
+                "volume": "450g",
+                "type": "shake",
+                "flavor": "chocolate",
+                "line": "HND"
+            },
+            "popular": true,
+            "image_keyword": "hinode-hnd-shake-chocolate"
+        },
+        {
+            "id": "hnd-026",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Routine",
+            "name": "Tônico Facial Routine 150ml",
+            "category": "facial",
+            "subcategory": "tonico",
+            "base_price": 21.00,
+            "suggested_price": 42.00,
+            "attributes": {
+                "volume": "150ml",
+                "type": "tonico",
+                "line": "Routine"
+            },
+            "popular": true,
+            "image_keyword": "hinode-routine-tonico"
+        },
+        {
+            "id": "hnd-027",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Dazzle",
+            "name": "Pó Solto Translúcido Dazzle",
+            "category": "maquiagem",
+            "subcategory": "po-solto",
+            "base_price": 32.45,
+            "suggested_price": 64.90,
+            "attributes": {
+                "type": "po-solto",
+                "finish": "translucido",
+                "line": "Dazzle"
+            },
+            "popular": true,
+            "image_keyword": "hinode-dazzle-po-solto"
+        },
+        {
+            "id": "hnd-028",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Sens",
+            "name": "Sabonete Líquido Sens Naturals 250ml",
+            "category": "banho",
+            "subcategory": "sabonete-liquido",
+            "base_price": 22.50,
+            "suggested_price": 45.00,
+            "attributes": {
+                "volume": "250ml",
+                "type": "sabonete-liquido",
+                "line": "Sens"
+            },
+            "popular": true,
+            "image_keyword": "hinode-sens-sabonete-naturals"
+        },
+        {
+            "id": "hnd-029",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Venyx",
+            "name": "Venyx L'Or Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 84.95,
+            "suggested_price": 169.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "line": "Venyx"
+            },
+            "popular": true,
+            "image_keyword": "hinode-venyx-lor"
+        },
+        {
+            "id": "hnd-030",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Pro White",
+            "name": "Gel Dental Pro White 90g",
+            "category": "higiene",
+            "subcategory": "gel-dental",
+            "base_price": 9.95,
+            "suggested_price": 19.90,
+            "attributes": {
+                "volume": "90g",
+                "type": "gel-dental",
+                "function": "branqueador",
+                "line": "Pro White"
+            },
+            "popular": true,
+            "image_keyword": "hinode-pro-white-gel"
+        },
+        {
+            "id": "hnd-031",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Empire",
+            "name": "Empire Sport Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 89.95,
+            "suggested_price": 179.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "fragrance": "sport",
+                "line": "Empire"
+            },
+            "popular": true,
+            "image_keyword": "hinode-empire-sport"
+        },
+        {
+            "id": "hnd-032",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Dazzle",
+            "name": "Blush Dazzle Diversas Cores",
+            "category": "maquiagem",
+            "subcategory": "blush",
+            "base_price": 24.95,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "blush",
+                "line": "Dazzle"
+            },
+            "popular": true,
+            "image_keyword": "hinode-dazzle-blush"
+        },
+        {
+            "id": "hnd-033",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Routine",
+            "name": "Máscara Facial de Argila Branca",
+            "category": "facial",
+            "subcategory": "mascara-facial",
+            "base_price": 29.50,
+            "suggested_price": 59.00,
+            "attributes": {
+                "type": "mascara-argila",
+                "color": "branca",
+                "line": "Routine"
+            },
+            "popular": true,
+            "image_keyword": "hinode-routine-mascara-argila"
+        },
+        {
+            "id": "hnd-034",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Corps",
+            "name": "Timeless Anti-Celulite Corps",
+            "category": "corporal",
+            "subcategory": "anticelulite",
+            "base_price": 54.95,
+            "suggested_price": 109.90,
+            "attributes": {
+                "type": "creme-anticelulite",
+                "line": "Corps"
+            },
+            "popular": true,
+            "image_keyword": "hinode-corps-timeless"
+        },
+        {
+            "id": "hnd-035",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Grace",
+            "name": "Grace La Rose Sublime 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 89.95,
+            "suggested_price": 179.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "fragrance": "rose-sublime",
+                "line": "Grace"
+            },
+            "popular": true,
+            "image_keyword": "hinode-grace-la-rose"
+        },
+        {
+            "id": "hnd-036",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "HND",
+            "name": "Colágeno Hidrolisado HND",
+            "category": "bem-estar",
+            "subcategory": "colageno",
+            "base_price": 79.95,
+            "suggested_price": 159.90,
+            "attributes": {
+                "type": "colageno-hidrolisado",
+                "line": "HND"
+            },
+            "popular": true,
+            "image_keyword": "hinode-hnd-colageno"
+        },
+        {
+            "id": "hnd-037",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Sens",
+            "name": "Desodorante Aerosol Sens 150ml",
+            "category": "higiene",
+            "subcategory": "desodorante",
+            "base_price": 14.50,
+            "suggested_price": 29.00,
+            "attributes": {
+                "volume": "150ml",
+                "type": "desodorante-aerosol",
+                "line": "Sens"
+            },
+            "popular": true,
+            "image_keyword": "hinode-sens-desodorante-aerosol"
+        },
+        {
+            "id": "hnd-038",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Dazzle",
+            "name": "Corretivo Light Skin Dazzle",
+            "category": "maquiagem",
+            "subcategory": "corretivo",
+            "base_price": 19.95,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "corretivo",
+                "skin_tone": "light",
+                "line": "Dazzle"
+            },
+            "popular": true,
+            "image_keyword": "hinode-dazzle-corretivo-light"
+        },
+        {
+            "id": "hnd-039",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Feelin",
+            "name": "Feelin Para Ele Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 84.95,
+            "suggested_price": 169.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Feelin"
+            },
+            "popular": true,
+            "image_keyword": "hinode-feelin-para-ele"
+        },
+        {
+            "id": "hnd-040",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Routine",
+            "name": "Hidratante Facial Peles Oleosas",
+            "category": "facial",
+            "subcategory": "hidratante-facial",
+            "base_price": 26.00,
+            "suggested_price": 52.00,
+            "attributes": {
+                "type": "hidratante",
+                "skin_type": "oleosa",
+                "line": "Routine"
+            },
+            "popular": true,
+            "image_keyword": "hinode-routine-hidratante-oleosa"
+        },
+        {
+            "id": "hnd-041",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Empire",
+            "name": "Empire VIP Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 89.95,
+            "suggested_price": 179.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "line": "Empire"
+            },
+            "popular": true,
+            "image_keyword": "hinode-empire-vip"
+        },
+        {
+            "id": "hnd-042",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Corps",
+            "name": "Gel Esfoliante Corporal Corps",
+            "category": "corporal",
+            "subcategory": "gel-esfoliante",
+            "base_price": 29.95,
+            "suggested_price": 59.90,
+            "attributes": {
+                "type": "gel-esfoliante",
+                "line": "Corps"
+            },
+            "popular": true,
+            "image_keyword": "hinode-corps-gel-esfoliante"
+        },
+        {
+            "id": "hnd-043",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Dazzle",
+            "name": "Esmalte Dazzle High Shine",
+            "category": "maquiagem",
+            "subcategory": "esmalte",
+            "base_price": 6.45,
+            "suggested_price": 12.90,
+            "attributes": {
+                "type": "esmalte",
+                "finish": "high-shine",
+                "line": "Dazzle"
+            },
+            "popular": true,
+            "image_keyword": "hinode-dazzle-esmalte"
+        },
+        {
+            "id": "hnd-044",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "H-Men",
+            "name": "Shampoo Anticaspa H-Men 300ml",
+            "category": "capilar",
+            "subcategory": "shampoo",
+            "base_price": 21.45,
+            "suggested_price": 42.90,
+            "attributes": {
+                "volume": "300ml",
+                "type": "shampoo",
+                "function": "anticaspa",
+                "gender": "masculino",
+                "line": "H-Men"
+            },
+            "popular": true,
+            "image_keyword": "hinode-h-men-shampoo-anticaspa"
+        },
+        {
+            "id": "hnd-045",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Ella",
+            "name": "Ella Radiance Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 69.95,
+            "suggested_price": 139.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "fragrance": "radiance",
+                "line": "Ella"
+            },
+            "popular": true,
+            "image_keyword": "hinode-ella-radiance"
+        },
+        {
+            "id": "hnd-046",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Sens",
+            "name": "Body Splash Sens Naturals 245ml",
+            "category": "corporal",
+            "subcategory": "body-splash",
+            "base_price": 27.50,
+            "suggested_price": 55.00,
+            "attributes": {
+                "volume": "245ml",
+                "type": "body-splash",
+                "line": "Sens"
+            },
+            "popular": true,
+            "image_keyword": "hinode-sens-body-splash"
+        },
+        {
+            "id": "hnd-047",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Routine",
+            "name": "Demaquilante Bifásico Routine",
+            "category": "limpeza",
+            "subcategory": "demaquilante",
+            "base_price": 24.00,
+            "suggested_price": 48.00,
+            "attributes": {
+                "type": "demaquilante-bifasico",
+                "line": "Routine"
+            },
+            "popular": true,
+            "image_keyword": "hinode-routine-demaquilante"
+        },
+        {
+            "id": "hnd-048",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Empire",
+            "name": "Desodorante Roll-on Empire",
+            "category": "higiene",
+            "subcategory": "desodorante",
+            "base_price": 11.45,
+            "suggested_price": 22.90,
+            "attributes": {
+                "type": "desodorante-rollon",
+                "line": "Empire"
+            },
+            "popular": true,
+            "image_keyword": "hinode-empire-desodorante-rollon"
+        },
+        {
+            "id": "hnd-049",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "Dazzle",
+            "name": "Iluminador Facial Show Glow",
+            "category": "maquiagem",
+            "subcategory": "iluminador",
+            "base_price": 27.45,
+            "suggested_price": 54.90,
+            "attributes": {
+                "type": "iluminador",
+                "usage": "facial",
+                "line": "Dazzle"
+            },
+            "popular": true,
+            "image_keyword": "hinode-dazzle-iluminador-show-glow"
+        },
+        {
+            "id": "hnd-050",
+            "brand": "hinode",
+            "brand_display": "Hinode",
+            "line": "HND",
+            "name": "Chá HND Frutas Vermelhas (Pó 150g)",
+            "category": "bem-estar",
+            "subcategory": "cha",
+            "base_price": 47.45,
+            "suggested_price": 94.90,
+            "attributes": {
+                "volume": "150g",
+                "type": "cha-po",
+                "flavor": "frutas-vermelhas",
+                "line": "HND"
+            },
+            "popular": true,
+            "image_keyword": "hinode-hnd-cha-frutas-vermelhas"
+        },
+        {
+            "id": "rac-001",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Intimos",
+            "name": "Sabonete Líquido Íntimo Tradicional 210ml",
+            "category": "higiene",
+            "subcategory": "sabonete-intimo",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "volume": "210ml",
+                "type": "sabonete-liquido",
+                "fragrance": "tradicional",
+                "line": "Intimos"
+            },
+            "popular": true,
+            "image_keyword": "racco-intimos-sabonete-tradicional"
+        },
+        {
+            "id": "rac-002",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Creme Priorage 30+ Facial 30g",
+            "category": "facial",
+            "subcategory": "creme-facial",
+            "base_price": 111.93,
+            "suggested_price": 159.90,
+            "attributes": {
+                "volume": "30g",
+                "type": "creme",
+                "age": "30+",
+                "line": "Ciclos"
+            },
+            "popular": true,
+            "image_keyword": "racco-ciclos-priorage-30"
+        },
+        {
+            "id": "rac-003",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Depeeling",
+            "name": "Mousse Spray Depilatório 150ml",
+            "category": "corporal",
+            "subcategory": "depilatorio",
+            "base_price": 59.43,
+            "suggested_price": 84.90,
+            "attributes": {
+                "volume": "150ml",
+                "type": "mousse-spray",
+                "line": "Depeeling"
+            },
+            "popular": true,
+            "image_keyword": "racco-depeeling-mousse"
+        },
+        {
+            "id": "rac-004",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Overdose",
+            "name": "Loção Hidratante Overdose Sugar Dream",
+            "category": "corporal",
+            "subcategory": "locao-hidratante",
+            "base_price": 32.83,
+            "suggested_price": 46.90,
+            "attributes": {
+                "type": "locao",
+                "fragrance": "sugar-dream",
+                "line": "Overdose"
+            },
+            "popular": true,
+            "image_keyword": "racco-overdose-sugar-dream"
+        },
+        {
+            "id": "rac-005",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Sérum Corporal Carnivore Redutor",
+            "category": "corporal",
+            "subcategory": "serum-corporal",
+            "base_price": 132.93,
+            "suggested_price": 189.90,
+            "attributes": {
+                "type": "serum",
+                "function": "redutor",
+                "line": "Ciclos"
+            },
+            "popular": true,
+            "image_keyword": "racco-ciclos-serum-carnivore"
+        },
+        {
+            "id": "rac-006",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "For Men",
+            "name": "Deo Colônia Allumage Masculina 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 97.93,
+            "suggested_price": 139.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "For Men"
+            },
+            "popular": true,
+            "image_keyword": "racco-for-men-allumage"
+        },
+        {
+            "id": "rac-007",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Raccoderma",
+            "name": "Gel Creme Glicerina + Vitamina E 60g",
+            "category": "facial",
+            "subcategory": "gel-creme",
+            "base_price": 62.93,
+            "suggested_price": 89.90,
+            "attributes": {
+                "volume": "60g",
+                "type": "gel-creme",
+                "main_ingredient": "glicerina-vitamina-e",
+                "line": "Raccoderma"
+            },
+            "popular": true,
+            "image_keyword": "racco-raccoderma-gel-glicerina"
+        },
+        {
+            "id": "rac-008",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "IOS",
+            "name": "Aloe Life Suplemento Vitamina C 1L",
+            "category": "bem-estar",
+            "subcategory": "suplemento",
+            "base_price": 90.93,
+            "suggested_price": 129.90,
+            "attributes": {
+                "volume": "1L",
+                "type": "suplemento",
+                "main_ingredient": "aloe-vitamina-c",
+                "line": "IOS"
+            },
+            "popular": true,
+            "image_keyword": "racco-ios-aloe-life"
+        },
+        {
+            "id": "rac-009",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Intimos",
+            "name": "Gel de Massagem Íntimo Morango",
+            "category": "higiene",
+            "subcategory": "gel-intimo",
+            "base_price": 32.83,
+            "suggested_price": 46.90,
+            "attributes": {
+                "type": "gel-massagem",
+                "flavor": "morango",
+                "line": "Intimos"
+            },
+            "popular": true,
+            "image_keyword": "racco-intimos-gel-morango"
+        },
+        {
+            "id": "rac-010",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Soleil",
+            "name": "Protetor Solar Corporal FPS 30",
+            "category": "solar",
+            "subcategory": "protetor-solar",
+            "base_price": 69.93,
+            "suggested_price": 99.90,
+            "attributes": {
+                "type": "protetor-solar",
+                "spf": "30",
+                "usage": "corporal",
+                "line": "Soleil"
+            },
+            "popular": true,
+            "image_keyword": "racco-soleil-protetor-fps30"
+        },
+        {
+            "id": "rac-011",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Espuma Micelar de Limpeza 150ml",
+            "category": "facial",
+            "subcategory": "espuma-limpeza",
+            "base_price": 48.93,
+            "suggested_price": 69.90,
+            "attributes": {
+                "volume": "150ml",
+                "type": "espuma-micelar",
+                "line": "Ciclos"
+            },
+            "popular": true,
+            "image_keyword": "racco-ciclos-espuma-micelar"
+        },
+        {
+            "id": "rac-012",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Fragrance",
+            "name": "Gi Racco Deo Colônia Feminina 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 104.93,
+            "suggested_price": 149.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "racco-fragrance-gi"
+        },
+        {
+            "id": "rac-013",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Overdose",
+            "name": "Body Splash Secret Berry 200ml",
+            "category": "corporal",
+            "subcategory": "body-splash",
+            "base_price": 41.93,
+            "suggested_price": 59.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "body-splash",
+                "fragrance": "secret-berry",
+                "line": "Overdose"
+            },
+            "popular": true,
+            "image_keyword": "racco-overdose-secret-berry"
+        },
+        {
+            "id": "rac-014",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "For Men",
+            "name": "Balm Pós-Barba Racco For Men",
+            "category": "homem",
+            "subcategory": "pos-barba",
+            "base_price": 30.03,
+            "suggested_price": 42.90,
+            "attributes": {
+                "type": "balm",
+                "line": "For Men"
+            },
+            "popular": true,
+            "image_keyword": "racco-for-men-balm-pos-barba"
+        },
+        {
+            "id": "rac-015",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Kit Firmeza Total (Colágeno+Sérum)",
+            "category": "facial",
+            "subcategory": "kit-facial",
+            "base_price": 214.06,
+            "suggested_price": 305.80,
+            "attributes": {
+                "type": "kit",
+                "function": "firmeza",
+                "line": "Ciclos"
+            },
+            "popular": true,
+            "image_keyword": "racco-ciclos-kit-firmeza"
+        },
+        {
+            "id": "rac-016",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Raccoderma",
+            "name": "Máscara Facial Purificante Raccoderma",
+            "category": "facial",
+            "subcategory": "mascara-facial",
+            "base_price": 38.43,
+            "suggested_price": 54.90,
+            "attributes": {
+                "type": "mascara-purificante",
+                "line": "Raccoderma"
+            },
+            "popular": true,
+            "image_keyword": "racco-raccoderma-mascara-purificante"
+        },
+        {
+            "id": "rac-017",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Intimos",
+            "name": "Sabonete Líquido Íntimo Fresh 210ml",
+            "category": "higiene",
+            "subcategory": "sabonete-intimo",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "volume": "210ml",
+                "type": "sabonete-liquido",
+                "fragrance": "fresh",
+                "line": "Intimos"
+            },
+            "popular": true,
+            "image_keyword": "racco-intimos-fresh"
+        },
+        {
+            "id": "rac-018",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "IOS",
+            "name": "Maxxi Suplemento Imunidade e Energia",
+            "category": "bem-estar",
+            "subcategory": "suplemento",
+            "base_price": 66.43,
+            "suggested_price": 94.90,
+            "attributes": {
+                "type": "suplemento",
+                "function": "imunidade-energia",
+                "line": "IOS"
+            },
+            "popular": true,
+            "image_keyword": "racco-ios-maxxi"
+        },
+        {
+            "id": "rac-019",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Creme Priorage 50+ Facial 30g",
+            "category": "facial",
+            "subcategory": "creme-facial",
+            "base_price": 125.93,
+            "suggested_price": 179.90,
+            "attributes": {
+                "volume": "30g",
+                "type": "creme",
+                "age": "50+",
+                "line": "Ciclos"
+            },
+            "popular": true,
+            "image_keyword": "racco-ciclos-priorage-50"
+        },
+        {
+            "id": "rac-020",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Depeeling",
+            "name": "Creme Depilatório para o Rosto",
+            "category": "facial",
+            "subcategory": "depilatorio",
+            "base_price": 27.93,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "creme-depilatorio",
+                "usage": "rosto",
+                "line": "Depeeling"
+            },
+            "popular": true,
+            "image_keyword": "racco-depeeling-creme-rosto"
+        },
+        {
+            "id": "rac-021",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Fragrance",
+            "name": "Lilac Deo Colônia Feminina 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 104.93,
+            "suggested_price": 149.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "fragrance": "lilac",
+                "gender": "feminino",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "racco-fragrance-lilac"
+        },
+        {
+            "id": "rac-022",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Overdose",
+            "name": "Hidratante corporal Blue Diamond 200ml",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 32.83,
+            "suggested_price": 46.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "creme",
+                "fragrance": "blue-diamond",
+                "line": "Overdose"
+            },
+            "popular": true,
+            "image_keyword": "racco-overdose-blue-diamond"
+        },
+        {
+            "id": "rac-023",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "For Men",
+            "name": "Shampoo Cabelo e Corpo For Men",
+            "category": "banho",
+            "subcategory": "shampoo-2em1",
+            "base_price": 25.83,
+            "suggested_price": 36.90,
+            "attributes": {
+                "type": "shampoo-2em1",
+                "gender": "masculino",
+                "line": "For Men"
+            },
+            "popular": true,
+            "image_keyword": "racco-for-men-shampoo"
+        },
+        {
+            "id": "rac-024",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Sérum Anticelulite Ciclos d'Racco",
+            "category": "corporal",
+            "subcategory": "anticelulite",
+            "base_price": 87.43,
+            "suggested_price": 124.90,
+            "attributes": {
+                "type": "serum",
+                "function": "anticelulite",
+                "line": "Ciclos"
+            },
+            "popular": true,
+            "image_keyword": "racco-ciclos-serum-anticelulite"
+        },
+        {
+            "id": "rac-025",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Intimos",
+            "name": "Toalhas Umedecidas Íntimas Intimos",
+            "category": "higiene",
+            "subcategory": "lencos-umedecidos",
+            "base_price": 16.03,
+            "suggested_price": 22.90,
+            "attributes": {
+                "type": "lencos",
+                "line": "Intimos"
+            },
+            "popular": false,
+            "image_keyword": "racco-intimos-toalhas-umedecidas"
+        },
+        {
+            "id": "rac-026",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Raccoderma",
+            "name": "Água Micelar Raccoderma 200ml",
+            "category": "facial",
+            "subcategory": "agua-micelar",
+            "base_price": 30.03,
+            "suggested_price": 42.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "agua-micelar",
+                "line": "Raccoderma"
+            },
+            "popular": true,
+            "image_keyword": "racco-raccoderma-agua-micelar"
+        },
+        {
+            "id": "rac-027",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "IOS",
+            "name": "Coenzima Q10 + Vitamina E",
+            "category": "bem-estar",
+            "subcategory": "suplemento",
+            "base_price": 76.93,
+            "suggested_price": 109.90,
+            "attributes": {
+                "type": "suplemento",
+                "main_ingredient": "coenzima-q10",
+                "line": "IOS"
+            },
+            "popular": true,
+            "image_keyword": "racco-ios-coenzima-q10"
+        },
+        {
+            "id": "rac-028",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Óleo de Tratamento Facial Ciclos",
+            "category": "facial",
+            "subcategory": "oleo-facial",
+            "base_price": 80.50,
+            "suggested_price": 115.00,
+            "attributes": {
+                "type": "oleo-tratamento",
+                "line": "Ciclos"
+            },
+            "popular": true,
+            "image_keyword": "racco-ciclos-oleo-facial"
+        },
+        {
+            "id": "rac-029",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Fragrance",
+            "name": "Malle Desodorante Colônia Masculina",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 97.93,
+            "suggested_price": 139.90,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "racco-fragrance-malle"
+        },
+        {
+            "id": "rac-030",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Soleil",
+            "name": "Protetor Solar Facial FPS 50 Soleil",
+            "category": "solar",
+            "subcategory": "protetor-solar",
+            "base_price": 55.93,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "protetor-solar",
+                "spf": "50",
+                "usage": "facial",
+                "line": "Soleil"
+            },
+            "popular": true,
+            "image_keyword": "racco-soleil-protetor-facial-fps50"
+        },
+        {
+            "id": "rac-031",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Overdose",
+            "name": "Body Splash Sugar Dream 200ml",
+            "category": "corporal",
+            "subcategory": "body-splash",
+            "base_price": 41.93,
+            "suggested_price": 59.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "body-splash",
+                "fragrance": "sugar-dream",
+                "line": "Overdose"
+            },
+            "popular": true,
+            "image_keyword": "racco-overdose-sugar-dream-splash"
+        },
+        {
+            "id": "rac-032",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "For Men",
+            "name": "Cera Modeladora para Cabelo For Men",
+            "category": "capilar",
+            "subcategory": "cera-modeladora",
+            "base_price": 31.43,
+            "suggested_price": 44.90,
+            "attributes": {
+                "type": "cera",
+                "gender": "masculino",
+                "line": "For Men"
+            },
+            "popular": true,
+            "image_keyword": "racco-for-men-cera-modeladora"
+        },
+        {
+            "id": "rac-033",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Creme de Mãos Ciclos d'Racco 50g",
+            "category": "maos",
+            "subcategory": "creme-maos",
+            "base_price": 24.43,
+            "suggested_price": 34.90,
+            "attributes": {
+                "volume": "50g",
+                "type": "creme",
+                "line": "Ciclos"
+            },
+            "popular": true,
+            "image_keyword": "racco-ciclos-creme-maos"
+        },
+        {
+            "id": "rac-034",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Intimos",
+            "name": "Sabonete Íntimo Morango 210ml",
+            "category": "higiene",
+            "subcategory": "sabonete-intimo",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "volume": "210ml",
+                "type": "sabonete-liquido",
+                "flavor": "morango",
+                "line": "Intimos"
+            },
+            "popular": true,
+            "image_keyword": "racco-intimos-sabonete-morango"
+        },
+        {
+            "id": "rac-035",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Raccoderma",
+            "name": "Hidratante Corporal Ureia 10%",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 45.43,
+            "suggested_price": 64.90,
+            "attributes": {
+                "type": "hidratante",
+                "main_ingredient": "ureia-10",
+                "line": "Raccoderma"
+            },
+            "popular": true,
+            "image_keyword": "racco-raccoderma-hidratante-ureia"
+        },
+        {
+            "id": "rac-036",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "IOS",
+            "name": "Fibra de Maçã e Psyllium HND",
+            "category": "bem-estar",
+            "subcategory": "suplemento",
+            "base_price": 62.93,
+            "suggested_price": 89.90,
+            "attributes": {
+                "type": "suplemento",
+                "main_ingredient": "fibra-maca",
+                "line": "IOS"
+            },
+            "popular": false,
+            "image_keyword": "racco-ios-fibra-maca"
+        },
+        {
+            "id": "rac-037",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Demaquilante Área dos Olhos Ciclos",
+            "category": "facial",
+            "subcategory": "demaquilante",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "demaquilante",
+                "usage": "olhos",
+                "line": "Ciclos"
+            },
+            "popular": true,
+            "image_keyword": "racco-ciclos-demaquilante-olhos"
+        },
+        {
+            "id": "rac-038",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Fragrance",
+            "name": "Leandro Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 97.93,
+            "suggested_price": 139.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "racco-fragrance-leandro"
+        },
+        {
+            "id": "rac-039",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Soleil",
+            "name": "Gel Pós Sol Aloe Vera Soleil",
+            "category": "solar",
+            "subcategory": "pos-sol",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "gel-pos-sol",
+                "main_ingredient": "aloe-vera",
+                "line": "Soleil"
+            },
+            "popular": true,
+            "image_keyword": "racco-soleil-gel-pos-sol"
+        },
+        {
+            "id": "rac-040",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Overdose",
+            "name": "Sabonete Líquido Secret Berry 250ml",
+            "category": "banho",
+            "subcategory": "sabonete-liquido",
+            "base_price": 24.43,
+            "suggested_price": 34.90,
+            "attributes": {
+                "volume": "250ml",
+                "type": "sabonete-liquido",
+                "fragrance": "secret-berry",
+                "line": "Overdose"
+            },
+            "popular": false,
+            "image_keyword": "racco-overdose-sabonete-secret-berry"
+        },
+        {
+            "id": "rac-041",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "For Men",
+            "name": "Desodorante Roll-on For Men",
+            "category": "higiene",
+            "subcategory": "desodorante",
+            "base_price": 15.33,
+            "suggested_price": 21.90,
+            "attributes": {
+                "type": "desodorante-rollon",
+                "gender": "masculino",
+                "line": "For Men"
+            },
+            "popular": true,
+            "image_keyword": "racco-for-men-desodorante-rollon"
+        },
+        {
+            "id": "rac-042",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Peeling de Cristal Facial Ciclos",
+            "category": "facial",
+            "subcategory": "peeling",
+            "base_price": 62.93,
+            "suggested_price": 89.90,
+            "attributes": {
+                "type": "peeling",
+                "function": "renovador",
+                "line": "Ciclos"
+            },
+            "popular": true,
+            "image_keyword": "racco-ciclos-peeling-cristal"
+        },
+        {
+            "id": "rac-043",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Intimos",
+            "name": "Desodorante Jato Seco Íntimo",
+            "category": "higiene",
+            "subcategory": "desodorante-intimo",
+            "base_price": 25.83,
+            "suggested_price": 36.90,
+            "attributes": {
+                "type": "desodorante-spray",
+                "line": "Intimos"
+            },
+            "popular": true,
+            "image_keyword": "racco-intimos-desodorante-jato-seco"
+        },
+        {
+            "id": "rac-044",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Raccoderma",
+            "name": "Creme para Pés com Ácido Salicílico",
+            "category": "pes",
+            "subcategory": "creme-pes",
+            "base_price": 27.93,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "creme",
+                "main_ingredient": "acido-salicilico",
+                "line": "Raccoderma"
+            },
+            "popular": true,
+            "image_keyword": "racco-raccoderma-creme-pes"
+        },
+        {
+            "id": "rac-045",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "IOS",
+            "name": "Chá de Ervas Racco (Energia)",
+            "category": "bem-estar",
+            "subcategory": "cha",
+            "base_price": 38.43,
+            "suggested_price": 54.90,
+            "attributes": {
+                "type": "cha",
+                "function": "energia",
+                "line": "IOS"
+            },
+            "popular": false,
+            "image_keyword": "racco-ios-cha-ervas"
+        },
+        {
+            "id": "rac-046",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Refil Espuma Micelar 150ml",
+            "category": "facial",
+            "subcategory": "espuma-limpeza",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "volume": "150ml",
+                "type": "refil",
+                "line": "Ciclos"
+            },
+            "popular": false,
+            "image_keyword": "racco-ciclos-refil-espuma"
+        },
+        {
+            "id": "rac-047",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Fragrance",
+            "name": "Overdose Blue Deo Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 76.93,
+            "suggested_price": 109.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "line": "Overdose"
+            },
+            "popular": true,
+            "image_keyword": "racco-fragrance-overdose-blue"
+        },
+        {
+            "id": "rac-048",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Soleil",
+            "name": "Protetor Labial FPS 15 Soleil",
+            "category": "labios",
+            "subcategory": "protetor-labial",
+            "base_price": 13.93,
+            "suggested_price": 19.90,
+            "attributes": {
+                "type": "protetor-labial",
+                "spf": "15",
+                "line": "Soleil"
+            },
+            "popular": true,
+            "image_keyword": "racco-soleil-protetor-labial"
+        },
+        {
+            "id": "rac-049",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "For Men",
+            "name": "Óleo para Barba Racco For Men",
+            "category": "homem",
+            "subcategory": "oleo-barba",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "oleo",
+                "gender": "masculino",
+                "line": "For Men"
+            },
+            "popular": true,
+            "image_keyword": "racco-for-men-oleo-barba"
+        },
+        {
+            "id": "rac-050",
+            "brand": "racco",
+            "brand_display": "Racco",
+            "line": "Ciclos",
+            "name": "Gel Creme Facial Matificante",
+            "category": "facial",
+            "subcategory": "hidratante-facial",
+            "base_price": 55.93,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "gel-creme",
+                "function": "matificante",
+                "line": "Ciclos"
+            },
+            "popular": true,
+            "image_keyword": "racco-ciclos-gel-matificante"
+        }
+    ]
+}

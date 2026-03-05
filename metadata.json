@@ -1,0 +1,5 @@
+{
+  "name": "Dona da Revenda",
+  "description": "Plataforma para revendedoras com Next.js, Supabase, Tailwind e agentes de IA.",
+  "requestFramePermissions": []
+}

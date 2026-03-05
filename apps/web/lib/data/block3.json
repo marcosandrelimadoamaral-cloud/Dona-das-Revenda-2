@@ -1,0 +1,1852 @@
+{
+    "products": [
+        {
+            "id": "jeq-001",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Portiolli",
+            "name": "Portiolli Gold Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 80.43,
+            "suggested_price": 114.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Portiolli"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-portiolli-gold"
+        },
+        {
+            "id": "jeq-002",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Eliana",
+            "name": "Eliana Cristal Desodorante Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 90.93,
+            "suggested_price": 129.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Eliana"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-eliana-cristal"
+        },
+        {
+            "id": "jeq-003",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Patricia Abravanel",
+            "name": "Patricia Abravanel Essence 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 83.93,
+            "suggested_price": 119.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Patricia Abravanel"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-patricia-abravanel-essence"
+        },
+        {
+            "id": "jeq-004",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Jequiti Eu",
+            "name": "Loção Hidratante Eu Desejo 250ml",
+            "category": "corporal",
+            "subcategory": "locao-hidratante",
+            "base_price": 27.93,
+            "suggested_price": 39.90,
+            "attributes": {
+                "volume": "250ml",
+                "type": "locao",
+                "fragrance": "eu-desejo",
+                "line": "Jequiti Eu"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-eu-locao-desejo"
+        },
+        {
+            "id": "jeq-005",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Sensi",
+            "name": "Hidratante Sensi Pele Morena 400ml",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 31.43,
+            "suggested_price": 44.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "creme",
+                "skin_type": "morena",
+                "line": "Sensi"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-sensi-hidratante-morena"
+        },
+        {
+            "id": "jeq-006",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Luan Santana",
+            "name": "Luan Santana VIP Masculino 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 76.93,
+            "suggested_price": 109.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Luan Santana"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-luan-santana-vip"
+        },
+        {
+            "id": "jeq-007",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Rodrigo Faro",
+            "name": "Rodrigo Faro Único Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 73.43,
+            "suggested_price": 104.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Rodrigo Faro"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-rodrigo-faro-unico"
+        },
+        {
+            "id": "jeq-008",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Jequiti Vida",
+            "name": "Body Splash Amora e Ameixa 200ml",
+            "category": "corporal",
+            "subcategory": "body-splash",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "body-splash",
+                "fragrance": "amora-ameixa",
+                "line": "Jequiti Vida"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-vida-body-splash"
+        },
+        {
+            "id": "jeq-009",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Aviva",
+            "name": "Base Líquida Matte Aviva 30ml",
+            "category": "maquiagem",
+            "subcategory": "base",
+            "base_price": 30.03,
+            "suggested_price": 42.90,
+            "attributes": {
+                "volume": "30ml",
+                "type": "base-liquida",
+                "finish": "mate",
+                "line": "Aviva"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-aviva-base-matte"
+        },
+        {
+            "id": "jeq-010",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Ellas",
+            "name": "Batom Hidratante Ellas",
+            "category": "maquiagem",
+            "subcategory": "batom",
+            "base_price": 13.93,
+            "suggested_price": 19.90,
+            "attributes": {
+                "type": "batom-hidratante",
+                "line": "Ellas"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-ellas-batom-hidratante"
+        },
+        {
+            "id": "jeq-011",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Portiolli",
+            "name": "Mini Colônia Portiolli 25ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 20.93,
+            "suggested_price": 29.90,
+            "attributes": {
+                "volume": "25ml",
+                "type": "mini-colonia",
+                "gender": "masculino",
+                "line": "Portiolli"
+            },
+            "popular": false,
+            "image_keyword": "jequiti-portiolli-mini"
+        },
+        {
+            "id": "jeq-012",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Claudia Leitte",
+            "name": "Claudia Leitte Intense Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 87.43,
+            "suggested_price": 124.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Claudia Leitte"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-claudia-leitte-intense"
+        },
+        {
+            "id": "jeq-013",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Lucco",
+            "name": "Lucas Lucco Bad Boy Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 76.93,
+            "suggested_price": 109.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Lucco"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-lucco-bad-boy"
+        },
+        {
+            "id": "jeq-014",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Sensi",
+            "name": "Sabonete em Barra Sensi Leite (5un)",
+            "category": "banho",
+            "subcategory": "sabonete",
+            "base_price": 18.83,
+            "suggested_price": 26.90,
+            "attributes": {
+                "quantity": "5un",
+                "type": "sabonete-barra",
+                "main_ingredient": "leite",
+                "line": "Sensi"
+            },
+            "popular": false,
+            "image_keyword": "jequiti-sensi-sabonete-leite"
+        },
+        {
+            "id": "jeq-015",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Royal Madeira",
+            "name": "Royal Madeira Absoluto 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 83.93,
+            "suggested_price": 119.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Royal Madeira"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-royal-madeira-absoluto"
+        },
+        {
+            "id": "jeq-016",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Jequiti Eu",
+            "name": "Óleo Monofásico Eu Arraso 200ml",
+            "category": "corporal",
+            "subcategory": "oleo-corporal",
+            "base_price": 32.83,
+            "suggested_price": 46.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "oleo-monofasico",
+                "fragrance": "eu-arraso",
+                "line": "Jequiti Eu"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-eu-oleo-arraso"
+        },
+        {
+            "id": "jeq-017",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Aviva",
+            "name": "Máscara de Cílios Supreme Aviva",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 27.93,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "mascara",
+                "function": "supreme",
+                "line": "Aviva"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-aviva-mascara-supreme"
+        },
+        {
+            "id": "jeq-018",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Hello Kitty",
+            "name": "Colônia Hello Kitty Estilosa 25ml",
+            "category": "infantil",
+            "subcategory": "colonia-infantil",
+            "base_price": 41.93,
+            "suggested_price": 59.90,
+            "attributes": {
+                "volume": "25ml",
+                "type": "colonia",
+                "line": "Hello Kitty"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-hello-kitty-estilosa"
+        },
+        {
+            "id": "jeq-019",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Aire",
+            "name": "Aire Altitude Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 66.43,
+            "suggested_price": 94.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "fragrance": "altitude",
+                "line": "Aire"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-aire-altitude"
+        },
+        {
+            "id": "jeq-020",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Uzon",
+            "name": "Uzon Black Masculino 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 80.43,
+            "suggested_price": 114.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Uzon"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-uzon-black"
+        },
+        {
+            "id": "jeq-021",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Eliana",
+            "name": "Eliana Glamour Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 90.93,
+            "suggested_price": 129.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Eliana"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-eliana-glamour"
+        },
+        {
+            "id": "jeq-022",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Sensi",
+            "name": "Creme para as Mãos Algodão 75g",
+            "category": "maos",
+            "subcategory": "creme-maos",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "volume": "75g",
+                "type": "creme",
+                "fragrance": "algodao",
+                "line": "Sensi"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-sensi-creme-maos"
+        },
+        {
+            "id": "jeq-023",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Patricia Abravanel",
+            "name": "Patricia Abravanel Intenso 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 83.93,
+            "suggested_price": 119.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Patricia Abravanel"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-patricia-abravanel-intenso"
+        },
+        {
+            "id": "jeq-024",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Aviva",
+            "name": "Pó Compacto Matte Aviva",
+            "category": "maquiagem",
+            "subcategory": "po-compacto",
+            "base_price": 32.13,
+            "suggested_price": 45.90,
+            "attributes": {
+                "type": "po-compacto",
+                "finish": "mate",
+                "line": "Aviva"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-aviva-po-compacto"
+        },
+        {
+            "id": "jeq-025",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Jequiti Vida",
+            "name": "Sabonete Líquido Orquídea 250ml",
+            "category": "banho",
+            "subcategory": "sabonete-liquido",
+            "base_price": 23.03,
+            "suggested_price": 32.90,
+            "attributes": {
+                "volume": "250ml",
+                "type": "sabonete-liquido",
+                "fragrance": "orquidea",
+                "line": "Jequiti Vida"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-vida-sabonete-orquidea"
+        },
+        {
+            "id": "jeq-026",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Rebeca Abravanel",
+            "name": "Rebeca Abravanel Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 76.93,
+            "suggested_price": 109.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Rebeca Abravanel"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-rebeca-abravanel"
+        },
+        {
+            "id": "jeq-027",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Portiolli",
+            "name": "Gel Fixador Portiolli 150g",
+            "category": "capilar",
+            "subcategory": "gel-fixador",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "volume": "150g",
+                "type": "gel-fixador",
+                "line": "Portiolli"
+            },
+            "popular": false,
+            "image_keyword": "jequiti-portiolli-gel"
+        },
+        {
+            "id": "jeq-028",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Ellas",
+            "name": "Lápis para Olhos com Esfuminho",
+            "category": "maquiagem",
+            "subcategory": "lapis-olhos",
+            "base_price": 16.03,
+            "suggested_price": 22.90,
+            "attributes": {
+                "type": "lapis-esfuminho",
+                "line": "Ellas"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-ellas-lapis-esfuminho"
+        },
+        {
+            "id": "jeq-029",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Aire",
+            "name": "Aire Movimento Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 66.43,
+            "suggested_price": 94.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "fragrance": "movimento",
+                "line": "Aire"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-aire-movimento"
+        },
+        {
+            "id": "jeq-030",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Jequiti Eu",
+            "name": "Creme de Mãos Eu Desejo 50g",
+            "category": "maos",
+            "subcategory": "creme-maos",
+            "base_price": 15.33,
+            "suggested_price": 21.90,
+            "attributes": {
+                "volume": "50g",
+                "type": "creme",
+                "fragrance": "eu-desejo",
+                "line": "Jequiti Eu"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-eu-creme-maos"
+        },
+        {
+            "id": "jeq-031",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Fabio Jr",
+            "name": "Fabio Jr Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 90.93,
+            "suggested_price": 129.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Fabio Jr"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-fabio-jr"
+        },
+        {
+            "id": "jeq-032",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Sensi",
+            "name": "Loção Hidratante Sensi Detox 400ml",
+            "category": "corporal",
+            "subcategory": "locao-hidratante",
+            "base_price": 31.43,
+            "suggested_price": 44.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "locao",
+                "function": "detox",
+                "line": "Sensi"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-sensi-locao-detox"
+        },
+        {
+            "id": "jeq-033",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Aviva",
+            "name": "Batom Líquido Matte Aviva",
+            "category": "maquiagem",
+            "subcategory": "batom-liquido",
+            "base_price": 23.03,
+            "suggested_price": 32.90,
+            "attributes": {
+                "type": "batom-liquido",
+                "finish": "mate",
+                "line": "Aviva"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-aviva-batom-liquido"
+        },
+        {
+            "id": "jeq-034",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Uzon",
+            "name": "Uzon Explorer Masculino 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 80.43,
+            "suggested_price": 114.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Uzon"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-uzon-explorer"
+        },
+        {
+            "id": "jeq-035",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Hello Kitty",
+            "name": "Gloss Labial Hello Kitty",
+            "category": "infantil",
+            "subcategory": "gloss-labial",
+            "base_price": 13.93,
+            "suggested_price": 19.90,
+            "attributes": {
+                "type": "gloss",
+                "line": "Hello Kitty"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-hello-kitty-gloss"
+        },
+        {
+            "id": "jeq-036",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Portiolli",
+            "name": "Desodorante Antitranspirante Roll-on",
+            "category": "higiene",
+            "subcategory": "desodorante",
+            "base_price": 13.23,
+            "suggested_price": 18.90,
+            "attributes": {
+                "type": "desodorante-rollon",
+                "function": "antitranspirante",
+                "line": "Portiolli"
+            },
+            "popular": false,
+            "image_keyword": "jequiti-portiolli-desodorante"
+        },
+        {
+            "id": "jeq-037",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Jequiti Vida",
+            "name": "Hidratante Flor de Cerejeira 250ml",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 24.43,
+            "suggested_price": 34.90,
+            "attributes": {
+                "volume": "250ml",
+                "type": "creme",
+                "fragrance": "flor-de-cerejeira",
+                "line": "Jequiti Vida"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-vida-cerejeira"
+        },
+        {
+            "id": "jeq-038",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Rodrigo Faro",
+            "name": "Rodrigo Faro Desodorante Colônia",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 73.43,
+            "suggested_price": 104.90,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Rodrigo Faro"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-rodrigo-faro"
+        },
+        {
+            "id": "jeq-039",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Aviva",
+            "name": "Esmalte Aviva Cores Diversas",
+            "category": "maquiagem",
+            "subcategory": "esmalte",
+            "base_price": 6.93,
+            "suggested_price": 9.90,
+            "attributes": {
+                "type": "esmalte",
+                "line": "Aviva"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-aviva-esmalte"
+        },
+        {
+            "id": "jeq-040",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Royal Madeira",
+            "name": "Royal Madeira Blanc 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 83.93,
+            "suggested_price": 119.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Royal Madeira"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-royal-madeira-blanc"
+        },
+        {
+            "id": "jeq-041",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Sensi",
+            "name": "Sabonete Líquido Íntimo Sensi 200ml",
+            "category": "higiene",
+            "subcategory": "sabonete-intimo",
+            "base_price": 20.93,
+            "suggested_price": 29.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "sabonete-liquido",
+                "line": "Sensi"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-sensi-sabonete-intimo"
+        },
+        {
+            "id": "jeq-042",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Eliana",
+            "name": "Mini Colônia Eliana 25ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 20.93,
+            "suggested_price": 29.90,
+            "attributes": {
+                "volume": "25ml",
+                "type": "mini-colonia",
+                "gender": "feminino",
+                "line": "Eliana"
+            },
+            "popular": false,
+            "image_keyword": "jequiti-eliana-mini"
+        },
+        {
+            "id": "jeq-043",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Jequiti Eu",
+            "name": "Gel de Banho Eu Arraso 200ml",
+            "category": "banho",
+            "subcategory": "gel-banho",
+            "base_price": 20.93,
+            "suggested_price": 29.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "gel-de-banho",
+                "fragrance": "eu-arraso",
+                "line": "Jequiti Eu"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-eu-gel-banho"
+        },
+        {
+            "id": "jeq-044",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Aire",
+            "name": "Aire Escape Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 66.43,
+            "suggested_price": 94.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "fragrance": "escape",
+                "line": "Aire"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-aire-escape"
+        },
+        {
+            "id": "jeq-045",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Aviva",
+            "name": "Iluminador Facial Aviva",
+            "category": "maquiagem",
+            "subcategory": "iluminador",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "iluminador",
+                "usage": "facial",
+                "line": "Aviva"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-aviva-iluminador"
+        },
+        {
+            "id": "jeq-046",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Patricia Abravanel",
+            "name": "Patricia Abravanel Colônia 25ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 20.93,
+            "suggested_price": 29.90,
+            "attributes": {
+                "volume": "25ml",
+                "type": "mini-colonia",
+                "gender": "feminino",
+                "line": "Patricia Abravanel"
+            },
+            "popular": false,
+            "image_keyword": "jequiti-patricia-abravanel-mini"
+        },
+        {
+            "id": "jeq-047",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Sensi",
+            "name": "Refil Hidratante Sensi 400ml",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 23.03,
+            "suggested_price": 32.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "refil",
+                "line": "Sensi"
+            },
+            "popular": false,
+            "image_keyword": "jequiti-sensi-refil"
+        },
+        {
+            "id": "jeq-048",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Aviva",
+            "name": "Trio de Sombras Aviva",
+            "category": "maquiagem",
+            "subcategory": "sombra",
+            "base_price": 32.13,
+            "suggested_price": 45.90,
+            "attributes": {
+                "type": "trio-sombras",
+                "line": "Aviva"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-aviva-trio-sombras"
+        },
+        {
+            "id": "jeq-049",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Portiolli",
+            "name": "Colônia Portiolli Classic 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 80.43,
+            "suggested_price": 114.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Portiolli"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-portiolli-classic"
+        },
+        {
+            "id": "jeq-050",
+            "brand": "jequiti",
+            "brand_display": "Jequiti",
+            "line": "Ellas",
+            "name": "Máscara de Cílios Alongadora",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 18.83,
+            "suggested_price": 26.90,
+            "attributes": {
+                "type": "mascara",
+                "function": "alongadora",
+                "line": "Ellas"
+            },
+            "popular": true,
+            "image_keyword": "jequiti-ellas-mascara-alongadora"
+        },
+        {
+            "id": "eud-001",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Siàge",
+            "name": "Máscara Cauterização dos Fios 250g",
+            "category": "capilar",
+            "subcategory": "mascara-capilar",
+            "base_price": 52.43,
+            "suggested_price": 74.90,
+            "attributes": {
+                "volume": "250g",
+                "type": "mascara",
+                "function": "cauterizacao",
+                "line": "Siàge"
+            },
+            "popular": true,
+            "image_keyword": "eudora-siage-mascara-cauterizacao"
+        },
+        {
+            "id": "eud-002",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Niina Secrets",
+            "name": "Base Líquida Hidra Glow Niina Secrets",
+            "category": "maquiagem",
+            "subcategory": "base",
+            "base_price": 55.93,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "base-liquida",
+                "finish": "hidra-glow",
+                "line": "Niina Secrets"
+            },
+            "popular": true,
+            "image_keyword": "eudora-niina-secrets-base-hidra-glow"
+        },
+        {
+            "id": "eud-003",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Lyra",
+            "name": "Lyra Desodorante Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 94.43,
+            "suggested_price": 134.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Lyra"
+            },
+            "popular": true,
+            "image_keyword": "eudora-lyra-colonia"
+        },
+        {
+            "id": "eud-004",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Club 6",
+            "name": "Club 6 Desodorante Colônia 95ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 90.93,
+            "suggested_price": 129.90,
+            "attributes": {
+                "volume": "95ml",
+                "type": "desodorante-colonia",
+                "line": "Club 6"
+            },
+            "popular": true,
+            "image_keyword": "eudora-club-6"
+        },
+        {
+            "id": "eud-005",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Instance",
+            "name": "Hidratante Corporal Frutas Vermelhas",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 38.43,
+            "suggested_price": 54.90,
+            "attributes": {
+                "type": "creme",
+                "fragrance": "frutas-vermelhas",
+                "line": "Instance"
+            },
+            "popular": true,
+            "image_keyword": "eudora-instance-frutas-vermelhas"
+        },
+        {
+            "id": "eud-006",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Siàge",
+            "name": "Shampoo Nutri Diamond 250ml",
+            "category": "capilar",
+            "subcategory": "shampoo",
+            "base_price": 30.03,
+            "suggested_price": 42.90,
+            "attributes": {
+                "volume": "250ml",
+                "type": "shampoo",
+                "function": "nutri-diamond",
+                "line": "Siàge"
+            },
+            "popular": true,
+            "image_keyword": "eudora-siage-shampoo-nutri-diamond"
+        },
+        {
+            "id": "eud-007",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Niina Secrets",
+            "name": "Primer Facial Hidra Blur Niina Secrets",
+            "category": "maquiagem",
+            "subcategory": "primer",
+            "base_price": 51.03,
+            "suggested_price": 72.90,
+            "attributes": {
+                "type": "primer",
+                "finish": "hidra-blur",
+                "line": "Niina Secrets"
+            },
+            "popular": true,
+            "image_keyword": "eudora-niina-secrets-primer"
+        },
+        {
+            "id": "eud-008",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Imensi",
+            "name": "Imensi Alive Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 87.43,
+            "suggested_price": 124.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "fragrance": "alive",
+                "line": "Imensi"
+            },
+            "popular": true,
+            "image_keyword": "eudora-imensi-alive"
+        },
+        {
+            "id": "eud-009",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Velvet",
+            "name": "Eudora Velvet Sensual Hidratante 250ml",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 45.43,
+            "suggested_price": 64.90,
+            "attributes": {
+                "volume": "250ml",
+                "type": "creme",
+                "fragrance": "sensual",
+                "line": "Velvet"
+            },
+            "popular": true,
+            "image_keyword": "eudora-velvet-sensual"
+        },
+        {
+            "id": "eud-010",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Soul",
+            "name": "Batom Líquido Matte Tint Soul",
+            "category": "maquiagem",
+            "subcategory": "batom-liquido",
+            "base_price": 31.43,
+            "suggested_price": 44.90,
+            "attributes": {
+                "type": "batom-liquido",
+                "finish": "mate-tint",
+                "line": "Soul"
+            },
+            "popular": true,
+            "image_keyword": "eudora-soul-batom-matte-tint"
+        },
+        {
+            "id": "eud-011",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Siàge",
+            "name": "Combo Nutri Rose (Shampoo+Cond)",
+            "category": "capilar",
+            "subcategory": "combo-capilar",
+            "base_price": 59.43,
+            "suggested_price": 84.90,
+            "attributes": {
+                "type": "combo",
+                "function": "nutri-rose",
+                "line": "Siàge"
+            },
+            "popular": true,
+            "image_keyword": "eudora-siage-combo-nutri-rose"
+        },
+        {
+            "id": "eud-012",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Niina Secrets",
+            "name": "Lip Oil Niina Secrets",
+            "category": "labios",
+            "subcategory": "lip-oil",
+            "base_price": 27.93,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "lip-oil",
+                "line": "Niina Secrets"
+            },
+            "popular": true,
+            "image_keyword": "eudora-niina-secrets-lip-oil"
+        },
+        {
+            "id": "eud-013",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Aurien",
+            "name": "Aurien Gold Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 111.93,
+            "suggested_price": 159.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "line": "Aurien"
+            },
+            "popular": true,
+            "image_keyword": "eudora-aurien-gold"
+        },
+        {
+            "id": "eud-014",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Club 6",
+            "name": "Club 6 Voyage Masculino 95ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 94.43,
+            "suggested_price": 134.90,
+            "attributes": {
+                "volume": "95ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Club 6"
+            },
+            "popular": true,
+            "image_keyword": "eudora-club-6-voyage"
+        },
+        {
+            "id": "eud-015",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Instance",
+            "name": "Creme de Mãos Baunilha 30g",
+            "category": "maos",
+            "subcategory": "creme-maos",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "volume": "30g",
+                "type": "creme",
+                "fragrance": "baunilha",
+                "line": "Instance"
+            },
+            "popular": true,
+            "image_keyword": "eudora-instance-creme-maos-baunilha"
+        },
+        {
+            "id": "eud-016",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Siàge",
+            "name": "Óleo Bifásico Cauterização dos Fios",
+            "category": "capilar",
+            "subcategory": "oleo-capilar",
+            "base_price": 44.03,
+            "suggested_price": 62.90,
+            "attributes": {
+                "type": "oleo-bifasico",
+                "function": "cauterizacao",
+                "line": "Siàge"
+            },
+            "popular": true,
+            "image_keyword": "eudora-siage-oleo-bifasico"
+        },
+        {
+            "id": "eud-017",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Niina Secrets",
+            "name": "Paleta de Sombras Purple Niina Secrets",
+            "category": "maquiagem",
+            "subcategory": "paleta-sombras",
+            "base_price": 83.93,
+            "suggested_price": 119.90,
+            "attributes": {
+                "type": "paleta",
+                "colors": "purple",
+                "line": "Niina Secrets"
+            },
+            "popular": true,
+            "image_keyword": "eudora-niina-secrets-paleta-purple"
+        },
+        {
+            "id": "eud-018",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Chic",
+            "name": "Chic Retrô Desodorante Colônia 95ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 73.43,
+            "suggested_price": 104.90,
+            "attributes": {
+                "volume": "95ml",
+                "type": "desodorante-colonia",
+                "style": "retro",
+                "line": "Chic"
+            },
+            "popular": true,
+            "image_keyword": "eudora-chic-retro"
+        },
+        {
+            "id": "eud-019",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Soul",
+            "name": "Máscara de Cílios Bomb Volumaço",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 30.03,
+            "suggested_price": 42.90,
+            "attributes": {
+                "type": "mascara",
+                "function": "volume",
+                "line": "Soul"
+            },
+            "popular": true,
+            "image_keyword": "eudora-soul-mascara-bomb"
+        },
+        {
+            "id": "eud-020",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Neo",
+            "name": "Neo Dermo Etage Sérum Antioxidante",
+            "category": "facial",
+            "subcategory": "serum",
+            "base_price": 104.93,
+            "suggested_price": 149.90,
+            "attributes": {
+                "type": "serum",
+                "function": "antioxidante",
+                "line": "Neo"
+            },
+            "popular": true,
+            "image_keyword": "eudora-neo-serum-antioxidante"
+        },
+        {
+            "id": "eud-021",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Siàge",
+            "name": "Leave-in Termoprotetor Cicatrifios",
+            "category": "capilar",
+            "subcategory": "leave-in",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "leave-in",
+                "function": "termoprotetor",
+                "line": "Siàge"
+            },
+            "popular": true,
+            "image_keyword": "eudora-siage-leave-in-cicatrifios"
+        },
+        {
+            "id": "eud-022",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Niina Secrets",
+            "name": "Corretivo Perfect Match Niina Secrets",
+            "category": "maquiagem",
+            "subcategory": "corretivo",
+            "base_price": 38.43,
+            "suggested_price": 54.90,
+            "attributes": {
+                "type": "corretivo",
+                "finish": "perfect-match",
+                "line": "Niina Secrets"
+            },
+            "popular": true,
+            "image_keyword": "eudora-niina-secrets-corretivo"
+        },
+        {
+            "id": "eud-023",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "La Victorie",
+            "name": "La Victorie Intense Eau de Parfum 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 153.93,
+            "suggested_price": 219.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "La Victorie"
+            },
+            "popular": true,
+            "image_keyword": "eudora-la-victorie-intense"
+        },
+        {
+            "id": "eud-024",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Club 6",
+            "name": "Club 6 VIP Masculino 95ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 94.43,
+            "suggested_price": 134.90,
+            "attributes": {
+                "volume": "95ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Club 6"
+            },
+            "popular": true,
+            "image_keyword": "eudora-club-6-vip"
+        },
+        {
+            "id": "eud-025",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Instance",
+            "name": "Sabonete Líquido Karité 200ml",
+            "category": "banho",
+            "subcategory": "sabonete-liquido",
+            "base_price": 25.83,
+            "suggested_price": 36.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "sabonete-liquido",
+                "main_ingredient": "karite",
+                "line": "Instance"
+            },
+            "popular": true,
+            "image_keyword": "eudora-instance-sabonete-karite"
+        },
+        {
+            "id": "eud-026",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Siàge",
+            "name": "Máscara Hair-Plastia 250g",
+            "category": "capilar",
+            "subcategory": "mascara-capilar",
+            "base_price": 52.43,
+            "suggested_price": 74.90,
+            "attributes": {
+                "volume": "250g",
+                "type": "mascara",
+                "function": "hair-plastia",
+                "line": "Siàge"
+            },
+            "popular": true,
+            "image_keyword": "eudora-siage-mascara-hair-plastia"
+        },
+        {
+            "id": "eud-027",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Niina Secrets",
+            "name": "Blush & Go Niina Secrets",
+            "category": "maquiagem",
+            "subcategory": "blush",
+            "base_price": 41.93,
+            "suggested_price": 59.90,
+            "attributes": {
+                "type": "blush",
+                "format": "compacto",
+                "line": "Niina Secrets"
+            },
+            "popular": true,
+            "image_keyword": "eudora-niina-secrets-blush-go"
+        },
+        {
+            "id": "eud-028",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Magnific",
+            "name": "Magnific Audaz Desodorante Colônia",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 104.93,
+            "suggested_price": 149.90,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "fragrance": "audaz",
+                "line": "Magnific"
+            },
+            "popular": true,
+            "image_keyword": "eudora-magnific-audaz"
+        },
+        {
+            "id": "eud-029",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Soul",
+            "name": "Lápis para Olhos Superpreto Soul",
+            "category": "maquiagem",
+            "subcategory": "lapis-olhos",
+            "base_price": 20.93,
+            "suggested_price": 29.90,
+            "attributes": {
+                "type": "lapis",
+                "color": "superpreto",
+                "line": "Soul"
+            },
+            "popular": true,
+            "image_keyword": "eudora-soul-lapis-superpreto"
+        },
+        {
+            "id": "eud-030",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Velvet",
+            "name": "Body Splash Velvet Cristal 200ml",
+            "category": "corporal",
+            "subcategory": "body-splash",
+            "base_price": 52.43,
+            "suggested_price": 74.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "body-splash",
+                "fragrance": "cristal",
+                "line": "Velvet"
+            },
+            "popular": true,
+            "image_keyword": "eudora-velvet-body-splash-cristal"
+        },
+        {
+            "id": "eud-031",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Siàge",
+            "name": "Shampoo Glow Expert 250ml",
+            "category": "capilar",
+            "subcategory": "shampoo",
+            "base_price": 30.03,
+            "suggested_price": 42.90,
+            "attributes": {
+                "volume": "250ml",
+                "type": "shampoo",
+                "function": "glow-expert",
+                "line": "Siàge"
+            },
+            "popular": true,
+            "image_keyword": "eudora-siage-shampoo-glow"
+        },
+        {
+            "id": "eud-032",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Niina Secrets",
+            "name": "Iluminador Solto Niina Secrets",
+            "category": "maquiagem",
+            "subcategory": "iluminador",
+            "base_price": 45.43,
+            "suggested_price": 64.90,
+            "attributes": {
+                "type": "iluminador",
+                "format": "solto",
+                "line": "Niina Secrets"
+            },
+            "popular": true,
+            "image_keyword": "eudora-niina-secrets-iluminador-solto"
+        },
+        {
+            "id": "eud-033",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Kiss Me",
+            "name": "Kiss Me Cabernet Colônia 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 62.93,
+            "suggested_price": 89.90,
+            "attributes": {
+                "volume": "50ml",
+                "type": "desodorante-colonia",
+                "fragrance": "cabernet",
+                "line": "Kiss Me"
+            },
+            "popular": true,
+            "image_keyword": "eudora-kiss-me-cabernet"
+        },
+        {
+            "id": "eud-034",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "H",
+            "name": "Eudora H Masculino Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 80.43,
+            "suggested_price": 114.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "H"
+            },
+            "popular": true,
+            "image_keyword": "eudora-h-masculino"
+        },
+        {
+            "id": "eud-035",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Instance",
+            "name": "Hidratante de Mãos Algodão 30g",
+            "category": "maos",
+            "subcategory": "creme-maos",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "volume": "30g",
+                "type": "creme",
+                "fragrance": "algodao",
+                "line": "Instance"
+            },
+            "popular": true,
+            "image_keyword": "eudora-instance-creme-maos-algodao"
+        },
+        {
+            "id": "eud-036",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Siàge",
+            "name": "Máscara Nutri Ouro 250g",
+            "category": "capilar",
+            "subcategory": "mascara-capilar",
+            "base_price": 52.43,
+            "suggested_price": 74.90,
+            "attributes": {
+                "volume": "250g",
+                "type": "mascara",
+                "function": "nutri-ouro",
+                "line": "Siàge"
+            },
+            "popular": true,
+            "image_keyword": "eudora-siage-mascara-nutri-ouro"
+        },
+        {
+            "id": "eud-037",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Soul",
+            "name": "Pó Compacto Facial Soul",
+            "category": "maquiagem",
+            "subcategory": "po-compacto",
+            "base_price": 38.43,
+            "suggested_price": 54.90,
+            "attributes": {
+                "type": "po-compacto",
+                "line": "Soul"
+            },
+            "popular": true,
+            "image_keyword": "eudora-soul-po-compacto"
+        },
+        {
+            "id": "eud-038",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Imensi",
+            "name": "Imensi Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 87.43,
+            "suggested_price": 124.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "line": "Imensi"
+            },
+            "popular": true,
+            "image_keyword": "eudora-imensi-colonia"
+        },
+        {
+            "id": "eud-039",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Velvet",
+            "name": "Velvet Premium Hidratante Corporal",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 48.93,
+            "suggested_price": 69.90,
+            "attributes": {
+                "type": "creme",
+                "line": "Velvet Premium"
+            },
+            "popular": true,
+            "image_keyword": "eudora-velvet-premium"
+        },
+        {
+            "id": "eud-040",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Siàge",
+            "name": "Elixir Capilar Night Sérum Siàge",
+            "category": "capilar",
+            "subcategory": "serum-capilar",
+            "base_price": 41.93,
+            "suggested_price": 59.90,
+            "attributes": {
+                "type": "elixir",
+                "period": "noite",
+                "line": "Siàge"
+            },
+            "popular": true,
+            "image_keyword": "eudora-siage-elixir-night"
+        },
+        {
+            "id": "eud-041",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Niina Secrets",
+            "name": "Batom Líquido Skinny Matte Niina",
+            "category": "maquiagem",
+            "subcategory": "batom-liquido",
+            "base_price": 31.43,
+            "suggested_price": 44.90,
+            "attributes": {
+                "type": "batom-liquido",
+                "finish": "skinny-mate",
+                "line": "Niina Secrets"
+            },
+            "popular": true,
+            "image_keyword": "eudora-niina-secrets-batom-skinny"
+        },
+        {
+            "id": "eud-042",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Lyra",
+            "name": "Lyra Joy Desodorante Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 94.43,
+            "suggested_price": 134.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "fragrance": "joy",
+                "line": "Lyra"
+            },
+            "popular": true,
+            "image_keyword": "eudora-lyra-joy"
+        },
+        {
+            "id": "eud-043",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Instance",
+            "name": "Sabonete em Barra Instance (4un)",
+            "category": "banho",
+            "subcategory": "sabonete",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "quantity": "4un",
+                "type": "sabonete-barra",
+                "line": "Instance"
+            },
+            "popular": false,
+            "image_keyword": "eudora-instance-sabonete"
+        },
+        {
+            "id": "eud-044",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Siàge",
+            "name": "Shampoo Acelera o Crescimento",
+            "category": "capilar",
+            "subcategory": "shampoo",
+            "base_price": 32.83,
+            "suggested_price": 46.90,
+            "attributes": {
+                "type": "shampoo",
+                "function": "acelera-crescimento",
+                "line": "Siàge"
+            },
+            "popular": true,
+            "image_keyword": "eudora-siage-shampoo-crescimento"
+        },
+        {
+            "id": "eud-045",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Soul",
+            "name": "Delineador Líquido Soul 2,5ml",
+            "category": "maquiagem",
+            "subcategory": "delineador",
+            "base_price": 25.83,
+            "suggested_price": 36.90,
+            "attributes": {
+                "volume": "2.5ml",
+                "type": "delineador-liquido",
+                "line": "Soul"
+            },
+            "popular": true,
+            "image_keyword": "eudora-soul-delineador"
+        },
+        {
+            "id": "eud-046",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Club 6",
+            "name": "Club 6 Cassino Masculino 95ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 94.43,
+            "suggested_price": 134.90,
+            "attributes": {
+                "volume": "95ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Club 6"
+            },
+            "popular": true,
+            "image_keyword": "eudora-club-6-cassino"
+        },
+        {
+            "id": "eud-047",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Velvet",
+            "name": "Velvet Exuberante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 73.43,
+            "suggested_price": 104.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "fragrance": "exuberante",
+                "line": "Velvet"
+            },
+            "popular": true,
+            "image_keyword": "eudora-velvet-exuberante"
+        },
+        {
+            "id": "eud-048",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Siàge",
+            "name": "Condicionador Cauterização dos Fios",
+            "category": "capilar",
+            "subcategory": "condicionador",
+            "base_price": 32.83,
+            "suggested_price": 46.90,
+            "attributes": {
+                "type": "condicionador",
+                "function": "cauterizacao",
+                "line": "Siàge"
+            },
+            "popular": true,
+            "image_keyword": "eudora-siage-condicionador-cauterizacao"
+        },
+        {
+            "id": "eud-049",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Soul",
+            "name": "Batom Soul Kiss Me Mate Soul",
+            "category": "maquiagem",
+            "subcategory": "batom",
+            "base_price": 20.93,
+            "suggested_price": 29.90,
+            "attributes": {
+                "type": "batom",
+                "finish": "mate",
+                "line": "Soul"
+            },
+            "popular": true,
+            "image_keyword": "eudora-soul-batom-kiss-me"
+        },
+        {
+            "id": "eud-050",
+            "brand": "eudora",
+            "brand_display": "Eudora",
+            "line": "Magnific",
+            "name": "Magnific Eau de Parfum 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 139.93,
+            "suggested_price": 199.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Magnific"
+            },
+            "popular": true,
+            "image_keyword": "eudora-magnific-edp"
+        }
+    ]
+}

@@ -1,0 +1,1873 @@
+{
+    "products": [
+        {
+            "id": "nat-001",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Kaiak",
+            "name": "Desodorante Colônia Kaiak Masculino 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 118.93,
+            "suggested_price": 169.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Kaiak"
+            },
+            "popular": true,
+            "image_keyword": "natura-kaiak-masculino"
+        },
+        {
+            "id": "nat-002",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Tododia",
+            "name": "Creme Hidratante Cereja e Avelã 400ml",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 48.23,
+            "suggested_price": 68.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "creme",
+                "fragrance": "cereja-avela",
+                "line": "Tododia"
+            },
+            "popular": true,
+            "image_keyword": "natura-tododia-cereja-avela"
+        },
+        {
+            "id": "nat-003",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Ekos",
+            "name": "Polpa Hidratante para Mãos Castanha 75g",
+            "category": "maos",
+            "subcategory": "hidratante-maos",
+            "base_price": 30.73,
+            "suggested_price": 43.90,
+            "attributes": {
+                "volume": "75g",
+                "type": "polpa",
+                "main_ingredient": "castanha",
+                "line": "Ekos"
+            },
+            "popular": true,
+            "image_keyword": "natura-ekos-polpa-maos-castanha"
+        },
+        {
+            "id": "nat-004",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Luna",
+            "name": "Luna Rose Desodorante Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 108.43,
+            "suggested_price": 154.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Luna"
+            },
+            "popular": true,
+            "image_keyword": "natura-luna-rose"
+        },
+        {
+            "id": "nat-005",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Chronos",
+            "name": "Sérum Intensivo Multi-clareador 30g",
+            "category": "facial",
+            "subcategory": "serum",
+            "base_price": 138.60,
+            "suggested_price": 198.00,
+            "attributes": {
+                "volume": "30g",
+                "type": "serum",
+                "function": "clareador",
+                "line": "Chronos"
+            },
+            "popular": false,
+            "image_keyword": "natura-chronos-serum-clareador"
+        },
+        {
+            "id": "nat-006",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Una",
+            "name": "Batom CC Hidratante FPS 25",
+            "category": "maquiagem",
+            "subcategory": "batom",
+            "base_price": 44.03,
+            "suggested_price": 62.90,
+            "attributes": {
+                "type": "batom-cc",
+                "spf": "25",
+                "line": "Una"
+            },
+            "popular": true,
+            "image_keyword": "natura-una-batom-cc"
+        },
+        {
+            "id": "nat-007",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Essencial",
+            "name": "Essencial Exclusivo Masculino 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 153.30,
+            "suggested_price": 219.00,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Essencial"
+            },
+            "popular": true,
+            "image_keyword": "natura-essencial-exclusivo-masculino"
+        },
+        {
+            "id": "nat-008",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Faces",
+            "name": "Batom Matte Faces (Cores Diversas)",
+            "category": "maquiagem",
+            "subcategory": "batom",
+            "base_price": 13.93,
+            "suggested_price": 19.90,
+            "attributes": {
+                "type": "batom-matte",
+                "finish": "matte",
+                "line": "Faces"
+            },
+            "popular": true,
+            "image_keyword": "natura-faces-batom-matte"
+        },
+        {
+            "id": "nat-009",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Mamae e Bebe",
+            "name": "Água de Colônia sem Álcool 100ml",
+            "category": "infantil",
+            "subcategory": "colonia-infantil",
+            "base_price": 59.43,
+            "suggested_price": 84.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "agua-de-colonia",
+                "alcohol_free": true,
+                "line": "Mamãe e Bebê"
+            },
+            "popular": true,
+            "image_keyword": "natura-mamae-bebe-colonia"
+        },
+        {
+            "id": "nat-010",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Humor",
+            "name": "Meu Primeiro Humor Feminino 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 97.93,
+            "suggested_price": 139.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Humor"
+            },
+            "popular": true,
+            "image_keyword": "natura-humor-meu-primeiro"
+        },
+        {
+            "id": "nat-011",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Tododia",
+            "name": "Body Splash Algodão 200ml",
+            "category": "corporal",
+            "subcategory": "body-splash",
+            "base_price": 48.93,
+            "suggested_price": 69.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "body-splash",
+                "fragrance": "algodao",
+                "line": "Tododia"
+            },
+            "popular": true,
+            "image_keyword": "natura-tododia-body-splash-algodao"
+        },
+        {
+            "id": "nat-012",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Ekos",
+            "name": "Desodorante Colônia Frescor Maracujá 150ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 66.43,
+            "suggested_price": 94.90,
+            "attributes": {
+                "volume": "150ml",
+                "type": "desodorante-colonia",
+                "fragrance": "maracuja",
+                "line": "Ekos"
+            },
+            "popular": false,
+            "image_keyword": "natura-ekos-frescor-maracuja"
+        },
+        {
+            "id": "nat-013",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Una",
+            "name": "Base Serum FPS 15",
+            "category": "maquiagem",
+            "subcategory": "base",
+            "base_price": 90.93,
+            "suggested_price": 129.90,
+            "attributes": {
+                "type": "base-serum",
+                "spf": "15",
+                "line": "Una"
+            },
+            "popular": true,
+            "image_keyword": "natura-una-base-serum"
+        },
+        {
+            "id": "nat-014",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Chronos",
+            "name": "Aqua Auto-hidratante Renovador 40g",
+            "category": "facial",
+            "subcategory": "hidratante-facial",
+            "base_price": 101.50,
+            "suggested_price": 145.00,
+            "attributes": {
+                "volume": "40g",
+                "type": "gel-creme",
+                "function": "autohidratante",
+                "line": "Chronos"
+            },
+            "popular": false,
+            "image_keyword": "natura-chronos-aqua-autohidratante"
+        },
+        {
+            "id": "nat-015",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Homem",
+            "name": "Natura Homem Sagaz 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 128.80,
+            "suggested_price": 184.00,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Homem"
+            },
+            "popular": true,
+            "image_keyword": "natura-homem-sagaz"
+        },
+        {
+            "id": "nat-016",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Ekos",
+            "name": "Óleo Trifásico Corporal Andiroba 200ml",
+            "category": "corporal",
+            "subcategory": "oleo-corporal",
+            "base_price": 51.03,
+            "suggested_price": 72.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "oleo-trifasico",
+                "main_ingredient": "andiroba",
+                "line": "Ekos"
+            },
+            "popular": false,
+            "image_keyword": "natura-ekos-oleo-trifasico-andiroba"
+        },
+        {
+            "id": "nat-017",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Tododia",
+            "name": "Sabonete em Barra Alecrim e Sálvia (5un)",
+            "category": "banho",
+            "subcategory": "sabonete",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "quantity": "5un",
+                "type": "sabonete-barra",
+                "fragrance": "alecrim-salvia",
+                "line": "Tododia"
+            },
+            "popular": false,
+            "image_keyword": "natura-tododia-sabonete-alecrim-salvia"
+        },
+        {
+            "id": "nat-018",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Plant",
+            "name": "Máscara de Hidratação Reparadora 250g",
+            "category": "capilar",
+            "subcategory": "mascara-capilar",
+            "base_price": 30.03,
+            "suggested_price": 42.90,
+            "attributes": {
+                "volume": "250g",
+                "type": "mascara",
+                "function": "hidratacao-reparadora",
+                "line": "Plant"
+            },
+            "popular": false,
+            "image_keyword": "natura-plant-mascara-hidratacao"
+        },
+        {
+            "id": "nat-019",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Seve",
+            "name": "Óleo Corporal Amêndoas Doces 200ml",
+            "category": "corporal",
+            "subcategory": "oleo-corporal",
+            "base_price": 62.93,
+            "suggested_price": 89.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "oleo-corporal",
+                "main_ingredient": "amendoas-doces",
+                "line": "Sève"
+            },
+            "popular": true,
+            "image_keyword": "natura-seve-oleo-amendoas"
+        },
+        {
+            "id": "nat-020",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Lumina",
+            "name": "Shampoo Reequilibrante Anticaspa 300ml",
+            "category": "capilar",
+            "subcategory": "shampoo",
+            "base_price": 27.23,
+            "suggested_price": 38.90,
+            "attributes": {
+                "volume": "300ml",
+                "type": "shampoo",
+                "function": "anticaspa",
+                "line": "Lumina"
+            },
+            "popular": false,
+            "image_keyword": "natura-lumina-shampoo-anticaspa"
+        },
+        {
+            "id": "nat-021",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Kaiak",
+            "name": "Kaiak Aventura Intenso 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 118.93,
+            "suggested_price": 169.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Kaiak"
+            },
+            "popular": true,
+            "image_keyword": "natura-kaiak-aventura-intenso"
+        },
+        {
+            "id": "nat-022",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Chronos",
+            "name": "Protetor Clareador FPS 70",
+            "category": "facial",
+            "subcategory": "protetor-solar",
+            "base_price": 80.50,
+            "suggested_price": 115.00,
+            "attributes": {
+                "type": "protetor-solar",
+                "spf": "70",
+                "function": "clareador",
+                "line": "Chronos"
+            },
+            "popular": false,
+            "image_keyword": "natura-chronos-protetor-fps70"
+        },
+        {
+            "id": "nat-023",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Tododia",
+            "name": "Desodorante Roll-on Sem Perfume",
+            "category": "higiene",
+            "subcategory": "desodorante",
+            "base_price": 16.03,
+            "suggested_price": 22.90,
+            "attributes": {
+                "type": "desodorante-rollon",
+                "fragrance": "sem-perfume",
+                "line": "Tododia"
+            },
+            "popular": false,
+            "image_keyword": "natura-tododia-desodorante-rollon"
+        },
+        {
+            "id": "nat-024",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Ekos",
+            "name": "Polpa para Pés Castanha 75g",
+            "category": "corporal",
+            "subcategory": "hidratante-pes",
+            "base_price": 30.73,
+            "suggested_price": 43.90,
+            "attributes": {
+                "volume": "75g",
+                "type": "polpa",
+                "main_ingredient": "castanha",
+                "line": "Ekos"
+            },
+            "popular": false,
+            "image_keyword": "natura-ekos-polpa-pes-castanha"
+        },
+        {
+            "id": "nat-025",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Una",
+            "name": "Delineador Peel Off Preto",
+            "category": "maquiagem",
+            "subcategory": "delineador",
+            "base_price": 46.13,
+            "suggested_price": 65.90,
+            "attributes": {
+                "type": "delineador-peel-off",
+                "color": "preto",
+                "line": "Una"
+            },
+            "popular": true,
+            "image_keyword": "natura-una-delineador-peel-off"
+        },
+        {
+            "id": "nat-026",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Essencial",
+            "name": "Essencial Oud Feminino 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 167.30,
+            "suggested_price": 239.00,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Essencial"
+            },
+            "popular": true,
+            "image_keyword": "natura-essencial-oud-feminino"
+        },
+        {
+            "id": "nat-027",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Biografia",
+            "name": "Biografia Assinatura Masculino 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 111.93,
+            "suggested_price": 159.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Biografia"
+            },
+            "popular": true,
+            "image_keyword": "natura-biografia-assinatura-masculino"
+        },
+        {
+            "id": "nat-028",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Tododia",
+            "name": "Hidratante Noz Pecã e Cacau 400ml",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 48.23,
+            "suggested_price": 68.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "creme",
+                "fragrance": "noz-peca-cacau",
+                "line": "Tododia"
+            },
+            "popular": true,
+            "image_keyword": "natura-tododia-noz-peca-cacau"
+        },
+        {
+            "id": "nat-029",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Kaiak",
+            "name": "Kaiak Vital Feminino 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 111.93,
+            "suggested_price": 159.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Kaiak"
+            },
+            "popular": true,
+            "image_keyword": "natura-kaiak-vital-feminino"
+        },
+        {
+            "id": "nat-030",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Aguas",
+            "name": "Águas de Jabuticaba 150ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 62.93,
+            "suggested_price": 89.90,
+            "attributes": {
+                "volume": "150ml",
+                "type": "desodorante-colonia",
+                "fragrance": "jabuticaba",
+                "line": "Águas"
+            },
+            "popular": false,
+            "image_keyword": "natura-aguas-jabuticaba"
+        },
+        {
+            "id": "nat-031",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Faces",
+            "name": "Lápis para Olhos Preto",
+            "category": "maquiagem",
+            "subcategory": "lapis-olhos",
+            "base_price": 18.83,
+            "suggested_price": 26.90,
+            "attributes": {
+                "type": "lapis-olhos",
+                "color": "preto",
+                "line": "Faces"
+            },
+            "popular": true,
+            "image_keyword": "natura-faces-lapis-olhos-preto"
+        },
+        {
+            "id": "nat-032",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Chronos",
+            "name": "Sérum Preenchedor Bioidratante 30ml",
+            "category": "facial",
+            "subcategory": "serum",
+            "base_price": 125.30,
+            "suggested_price": 179.00,
+            "attributes": {
+                "volume": "30ml",
+                "type": "serum",
+                "function": "preenchedor",
+                "line": "Chronos"
+            },
+            "popular": true,
+            "image_keyword": "natura-chronos-serum-preenchedor"
+        },
+        {
+            "id": "nat-033",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Mamae e Bebe",
+            "name": "Sabonete Líquido Glicerinado 200ml",
+            "category": "infantil",
+            "subcategory": "sabonete",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "sabonete-liquido",
+                "hypoallergenic": true,
+                "line": "Mamãe e Bebê"
+            },
+            "popular": true,
+            "image_keyword": "natura-mamae-bebe-sabonete-liquido"
+        },
+        {
+            "id": "nat-034",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Tododia",
+            "name": "Refil Hidratante Amora Vermelha 400ml",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "refil",
+                "fragrance": "amora-vermelha",
+                "line": "Tododia"
+            },
+            "popular": false,
+            "image_keyword": "natura-tododia-refil-amora-vermelha"
+        },
+        {
+            "id": "nat-035",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Ekos",
+            "name": "Sabonete Líquido Esfoliante Castanha 200ml",
+            "category": "banho",
+            "subcategory": "sabonete-esfoliante",
+            "base_price": 31.43,
+            "suggested_price": 44.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "sabonete-esfoliante",
+                "main_ingredient": "castanha",
+                "line": "Ekos"
+            },
+            "popular": false,
+            "image_keyword": "natura-ekos-sabonete-esfoliante-castanha"
+        },
+        {
+            "id": "nat-036",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Una",
+            "name": "Máscara de Cílios Secret",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 64.40,
+            "suggested_price": 92.00,
+            "attributes": {
+                "type": "mascara",
+                "function": "volumoso",
+                "line": "Una"
+            },
+            "popular": true,
+            "image_keyword": "natura-una-mascara-secret"
+        },
+        {
+            "id": "nat-037",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Kriska",
+            "name": "Kriska Drama 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 87.43,
+            "suggested_price": 124.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Kriska"
+            },
+            "popular": true,
+            "image_keyword": "natura-kriska-drama"
+        },
+        {
+            "id": "nat-038",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Homem",
+            "name": "Shampoo 2 em 1 Cabelo e Corpo 200ml",
+            "category": "capilar",
+            "subcategory": "shampoo",
+            "base_price": 25.83,
+            "suggested_price": 36.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "shampoo-2em1",
+                "function": "cabelo-e-corpo",
+                "line": "Homem"
+            },
+            "popular": false,
+            "image_keyword": "natura-homem-shampoo-2em1"
+        },
+        {
+            "id": "nat-039",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Tododia",
+            "name": "Body Splash Manga Rosa e Água de Coco",
+            "category": "corporal",
+            "subcategory": "body-splash",
+            "base_price": 48.93,
+            "suggested_price": 69.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "body-splash",
+                "fragrance": "manga-rosa-agua-coco",
+                "line": "Tododia"
+            },
+            "popular": true,
+            "image_keyword": "natura-tododia-body-splash-manga-rosa"
+        },
+        {
+            "id": "nat-040",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Plant",
+            "name": "Condicionador Revitalização Pós-Química",
+            "category": "capilar",
+            "subcategory": "condicionador",
+            "base_price": 20.93,
+            "suggested_price": 29.90,
+            "attributes": {
+                "type": "condicionador",
+                "function": "revitalizacao-pos-quimica",
+                "line": "Plant"
+            },
+            "popular": false,
+            "image_keyword": "natura-plant-condicionador-pos-quimica"
+        },
+        {
+            "id": "nat-041",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Faces",
+            "name": "Corretivo Alta Cobertura Faces",
+            "category": "maquiagem",
+            "subcategory": "corretivo",
+            "base_price": 24.43,
+            "suggested_price": 34.90,
+            "attributes": {
+                "type": "corretivo",
+                "coverage": "alta",
+                "line": "Faces"
+            },
+            "popular": true,
+            "image_keyword": "natura-faces-corretivo-alta-cobertura"
+        },
+        {
+            "id": "nat-042",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Seve",
+            "name": "Refil Óleo Amêndoas e Cereja 200ml",
+            "category": "corporal",
+            "subcategory": "oleo-corporal",
+            "base_price": 45.43,
+            "suggested_price": 64.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "refil",
+                "fragrance": "amendoas-cereja",
+                "line": "Sève"
+            },
+            "popular": false,
+            "image_keyword": "natura-seve-refil-amendoas-cereja"
+        },
+        {
+            "id": "nat-043",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Ekos",
+            "name": "Moça Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 83.93,
+            "suggested_price": 119.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Ekos"
+            },
+            "popular": true,
+            "image_keyword": "natura-ekos-moca"
+        },
+        {
+            "id": "nat-044",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Chronos",
+            "name": "Gel Creme Antissinais 45+ Noite",
+            "category": "facial",
+            "subcategory": "anti-rugas",
+            "base_price": 93.80,
+            "suggested_price": 134.00,
+            "attributes": {
+                "volume": "40g",
+                "type": "gel-creme",
+                "function": "antissinais",
+                "age": "45+",
+                "period": "noite",
+                "line": "Chronos"
+            },
+            "popular": false,
+            "image_keyword": "natura-chronos-antissinais-45-noite"
+        },
+        {
+            "id": "nat-045",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Tododia",
+            "name": "Sabonete em Barra Macadâmia (5un)",
+            "category": "banho",
+            "subcategory": "sabonete",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "quantity": "5un",
+                "type": "sabonete-barra",
+                "fragrance": "macadamia",
+                "line": "Tododia"
+            },
+            "popular": false,
+            "image_keyword": "natura-tododia-sabonete-macadamia"
+        },
+        {
+            "id": "nat-046",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Una",
+            "name": "Iluminador Marmorizado de Corpo",
+            "category": "maquiagem",
+            "subcategory": "iluminador",
+            "base_price": 80.50,
+            "suggested_price": 115.00,
+            "attributes": {
+                "type": "iluminador",
+                "finish": "marmorizado",
+                "usage": "corpo",
+                "line": "Una"
+            },
+            "popular": true,
+            "image_keyword": "natura-una-iluminador-marmorizado-corpo"
+        },
+        {
+            "id": "nat-047",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Kaiak",
+            "name": "Kaiak Oceano Masculino 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 118.93,
+            "suggested_price": 169.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Kaiak"
+            },
+            "popular": true,
+            "image_keyword": "natura-kaiak-oceano"
+        },
+        {
+            "id": "nat-048",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Lumina",
+            "name": "Fluido Termoprotetor Lumina 150ml",
+            "category": "capilar",
+            "subcategory": "protetor-termico",
+            "base_price": 38.43,
+            "suggested_price": 54.90,
+            "attributes": {
+                "volume": "150ml",
+                "type": "fluido-termoprotetor",
+                "function": "protecao-termica",
+                "line": "Lumina"
+            },
+            "popular": false,
+            "image_keyword": "natura-lumina-fluido-termoprotetor"
+        },
+        {
+            "id": "nat-049",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Homem",
+            "name": "Natura Homem Cor.agio 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 157.50,
+            "suggested_price": 225.00,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Homem"
+            },
+            "popular": true,
+            "image_keyword": "natura-homem-coragio"
+        },
+        {
+            "id": "nat-050",
+            "brand": "natura",
+            "brand_display": "Natura",
+            "line": "Faces",
+            "name": "Blush Color Faces",
+            "category": "maquiagem",
+            "subcategory": "blush",
+            "base_price": 27.93,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "blush",
+                "finish": "color",
+                "line": "Faces"
+            },
+            "popular": true,
+            "image_keyword": "natura-faces-blush-color"
+        },
+        {
+            "id": "avn-001",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Renew",
+            "name": "Renew Clinical Concentrado Preenchedor",
+            "category": "facial",
+            "subcategory": "serum",
+            "base_price": 104.93,
+            "suggested_price": 149.90,
+            "attributes": {
+                "type": "serum-concentrado",
+                "function": "preenchedor",
+                "line": "Renew"
+            },
+            "popular": true,
+            "image_keyword": "avon-renew-clinical-preenchedor"
+        },
+        {
+            "id": "avn-002",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Power Stay",
+            "name": "Batom Líquido 16h Power Stay",
+            "category": "maquiagem",
+            "subcategory": "batom-liquido",
+            "base_price": 31.43,
+            "suggested_price": 44.90,
+            "attributes": {
+                "type": "batom-liquido",
+                "duration": "16h",
+                "finish": "power-stay",
+                "line": "Power Stay"
+            },
+            "popular": true,
+            "image_keyword": "avon-power-stay-batom-16h"
+        },
+        {
+            "id": "avn-003",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Far Away",
+            "name": "Far Away Beyond Parfum 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 76.93,
+            "suggested_price": 109.90,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Far Away"
+            },
+            "popular": true,
+            "image_keyword": "avon-far-away-beyond"
+        },
+        {
+            "id": "avn-004",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Care",
+            "name": "Hidratante Corporal Erva Doce 750ml",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 30.03,
+            "suggested_price": 42.90,
+            "attributes": {
+                "volume": "750ml",
+                "type": "creme",
+                "fragrance": "erva-doce",
+                "line": "Care"
+            },
+            "popular": true,
+            "image_keyword": "avon-care-hidratante-erva-doce"
+        },
+        {
+            "id": "avn-005",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Advance Techniques",
+            "name": "Óleo de Tratamento Argan e Coco",
+            "category": "capilar",
+            "subcategory": "oleo-capilar",
+            "base_price": 23.03,
+            "suggested_price": 32.90,
+            "attributes": {
+                "type": "oleo-tratamento",
+                "main_ingredient": "argan-coco",
+                "line": "Advance Techniques"
+            },
+            "popular": true,
+            "image_keyword": "avon-advance-oleo-argan-coco"
+        },
+        {
+            "id": "avn-006",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Renew",
+            "name": "Renew Reversalist Dia FPS 25 50g",
+            "category": "facial",
+            "subcategory": "creme-dia",
+            "base_price": 62.93,
+            "suggested_price": 89.90,
+            "attributes": {
+                "volume": "50g",
+                "type": "creme-dia",
+                "spf": "25",
+                "line": "Renew"
+            },
+            "popular": true,
+            "image_keyword": "avon-renew-reversalist-dia"
+        },
+        {
+            "id": "avn-007",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Glimmerstick",
+            "name": "Lápis Retrátil para Olhos Preto",
+            "category": "maquiagem",
+            "subcategory": "lapis-olhos",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "type": "lapis-retratil",
+                "color": "preto",
+                "line": "Glimmerstick"
+            },
+            "popular": true,
+            "image_keyword": "avon-glimmerstick-lapis-preto"
+        },
+        {
+            "id": "avn-008",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Pur Blanca",
+            "name": "Pur Blanca Desodorante Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 48.93,
+            "suggested_price": 69.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Pur Blanca"
+            },
+            "popular": true,
+            "image_keyword": "avon-pur-blanca-colonia"
+        },
+        {
+            "id": "avn-009",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Color Trend",
+            "name": "Pó Compacto Matte Real",
+            "category": "maquiagem",
+            "subcategory": "po-compacto",
+            "base_price": 20.93,
+            "suggested_price": 29.90,
+            "attributes": {
+                "type": "po-compacto",
+                "finish": "mate",
+                "line": "Color Trend"
+            },
+            "popular": true,
+            "image_keyword": "avon-color-trend-po-matte"
+        },
+        {
+            "id": "avn-010",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Care",
+            "name": "Creme de Mãos Silicone 75g",
+            "category": "maos",
+            "subcategory": "creme-maos",
+            "base_price": 10.43,
+            "suggested_price": 14.90,
+            "attributes": {
+                "volume": "75g",
+                "type": "creme",
+                "main_ingredient": "silicone",
+                "line": "Care"
+            },
+            "popular": true,
+            "image_keyword": "avon-care-creme-maos-silicone"
+        },
+        {
+            "id": "avn-011",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Renew",
+            "name": "Renew Platinum Noite 50g",
+            "category": "facial",
+            "subcategory": "creme-noite",
+            "base_price": 69.93,
+            "suggested_price": 99.90,
+            "attributes": {
+                "volume": "50g",
+                "type": "creme-noite",
+                "line": "Renew"
+            },
+            "popular": true,
+            "image_keyword": "avon-renew-platinum-noite"
+        },
+        {
+            "id": "avn-012",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Power Stay",
+            "name": "Base Líquida 24h Power Stay",
+            "category": "maquiagem",
+            "subcategory": "base",
+            "base_price": 45.43,
+            "suggested_price": 64.90,
+            "attributes": {
+                "type": "base-liquida",
+                "duration": "24h",
+                "line": "Power Stay"
+            },
+            "popular": true,
+            "image_keyword": "avon-power-stay-base-24h"
+        },
+        {
+            "id": "avn-013",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Musk",
+            "name": "Musk Marine Desodorante Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 38.43,
+            "suggested_price": 54.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "fragrance": "marine",
+                "line": "Musk"
+            },
+            "popular": true,
+            "image_keyword": "avon-musk-marine"
+        },
+        {
+            "id": "avn-014",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Advance Techniques",
+            "name": "Shampoo Reconstrução Extrema 300ml",
+            "category": "capilar",
+            "subcategory": "shampoo",
+            "base_price": 16.03,
+            "suggested_price": 22.90,
+            "attributes": {
+                "volume": "300ml",
+                "type": "shampoo",
+                "function": "reconstrucao-extrema",
+                "line": "Advance Techniques"
+            },
+            "popular": true,
+            "image_keyword": "avon-advance-shampoo-reconstrucao"
+        },
+        {
+            "id": "avn-015",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Color Trend",
+            "name": "Batom Hidratante FPS 15",
+            "category": "maquiagem",
+            "subcategory": "batom",
+            "base_price": 11.83,
+            "suggested_price": 16.90,
+            "attributes": {
+                "type": "batom",
+                "spf": "15",
+                "line": "Color Trend"
+            },
+            "popular": true,
+            "image_keyword": "avon-color-trend-batom-fps15"
+        },
+        {
+            "id": "avn-016",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Renew",
+            "name": "Renew Vitamin C Sérum 30ml",
+            "category": "facial",
+            "subcategory": "serum",
+            "base_price": 83.93,
+            "suggested_price": 119.90,
+            "attributes": {
+                "volume": "30ml",
+                "type": "serum",
+                "main_ingredient": "vitamina-c",
+                "line": "Renew"
+            },
+            "popular": true,
+            "image_keyword": "avon-renew-serum-vitamina-c"
+        },
+        {
+            "id": "avn-017",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Encanto",
+            "name": "Loção Hidratante Irresistível 400ml",
+            "category": "corporal",
+            "subcategory": "locao-hidratante",
+            "base_price": 27.93,
+            "suggested_price": 39.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "locao",
+                "fragrance": "irresistivel",
+                "line": "Encanto"
+            },
+            "popular": true,
+            "image_keyword": "avon-encanto-locao-irresistivel"
+        },
+        {
+            "id": "avn-018",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Black Suede",
+            "name": "Black Suede Hot Desodorante Colônia",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 59.43,
+            "suggested_price": 84.90,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Black Suede"
+            },
+            "popular": true,
+            "image_keyword": "avon-black-suede-hot"
+        },
+        {
+            "id": "avn-019",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Foot Works",
+            "name": "Creme Esfoliante para Pés 90g",
+            "category": "pes",
+            "subcategory": "creme-esfoliante",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "volume": "90g",
+                "type": "creme-esfoliante",
+                "line": "Foot Works"
+            },
+            "popular": false,
+            "image_keyword": "avon-foot-works-esfoliante-pes"
+        },
+        {
+            "id": "avn-020",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Clearskin",
+            "name": "Gel Secativo de Ação Rápida 15g",
+            "category": "facial",
+            "subcategory": "tratamento-acne",
+            "base_price": 15.33,
+            "suggested_price": 21.90,
+            "attributes": {
+                "volume": "15g",
+                "type": "gel-secativo",
+                "function": "acao-rapida",
+                "line": "Clearskin"
+            },
+            "popular": true,
+            "image_keyword": "avon-clearskin-gel-secativo"
+        },
+        {
+            "id": "avn-021",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Renew",
+            "name": "Renew Ultimate Dia FPS 25 50g",
+            "category": "facial",
+            "subcategory": "creme-dia",
+            "base_price": 66.43,
+            "suggested_price": 94.90,
+            "attributes": {
+                "volume": "50g",
+                "type": "creme-dia",
+                "spf": "25",
+                "line": "Renew"
+            },
+            "popular": true,
+            "image_keyword": "avon-renew-ultimate-dia"
+        },
+        {
+            "id": "avn-022",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Power Stay",
+            "name": "Máscara de Cílios 24h",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "mascara",
+                "duration": "24h",
+                "line": "Power Stay"
+            },
+            "popular": true,
+            "image_keyword": "avon-power-stay-mascara-24h"
+        },
+        {
+            "id": "avn-023",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Wild Country",
+            "name": "Wild Country Spirit Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 55.93,
+            "suggested_price": 79.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Wild Country"
+            },
+            "popular": true,
+            "image_keyword": "avon-wild-country-spirit"
+        },
+        {
+            "id": "avn-024",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Care",
+            "name": "Loção Hidratante Milk 400ml",
+            "category": "corporal",
+            "subcategory": "locao-hidratante",
+            "base_price": 20.23,
+            "suggested_price": 28.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "locao",
+                "main_ingredient": "leite",
+                "line": "Care"
+            },
+            "popular": true,
+            "image_keyword": "avon-care-locao-milk"
+        },
+        {
+            "id": "avn-025",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Color Trend",
+            "name": "Delineador Líquido Preto",
+            "category": "maquiagem",
+            "subcategory": "delineador",
+            "base_price": 16.03,
+            "suggested_price": 22.90,
+            "attributes": {
+                "type": "delineador-liquido",
+                "color": "preto",
+                "line": "Color Trend"
+            },
+            "popular": true,
+            "image_keyword": "avon-color-trend-delineador-liquido"
+        },
+        {
+            "id": "avn-026",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Advance Techniques",
+            "name": "Condicionador Brilho Extraordinário",
+            "category": "capilar",
+            "subcategory": "condicionador",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "type": "condicionador",
+                "function": "brilho-extraordinario",
+                "line": "Advance Techniques"
+            },
+            "popular": true,
+            "image_keyword": "avon-advance-condicionador-brilho"
+        },
+        {
+            "id": "avn-027",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Renew",
+            "name": "Renew Hydra Pro Vita-D 50g",
+            "category": "facial",
+            "subcategory": "hidratante",
+            "base_price": 55.93,
+            "suggested_price": 79.90,
+            "attributes": {
+                "volume": "50g",
+                "type": "hidratante",
+                "main_ingredient": "vita-d",
+                "line": "Renew"
+            },
+            "popular": false,
+            "image_keyword": "avon-renew-hydra-pro-vita-d"
+        },
+        {
+            "id": "avn-028",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Exclusive",
+            "name": "Exclusive In Blue Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 62.93,
+            "suggested_price": 89.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Exclusive"
+            },
+            "popular": true,
+            "image_keyword": "avon-exclusive-in-blue"
+        },
+        {
+            "id": "avn-029",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Color Trend",
+            "name": "Blush em Pó Color Trend",
+            "category": "maquiagem",
+            "subcategory": "blush",
+            "base_price": 18.83,
+            "suggested_price": 26.90,
+            "attributes": {
+                "type": "blush",
+                "format": "po",
+                "line": "Color Trend"
+            },
+            "popular": true,
+            "image_keyword": "avon-color-trend-blush-po"
+        },
+        {
+            "id": "avn-030",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Care",
+            "name": "Protetor Solar FPS 50 120g",
+            "category": "protecao-solar",
+            "subcategory": "protetor-solar",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "volume": "120g",
+                "type": "protetor-solar",
+                "spf": "50",
+                "line": "Care"
+            },
+            "popular": true,
+            "image_keyword": "avon-care-protetor-solar-fps50"
+        },
+        {
+            "id": "avn-031",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Renew",
+            "name": "Renew Clinical Clareador de Olheiras",
+            "category": "facial",
+            "subcategory": "tratamento-olhos",
+            "base_price": 48.93,
+            "suggested_price": 69.90,
+            "attributes": {
+                "type": "clareador-olheiras",
+                "function": "clinical",
+                "line": "Renew"
+            },
+            "popular": true,
+            "image_keyword": "avon-renew-clinical-clareador-olheiras"
+        },
+        {
+            "id": "avn-032",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Far Away",
+            "name": "Far Away Glamour 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 66.43,
+            "suggested_price": 94.90,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Far Away"
+            },
+            "popular": true,
+            "image_keyword": "avon-far-away-glamour"
+        },
+        {
+            "id": "avn-033",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Color Trend",
+            "name": "Corretivo Líquido Matte Real",
+            "category": "maquiagem",
+            "subcategory": "corretivo",
+            "base_price": 15.33,
+            "suggested_price": 21.90,
+            "attributes": {
+                "type": "corretivo-liquido",
+                "finish": "mate",
+                "line": "Color Trend"
+            },
+            "popular": true,
+            "image_keyword": "avon-color-trend-corretivo-matte"
+        },
+        {
+            "id": "avn-034",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Advance Techniques",
+            "name": "Creme de Pentear Cachos Fabulosos",
+            "category": "capilar",
+            "subcategory": "creme-pentear",
+            "base_price": 20.23,
+            "suggested_price": 28.90,
+            "attributes": {
+                "type": "creme-de-pentear",
+                "hair_type": "cachos",
+                "line": "Advance Techniques"
+            },
+            "popular": true,
+            "image_keyword": "avon-advance-creme-pentear-cachos"
+        },
+        {
+            "id": "avn-035",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Clearskin",
+            "name": "Máscara Negra Facial 60g",
+            "category": "facial",
+            "subcategory": "mascara-facial",
+            "base_price": 18.83,
+            "suggested_price": 26.90,
+            "attributes": {
+                "volume": "60g",
+                "type": "mascara-negra",
+                "function": "limpeza-profunda",
+                "line": "Clearskin"
+            },
+            "popular": true,
+            "image_keyword": "avon-clearskin-mascara-negra"
+        },
+        {
+            "id": "avn-036",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Musk",
+            "name": "Musk Freeze Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 38.43,
+            "suggested_price": 54.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "fragrance": "freeze",
+                "line": "Musk"
+            },
+            "popular": true,
+            "image_keyword": "avon-musk-freeze"
+        },
+        {
+            "id": "avn-037",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Care",
+            "name": "Sabonete Líquido Íntimo 200ml",
+            "category": "higiene",
+            "subcategory": "sabonete-intimo",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "sabonete-liquido",
+                "line": "Care"
+            },
+            "popular": true,
+            "image_keyword": "avon-care-sabonete-intimo"
+        },
+        {
+            "id": "avn-038",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Power Stay",
+            "name": "Corretivo Líquido 18h",
+            "category": "maquiagem",
+            "subcategory": "corretivo",
+            "base_price": 27.93,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "corretivo-liquido",
+                "duration": "18h",
+                "line": "Power Stay"
+            },
+            "popular": true,
+            "image_keyword": "avon-power-stay-corretivo-18h"
+        },
+        {
+            "id": "avn-039",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Renew",
+            "name": "Renew Solar Advance FPS 50 50ml",
+            "category": "facial",
+            "subcategory": "protetor-solar",
+            "base_price": 41.93,
+            "suggested_price": 59.90,
+            "attributes": {
+                "volume": "50ml",
+                "type": "protetor-solar",
+                "spf": "50",
+                "line": "Renew"
+            },
+            "popular": true,
+            "image_keyword": "avon-renew-solar-advance"
+        },
+        {
+            "id": "avn-040",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Far Away",
+            "name": "Far Away Aurora 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 66.43,
+            "suggested_price": 94.90,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Far Away"
+            },
+            "popular": true,
+            "image_keyword": "avon-far-away-aurora"
+        },
+        {
+            "id": "avn-041",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Color Trend",
+            "name": "Esmalte Brilho e Longa Duração",
+            "category": "maquiagem",
+            "subcategory": "esmalte",
+            "base_price": 4.83,
+            "suggested_price": 6.90,
+            "attributes": {
+                "type": "esmalte",
+                "finish": "brilho-longa-duracao",
+                "line": "Color Trend"
+            },
+            "popular": true,
+            "image_keyword": "avon-color-trend-esmalte"
+        },
+        {
+            "id": "avn-042",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Advance Techniques",
+            "name": "Máscara de Nutrição Completa 250g",
+            "category": "capilar",
+            "subcategory": "mascara-capilar",
+            "base_price": 24.43,
+            "suggested_price": 34.90,
+            "attributes": {
+                "volume": "250g",
+                "type": "mascara",
+                "function": "nutricao-completa",
+                "line": "Advance Techniques"
+            },
+            "popular": true,
+            "image_keyword": "avon-advance-mascara-nutricao"
+        },
+        {
+            "id": "avn-043",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Renew",
+            "name": "Água Micelar com Ácido Hialurônico",
+            "category": "facial",
+            "subcategory": "agua-micelar",
+            "base_price": 30.03,
+            "suggested_price": 42.90,
+            "attributes": {
+                "type": "agua-micelar",
+                "main_ingredient": "acido-hialuronico",
+                "line": "Renew"
+            },
+            "popular": true,
+            "image_keyword": "avon-renew-agua-micelar"
+        },
+        {
+            "id": "avn-044",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Pur Blanca",
+            "name": "Pur Blanca Serenity 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 48.93,
+            "suggested_price": 69.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "fragrance": "serenity",
+                "line": "Pur Blanca"
+            },
+            "popular": true,
+            "image_keyword": "avon-pur-blanca-serenity"
+        },
+        {
+            "id": "avn-045",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Care",
+            "name": "Loção Hidratante Restauradora 400ml",
+            "category": "corporal",
+            "subcategory": "locao-hidratante",
+            "base_price": 20.23,
+            "suggested_price": 28.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "locao",
+                "function": "restauradora",
+                "line": "Care"
+            },
+            "popular": true,
+            "image_keyword": "avon-care-locao-restauradora"
+        },
+        {
+            "id": "avn-046",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Color Trend",
+            "name": "Mascara de Cílios Invisible Crush",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 16.03,
+            "suggested_price": 22.90,
+            "attributes": {
+                "type": "mascara",
+                "finish": "invisible-crush",
+                "line": "Color Trend"
+            },
+            "popular": true,
+            "image_keyword": "avon-color-trend-mascara-invisible"
+        },
+        {
+            "id": "avn-047",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Musk",
+            "name": "Musk Fresh Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 38.43,
+            "suggested_price": 54.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "fragrance": "fresh",
+                "line": "Musk"
+            },
+            "popular": true,
+            "image_keyword": "avon-musk-fresh"
+        },
+        {
+            "id": "avn-048",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Clearskin",
+            "name": "Tônico Facial Adstringente 200ml",
+            "category": "facial",
+            "subcategory": "tonico",
+            "base_price": 17.43,
+            "suggested_price": 24.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "tonico-adstringente",
+                "line": "Clearskin"
+            },
+            "popular": true,
+            "image_keyword": "avon-clearskin-tonico-adstringente"
+        },
+        {
+            "id": "avn-049",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Renew",
+            "name": "Renew Power Sérum Renovador 30ml",
+            "category": "facial",
+            "subcategory": "serum",
+            "base_price": 111.93,
+            "suggested_price": 159.90,
+            "attributes": {
+                "volume": "30ml",
+                "type": "serum",
+                "function": "renovador",
+                "line": "Renew"
+            },
+            "popular": true,
+            "image_keyword": "avon-renew-power-serum"
+        },
+        {
+            "id": "avn-050",
+            "brand": "avon",
+            "brand_display": "Avon",
+            "line": "Color Trend",
+            "name": "Brilho Labial Morango",
+            "category": "labios",
+            "subcategory": "brilho-labial",
+            "base_price": 9.03,
+            "suggested_price": 12.90,
+            "attributes": {
+                "type": "brilho-labial",
+                "flavor": "morango",
+                "line": "Color Trend"
+            },
+            "popular": true,
+            "image_keyword": "avon-color-trend-brilho-morango"
+        }
+    ]
+}

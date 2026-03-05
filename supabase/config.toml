@@ -1,0 +1,11 @@
+[functions.whatsapp-webhook]
+verify_jwt = false # Webhook externo não precisa de JWT
+
+[functions.process-ai-queue]
+verify_jwt = false # Chamada interna
+
+[functions.daily-automations]
+verify_jwt = false # CRON schedule
+
+[functions.webhook-payments]
+verify_jwt = false # Webhook externo
