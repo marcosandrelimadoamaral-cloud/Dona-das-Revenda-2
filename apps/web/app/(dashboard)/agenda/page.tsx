@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Calendar as CalendarIcon, CreditCard, Gift, Sparkles, Plus, ChevronLeft, ChevronRight, CalendarClock, Briefcase, FileText } from "lucide-react"
 import { format, isSameDay, addMonths, subMonths } from "date-fns"
 import { ptBR } from "date-fns/locale"
@@ -34,7 +34,7 @@ export default function AgendaPage() {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [formError, setFormError] = useState<string | null>(null)
 
-    async function loadEvents() {
+    const loadEvents = useCallback(async () => {
         setLoading(true)
         const year = currentMonth.getFullYear()
         const month = currentMonth.getMonth() + 1
@@ -45,11 +45,11 @@ export default function AgendaPage() {
             setEvents([])
         }
         setLoading(false)
-    }
+    }, [currentMonth])
 
     useEffect(() => {
         loadEvents()
-    }, [currentMonth])
+    }, [currentMonth, loadEvents])
 
     const handleMonthChange = (month: Date) => setCurrentMonth(month)
     const nextMonth = () => setCurrentMonth(addMonths(currentMonth, 1))
