@@ -370,7 +370,7 @@ export default function ClientsPage() {
       </Card>
 
       {/* Mobile Floating Action Button - Add Client */}
-      <div className="lg:hidden fixed bottom-20 right-4 z-50 animate-in slide-in-from-bottom-2 fade-in duration-300">
+      <div className="lg:hidden fixed bottom-[110px] right-4 z-[40] animate-in slide-in-from-bottom-2 fade-in duration-300">
         <AddClientDialog onClientAdded={loadClients} isFloating={true} />
       </div>
 

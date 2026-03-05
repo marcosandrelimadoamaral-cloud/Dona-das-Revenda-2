@@ -176,13 +176,12 @@ export function DashboardLayoutClient({
                     <Link
                         key={item.href}
                         href={item.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className={`flex items - center gap - 3 px - 3 py - 2.5 rounded - xl transition - all duration - 150 text - sm font - medium ${isActive
-                                ? "bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800"
-                                : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100/80 dark:hover:bg-gray-800/60"
-                            } `}
+                        className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-150 text-sm font-medium ${isActive
+                            ? "bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800"
+                            : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100/80 dark:hover:bg-gray-800/60"
+                            }`}
                     >
-                        <item.icon className={`w - 4.5 h - 4.5 shrink - 0 ${isActive ? "text-purple-600 dark:text-purple-400" : ""} `} />
+                        <item.icon className={`w-4.5 h-4.5 shrink-0 ${isActive ? "text-purple-600 dark:text-purple-400" : ""}`} />
                         {item.label}
                     </Link>
                 )
@@ -313,8 +312,8 @@ export function DashboardLayoutClient({
                     {/* Trial expiring banner */}
                     {showStickyBanner && (
                         <div className={`flex items - center justify - between px - 4 py - 2.5 text - sm font - medium ${daysRemaining <= 1
-                                ? "bg-red-600 text-white"
-                                : "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
+                            ? "bg-red-600 text-white"
+                            : "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
                             } `}>
                             <div className="flex items-center gap-2">
                                 <AlertTriangle className="w-4 h-4 shrink-0" />
@@ -421,10 +420,10 @@ export function DashboardLayoutClient({
                                         <div className="space-y-1 mt-1">
                                             {notifications.map((n) => (
                                                 <div key={n.id} className={`flex gap - 3 p - 3 rounded - xl ${n.type === "trial"
-                                                        ? "bg-purple-50 dark:bg-purple-950/30"
-                                                        : n.type === "stock"
-                                                            ? "bg-amber-50 dark:bg-amber-950/30"
-                                                            : "bg-gray-50 dark:bg-gray-800"
+                                                    ? "bg-purple-50 dark:bg-purple-950/30"
+                                                    : n.type === "stock"
+                                                        ? "bg-amber-50 dark:bg-amber-950/30"
+                                                        : "bg-gray-50 dark:bg-gray-800"
                                                     } `}>
                                                     <div className={`w - 8 h - 8 rounded - full flex items - center justify - center shrink - 0 ${n.type === "trial" ? "bg-purple-100 dark:bg-purple-900" : "bg-amber-100 dark:bg-amber-900"} `}>
                                                         {n.type === "trial"
