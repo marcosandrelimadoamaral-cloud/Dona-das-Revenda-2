@@ -117,11 +117,30 @@ export function ChatInterface({ settings }: { settings: any }) {
 
             {/* Main Chat Area */}
             <div className="flex-1 flex flex-col min-w-0 bg-white dark:bg-gray-950">
-                <div className="h-14 border-b flex items-center justify-between px-4 sm:px-6">
+                <div className="md:hidden border-b bg-gray-50 dark:bg-gray-900 border-gray-100 dark:border-gray-800">
+                    <div className="flex gap-2 p-3 overflow-x-auto hide-scrollbar snap-x">
+                        {AGENTS.map((agent) => (
+                            <button
+                                key={agent.id}
+                                onClick={() => setActiveAgent(agent.id)}
+                                className={`flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all shrink-0 snap-start ${activeAgent === agent.id
+                                        ? 'bg-white dark:bg-gray-800 border-indigo-200 dark:border-indigo-700 shadow-sm ring-1 ring-indigo-500/10'
+                                        : 'bg-white/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800'
+                                    }`}
+                            >
+                                <div className={`w-6 h-6 rounded-full flex items-center justify-center ${agent.bg}`}>
+                                    <agent.icon className={`w-3 h-3 ${agent.color}`} />
+                                </div>
+                                <span className={`text-xs font-semibold ${activeAgent === agent.id ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'}`}>
+                                    {agent.name}
+                                </span>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="h-14 border-b hidden md:flex items-center justify-between px-4 sm:px-6">
                     <div className="flex items-center gap-3">
-                        <div className={`w-8 h-8 md:hidden rounded-full flex items-center justify-center ${currentAgent.bg}`}>
-                            <currentAgent.icon className={`w-4 h-4 ${currentAgent.color}`} />
-                        </div>
                         <div>
                             <h2 className="font-semibold flex items-center gap-2">
                                 {currentAgent.name}

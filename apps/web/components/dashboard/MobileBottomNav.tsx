@@ -15,7 +15,7 @@ import {
 
 const bottomNavItems = [
     { href: "/dashboard", label: "Início", icon: LayoutDashboard },
-    { href: "/inventory", label: "Estoque", icon: Package },
+    { href: "/pos", label: "Vender", icon: ShoppingCart },
     { href: "/ai", label: "IA", icon: Sparkles, primary: true },
     { href: "/finance", label: "Finanças", icon: Wallet },
     { href: "/clients", label: "Clientes", icon: Users },
