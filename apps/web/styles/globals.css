@@ -13,16 +13,19 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 262 83% 58%; /* #7C3AED */
+    --primary: 262 83% 58%;
+    /* #7C3AED */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 333 71% 51%; /* #DB2777 */
+    --secondary: 333 71% 51%;
+    /* #DB2777 */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 25 95% 53%; /* #F97316 */
+    --accent: 25 95% 53%;
+    /* #F97316 */
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -70,6 +73,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -79,29 +83,64 @@
   .animate-blob {
     animation: blob 7s infinite;
   }
+
   .animation-delay-2000 {
     animation-delay: 2s;
   }
+
   .animation-delay-4000 {
     animation-delay: 4s;
   }
+
   .perspective-1000 {
     perspective: 1000px;
   }
+
   .transform-3d {
     transform-style: preserve-3d;
   }
+
   .rotate-y-\\[-5deg\\] {
     transform: rotateY(-5deg);
   }
+
   .rotate-x-\\[5deg\\] {
     transform: rotateX(5deg);
   }
+
   .hover\\:rotate-y-0:hover {
     transform: rotateY(0deg);
   }
+
   .hover\\:rotate-x-0:hover {
     transform: rotateX(0deg);
+  }
+
+  /* Safe area inset for iOS notch / home-bar */
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .safe-area-inset-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  /* Better mobile scrolling */
+  .scroll-touch {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+}
+
+/* Improve mobile tap experience */
+@media (hover: none) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button,
+  a {
+    touch-action: manipulation;
   }
 }
 
@@ -109,12 +148,15 @@
   0% {
     transform: translate(0px, 0px) scale(1);
   }
+
   33% {
     transform: translate(30px, -50px) scale(1.1);
   }
+
   66% {
     transform: translate(-20px, 20px) scale(0.9);
   }
+
   100% {
     transform: translate(0px, 0px) scale(1);
   }
