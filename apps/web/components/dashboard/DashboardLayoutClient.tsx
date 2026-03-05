@@ -1,8 +1,9 @@
 "use client"
 
 import { useState, useTransition, useEffect } from "react"
+import { motion } from "framer-motion"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { useTheme } from "next-themes"
 import {
     LayoutDashboard,
@@ -74,7 +75,9 @@ export function DashboardLayoutClient({
     isTrialValid?: boolean
 }) {
     const pathname = usePathname()
+    const router = useRouter()
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const [isDraggingFab, setIsDraggingFab] = useState(false)
     const [isPending, startTransition] = useTransition()
     const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
@@ -91,7 +94,7 @@ export function DashboardLayoutClient({
         if (!isPro && isTrialValid) {
             items.push({
                 id: "trial",
-                title: `Trial: ${daysRemaining} dia${daysRemaining !== 1 ? "s" : ""} restante${daysRemaining !== 1 ? "s" : ""}`,
+                title: `Trial: ${daysRemaining} dia${daysRemaining !== 1 ? "s" : ""} restante${daysRemaining !== 1 ? "s" : ""} `,
                 body: "Assine agora para não perder o acesso à plataforma.",
                 type: "trial",
             })
@@ -111,7 +114,7 @@ export function DashboardLayoutClient({
                 items.push({
                     id: "lowstock",
                     title: `${res.data.length} produto${res.data.length > 1 ? "s" : ""} com estoque baixo`,
-                    body: res.data.slice(0, 2).map((p: any) => p.custom_name || p.catalog_products?.name || "Produto").join(", ") + (res.data.length > 2 ? ` e mais ${res.data.length - 2}` : ""),
+                    body: res.data.slice(0, 2).map((p: any) => p.custom_name || p.catalog_products?.name || "Produto").join(", ") + (res.data.length > 2 ? ` e mais ${res.data.length - 2} ` : ""),
                     type: "stock",
                 })
             }
@@ -174,12 +177,12 @@ export function DashboardLayoutClient({
                         key={item.href}
                         href={item.href}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-150 text-sm font-medium ${isActive
-                            ? "bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800"
-                            : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100/80 dark:hover:bg-gray-800/60"
-                            }`}
+                        className={`flex items - center gap - 3 px - 3 py - 2.5 rounded - xl transition - all duration - 150 text - sm font - medium ${isActive
+                                ? "bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800"
+                                : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100/80 dark:hover:bg-gray-800/60"
+                            } `}
                     >
-                        <item.icon className={`w-4.5 h-4.5 shrink-0 ${isActive ? "text-purple-600 dark:text-purple-400" : ""}`} />
+                        <item.icon className={`w - 4.5 h - 4.5 shrink - 0 ${isActive ? "text-purple-600 dark:text-purple-400" : ""} `} />
                         {item.label}
                     </Link>
                 )
@@ -309,16 +312,16 @@ export function DashboardLayoutClient({
                 <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
                     {/* Trial expiring banner */}
                     {showStickyBanner && (
-                        <div className={`flex items-center justify-between px-4 py-2.5 text-sm font-medium ${daysRemaining <= 1
-                            ? "bg-red-600 text-white"
-                            : "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
-                            }`}>
+                        <div className={`flex items - center justify - between px - 4 py - 2.5 text - sm font - medium ${daysRemaining <= 1
+                                ? "bg-red-600 text-white"
+                                : "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
+                            } `}>
                             <div className="flex items-center gap-2">
                                 <AlertTriangle className="w-4 h-4 shrink-0" />
                                 <span>
                                     {daysRemaining <= 0
                                         ? "Seu trial expirou! Assine para recuperar o acesso."
-                                        : `Seu trial expira em ${daysRemaining} dia${daysRemaining !== 1 ? "s" : ""}! Não perca o acesso à plataforma.`}
+                                        : `Seu trial expira em ${daysRemaining} dia${daysRemaining !== 1 ? "s" : ""} !Não perca o acesso à plataforma.`}
                                 </span>
                             </div>
                             <div className="flex items-center gap-3 shrink-0">
@@ -417,13 +420,13 @@ export function DashboardLayoutClient({
                                     ) : (
                                         <div className="space-y-1 mt-1">
                                             {notifications.map((n) => (
-                                                <div key={n.id} className={`flex gap-3 p-3 rounded-xl ${n.type === "trial"
-                                                    ? "bg-purple-50 dark:bg-purple-950/30"
-                                                    : n.type === "stock"
-                                                        ? "bg-amber-50 dark:bg-amber-950/30"
-                                                        : "bg-gray-50 dark:bg-gray-800"
-                                                    }`}>
-                                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${n.type === "trial" ? "bg-purple-100 dark:bg-purple-900" : "bg-amber-100 dark:bg-amber-900"}`}>
+                                                <div key={n.id} className={`flex gap - 3 p - 3 rounded - xl ${n.type === "trial"
+                                                        ? "bg-purple-50 dark:bg-purple-950/30"
+                                                        : n.type === "stock"
+                                                            ? "bg-amber-50 dark:bg-amber-950/30"
+                                                            : "bg-gray-50 dark:bg-gray-800"
+                                                    } `}>
+                                                    <div className={`w - 8 h - 8 rounded - full flex items - center justify - center shrink - 0 ${n.type === "trial" ? "bg-purple-100 dark:bg-purple-900" : "bg-amber-100 dark:bg-amber-900"} `}>
                                                         {n.type === "trial"
                                                             ? <Crown className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                                                             : <PackageOpen className="w-4 h-4 text-amber-600 dark:text-amber-400" />
@@ -470,15 +473,28 @@ export function DashboardLayoutClient({
             </div>
 
             {/* Mobile Floating Action Button (Estoque / Novo Produto) */}
-            {!["/pos", "/ai", "/billing", "/settings"].includes(pathname) && (
-                <div className="lg:hidden fixed bottom-20 right-4 z-[60] animate-in slide-in-from-bottom-2 fade-in duration-300">
-                    <Link href="/inventory" className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg shadow-purple-500/30 active:scale-95 transition-transform">
-                        <PackageOpen className="w-6 h-6" />
-                        <div className="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-white dark:border-gray-900 rounded-full flex items-center justify-center">
-                            <span className="text-[10px] font-bold text-white">+</span>
-                        </div>
-                    </Link>
-                </div>
+            {!["/pos", "/ai", "/billing", "/settings", "/clients"].includes(pathname) && (
+                <motion.div
+                    drag
+                    dragMomentum={false}
+                    onDragStart={() => setIsDraggingFab(true)}
+                    onDragEnd={() => {
+                        // Tiny delay to ensure we don't trigger click right after drag finishes
+                        setTimeout(() => setIsDraggingFab(false), 150)
+                    }}
+                    onClick={(e) => {
+                        if (!isDraggingFab) {
+                            router.push('/inventory')
+                        }
+                    }}
+                    className="lg:hidden fixed z-[60] flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg shadow-purple-500/30 cursor-grab active:cursor-grabbing"
+                    style={{ bottom: 80, right: 16, touchAction: "none" }}
+                >
+                    <PackageOpen className="w-6 h-6 pointer-events-none" />
+                    <div className="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-white dark:border-gray-900 rounded-full flex items-center justify-center pointer-events-none">
+                        <span className="text-[10px] font-bold text-white">+</span>
+                    </div>
+                </motion.div>
             )}
 
             {/* PWA Install Prompt */}
