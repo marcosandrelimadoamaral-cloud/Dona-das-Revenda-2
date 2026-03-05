@@ -154,7 +154,9 @@ export default function ClientsPage() {
           <h1 className="text-2xl font-bold tracking-tight">CRM e Clientes</h1>
           <p className="text-muted-foreground">Gerencie seus contatos e engajamento.</p>
         </div>
-        <AddClientDialog onClientAdded={loadClients} />
+        <div className="hidden lg:block">
+          <AddClientDialog onClientAdded={loadClients} />
+        </div>
       </div>
 
       <Card className="border-none shadow-sm rounded-3xl bg-white/70 dark:bg-gray-950/50 backdrop-blur-xl">
@@ -204,7 +206,8 @@ export default function ClientsPage() {
           </div>
         </CardHeader>
         <CardContent className="p-0">
-          <div className="overflow-x-auto w-full">
+          {/* DESKTOP TABLE VIEW */}
+          <div className="hidden lg:block overflow-x-auto w-full">
             <Table>
               <TableHeader className="bg-gray-50/50 dark:bg-gray-900/50">
                 <TableRow className="border-gray-100 dark:border-gray-800">
@@ -291,8 +294,85 @@ export default function ClientsPage() {
               </TableBody>
             </Table>
           </div>
+
+          {/* MOBILE LIST VIEW */}
+          <div className="lg:hidden flex flex-col gap-3 p-4 pt-2">
+            {loading ? (
+              Array.from({ length: 4 }).map((_, i) => (
+                <div key={i} className="flex items-center gap-4 p-4 border rounded-2xl bg-white dark:bg-gray-900 border-gray-100 dark:border-gray-800">
+                  <Skeleton className="h-12 w-12 rounded-full" />
+                  <div className="space-y-2 flex-1">
+                    <Skeleton className="h-4 w-32" />
+                    <Skeleton className="h-3 w-24" />
+                  </div>
+                </div>
+              ))
+            ) : filteredClients.length === 0 ? (
+              <div className="flex flex-col items-center justify-center p-8 text-center border border-dashed rounded-2xl border-gray-200 dark:border-gray-800">
+                <User className="w-12 h-12 text-gray-300 dark:text-gray-600 mb-4" />
+                <p className="font-semibold text-gray-900 dark:text-white">Nenhum cliente</p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {searchTerm ? "Nenhum resultado para a busca." : "Toque no + para adicionar clientes."}
+                </p>
+              </div>
+            ) : (
+              filteredClients.map((client) => {
+                const status = getClientStatus(client)
+
+                return (
+                  <div
+                    key={client.id}
+                    onClick={() => handleOpenProfile(client)}
+                    className="flex flex-col p-4 gap-3 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl shadow-sm hover:shadow-md transition-all active:scale-[0.98]"
+                  >
+                    <div className="flex justify-between items-start">
+                      <div className="flex items-center gap-3">
+                        <Avatar className="h-12 w-12 border">
+                          <AvatarFallback className="bg-purple-100 text-purple-700 font-bold">
+                            {getInitials(client.name)}
+                          </AvatarFallback>
+                        </Avatar>
+                        <div>
+                          <p className="font-semibold text-gray-900 dark:text-gray-100 leading-tight block">{client.name}</p>
+                          <div className="flex items-center text-xs text-muted-foreground mt-1">
+                            <Phone className="w-3 h-3 mr-1 shrink-0" />
+                            {client.phone || 'S/ N'}
+                          </div>
+                        </div>
+                      </div>
+                      <Badge variant="outline" className={`${status.color} uppercase text-[10px] tracking-wider px-2 py-0 border-0 shadow-sm`}>
+                        {status.label}
+                      </Badge>
+                    </div>
+
+                    <div className="flex items-center justify-between border-t border-gray-100 dark:border-gray-800 pt-3 mt-1">
+                      <div>
+                        <p className="text-[10px] text-muted-foreground uppercase tracking-wide font-semibold">Total Gasto</p>
+                        <p className="font-bold text-emerald-600 dark:text-emerald-400">
+                          {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(client.total_spent || 0)}
+                        </p>
+                      </div>
+                      <Button
+                        size="sm"
+                        className="bg-purple-100 text-purple-700 hover:bg-purple-200 dark:bg-purple-900/50 dark:text-purple-300 dark:hover:bg-purple-800 h-9 rounded-xl shadow-none px-3"
+                        onClick={(e) => handleGenerateApproach(client, e)}
+                      >
+                        <Sparkles className="w-4 h-4 mr-2" />
+                        <span className="text-xs font-bold">Gerar IA</span>
+                      </Button>
+                    </div>
+                  </div>
+                )
+              })
+            )}
+          </div>
         </CardContent>
       </Card>
+
+      {/* Mobile Floating Action Button - Add Client */}
+      <div className="lg:hidden fixed bottom-20 right-4 z-50 animate-in slide-in-from-bottom-2 fade-in duration-300">
+        <AddClientDialog onClientAdded={loadClients} isFloating={true} />
+      </div>
 
       <ClientProfileSheet
         client={selectedClient}

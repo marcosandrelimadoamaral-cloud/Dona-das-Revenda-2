@@ -472,7 +472,7 @@ export function DashboardLayoutClient({
             {/* Mobile Floating Action Button (Estoque / Novo Produto) */}
             {!["/pos", "/ai", "/billing", "/settings"].includes(pathname) && (
                 <div className="lg:hidden fixed bottom-20 right-4 z-[60] animate-in slide-in-from-bottom-2 fade-in duration-300">
-                    <Link href="/inventory/new" className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg shadow-purple-500/30 active:scale-95 transition-transform">
+                    <Link href="/inventory" className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg shadow-purple-500/30 active:scale-95 transition-transform">
                         <PackageOpen className="w-6 h-6" />
                         <div className="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-white dark:border-gray-900 rounded-full flex items-center justify-center">
                             <span className="text-[10px] font-bold text-white">+</span>

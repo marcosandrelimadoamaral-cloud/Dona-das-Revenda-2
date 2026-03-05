@@ -10,10 +10,10 @@ import { createClient } from "@/app/actions/clients/createClient"
 import { toast } from "sonner"
 import { Plus } from "lucide-react"
 
-export function AddClientDialog({ onClientAdded }: { onClientAdded: () => void }) {
+export function AddClientDialog({ onClientAdded, isFloating = false }: { onClientAdded: () => void, isFloating?: boolean }) {
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)
-  
+
   // Form state
   const [name, setName] = useState("")
   const [phone, setPhone] = useState("")
@@ -24,14 +24,14 @@ export function AddClientDialog({ onClientAdded }: { onClientAdded: () => void }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!name || !phone) {
       toast.error("Preencha os campos obrigatórios (Nome e Telefone)")
       return
     }
 
     setLoading(true)
-    
+
     const formData = new FormData()
     formData.append('name', name)
     formData.append('phone', phone)
@@ -41,9 +41,9 @@ export function AddClientDialog({ onClientAdded }: { onClientAdded: () => void }
     if (observations) formData.append('observations', observations)
 
     const result = await createClient(formData)
-    
+
     setLoading(false)
-    
+
     if (result.error) {
       toast.error(result.error)
     } else {
@@ -66,40 +66,46 @@ export function AddClientDialog({ onClientAdded }: { onClientAdded: () => void }
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className="gap-2">
-          <Plus className="w-4 h-4" /> Novo Cliente
-        </Button>
+        {isFloating ? (
+          <Button className="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg shadow-purple-500/30 p-0 hover:scale-105 transition-transform">
+            <Plus className="w-6 h-6" />
+          </Button>
+        ) : (
+          <Button className="gap-2">
+            <Plus className="w-4 h-4" /> Novo Cliente
+          </Button>
+        )}
       </DialogTrigger>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
           <DialogTitle>Adicionar Cliente</DialogTitle>
         </DialogHeader>
-        
+
         <form onSubmit={handleSubmit} className="mt-4 space-y-4">
           <div className="space-y-2">
             <label className="text-sm font-medium">Nome Completo *</label>
-            <Input 
-              value={name} 
-              onChange={e => setName(e.target.value)} 
-              placeholder="Ex: Maria da Silva" 
+            <Input
+              value={name}
+              onChange={e => setName(e.target.value)}
+              placeholder="Ex: Maria da Silva"
             />
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <label className="text-sm font-medium">Telefone (WhatsApp) *</label>
-              <Input 
-                value={phone} 
-                onChange={e => setPhone(e.target.value)} 
-                placeholder="(11) 99999-9999" 
+              <Input
+                value={phone}
+                onChange={e => setPhone(e.target.value)}
+                placeholder="(11) 99999-9999"
               />
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium">Data de Nascimento</label>
-              <Input 
-                type="date" 
-                value={birthDate} 
-                onChange={e => setBirthDate(e.target.value)} 
+              <Input
+                type="date"
+                value={birthDate}
+                onChange={e => setBirthDate(e.target.value)}
               />
             </div>
           </div>
@@ -107,11 +113,11 @@ export function AddClientDialog({ onClientAdded }: { onClientAdded: () => void }
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <label className="text-sm font-medium">Email</label>
-              <Input 
-                type="email" 
-                value={email} 
-                onChange={e => setEmail(e.target.value)} 
-                placeholder="maria@email.com" 
+              <Input
+                type="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                placeholder="maria@email.com"
               />
             </div>
             <div className="space-y-2">
@@ -132,10 +138,10 @@ export function AddClientDialog({ onClientAdded }: { onClientAdded: () => void }
 
           <div className="space-y-2">
             <label className="text-sm font-medium">Observações</label>
-            <Textarea 
-              value={observations} 
-              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setObservations(e.target.value)} 
-              placeholder="Anotações importantes sobre a cliente..." 
+            <Textarea
+              value={observations}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setObservations(e.target.value)}
+              placeholder="Anotações importantes sobre a cliente..."
               className="resize-none"
             />
           </div>
