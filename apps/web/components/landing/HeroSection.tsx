@@ -29,29 +29,43 @@ export function HeroSection() {
           className="flex flex-col gap-6"
         >
           <div className="flex items-center gap-2">
-            <Badge variant="secondary" className="bg-indigo-100 text-indigo-800 hover:bg-indigo-100 px-3 py-1 animate-pulse">
-              🚀 Nova: Agente IA que cria Reels que viralizam
+            <Badge variant="secondary" className="bg-red-100 text-red-800 hover:bg-red-200 px-3 py-1 font-bold tracking-wide animate-pulse">
+              🚨 Pare de Perder Dinheiro
             </Badge>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
-            Sua revenda de cosméticos no <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">piloto automático com IA</span>
+            Adeus fiados e <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">desorganização.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
-            PDV, financeiro, estoque, fiados e 5 agentes de IA — tudo em um só lugar. Gerencia sua revenda enquanto você foca em crescer.
+            O único app que organiza clientes, vendas e cobra fiados no automático com IA inteligente.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Button asChild size="lg" className="h-14 px-8 text-base bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all rounded-xl cursor-pointer">
+          <div className="flex flex-col w-full mt-4 sm:mt-8 gap-3 relative z-20">
+            <Button asChild size="lg" className="w-full h-16 sm:h-20 text-lg sm:text-xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-[0_8px_30px_rgb(99,102,241,0.4)] hover:shadow-[0_8px_30px_rgb(99,102,241,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all rounded-2xl cursor-pointer">
               <Link href="/signup?ref=landing">
-                Testar Grátis por 7 Dias
+                Assinar Agora com 7 Dias Grátis
               </Link>
             </Button>
+
+            {/* Social Proof Progressivo (Logo abaixo do botão principal na Thumb Zone) */}
+            <div className="flex flex-col items-center justify-center gap-1 mt-2 mb-4">
+              <div className="flex items-center gap-1">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400 drop-shadow-sm" />
+                ))}
+                <span className="font-bold text-base ml-1 text-gray-800 dark:text-gray-200">5.0</span>
+              </div>
+              <span className="text-sm text-muted-foreground font-medium">
+                Aprovado por <strong>+500</strong> revendedoras de sucesso.
+              </span>
+            </div>
+
             <Dialog>
               <DialogTrigger asChild>
-                <Button size="lg" variant="outline" className="h-14 px-8 text-base rounded-xl border-2">
-                  <Play className="mr-2 h-5 w-5" /> Ver demonstração em 2 min
+                <Button size="lg" variant="outline" className="w-full h-14 text-base rounded-2xl border-2 active:bg-gray-100 dark:active:bg-gray-900 transition-colors">
+                  <Play className="mr-2 h-5 w-5 text-indigo-600" /> Ver como funciona na prática
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[800px] p-0 overflow-hidden bg-black/95 border-0">
@@ -68,31 +82,6 @@ export function HeroSection() {
                 </div>
               </DialogContent>
             </Dialog>
-          </div>
-
-          <div className="flex flex-col gap-2 mt-8">
-            <div className="flex items-center gap-4">
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  /* eslint-disable-next-line @next/next/no-img-element */
-                  <img
-                    key={i}
-                    src={`https://i.pravatar.cc/100?img=${i + 10}`}
-                    alt="User"
-                    className="w-10 h-10 rounded-full border-2 border-background"
-                  />
-                ))}
-              </div>
-              <div className="flex flex-col">
-                <div className="flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                  <span className="font-bold ml-1">4.9/5</span>
-                </div>
-                <span className="text-sm text-muted-foreground">Junte-se a 500+ empresárias da beleza</span>
-              </div>
-            </div>
           </div>
         </motion.div>
 
