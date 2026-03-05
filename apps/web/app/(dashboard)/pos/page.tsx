@@ -239,28 +239,9 @@ export default function PosPage() {
         {/* ======================================= */}
         <TabsContent value="vender" className="flex-1 flex flex-col overflow-hidden m-0 data-[state=inactive]:hidden border border-t-0 sm:border-t rounded-b-3xl sm:rounded-3xl shadow-sm mb-4 sm:mb-8">
 
-          {/* Mobile Cart/Catalog Tabs */}
-          <div className="lg:hidden flex border-b bg-white dark:bg-gray-800 shrink-0">
-            <button
-              className={`flex-1 py-3 text-sm font-medium border-b-2 ${activeTab === 'catalog' ? 'border-purple-600 text-purple-600' : 'border-transparent text-muted-foreground'}`}
-              onClick={() => setActiveTab('catalog')}
-            >
-              Catálogo
-            </button>
-            <button
-              className={`flex-1 py-3 text-sm font-medium border-b-2 flex items-center justify-center gap-2 ${activeTab === 'cart' ? 'border-purple-600 text-purple-600' : 'border-transparent text-muted-foreground'}`}
-              onClick={() => setActiveTab('cart')}
-            >
-              Carrinho
-              {cart.length > 0 && (
-                <span className="bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300 text-xs px-2 py-0.5 rounded-full">
-                  {cart.length}
-                </span>
-              )}
-            </button>
-          </div>
+          {/* Mobile Cart/Catalog tabs removed in favor of floating button */}
 
-          <div className="flex flex-1 overflow-hidden">
+          <div className="flex flex-1 overflow-hidden relative">
             {/* LEFT SIDE: CATALOG */}
             <div className={`w-full lg:w-[65%] flex flex-col bg-gray-50/50 dark:bg-gray-900/50 ${activeTab === 'catalog' ? 'flex' : 'hidden lg:flex'}`}>
               {/* Catalog Header */}
@@ -320,18 +301,47 @@ export default function PosPage() {
                   </div>
                 )}
               </ScrollArea>
+
+              {/* Mobile Floating Cart Button when there are items */}
+              {cart.length > 0 && (
+                <div className="lg:hidden absolute bottom-6 left-4 right-4 z-50 animate-in slide-in-from-bottom-4 fade-in duration-300">
+                  <button
+                    onClick={() => setActiveTab('cart')}
+                    className="w-full flex items-center justify-between bg-purple-600 text-white rounded-2xl p-4 shadow-xl shadow-purple-500/20 active:scale-95 transition-transform"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="relative">
+                        <ShoppingCart className="w-6 h-6" />
+                        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-purple-600">
+                          {cart.length}
+                        </span>
+                      </div>
+                      <span className="font-semibold text-sm">Ver Carrinho</span>
+                    </div>
+                    <span className="font-bold">{formatCurrency(subtotal)}</span>
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* RIGHT SIDE: CART */}
             <div className={`w-full lg:w-[35%] flex flex-col bg-white dark:bg-gray-800 border-l ${activeTab === 'cart' ? 'flex' : 'hidden lg:flex'}`}>
               {/* Cart Header */}
-              <div className="p-4 border-b shrink-0 flex items-center justify-between">
-                <h2 className="text-lg font-bold flex items-center gap-2">
-                  Carrinho
-                  <span className="bg-gray-100 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-full text-muted-foreground">
-                    {cart.length} itens
-                  </span>
-                </h2>
+              <div className="p-4 border-b shrink-0 flex items-center justify-between bg-white dark:bg-gray-800 relative z-10">
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => setActiveTab('catalog')}
+                    className="lg:hidden w-8 h-8 flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors"
+                  >
+                    <Minus className="w-5 h-5 rotate-90" />
+                  </button>
+                  <h2 className="text-lg font-bold flex items-center gap-2">
+                    Carrinho
+                    <span className="bg-gray-100 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-full text-muted-foreground hidden sm:inline-flex">
+                      {cart.length} itens
+                    </span>
+                  </h2>
+                </div>
                 {cart.length > 0 && (
                   <Button variant="ghost" size="sm" className="text-red-500 hover:text-red-600 hover:bg-red-50" onClick={() => setCart([])}>
                     Limpar
