@@ -73,7 +73,13 @@ export async function middleware(request: NextRequest) {
     pathname.startsWith('/contato') ||
     pathname.startsWith('/api/webhooks') // Webhooks do Stripe/MercadoPago
 
-  const isAuthRoute = pathname.startsWith('/login') || pathname.startsWith('/signup') || pathname.startsWith('/auth')
+  const isAuthRoute =
+    pathname.startsWith('/login') ||
+    pathname.startsWith('/signup') ||
+    pathname.startsWith('/auth') ||
+    pathname.startsWith('/verify-email') ||
+    pathname.startsWith('/forgot-password') ||
+    pathname.startsWith('/update-password')
 
   if (isPublicRoute) {
     return response

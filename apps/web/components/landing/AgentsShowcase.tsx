@@ -304,7 +304,7 @@ export function AgentsShowcase() {
 
                 {activeAgent.id === 'zara' && (
                   <div className="space-y-2">
-                    <div className="bg-cyan-50 border border-cyan-100 p-3 rounded-lg text-sm mb-4">
+                    <div className="bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-100 dark:border-cyan-800 p-3 rounded-lg text-sm mb-4">
                       <b>Zara:</b> Oi! Sou a Zara, sua consultora virtual. Como posso te ajudar hoje? 💄
                     </div>
                     <label className="text-sm font-medium">Sua mensagem:</label>
@@ -317,7 +317,7 @@ export function AgentsShowcase() {
                 )}
 
                 {(activeAgent.id === 'nina' || activeAgent.id === 'lia') && (
-                  <div className="bg-gray-50 border p-4 rounded-xl text-center text-gray-500">
+                  <div className="bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 p-4 rounded-xl text-center text-gray-500 dark:text-gray-400">
                     Clique no botão abaixo para {activeAgent.id === 'nina' ? 'gerar uma análise do seu estoque virtual.' : 'ver sua agenda e tarefas simuladas.'}
                   </div>
                 )}
@@ -355,10 +355,10 @@ export function AgentsShowcase() {
                 {/* Clara Result */}
                 {activeAgent.id === 'clara' && demoResult.hook && (
                   <>
-                    <div className="p-4 bg-gray-50 border rounded-xl space-y-3">
-                      <div><Badge className="bg-pink-100 text-pink-700 border-0 mb-1">Hook</Badge><p className="text-sm">{demoResult.hook}</p></div>
-                      <div><Badge className="bg-purple-100 text-purple-700 border-0 mb-1">Roteiro</Badge><p className="text-sm">{demoResult.script}</p></div>
-                      <div><Badge className="bg-blue-100 text-blue-700 border-0 mb-1">Legenda Instagram</Badge><p className="text-sm whitespace-pre-wrap">{demoResult.caption}</p></div>
+                    <div className="p-4 bg-gray-50 dark:bg-gray-800 border dark:border-gray-700 rounded-xl space-y-3">
+                      <div><Badge className="bg-pink-100 dark:bg-pink-900 text-pink-700 dark:text-pink-300 border-0 mb-1">Hook</Badge><p className="text-sm">{demoResult.hook}</p></div>
+                      <div><Badge className="bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 border-0 mb-1">Roteiro</Badge><p className="text-sm">{demoResult.script}</p></div>
+                      <div><Badge className="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 border-0 mb-1">Legenda Instagram</Badge><p className="text-sm whitespace-pre-wrap">{demoResult.caption}</p></div>
                     </div>
                   </>
                 )}
@@ -367,16 +367,16 @@ export function AgentsShowcase() {
                 {activeAgent.id === 'finn' && demoResult.margin && (
                   <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-emerald-50 border border-emerald-100 p-4 rounded-xl">
-                        <div className="text-sm text-emerald-700 font-medium">Margem Real</div>
-                        <div className="text-3xl font-bold text-emerald-900">{demoResult.margin}%</div>
+                      <div className="bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-800 p-4 rounded-xl">
+                        <div className="text-sm text-emerald-700 dark:text-emerald-400 font-medium">Margem Real</div>
+                        <div className="text-3xl font-bold text-emerald-900 dark:text-emerald-300">{demoResult.margin}%</div>
                       </div>
-                      <div className="bg-blue-50 border border-blue-100 p-4 rounded-xl">
-                        <div className="text-sm text-blue-700 font-medium">Lucro Estimado (mês)</div>
-                        <div className="text-3xl font-bold text-blue-900">R$ {demoResult.profit}</div>
+                      <div className="bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-800 p-4 rounded-xl">
+                        <div className="text-sm text-blue-700 dark:text-blue-400 font-medium">Lucro Estimado (mês)</div>
+                        <div className="text-3xl font-bold text-blue-900 dark:text-blue-300">R$ {demoResult.profit}</div>
                       </div>
                     </div>
-                    <div className="bg-amber-50 border border-amber-100 p-4 rounded-xl text-sm text-amber-900">
+                    <div className="bg-amber-50 dark:bg-amber-950/40 border border-amber-100 dark:border-amber-800 p-4 rounded-xl text-sm text-amber-900 dark:text-amber-300">
                       <b>💡 Conselho do Finn:</b> {demoResult.suggestion}
                     </div>
                   </div>
@@ -385,10 +385,10 @@ export function AgentsShowcase() {
                 {/* Zara Result */}
                 {activeAgent.id === 'zara' && demoResult.reply && (
                   <div className="space-y-4">
-                    <div className="bg-gray-100 p-3 rounded-2xl rounded-tr-sm ml-8 text-sm text-right">
+                    <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded-2xl rounded-tr-sm ml-8 text-sm text-right">
                       {zaraMessage}
                     </div>
-                    <div className="bg-cyan-50 border border-cyan-100 p-3 rounded-2xl rounded-tl-sm mr-8 text-sm">
+                    <div className="bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-100 dark:border-cyan-800 p-3 rounded-2xl rounded-tl-sm mr-8 text-sm">
                       <b>Zara:</b> {demoResult.reply}
                     </div>
                   </div>
@@ -398,7 +398,7 @@ export function AgentsShowcase() {
                 {activeAgent.id === 'nina' && demoResult.alerts && (
                   <div className="space-y-4">
                     {demoResult.alerts.map((alert: any, i: number) => (
-                      <div key={i} className="flex items-center justify-between p-3 border rounded-lg bg-red-50/50">
+                      <div key={i} className="flex items-center justify-between p-3 border dark:border-gray-700 rounded-lg bg-red-50/50 dark:bg-red-950/20">
                         <div className="flex items-center gap-2">
                           <Package className="w-4 h-4 text-red-500" />
                           <span className="font-medium text-sm">{alert.product}</span>
@@ -406,7 +406,7 @@ export function AgentsShowcase() {
                         <Badge variant="destructive">{alert.action}</Badge>
                       </div>
                     ))}
-                    <div className="p-3 bg-orange-50 text-orange-800 rounded-lg text-sm border border-orange-200">
+                    <div className="p-3 bg-orange-50 dark:bg-orange-950/40 text-orange-800 dark:text-orange-300 rounded-lg text-sm border border-orange-200 dark:border-orange-800">
                       <b>Sugestão de Reposição:</b> {demoResult.recommendation}
                     </div>
                   </div>
@@ -415,10 +415,10 @@ export function AgentsShowcase() {
                 {/* Lia Result */}
                 {activeAgent.id === 'lia' && demoResult.tasks && (
                   <div className="space-y-3">
-                    <h4 className="font-bold text-sm text-purple-900 bg-purple-100 px-3 py-1 rounded inline-block">Agenda do Dia</h4>
+                    <h4 className="font-bold text-sm text-purple-900 dark:text-purple-300 bg-purple-100 dark:bg-purple-900/40 px-3 py-1 rounded inline-block">Agenda do Dia</h4>
                     {demoResult.tasks.map((task: any, i: number) => (
-                      <div key={i} className="flex gap-3 text-sm p-3 border rounded-lg bg-white shadow-sm">
-                        <span className="font-bold text-gray-500">{task.time}</span>
+                      <div key={i} className="flex gap-3 text-sm p-3 border dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 shadow-sm">
+                        <span className="font-bold text-gray-500 dark:text-gray-400">{task.time}</span>
                         <span>{task.title}</span>
                       </div>
                     ))}
