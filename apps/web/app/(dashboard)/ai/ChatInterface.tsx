@@ -137,7 +137,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                 <div className="flex-1 overflow-y-auto p-4 sm:p-6" ref={scrollRef}>
                     <div className="max-w-3xl mx-auto space-y-6">
                         {messages.map((msg, idx) => (
-                            <div key={idx} className={`flex gap-4 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                            <div key={idx} className={`flex gap-2.5 sm:gap-4 w-full ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                 {msg.role === 'agent' && (
                                     <Avatar className="w-8 h-8 border shrink-0">
                                         <AvatarFallback className={currentAgent.bg}>
@@ -146,9 +146,9 @@ export function ChatInterface({ settings }: { settings: any }) {
                                     </Avatar>
                                 )}
 
-                                <div className={`max-w-[85%] rounded-2xl px-5 py-3 ${msg.role === 'user'
-                                    ? 'bg-purple-600 text-white rounded-br-sm'
-                                    : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-bl-sm'
+                                <div className={`max-w-[85%] sm:max-w-[75%] px-4 py-3 sm:px-5 sm:py-3.5 shadow-sm border border-transparent ${msg.role === 'user'
+                                    ? 'bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-3xl rounded-br-md shadow-purple-500/20'
+                                    : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-3xl rounded-tl-md border-gray-100 dark:border-gray-700 shadow-black/5'
                                     }`}>
                                     <div className="prose prose-sm dark:prose-invert max-w-none break-words leading-relaxed">
                                         <ReactMarkdown remarkPlugins={[remarkGfm]}>{msg.content}</ReactMarkdown>
@@ -156,8 +156,8 @@ export function ChatInterface({ settings }: { settings: any }) {
                                 </div>
 
                                 {msg.role === 'user' && (
-                                    <Avatar className="w-8 h-8 border shrink-0">
-                                        <AvatarFallback className="bg-purple-100 text-purple-700"><User className="w-4 h-4" /></AvatarFallback>
+                                    <Avatar className="w-8 h-8 border shrink-0 hidden sm:block">
+                                        <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white"><User className="w-4 h-4" /></AvatarFallback>
                                     </Avatar>
                                 )}
                             </div>
@@ -170,7 +170,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                                         <currentAgent.icon className={`w-4 h-4 ${currentAgent.color} animate-pulse`} />
                                     </AvatarFallback>
                                 </Avatar>
-                                <div className="bg-indigo-50/50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800 rounded-2xl rounded-bl-sm px-5 py-4 flex items-center gap-2">
+                                <div className="bg-white dark:bg-gray-800 border border-indigo-100 dark:border-indigo-800/50 shadow-sm rounded-3xl rounded-tl-md px-5 py-4 flex items-center gap-2">
                                     <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400 animate-pulse">Analisando seus dados reais...</span>
                                 </div>
                             </div>
@@ -272,7 +272,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                         </div>
 
                         {/* Personalize tip */}
-                        <div className="mt-3 flex items-center gap-2 bg-purple-50 dark:bg-purple-950/30 border border-purple-100 dark:border-purple-900 rounded-xl px-3 py-2">
+                        <div className="hidden sm:flex mt-3 items-center gap-2 bg-purple-50 dark:bg-purple-950/30 border border-purple-100 dark:border-purple-900 rounded-xl px-3 py-2">
                             <Settings2 className="w-3.5 h-3.5 text-purple-500 shrink-0" />
                             <p className="text-xs text-purple-700 dark:text-purple-300 flex-1">
                                 <span className="font-semibold">Personalize sua experiência</span> — adicione contexto da sua loja para respostas mais precisas.
@@ -286,7 +286,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                         </div>
 
                         {/* Legal Disclaimer */}
-                        <div className="mt-3 text-center">
+                        <div className="mt-3 text-center hidden sm:block">
                             <p className="text-xs text-gray-400 dark:text-gray-500">
                                 {currentAgent.name} é uma Inteligência Artificial e pode cometer erros. Verifique as informações.
                             </p>
