@@ -12,7 +12,8 @@ import {
   Clock,
   User,
   PackageOpen,
-  CheckCircle2
+  CheckCircle2,
+  ShoppingCart
 } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"

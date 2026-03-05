@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Calendar, Sparkles } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { toast } from "sonner"
 import { generateApproach } from "@/app/actions/ai/generateApproach"
 import { getClientHistory } from "@/app/actions/clients/getClientHistory"
@@ -25,21 +25,21 @@ export function ClientProfileSheet({ client, open, onOpenChange }: ClientProfile
   const [history, setHistory] = useState<any[]>([])
   const [loadingHistory, setLoadingHistory] = useState(false)
 
+  const loadHistory = useCallback(async () => {
+    if (!client?.id) return
+    setLoadingHistory(true)
+    const { data } = await getClientHistory(client.id)
+    if (data) setHistory(data)
+    setLoadingHistory(false)
+  }, [client?.id])
+
   // Atualiza as notas e carrega o histórico quando o cliente muda
   useEffect(() => {
     if (client) {
       setNotes(client.observations || "")
       loadHistory()
     }
-  }, [client])
-
-  const loadHistory = async () => {
-    if (!client?.id) return
-    setLoadingHistory(true)
-    const { data } = await getClientHistory(client.id)
-    if (data) setHistory(data)
-    setLoadingHistory(false)
-  }
+  }, [client, loadHistory])
 
   if (!client) return null
 

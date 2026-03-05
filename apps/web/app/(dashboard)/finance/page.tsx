@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -40,7 +40,7 @@ export default function FinancePage() {
   const [customStart, setCustomStart] = useState(firstOfMonthStr)
   const [customEnd, setCustomEnd] = useState(todayStr)
 
-  async function loadData(selectedPeriod: Period, start?: string, end?: string) {
+  const loadData = useCallback(async (selectedPeriod: Period, start?: string, end?: string) => {
     setLoading(true)
     setErrorMsg(null)
     try {
@@ -63,16 +63,16 @@ export default function FinancePage() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [customStart, customEnd])
 
   useEffect(() => {
     loadData(period)
-  }, [period])
+  }, [period, loadData])
 
   // When custom dates change, re-load (only when period is custom)
   useEffect(() => {
     if (period === 'custom') loadData('custom', customStart, customEnd)
-  }, [customStart, customEnd])
+  }, [customStart, customEnd, period, loadData])
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value)
