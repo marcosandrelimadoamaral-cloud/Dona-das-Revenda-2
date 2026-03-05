@@ -141,8 +141,8 @@ export function Navbar() {
   }
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent"}`}>
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 safe-area-inset-top ${isScrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent"}`}>
+      <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
           <Image src="/logo.png" alt="Dona da Revenda" width={56} height={56} className="rounded-xl shadow-sm" />
           <div className="flex flex-col leading-none">
@@ -176,7 +176,7 @@ export function Navbar() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] safe-area-inset-top">
               <nav className="flex flex-col gap-6 mt-8">
                 <Link href="#funcionalidades" className="text-lg font-medium">Funcionalidades</Link>
                 <Link href="#agentes" className="text-lg font-medium">Agentes IA</Link>
