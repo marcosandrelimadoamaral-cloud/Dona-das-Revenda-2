@@ -1,0 +1,28 @@
+{
+  "name": "donadarevenda",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "turbo": "^1.13.3"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@tanstack/react-table": "^8.21.3",
+    "html5-qrcode": "^2.3.8",
+    "inngest": "^3.52.4",
+    "next-themes": "^0.4.6",
+    "recharts": "^3.7.0",
+    "stripe": "^20.4.0",
+    "xlsx": "^0.18.5"
+  }
+}

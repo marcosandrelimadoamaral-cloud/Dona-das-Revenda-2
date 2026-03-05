@@ -1,0 +1,1847 @@
+{
+    "products": [
+        {
+            "id": "bot-001",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Malbec",
+            "name": "Malbec Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 146.93,
+            "suggested_price": 209.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Malbec"
+            },
+            "popular": true,
+            "image_keyword": "boticario-malbec-colonia"
+        },
+        {
+            "id": "bot-002",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Lily",
+            "name": "Creme Acetinado Corporal Lily 250g",
+            "category": "corporal",
+            "subcategory": "creme-corporal",
+            "base_price": 83.93,
+            "suggested_price": 119.90,
+            "attributes": {
+                "volume": "250g",
+                "type": "creme-acetinado",
+                "line": "Lily"
+            },
+            "popular": true,
+            "image_keyword": "boticario-lily-creme-acetinado"
+        },
+        {
+            "id": "bot-003",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Egeo",
+            "name": "Egeo Dolce Desodorante Colônia 90ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 97.93,
+            "suggested_price": 139.90,
+            "attributes": {
+                "volume": "90ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Egeo"
+            },
+            "popular": true,
+            "image_keyword": "boticario-egeo-dolce"
+        },
+        {
+            "id": "bot-004",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Nativa SPA",
+            "name": "Loção Hidratante Ameixa Negra 400ml",
+            "category": "corporal",
+            "subcategory": "locao-hidratante",
+            "base_price": 52.43,
+            "suggested_price": 74.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "locao",
+                "fragrance": "ameixa-negra",
+                "line": "Nativa SPA"
+            },
+            "popular": true,
+            "image_keyword": "boticario-nativa-spa-ameixa-negra"
+        },
+        {
+            "id": "bot-005",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Floratta",
+            "name": "Floratta Red Desodorante Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 104.93,
+            "suggested_price": 149.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Floratta"
+            },
+            "popular": true,
+            "image_keyword": "boticario-floratta-red"
+        },
+        {
+            "id": "bot-006",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Botik",
+            "name": "Gel de Limpeza Facial Vitamina C 50g",
+            "category": "facial",
+            "subcategory": "gel-limpeza",
+            "base_price": 45.43,
+            "suggested_price": 64.90,
+            "attributes": {
+                "volume": "50g",
+                "type": "gel-limpeza",
+                "main_ingredient": "vitamina-c",
+                "line": "Botik"
+            },
+            "popular": false,
+            "image_keyword": "boticario-botik-gel-vitamina-c"
+        },
+        {
+            "id": "bot-007",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Make B.",
+            "name": "Batom Stick Mate Make B.",
+            "category": "maquiagem",
+            "subcategory": "batom",
+            "base_price": 44.03,
+            "suggested_price": 62.90,
+            "attributes": {
+                "type": "batom-mate",
+                "finish": "mate",
+                "line": "Make B."
+            },
+            "popular": true,
+            "image_keyword": "boticario-make-b-batom-mate"
+        },
+        {
+            "id": "bot-008",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Cuide-se Bem",
+            "name": "Loção Hidratante Deleite 400ml",
+            "category": "corporal",
+            "subcategory": "locao-hidratante",
+            "base_price": 45.43,
+            "suggested_price": 64.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "locao",
+                "fragrance": "deleite",
+                "line": "Cuide-se Bem"
+            },
+            "popular": true,
+            "image_keyword": "boticario-cuide-se-bem-deleite"
+        },
+        {
+            "id": "bot-009",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Match",
+            "name": "Máscara Nutrição Regeneradora 250g",
+            "category": "capilar",
+            "subcategory": "mascara-capilar",
+            "base_price": 55.93,
+            "suggested_price": 79.90,
+            "attributes": {
+                "volume": "250g",
+                "type": "mascara",
+                "function": "nutricao-regeneradora",
+                "line": "Match"
+            },
+            "popular": false,
+            "image_keyword": "boticario-match-mascara-nutricao"
+        },
+        {
+            "id": "bot-010",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Zaad",
+            "name": "Zaad Expedition Eau de Parfum 95ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 202.93,
+            "suggested_price": 289.90,
+            "attributes": {
+                "volume": "95ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Zaad"
+            },
+            "popular": true,
+            "image_keyword": "boticario-zaad-expedition"
+        },
+        {
+            "id": "bot-011",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Coffee",
+            "name": "Coffee Woman Seduction 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 129.43,
+            "suggested_price": 184.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Coffee"
+            },
+            "popular": true,
+            "image_keyword": "boticario-coffee-woman-seduction"
+        },
+        {
+            "id": "bot-012",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Malbec",
+            "name": "Malbec Black Legend 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 160.93,
+            "suggested_price": 229.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Malbec"
+            },
+            "popular": true,
+            "image_keyword": "boticario-malbec-black-legend"
+        },
+        {
+            "id": "bot-013",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Lily",
+            "name": "Lily Lumière Eau de Parfum 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 195.93,
+            "suggested_price": 279.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Lily"
+            },
+            "popular": true,
+            "image_keyword": "boticario-lily-lumiere"
+        },
+        {
+            "id": "bot-014",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Nativa SPA",
+            "name": "Óleo Hidratante Ameixa 200ml",
+            "category": "corporal",
+            "subcategory": "oleo-corporal",
+            "base_price": 59.43,
+            "suggested_price": 84.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "oleo-hidratante",
+                "fragrance": "ameixa",
+                "line": "Nativa SPA"
+            },
+            "popular": true,
+            "image_keyword": "boticario-nativa-spa-oleo-ameixa"
+        },
+        {
+            "id": "bot-015",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Boticollection",
+            "name": "Thaty Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 90.93,
+            "suggested_price": 129.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Boticollection"
+            },
+            "popular": true,
+            "image_keyword": "boticario-boticollection-thaty"
+        },
+        {
+            "id": "bot-016",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Cuide-se Bem",
+            "name": "Body Splash Nuvem 200ml",
+            "category": "corporal",
+            "subcategory": "body-splash",
+            "base_price": 52.43,
+            "suggested_price": 74.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "body-splash",
+                "fragrance": "nuvem",
+                "line": "Cuide-se Bem"
+            },
+            "popular": true,
+            "image_keyword": "boticario-cuide-se-bem-body-splash-nuvem"
+        },
+        {
+            "id": "bot-017",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Make B.",
+            "name": "Base Líquida Glycolic Active",
+            "category": "maquiagem",
+            "subcategory": "base",
+            "base_price": 76.93,
+            "suggested_price": 109.90,
+            "attributes": {
+                "type": "base-liquida",
+                "main_ingredient": "acido-glicolico",
+                "line": "Make B."
+            },
+            "popular": true,
+            "image_keyword": "boticario-make-b-base-glycolic"
+        },
+        {
+            "id": "bot-018",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Dr. Botica",
+            "name": "Poção da Coragem Colônia 120ml",
+            "category": "infantil",
+            "subcategory": "colonia-infantil",
+            "base_price": 62.93,
+            "suggested_price": 89.90,
+            "attributes": {
+                "volume": "120ml",
+                "type": "colonia",
+                "line": "Dr. Botica"
+            },
+            "popular": true,
+            "image_keyword": "boticario-dr-botica-pocao-coragem"
+        },
+        {
+            "id": "bot-019",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Match",
+            "name": "Shampoo Science Reconstrução 250ml",
+            "category": "capilar",
+            "subcategory": "shampoo",
+            "base_price": 32.83,
+            "suggested_price": 46.90,
+            "attributes": {
+                "volume": "250ml",
+                "type": "shampoo",
+                "function": "reconstrucao",
+                "line": "Match"
+            },
+            "popular": false,
+            "image_keyword": "boticario-match-shampoo-reconstrucao"
+        },
+        {
+            "id": "bot-020",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Botik",
+            "name": "Sérum de Alta Potência Retinol Puro",
+            "category": "facial",
+            "subcategory": "serum",
+            "base_price": 132.93,
+            "suggested_price": 189.90,
+            "attributes": {
+                "type": "serum",
+                "main_ingredient": "retinol",
+                "line": "Botik"
+            },
+            "popular": true,
+            "image_keyword": "boticario-botik-serum-retinol"
+        },
+        {
+            "id": "bot-021",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Egeo",
+            "name": "Egeo Blue Desodorante Colônia 90ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 97.93,
+            "suggested_price": 139.90,
+            "attributes": {
+                "volume": "90ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Egeo"
+            },
+            "popular": true,
+            "image_keyword": "boticario-egeo-blue"
+        },
+        {
+            "id": "bot-022",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Malbec",
+            "name": "Malbec Magnetic 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 146.93,
+            "suggested_price": 209.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Malbec"
+            },
+            "popular": true,
+            "image_keyword": "boticario-malbec-magnetic"
+        },
+        {
+            "id": "bot-023",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Lily",
+            "name": "Refil Creme Acetinado Lily 250g",
+            "category": "corporal",
+            "subcategory": "creme-corporal",
+            "base_price": 62.93,
+            "suggested_price": 89.90,
+            "attributes": {
+                "volume": "250g",
+                "type": "refil",
+                "line": "Lily"
+            },
+            "popular": false,
+            "image_keyword": "boticario-lily-refil-creme"
+        },
+        {
+            "id": "bot-024",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Floratta",
+            "name": "Floratta Blue Desodorante Colônia",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 97.93,
+            "suggested_price": 139.90,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Floratta"
+            },
+            "popular": true,
+            "image_keyword": "boticario-floratta-blue"
+        },
+        {
+            "id": "bot-025",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Nativa SPA",
+            "name": "Loção Ameixa Dourada 100ml",
+            "category": "corporal",
+            "subcategory": "locao-hidratante",
+            "base_price": 22.33,
+            "suggested_price": 31.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "locao",
+                "fragrance": "ameixa-dourada",
+                "line": "Nativa SPA"
+            },
+            "popular": false,
+            "image_keyword": "boticario-nativa-spa-ameixa-dourada"
+        },
+        {
+            "id": "bot-026",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Make B.",
+            "name": "Máscara de Cílios Volume Extremo",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 59.43,
+            "suggested_price": 84.90,
+            "attributes": {
+                "type": "mascara",
+                "function": "volume-extremo",
+                "line": "Make B."
+            },
+            "popular": true,
+            "image_keyword": "boticario-make-b-mascara-volume"
+        },
+        {
+            "id": "bot-027",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Cuide-se Bem",
+            "name": "Sabonete em Barra Deleite 2un",
+            "category": "banho",
+            "subcategory": "sabonete",
+            "base_price": 13.93,
+            "suggested_price": 19.90,
+            "attributes": {
+                "quantity": "2un",
+                "type": "sabonete-barra",
+                "fragrance": "deleite",
+                "line": "Cuide-se Bem"
+            },
+            "popular": false,
+            "image_keyword": "boticario-cuide-se-bem-sabonete-deleite"
+        },
+        {
+            "id": "bot-028",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Malbec",
+            "name": "Gel após Barba Malbec 110g",
+            "category": "homem",
+            "subcategory": "pos-barba",
+            "base_price": 41.93,
+            "suggested_price": 59.90,
+            "attributes": {
+                "volume": "110g",
+                "type": "gel-pos-barba",
+                "gender": "masculino",
+                "line": "Malbec"
+            },
+            "popular": true,
+            "image_keyword": "boticario-malbec-gel-pos-barba"
+        },
+        {
+            "id": "bot-029",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Glamour",
+            "name": "Glamour Secrets Black 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 122.43,
+            "suggested_price": 174.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Glamour"
+            },
+            "popular": true,
+            "image_keyword": "boticario-glamour-secrets-black"
+        },
+        {
+            "id": "bot-030",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Arbo",
+            "name": "Arbo Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 108.43,
+            "suggested_price": 154.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Arbo"
+            },
+            "popular": true,
+            "image_keyword": "boticario-arbo-colonia"
+        },
+        {
+            "id": "bot-031",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Nativa SPA",
+            "name": "Shampoo Quinoa Hidratação 300ml",
+            "category": "capilar",
+            "subcategory": "shampoo",
+            "base_price": 34.93,
+            "suggested_price": 49.90,
+            "attributes": {
+                "volume": "300ml",
+                "type": "shampoo",
+                "main_ingredient": "quinoa",
+                "function": "hidratacao",
+                "line": "Nativa SPA"
+            },
+            "popular": false,
+            "image_keyword": "boticario-nativa-spa-shampoo-quinoa"
+        },
+        {
+            "id": "bot-032",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Botik",
+            "name": "Creme Firmador Ácido Hialurônico",
+            "category": "facial",
+            "subcategory": "creme-firmador",
+            "base_price": 111.93,
+            "suggested_price": 159.90,
+            "attributes": {
+                "type": "creme",
+                "main_ingredient": "acido-hialuronico",
+                "function": "firmador",
+                "line": "Botik"
+            },
+            "popular": true,
+            "image_keyword": "boticario-botik-creme-hialuronico"
+        },
+        {
+            "id": "bot-033",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Make B.",
+            "name": "Primer Facial Preenchedor",
+            "category": "maquiagem",
+            "subcategory": "primer",
+            "base_price": 55.93,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "primer",
+                "function": "preenchedor",
+                "line": "Make B."
+            },
+            "popular": true,
+            "image_keyword": "boticario-make-b-primer-preenchedor"
+        },
+        {
+            "id": "bot-034",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Egeo",
+            "name": "Egeo Spicy Vibe 90ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 111.93,
+            "suggested_price": 159.90,
+            "attributes": {
+                "volume": "90ml",
+                "type": "desodorante-colonia",
+                "fragrance": "spicy",
+                "line": "Egeo"
+            },
+            "popular": true,
+            "image_keyword": "boticario-egeo-spicy-vibe"
+        },
+        {
+            "id": "bot-035",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Boticollection",
+            "name": "Free Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 97.93,
+            "suggested_price": 139.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Boticollection"
+            },
+            "popular": true,
+            "image_keyword": "boticario-boticollection-free"
+        },
+        {
+            "id": "bot-036",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Cuide-se Bem",
+            "name": "Hidratante Labial Morango",
+            "category": "labios",
+            "subcategory": "hidratante-labial",
+            "base_price": 23.03,
+            "suggested_price": 32.90,
+            "attributes": {
+                "type": "hidratante-labial",
+                "flavor": "morango",
+                "line": "Cuide-se Bem"
+            },
+            "popular": true,
+            "image_keyword": "boticario-cuide-se-bem-hidratante-labial-morango"
+        },
+        {
+            "id": "bot-037",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Sophie",
+            "name": "Sophie Colônia Hello 100ml",
+            "category": "infantil",
+            "subcategory": "colonia-infantil",
+            "base_price": 62.93,
+            "suggested_price": 89.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "colonia",
+                "line": "Sophie"
+            },
+            "popular": true,
+            "image_keyword": "boticario-sophie-hello"
+        },
+        {
+            "id": "bot-038",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Malbec",
+            "name": "Malbec X Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 160.93,
+            "suggested_price": 229.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Malbec"
+            },
+            "popular": true,
+            "image_keyword": "boticario-malbec-x"
+        },
+        {
+            "id": "bot-039",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Floratta",
+            "name": "Floratta Rose Desodorante Colônia",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 97.93,
+            "suggested_price": 139.90,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "fragrance": "rose",
+                "gender": "feminino",
+                "line": "Floratta"
+            },
+            "popular": true,
+            "image_keyword": "boticario-floratta-rose"
+        },
+        {
+            "id": "bot-040",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Nativa SPA",
+            "name": "Refil Loção Ameixa Negra 400ml",
+            "category": "corporal",
+            "subcategory": "locao-hidratante",
+            "base_price": 41.93,
+            "suggested_price": 59.90,
+            "attributes": {
+                "volume": "400ml",
+                "type": "refil",
+                "fragrance": "ameixa-negra",
+                "line": "Nativa SPA"
+            },
+            "popular": false,
+            "image_keyword": "boticario-nativa-spa-refil-ameixa-negra"
+        },
+        {
+            "id": "bot-041",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Make B.",
+            "name": "Pó Compacto Mate Salicylic",
+            "category": "maquiagem",
+            "subcategory": "po-compacto",
+            "base_price": 66.43,
+            "suggested_price": 94.90,
+            "attributes": {
+                "type": "po-compacto",
+                "finish": "mate",
+                "main_ingredient": "acido-salicilico",
+                "line": "Make B."
+            },
+            "popular": true,
+            "image_keyword": "boticario-make-b-po-compacto-salicylic"
+        },
+        {
+            "id": "bot-042",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Botik",
+            "name": "Tônico Facial Micelar 200ml",
+            "category": "facial",
+            "subcategory": "tonico",
+            "base_price": 48.93,
+            "suggested_price": 69.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "tonico-micelar",
+                "line": "Botik"
+            },
+            "popular": true,
+            "image_keyword": "boticario-botik-tonico-micelar"
+        },
+        {
+            "id": "bot-043",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Cuide-se Bem",
+            "name": "Creme de Mãos Nuvem 50g",
+            "category": "maos",
+            "subcategory": "creme-maos",
+            "base_price": 24.43,
+            "suggested_price": 34.90,
+            "attributes": {
+                "volume": "50g",
+                "type": "creme",
+                "fragrance": "nuvem",
+                "line": "Cuide-se Bem"
+            },
+            "popular": true,
+            "image_keyword": "boticario-cuide-se-bem-creme-maos-nuvem"
+        },
+        {
+            "id": "bot-044",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Lily",
+            "name": "Lily Absolu Eau de Parfum 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 195.93,
+            "suggested_price": 279.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Lily"
+            },
+            "popular": true,
+            "image_keyword": "boticario-lily-absolu"
+        },
+        {
+            "id": "bot-045",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Match",
+            "name": "Óleo Capilar Reparador Nutrição",
+            "category": "capilar",
+            "subcategory": "oleo-capilar",
+            "base_price": 45.43,
+            "suggested_price": 64.90,
+            "attributes": {
+                "type": "oleo-capilar",
+                "function": "reparador-nutricao",
+                "line": "Match"
+            },
+            "popular": false,
+            "image_keyword": "boticario-match-oleo-capilar"
+        },
+        {
+            "id": "bot-046",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Glamour",
+            "name": "Glamour Just Shine 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 122.43,
+            "suggested_price": 174.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Glamour"
+            },
+            "popular": true,
+            "image_keyword": "boticario-glamour-just-shine"
+        },
+        {
+            "id": "bot-047",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Malbec",
+            "name": "Desodorante Body Spray Malbec",
+            "category": "corporal",
+            "subcategory": "desodorante",
+            "base_price": 31.43,
+            "suggested_price": 44.90,
+            "attributes": {
+                "type": "body-spray",
+                "gender": "masculino",
+                "line": "Malbec"
+            },
+            "popular": true,
+            "image_keyword": "boticario-malbec-body-spray"
+        },
+        {
+            "id": "bot-048",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Nativa SPA",
+            "name": "Body Splash Jasmim Sambac",
+            "category": "corporal",
+            "subcategory": "body-splash",
+            "base_price": 55.93,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "body-splash",
+                "fragrance": "jasmim-sambac",
+                "line": "Nativa SPA"
+            },
+            "popular": true,
+            "image_keyword": "boticario-nativa-spa-body-splash-jasmim"
+        },
+        {
+            "id": "bot-049",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Egeo",
+            "name": "Egeo Bomb Black 90ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 97.93,
+            "suggested_price": 139.90,
+            "attributes": {
+                "volume": "90ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Egeo"
+            },
+            "popular": true,
+            "image_keyword": "boticario-egeo-bomb-black"
+        },
+        {
+            "id": "bot-050",
+            "brand": "boticario",
+            "brand_display": "Boticário",
+            "line": "Botik",
+            "name": "Gel-Creme Redutor de Olheiras",
+            "category": "facial",
+            "subcategory": "gel-creme-olhos",
+            "base_price": 83.93,
+            "suggested_price": 119.90,
+            "attributes": {
+                "type": "gel-creme",
+                "function": "redutor-olheiras",
+                "line": "Botik"
+            },
+            "popular": true,
+            "image_keyword": "boticario-botik-gel-olheiras"
+        },
+        {
+            "id": "mky-001",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "TimeWise",
+            "name": "Sistema TimeWise 3D (Kit Completo)",
+            "category": "facial",
+            "subcategory": "kit-facial",
+            "base_price": 209.40,
+            "suggested_price": 349.00,
+            "attributes": {
+                "type": "kit-completo",
+                "function": "antissinais",
+                "line": "TimeWise 3D"
+            },
+            "popular": true,
+            "image_keyword": "marykay-timewise-3d-kit"
+        },
+        {
+            "id": "mky-002",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "TimeWise",
+            "name": "Base Líquida TimeWise Matte 3D",
+            "category": "maquiagem",
+            "subcategory": "base",
+            "base_price": 45.54,
+            "suggested_price": 75.90,
+            "attributes": {
+                "type": "base-liquida",
+                "finish": "mate",
+                "line": "TimeWise 3D"
+            },
+            "popular": true,
+            "image_keyword": "marykay-timewise-base-matte"
+        },
+        {
+            "id": "mky-003",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Satin Hands",
+            "name": "Kit Satin Hands Pêssego",
+            "category": "maos",
+            "subcategory": "kit-maos",
+            "base_price": 101.94,
+            "suggested_price": 169.90,
+            "attributes": {
+                "type": "kit",
+                "fragrance": "pessego",
+                "line": "Satin Hands"
+            },
+            "popular": true,
+            "image_keyword": "marykay-satin-hands-pessego"
+        },
+        {
+            "id": "mky-004",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "ClearProof",
+            "name": "Máscara Detox de Carvão ClearProof",
+            "category": "facial",
+            "subcategory": "mascara-facial",
+            "base_price": 56.94,
+            "suggested_price": 94.90,
+            "attributes": {
+                "type": "mascara-detox",
+                "main_ingredient": "carvao",
+                "function": "limpeza-profunda",
+                "line": "ClearProof"
+            },
+            "popular": true,
+            "image_keyword": "marykay-clearproof-mascara-carvao"
+        },
+        {
+            "id": "mky-005",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Fragrance",
+            "name": "Pink Diamonds Eau de Parfum 60ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 87.00,
+            "suggested_price": 145.00,
+            "attributes": {
+                "volume": "60ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "marykay-pink-diamonds"
+        },
+        {
+            "id": "mky-006",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "TimeWise",
+            "name": "Creme para Área dos Olhos TimeWise 3D",
+            "category": "facial",
+            "subcategory": "creme-olhos",
+            "base_price": 49.74,
+            "suggested_price": 82.90,
+            "attributes": {
+                "type": "creme-olhos",
+                "function": "antissinais",
+                "line": "TimeWise 3D"
+            },
+            "popular": true,
+            "image_keyword": "marykay-timewise-creme-olhos"
+        },
+        {
+            "id": "mky-007",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Batom Gel Semi-Matte",
+            "category": "maquiagem",
+            "subcategory": "batom",
+            "base_price": 29.94,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "batom-gel",
+                "finish": "semi-mate",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "marykay-batom-gel-semimatte"
+        },
+        {
+            "id": "mky-008",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Lash Intensity",
+            "name": "Máscara de Cílios Lash Intensity",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 47.94,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "mascara",
+                "function": "intensity",
+                "line": "Lash Intensity"
+            },
+            "popular": true,
+            "image_keyword": "marykay-lash-intensity-mascara"
+        },
+        {
+            "id": "mky-009",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "MK Men",
+            "name": "Espuma de Barbear MK Men 184g",
+            "category": "homem",
+            "subcategory": "barbear",
+            "base_price": 37.74,
+            "suggested_price": 62.90,
+            "attributes": {
+                "volume": "184g",
+                "type": "espuma-barbear",
+                "gender": "masculino",
+                "line": "MK Men"
+            },
+            "popular": true,
+            "image_keyword": "marykay-mk-men-espuma-barbear"
+        },
+        {
+            "id": "mky-010",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Satin Lips",
+            "name": "Kit Satin Lips Karité",
+            "category": "labios",
+            "subcategory": "kit-labios",
+            "base_price": 53.94,
+            "suggested_price": 89.90,
+            "attributes": {
+                "type": "kit",
+                "main_ingredient": "karite",
+                "line": "Satin Lips"
+            },
+            "popular": true,
+            "image_keyword": "marykay-satin-lips-kit"
+        },
+        {
+            "id": "mky-011",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "TimeWise",
+            "name": "Gel de Limpeza 4 em 1 TimeWise 3D",
+            "category": "facial",
+            "subcategory": "gel-limpeza",
+            "base_price": 41.94,
+            "suggested_price": 69.90,
+            "attributes": {
+                "type": "gel-limpeza",
+                "function": "4-em-1",
+                "line": "TimeWise 3D"
+            },
+            "popular": true,
+            "image_keyword": "marykay-timewise-gel-limpeza"
+        },
+        {
+            "id": "mky-012",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Fragrance",
+            "name": "Magnetic Passion Edge 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 113.40,
+            "suggested_price": 189.00,
+            "attributes": {
+                "volume": "75ml",
+                "type": "perfume",
+                "gender": "masculino",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "marykay-magnetic-passion-edge"
+        },
+        {
+            "id": "mky-013",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "CC Cream Multibenefícios FPS 15",
+            "category": "maquiagem",
+            "subcategory": "cc-cream",
+            "base_price": 43.74,
+            "suggested_price": 72.90,
+            "attributes": {
+                "type": "cc-cream",
+                "spf": "15",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "marykay-cc-cream"
+        },
+        {
+            "id": "mky-014",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Repair",
+            "name": "Sérum Lifting Volu-Firm Repair",
+            "category": "facial",
+            "subcategory": "serum",
+            "base_price": 119.40,
+            "suggested_price": 199.00,
+            "attributes": {
+                "type": "serum-lifting",
+                "function": "firmador",
+                "line": "Repair"
+            },
+            "popular": true,
+            "image_keyword": "marykay-repair-serum-volu-firm"
+        },
+        {
+            "id": "mky-015",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Corretivo Perfecting Concealer",
+            "category": "maquiagem",
+            "subcategory": "corretivo",
+            "base_price": 38.94,
+            "suggested_price": 64.90,
+            "attributes": {
+                "type": "corretivo",
+                "finish": "perfecting",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "marykay-corretivo-perfecting"
+        },
+        {
+            "id": "mky-016",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Body Care",
+            "name": "Loção Hidratante Satin Body Karité",
+            "category": "corporal",
+            "subcategory": "locao-hidratante",
+            "base_price": 44.94,
+            "suggested_price": 74.90,
+            "attributes": {
+                "type": "locao",
+                "main_ingredient": "karite",
+                "line": "Body Care"
+            },
+            "popular": true,
+            "image_keyword": "marykay-satin-body-locao"
+        },
+        {
+            "id": "mky-017",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Sun Care",
+            "name": "Protetor Solar FPS 50 Mary Kay",
+            "category": "solar",
+            "subcategory": "protetor-solar",
+            "base_price": 47.94,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "protetor-solar",
+                "spf": "50",
+                "line": "Sun Care"
+            },
+            "popular": true,
+            "image_keyword": "marykay-protetor-solar-fps50"
+        },
+        {
+            "id": "mky-018",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Fragrance",
+            "name": "Free Spirit Ocean Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 71.40,
+            "suggested_price": 119.00,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "fragrance": "ocean",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "marykay-free-spirit-ocean"
+        },
+        {
+            "id": "mky-019",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Primer Facial Fixador de Maquiagem",
+            "category": "maquiagem",
+            "subcategory": "primer",
+            "base_price": 46.14,
+            "suggested_price": 76.90,
+            "attributes": {
+                "type": "primer",
+                "function": "fixador",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "marykay-primer-facial"
+        },
+        {
+            "id": "mky-020",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "TimeWise",
+            "name": "Microesfoliante Refinar Passo 1",
+            "category": "facial",
+            "subcategory": "esfoliante",
+            "base_price": 69.00,
+            "suggested_price": 115.00,
+            "attributes": {
+                "type": "microesfoliante",
+                "step": "passo-1",
+                "line": "TimeWise"
+            },
+            "popular": true,
+            "image_keyword": "marykay-timewise-microesfoliante"
+        },
+        {
+            "id": "mky-021",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Pó Solto Translúcido",
+            "category": "maquiagem",
+            "subcategory": "po-solto",
+            "base_price": 47.94,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "po-solto",
+                "finish": "translucido",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "marykay-po-solto-translucido"
+        },
+        {
+            "id": "mky-022",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Repair",
+            "name": "Creme Diurno FPS 30 Volu-Firm",
+            "category": "facial",
+            "subcategory": "creme-dia",
+            "base_price": 107.40,
+            "suggested_price": 179.00,
+            "attributes": {
+                "type": "creme-dia",
+                "spf": "30",
+                "function": "firmador",
+                "line": "Repair"
+            },
+            "popular": true,
+            "image_keyword": "marykay-repair-creme-dia-volu-firm"
+        },
+        {
+            "id": "mky-023",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Fragrance",
+            "name": "If You Believe Eau de Toilette 60ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-toilette",
+            "base_price": 83.40,
+            "suggested_price": 139.00,
+            "attributes": {
+                "volume": "60ml",
+                "type": "toilette",
+                "gender": "feminino",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "marykay-if-you-believe"
+        },
+        {
+            "id": "mky-024",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Lash Love",
+            "name": "Máscara de Cílios Lash Love",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 41.94,
+            "suggested_price": 69.90,
+            "attributes": {
+                "type": "mascara",
+                "line": "Lash Love"
+            },
+            "popular": true,
+            "image_keyword": "marykay-lash-love-mascara"
+        },
+        {
+            "id": "mky-025",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Demaquilante Bifásico para Olhos",
+            "category": "limpeza",
+            "subcategory": "demaquilante",
+            "base_price": 44.94,
+            "suggested_price": 74.90,
+            "attributes": {
+                "type": "demaquilante-bifasico",
+                "usage": "olhos",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "marykay-demaquilante-bifasico"
+        },
+        {
+            "id": "mky-026",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "TimeWise",
+            "name": "Creme Noturno TimeWise 3D",
+            "category": "facial",
+            "subcategory": "creme-noite",
+            "base_price": 59.40,
+            "suggested_price": 99.00,
+            "attributes": {
+                "type": "creme-noite",
+                "line": "TimeWise 3D"
+            },
+            "popular": true,
+            "image_keyword": "marykay-timewise-creme-noite"
+        },
+        {
+            "id": "mky-027",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "MK Men",
+            "name": "Loção Hidratante com FPS 30 MK Men",
+            "category": "homem",
+            "subcategory": "hidratante-facial",
+            "base_price": 53.94,
+            "suggested_price": 89.90,
+            "attributes": {
+                "type": "locao-hidratante",
+                "spf": "30",
+                "gender": "masculino",
+                "line": "MK Men"
+            },
+            "popular": true,
+            "image_keyword": "marykay-mk-men-locao-fps30"
+        },
+        {
+            "id": "mky-028",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Fragrance",
+            "name": "Upscale Gentleman Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 95.40,
+            "suggested_price": 159.00,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "marykay-upscale-gentleman"
+        },
+        {
+            "id": "mky-029",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Blush Mineral em Pó Mary Kay",
+            "category": "maquiagem",
+            "subcategory": "blush",
+            "base_price": 25.74,
+            "suggested_price": 42.90,
+            "attributes": {
+                "type": "blush",
+                "formula": "mineral",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "marykay-blush-mineral"
+        },
+        {
+            "id": "mky-030",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Satin Body",
+            "name": "Creme Esfoliante Satin Body",
+            "category": "corporal",
+            "subcategory": "esfoliante-corporal",
+            "base_price": 38.94,
+            "suggested_price": 64.90,
+            "attributes": {
+                "type": "creme-esfoliante",
+                "line": "Satin Body"
+            },
+            "popular": true,
+            "image_keyword": "marykay-satin-body-esfoliante"
+        },
+        {
+            "id": "mky-031",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "ClearProof",
+            "name": "Tônico para Pele com Tendência à Acne",
+            "category": "facial",
+            "subcategory": "tonico",
+            "base_price": 46.14,
+            "suggested_price": 76.90,
+            "attributes": {
+                "type": "tonico",
+                "skin_type": "oleosa-acneica",
+                "line": "ClearProof"
+            },
+            "popular": true,
+            "image_keyword": "marykay-clearproof-tonico"
+        },
+        {
+            "id": "mky-032",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Delineador Líquido em Caneta",
+            "category": "maquiagem",
+            "subcategory": "delineador",
+            "base_price": 38.94,
+            "suggested_price": 64.90,
+            "attributes": {
+                "type": "delineador-liquido",
+                "format": "caneta",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "marykay-delineador-caneta"
+        },
+        {
+            "id": "mky-033",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "TimeWise",
+            "name": "Vitamina C em Quadrados TimeWise",
+            "category": "facial",
+            "subcategory": "vitamina-c",
+            "base_price": 66.00,
+            "suggested_price": 110.00,
+            "attributes": {
+                "type": "vitamina-c",
+                "format": "quadrados",
+                "line": "TimeWise"
+            },
+            "popular": true,
+            "image_keyword": "marykay-timewise-vitamina-c"
+        },
+        {
+            "id": "mky-034",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Repair",
+            "name": "Creme para Olhos Volu-Firm Repair",
+            "category": "facial",
+            "subcategory": "creme-olhos",
+            "base_price": 87.00,
+            "suggested_price": 145.00,
+            "attributes": {
+                "type": "creme-olhos",
+                "function": "firmador",
+                "line": "Repair"
+            },
+            "popular": true,
+            "image_keyword": "marykay-repair-creme-olhos"
+        },
+        {
+            "id": "mky-035",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Fragrance",
+            "name": "Love Fearlessly Eau de Parfum 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 107.40,
+            "suggested_price": 179.00,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "marykay-love-fearlessly"
+        },
+        {
+            "id": "mky-036",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Batom Líquido Matte At Play",
+            "category": "maquiagem",
+            "subcategory": "batom-liquido",
+            "base_price": 23.94,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "batom-liquido",
+                "finish": "mate",
+                "line": "At Play"
+            },
+            "popular": true,
+            "image_keyword": "marykay-at-play-batom-matte"
+        },
+        {
+            "id": "mky-037",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "MK Men",
+            "name": "Fragrância MK High Intensity 73ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 99.00,
+            "suggested_price": 165.00,
+            "attributes": {
+                "volume": "73ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "MK Men"
+            },
+            "popular": true,
+            "image_keyword": "marykay-mk-men-high-intensity"
+        },
+        {
+            "id": "mky-038",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Base em Pó Mineral Mary Kay",
+            "category": "maquiagem",
+            "subcategory": "base-po",
+            "base_price": 44.94,
+            "suggested_price": 74.90,
+            "attributes": {
+                "type": "base-em-po",
+                "formula": "mineral",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "marykay-base-po-mineral"
+        },
+        {
+            "id": "mky-039",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "TimeWise",
+            "name": "Restaurador de Umidade Passo 2",
+            "category": "facial",
+            "subcategory": "hidratante",
+            "base_price": 69.00,
+            "suggested_price": 115.00,
+            "attributes": {
+                "type": "restaurador-umidade",
+                "step": "passo-2",
+                "line": "TimeWise"
+            },
+            "popular": true,
+            "image_keyword": "marykay-timewise-restaurador-umidade"
+        },
+        {
+            "id": "mky-040",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Body Care",
+            "name": "Gel de Banho Satin Body Karité",
+            "category": "banho",
+            "subcategory": "gel-banho",
+            "base_price": 32.94,
+            "suggested_price": 54.90,
+            "attributes": {
+                "type": "gel-de-banho",
+                "main_ingredient": "karite",
+                "line": "Body Care"
+            },
+            "popular": true,
+            "image_keyword": "marykay-gel-banho-satin-body"
+        },
+        {
+            "id": "mky-041",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Repair",
+            "name": "Espuma de Limpeza Volu-Firm Repair",
+            "category": "facial",
+            "subcategory": "espuma-limpeza",
+            "base_price": 77.40,
+            "suggested_price": 129.00,
+            "attributes": {
+                "type": "espuma-limpeza",
+                "function": "firmador",
+                "line": "Repair"
+            },
+            "popular": true,
+            "image_keyword": "marykay-repair-espuma-limpeza"
+        },
+        {
+            "id": "mky-042",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Lápis Retrátil para Olhos",
+            "category": "maquiagem",
+            "subcategory": "lapis-olhos",
+            "base_price": 25.74,
+            "suggested_price": 42.90,
+            "attributes": {
+                "type": "lapis-retratil",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "marykay-lapis-retratil-olhos"
+        },
+        {
+            "id": "mky-043",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Fragrance",
+            "name": "Belara Eau de Parfum 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 83.40,
+            "suggested_price": 139.00,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "marykay-belara"
+        },
+        {
+            "id": "mky-044",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "ClearProof",
+            "name": "Gel de Limpeza Profunda ClearProof",
+            "category": "facial",
+            "subcategory": "gel-limpeza",
+            "base_price": 41.94,
+            "suggested_price": 69.90,
+            "attributes": {
+                "type": "gel-limpeza",
+                "skin_type": "oleosa-acneica",
+                "line": "ClearProof"
+            },
+            "popular": true,
+            "image_keyword": "marykay-clearproof-gel-limpeza"
+        },
+        {
+            "id": "mky-045",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Iluminador em Bastão At Play",
+            "category": "maquiagem",
+            "subcategory": "iluminador",
+            "base_price": 29.94,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "iluminador",
+                "format": "bastao",
+                "line": "At Play"
+            },
+            "popular": true,
+            "image_keyword": "marykay-at-play-iluminador-bastao"
+        },
+        {
+            "id": "mky-046",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Satin Lips",
+            "name": "Bálsamo Labial de Karité Satin Lips",
+            "category": "labios",
+            "subcategory": "balsamo-labial",
+            "base_price": 29.94,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "balsamo",
+                "main_ingredient": "karite",
+                "line": "Satin Lips"
+            },
+            "popular": true,
+            "image_keyword": "marykay-satin-lips-balsamo"
+        },
+        {
+            "id": "mky-047",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "MK Men",
+            "name": "Gel de Limpeza Facial MK Men 133ml",
+            "category": "homem",
+            "subcategory": "gel-limpeza",
+            "base_price": 35.94,
+            "suggested_price": 59.90,
+            "attributes": {
+                "volume": "133ml",
+                "type": "gel-limpeza",
+                "gender": "masculino",
+                "line": "MK Men"
+            },
+            "popular": true,
+            "image_keyword": "marykay-mk-men-gel-limpeza"
+        },
+        {
+            "id": "mky-048",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "TimeWise",
+            "name": "Creme Diurno FPS 30 TimeWise 3D",
+            "category": "facial",
+            "subcategory": "creme-dia",
+            "base_price": 59.40,
+            "suggested_price": 99.00,
+            "attributes": {
+                "type": "creme-dia",
+                "spf": "30",
+                "line": "TimeWise 3D"
+            },
+            "popular": true,
+            "image_keyword": "marykay-timewise-creme-dia-fps30"
+        },
+        {
+            "id": "mky-049",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Makeup",
+            "name": "Duo de Sombras At Play",
+            "category": "maquiagem",
+            "subcategory": "sombra",
+            "base_price": 27.54,
+            "suggested_price": 45.90,
+            "attributes": {
+                "type": "duo-sombras",
+                "line": "At Play"
+            },
+            "popular": true,
+            "image_keyword": "marykay-at-play-duo-sombras"
+        },
+        {
+            "id": "mky-050",
+            "brand": "marykay",
+            "brand_display": "Mary Kay",
+            "line": "Fragrance",
+            "name": "Cityscape para Ela Eau de Parfum",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 119.40,
+            "suggested_price": 199.00,
+            "attributes": {
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Fragrance"
+            },
+            "popular": true,
+            "image_keyword": "marykay-cityscape-para-ela"
+        }
+    ]
+}

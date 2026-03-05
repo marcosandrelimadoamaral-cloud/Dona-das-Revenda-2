@@ -1,0 +1,1789 @@
+{
+    "products": [
+        {
+            "id": "bel-001",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Nocturne",
+            "name": "Nocturne Sérum Renovador Noturno",
+            "category": "facial",
+            "subcategory": "serum-noturno",
+            "base_price": 113.40,
+            "suggested_price": 189.00,
+            "attributes": {
+                "type": "serum",
+                "period": "noturno",
+                "function": "renovador",
+                "line": "L'Bel Nocturne"
+            },
+            "popular": true,
+            "image_keyword": "lbel-nocturne-serum"
+        },
+        {
+            "id": "bel-002",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Mithyka",
+            "name": "Mithyka Eau de Parfum 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 89.40,
+            "suggested_price": 149.00,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Ésika Mithyka"
+            },
+            "popular": true,
+            "image_keyword": "esika-mithyka-edp"
+        },
+        {
+            "id": "bel-003",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Studio Look",
+            "name": "Batom Líquido Matte Studio Look",
+            "category": "maquiagem",
+            "subcategory": "batom-liquido",
+            "base_price": 23.94,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "batom-liquido",
+                "finish": "matte",
+                "line": "Cyzone Studio Look"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-studio-look-batom"
+        },
+        {
+            "id": "bel-004",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Concentré",
+            "name": "Concentré Total Creme para Rosto",
+            "category": "facial",
+            "subcategory": "creme-facial",
+            "base_price": 149.40,
+            "suggested_price": 249.00,
+            "attributes": {
+                "type": "creme-multibeneficios",
+                "function": "total",
+                "line": "L'Bel Concentré"
+            },
+            "popular": true,
+            "image_keyword": "lbel-concentre-total"
+        },
+        {
+            "id": "bel-005",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Magnat",
+            "name": "Magnat Desodorante Colônia Masculina",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 95.40,
+            "suggested_price": 159.00,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Ésika Magnat"
+            },
+            "popular": true,
+            "image_keyword": "esika-magnat-colonia"
+        },
+        {
+            "id": "bel-006",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Skin First",
+            "name": "Gel Facial Hidratante Skin First",
+            "category": "facial",
+            "subcategory": "hidratante-facial",
+            "base_price": 29.94,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "gel-hidratante",
+                "line": "Cyzone Skin First"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-skin-first-gel"
+        },
+        {
+            "id": "bel-007",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Essential",
+            "name": "Desmaquilante Bifásico Essential 125ml",
+            "category": "limpeza",
+            "subcategory": "demaquilante",
+            "base_price": 44.94,
+            "suggested_price": 74.90,
+            "attributes": {
+                "volume": "125ml",
+                "type": "demaquilante-bifasico",
+                "line": "L'Bel Essential"
+            },
+            "popular": true,
+            "image_keyword": "lbel-essential-demaquilante"
+        },
+        {
+            "id": "bel-008",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Colorfix",
+            "name": "Batom Colorfix 24h Duo Tattoo",
+            "category": "maquiagem",
+            "subcategory": "batom",
+            "base_price": 32.94,
+            "suggested_price": 54.90,
+            "attributes": {
+                "type": "batom-duo",
+                "duration": "24h",
+                "line": "Ésika Colorfix"
+            },
+            "popular": true,
+            "image_keyword": "esika-colorfix-duo-tattoo"
+        },
+        {
+            "id": "bel-009",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Studio Look",
+            "name": "Base Líquida Alta Cobertura",
+            "category": "maquiagem",
+            "subcategory": "base",
+            "base_price": 35.94,
+            "suggested_price": 59.90,
+            "attributes": {
+                "type": "base-liquida",
+                "coverage": "alta",
+                "line": "Cyzone Studio Look"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-studio-look-base"
+        },
+        {
+            "id": "bel-010",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Bio Resist",
+            "name": "Creme Nutritivo Bio Resist Noite",
+            "category": "facial",
+            "subcategory": "creme-noite",
+            "base_price": 77.40,
+            "suggested_price": 129.00,
+            "attributes": {
+                "type": "creme-nutritivo",
+                "period": "noite",
+                "line": "L'Bel Bio Resist"
+            },
+            "popular": true,
+            "image_keyword": "lbel-bio-resist-noite"
+        },
+        {
+            "id": "bel-011",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Bleu Intense",
+            "name": "Bleu Intense Desodorante Colônia",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 83.40,
+            "suggested_price": 139.00,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "fragrance": "intense",
+                "line": "Ésika Bleu"
+            },
+            "popular": true,
+            "image_keyword": "esika-bleu-intense"
+        },
+        {
+            "id": "bel-012",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Dancing",
+            "name": "Dancing Night Desodorante Colônia",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 53.94,
+            "suggested_price": 89.90,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "fragrance": "night",
+                "line": "Cyzone Dancing"
+            },
+            "popular": false,
+            "image_keyword": "cyzone-dancing-night"
+        },
+        {
+            "id": "bel-013",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Mon L'Bel",
+            "name": "Mon L'Bel Eau de Parfum 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 119.40,
+            "suggested_price": 199.00,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "L'Bel"
+            },
+            "popular": true,
+            "image_keyword": "lbel-mon-lbel-edp"
+        },
+        {
+            "id": "bel-014",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Mega Full",
+            "name": "Máscara de Cílios Mega Full Size",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 29.94,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "mascara",
+                "function": "volume",
+                "line": "Ésika Mega Full"
+            },
+            "popular": true,
+            "image_keyword": "esika-mega-full-size"
+        },
+        {
+            "id": "bel-015",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Studio Look",
+            "name": "Corretivo Facial de Alta Cobertura",
+            "category": "maquiagem",
+            "subcategory": "corretivo",
+            "base_price": 20.94,
+            "suggested_price": 34.90,
+            "attributes": {
+                "type": "corretivo",
+                "coverage": "alta",
+                "line": "Cyzone Studio Look"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-studio-look-corretivo"
+        },
+        {
+            "id": "bel-016",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Oxygen Supreme",
+            "name": "Creme Hidratante Oxygen Supreme 30+",
+            "category": "facial",
+            "subcategory": "hidratante-facial",
+            "base_price": 69.00,
+            "suggested_price": 115.00,
+            "attributes": {
+                "type": "creme-hidratante",
+                "age": "30+",
+                "line": "L'Bel Oxygen"
+            },
+            "popular": false,
+            "image_keyword": "lbel-oxygen-supreme-30"
+        },
+        {
+            "id": "bel-017",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Vibranza",
+            "name": "Vibranza Eau de Parfum 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 89.40,
+            "suggested_price": 149.00,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "Ésika Vibranza"
+            },
+            "popular": true,
+            "image_keyword": "esika-vibranza-edp"
+        },
+        {
+            "id": "bel-018",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Pure It",
+            "name": "Máscara Facial de Argila Cyzone",
+            "category": "facial",
+            "subcategory": "mascara-facial",
+            "base_price": 25.74,
+            "suggested_price": 42.90,
+            "attributes": {
+                "type": "mascara-argila",
+                "line": "Cyzone Pure It"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-pure-it-mascara"
+        },
+        {
+            "id": "bel-019",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Rose D'Amélie",
+            "name": "Rose D'Amélie Eau de Parfum 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 107.40,
+            "suggested_price": 179.00,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "fragrance": "rose",
+                "line": "L'Bel"
+            },
+            "popular": true,
+            "image_keyword": "lbel-rose-damelie"
+        },
+        {
+            "id": "bel-020",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Perfect Block",
+            "name": "Protetor Solar Facial FPS 50",
+            "category": "solar",
+            "subcategory": "protetor-solar",
+            "base_price": 38.94,
+            "suggested_price": 64.90,
+            "attributes": {
+                "type": "protetor-solar",
+                "spf": "50",
+                "line": "Ésika Perfect Block"
+            },
+            "popular": true,
+            "image_keyword": "esika-perfect-block-fps50"
+        },
+        {
+            "id": "bel-021",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Studio Look",
+            "name": "Paleta de Sombras Studio Look",
+            "category": "maquiagem",
+            "subcategory": "paleta-sombras",
+            "base_price": 47.94,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "paleta",
+                "line": "Cyzone Studio Look"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-studio-look-paleta"
+        },
+        {
+            "id": "bel-022",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Concentré",
+            "name": "Concentré Total para Olhos",
+            "category": "facial",
+            "subcategory": "creme-olhos",
+            "base_price": 95.40,
+            "suggested_price": 159.00,
+            "attributes": {
+                "type": "creme-olhos",
+                "function": "total",
+                "line": "L'Bel Concentré"
+            },
+            "popular": true,
+            "image_keyword": "lbel-concentre-olhos"
+        },
+        {
+            "id": "bel-023",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Kalos",
+            "name": "Kalos Black Desodorante Colônia 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 83.40,
+            "suggested_price": 139.00,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Ésika Kalos"
+            },
+            "popular": true,
+            "image_keyword": "esika-kalos-black"
+        },
+        {
+            "id": "bel-024",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Sweet Black",
+            "name": "Sweet Black Exclusive Colônia 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 53.94,
+            "suggested_price": 89.90,
+            "attributes": {
+                "volume": "50ml",
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Cyzone Sweet Black"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-sweet-black-exclusive"
+        },
+        {
+            "id": "bel-025",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Satin Rouge",
+            "name": "Satin Rouge Eau de Parfum 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 107.40,
+            "suggested_price": 179.00,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "L'Bel Satin Rouge"
+            },
+            "popular": true,
+            "image_keyword": "lbel-satin-rouge"
+        },
+        {
+            "id": "bel-026",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Colorfix",
+            "name": "Delineador em Gel Colorfix",
+            "category": "maquiagem",
+            "subcategory": "delineador",
+            "base_price": 23.94,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "delineador-gel",
+                "line": "Ésika Colorfix"
+            },
+            "popular": true,
+            "image_keyword": "esika-colorfix-delineador"
+        },
+        {
+            "id": "bel-027",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Skin First",
+            "name": "Água Micelar Skin First 200ml",
+            "category": "limpeza",
+            "subcategory": "agua-micelar",
+            "base_price": 23.94,
+            "suggested_price": 39.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "agua-micelar",
+                "line": "Cyzone Skin First"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-skin-first-micelar"
+        },
+        {
+            "id": "bel-028",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Bio Resist",
+            "name": "Loção Facial Bio Resist FPS 30",
+            "category": "facial",
+            "subcategory": "locao-facial",
+            "base_price": 71.40,
+            "suggested_price": 119.00,
+            "attributes": {
+                "type": "locao",
+                "spf": "30",
+                "line": "L'Bel Bio Resist"
+            },
+            "popular": true,
+            "image_keyword": "lbel-bio-resist-locao"
+        },
+        {
+            "id": "bel-029",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "D'Orsay",
+            "name": "D'Orsay Classique Masculino 100ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 95.40,
+            "suggested_price": 159.00,
+            "attributes": {
+                "volume": "100ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Ésika D'Orsay"
+            },
+            "popular": true,
+            "image_keyword": "esika-dorsay-classique"
+        },
+        {
+            "id": "bel-030",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Studio Look",
+            "name": "Pó Compacto Matte Studio Look",
+            "category": "maquiagem",
+            "subcategory": "po-compacto",
+            "base_price": 29.94,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "po-compacto",
+                "finish": "matte",
+                "line": "Cyzone Studio Look"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-studio-look-po"
+        },
+        {
+            "id": "bel-031",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Mithyka",
+            "name": "Mithyka Zaffir Eau de Parfum 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 89.40,
+            "suggested_price": 149.00,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "gender": "feminino",
+                "line": "L'Bel Mithyka"
+            },
+            "popular": true,
+            "image_keyword": "lbel-mithyka-zaffir"
+        },
+        {
+            "id": "bel-032",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Mega Full",
+            "name": "Máscara Mega Full Curve Ésika",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 29.94,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "mascara",
+                "function": "curve",
+                "line": "Ésika Mega Full"
+            },
+            "popular": true,
+            "image_keyword": "esika-mega-full-curve"
+        },
+        {
+            "id": "bel-033",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Aury",
+            "name": "Aury Desodorante Colônia Feminina",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 47.94,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Cyzone Aury"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-aury-colonia"
+        },
+        {
+            "id": "bel-034",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Nocturne",
+            "name": "Hidratante Labial Nocturne",
+            "category": "labios",
+            "subcategory": "hidratante-labial",
+            "base_price": 23.94,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "hidratante-labial",
+                "line": "L'Bel Nocturne"
+            },
+            "popular": true,
+            "image_keyword": "lbel-nocturne-labial"
+        },
+        {
+            "id": "bel-035",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Pulso",
+            "name": "Pulso Desodorante Colônia Masculina",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 83.40,
+            "suggested_price": 139.00,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Ésika Pulso"
+            },
+            "popular": true,
+            "image_keyword": "esika-pulso-colonia"
+        },
+        {
+            "id": "bel-036",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Studio Look",
+            "name": "Primer Facial Studio Look",
+            "category": "maquiagem",
+            "subcategory": "primer",
+            "base_price": 32.94,
+            "suggested_price": 54.90,
+            "attributes": {
+                "type": "primer",
+                "line": "Cyzone Studio Look"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-studio-look-primer"
+        },
+        {
+            "id": "bel-037",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Renovance",
+            "name": "Renovance Creme Facial Noturno",
+            "category": "facial",
+            "subcategory": "creme-noite",
+            "base_price": 87.00,
+            "suggested_price": 145.00,
+            "attributes": {
+                "type": "creme-noite",
+                "line": "L'Bel Renovance"
+            },
+            "popular": true,
+            "image_keyword": "lbel-renovance-creme-noite"
+        },
+        {
+            "id": "bel-038",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Red It",
+            "name": "Red It Eau de Parfum 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-parfum",
+            "base_price": 77.40,
+            "suggested_price": 129.00,
+            "attributes": {
+                "volume": "50ml",
+                "type": "perfume",
+                "line": "Ésika Red It"
+            },
+            "popular": true,
+            "image_keyword": "esika-red-it-edp"
+        },
+        {
+            "id": "bel-039",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Blue & Blue",
+            "name": "Blue & Blue For Him Colônia 75ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 41.94,
+            "suggested_price": 69.90,
+            "attributes": {
+                "volume": "75ml",
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Cyzone Blue"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-blue-blue-him"
+        },
+        {
+            "id": "bel-040",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Essential",
+            "name": "Tônico Facial Essential 200ml",
+            "category": "facial",
+            "subcategory": "tonico",
+            "base_price": 35.94,
+            "suggested_price": 59.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "tonico",
+                "line": "L'Bel Essential"
+            },
+            "popular": true,
+            "image_keyword": "lbel-essential-tonico"
+        },
+        {
+            "id": "bel-041",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Colorfix",
+            "name": "Máscara Colorfix Cílios a Prova D'água",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 26.94,
+            "suggested_price": 44.90,
+            "attributes": {
+                "type": "mascara",
+                "features": "prova-dagua",
+                "line": "Ésika Colorfix"
+            },
+            "popular": true,
+            "image_keyword": "esika-colorfix-mascara"
+        },
+        {
+            "id": "bel-042",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "My Destiny",
+            "name": "My Destiny Eau de Toilette 50ml",
+            "category": "perfumaria",
+            "subcategory": "eau-de-toilette",
+            "base_price": 53.94,
+            "suggested_price": 89.90,
+            "attributes": {
+                "volume": "50ml",
+                "type": "toilette",
+                "gender": "feminino",
+                "line": "Cyzone My Destiny"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-my-destiny"
+        },
+        {
+            "id": "bel-043",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Nocturne",
+            "name": "Máscara Facial Nocturne Exfoliante",
+            "category": "facial",
+            "subcategory": "mascara-facial",
+            "base_price": 41.94,
+            "suggested_price": 69.90,
+            "attributes": {
+                "type": "mascara-exfoliante",
+                "line": "L'Bel Nocturne"
+            },
+            "popular": true,
+            "image_keyword": "lbel-nocturne-mascara"
+        },
+        {
+            "id": "bel-044",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Brave",
+            "name": "Brave Desodorante Colônia Masculina",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 71.40,
+            "suggested_price": 119.00,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Ésika Brave"
+            },
+            "popular": true,
+            "image_keyword": "esika-brave-colonia"
+        },
+        {
+            "id": "bel-045",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Studio Look",
+            "name": "Iluminador Líquido Studio Look",
+            "category": "maquiagem",
+            "subcategory": "iluminador",
+            "base_price": 27.54,
+            "suggested_price": 45.90,
+            "attributes": {
+                "type": "iluminador-liquido",
+                "line": "Cyzone Studio Look"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-studio-look-iluminador"
+        },
+        {
+            "id": "bel-046",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Concentré",
+            "name": "Concentré Hidratante Corporal 400ml",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 59.40,
+            "suggested_price": 99.00,
+            "attributes": {
+                "volume": "400ml",
+                "type": "hidratante",
+                "line": "L'Bel Concentré"
+            },
+            "popular": true,
+            "image_keyword": "lbel-concentre-hidratante-corporal"
+        },
+        {
+            "id": "bel-047",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Prints",
+            "name": "Prints Experience Colônia Feminina",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 47.94,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Ésika Prints"
+            },
+            "popular": true,
+            "image_keyword": "esika-prints-experience"
+        },
+        {
+            "id": "bel-048",
+            "brand": "yanbal",
+            "brand_display": "Cyzone",
+            "line": "Prints",
+            "name": "Prints Adventure Colônia Feminina",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 47.94,
+            "suggested_price": 79.90,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "gender": "feminino",
+                "line": "Cyzone Prints"
+            },
+            "popular": true,
+            "image_keyword": "cyzone-prints-adventure"
+        },
+        {
+            "id": "bel-049",
+            "brand": "yanbal",
+            "brand_display": "L'Bel",
+            "line": "Bio Resist",
+            "name": "Gel de Limpeza Facial Bio Resist",
+            "category": "facial",
+            "subcategory": "gel-limpeza",
+            "base_price": 38.94,
+            "suggested_price": 64.90,
+            "attributes": {
+                "type": "gel-limpeza",
+                "line": "L'Bel Bio Resist"
+            },
+            "popular": true,
+            "image_keyword": "lbel-bio-resist-gel-limpeza"
+        },
+        {
+            "id": "bel-050",
+            "brand": "yanbal",
+            "brand_display": "Ésika",
+            "line": "Ritmo",
+            "name": "Ritmo Desodorante Colônia Masculina",
+            "category": "perfumaria",
+            "subcategory": "eau-de-cologne",
+            "base_price": 59.40,
+            "suggested_price": 99.00,
+            "attributes": {
+                "type": "desodorante-colonia",
+                "gender": "masculino",
+                "line": "Ésika Ritmo"
+            },
+            "popular": true,
+            "image_keyword": "esika-ritmo-colonia"
+        },
+        {
+            "id": "ind-001",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Melu",
+            "name": "Sabonete Facial Melu 150ml",
+            "category": "facial",
+            "subcategory": "sabonete-facial",
+            "base_price": 14.94,
+            "suggested_price": 24.90,
+            "attributes": {
+                "volume": "150ml",
+                "type": "sabonete-liquido",
+                "line": "Melu"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-melu-sabonete"
+        },
+        {
+            "id": "ind-002",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "CoverUp",
+            "name": "Base Líquida Mari Maria CoverUp",
+            "category": "maquiagem",
+            "subcategory": "base",
+            "base_price": 22.80,
+            "suggested_price": 38.00,
+            "attributes": {
+                "type": "base-liquida",
+                "coverage": "alta",
+                "line": "CoverUp"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-base-coverup"
+        },
+        {
+            "id": "ind-003",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Terrapeutics",
+            "name": "Sabonete Líquido Castanha do Brasil",
+            "category": "banho",
+            "subcategory": "sabonete-liquido",
+            "base_price": 19.74,
+            "suggested_price": 32.90,
+            "attributes": {
+                "type": "sabonete-liquido",
+                "fragrance": "castanha",
+                "line": "Terrapeutics"
+            },
+            "popular": true,
+            "image_keyword": "granado-sabonete-castanha"
+        },
+        {
+            "id": "ind-004",
+            "brand": "independent",
+            "brand_display": "Boca Rosa",
+            "line": "Hair",
+            "name": "Máscara de Tratamento Quartzo Rosa",
+            "category": "capilar",
+            "subcategory": "mascara-capilar",
+            "base_price": 41.94,
+            "suggested_price": 69.90,
+            "attributes": {
+                "type": "mascara",
+                "line": "Quartzo Rosa"
+            },
+            "popular": true,
+            "image_keyword": "boca-rosa-hair-mascara"
+        },
+        {
+            "id": "ind-005",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Glass",
+            "name": "Primer Facial Glass Ruby Rose",
+            "category": "maquiagem",
+            "subcategory": "primer",
+            "base_price": 20.94,
+            "suggested_price": 34.90,
+            "attributes": {
+                "type": "primer",
+                "finish": "glass",
+                "line": "Glass"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-glass-primer"
+        },
+        {
+            "id": "ind-006",
+            "brand": "independent",
+            "brand_display": "Vizzela",
+            "line": "Makeup",
+            "name": "Corretivo Líquido Vegano Vizzela",
+            "category": "maquiagem",
+            "subcategory": "corretivo",
+            "base_price": 23.94,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "corretivo",
+                "feature": "vegano",
+                "line": "Vizzela"
+            },
+            "popular": true,
+            "image_keyword": "vizzela-corretivo-liquido"
+        },
+        {
+            "id": "ind-007",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "Labios",
+            "name": "Batom Líquido Matte Ginger Glow",
+            "category": "maquiagem",
+            "subcategory": "batom-liquido",
+            "base_price": 16.80,
+            "suggested_price": 28.00,
+            "attributes": {
+                "type": "batom-liquido",
+                "finish": "matte",
+                "line": "Ginger Glow"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-batom-ginger-glow"
+        },
+        {
+            "id": "ind-008",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Bebe",
+            "name": "Colônia Granado Bebê Lavanda 100ml",
+            "category": "infantil",
+            "subcategory": "colonia-infantil",
+            "base_price": 32.94,
+            "suggested_price": 54.90,
+            "attributes": {
+                "volume": "100ml",
+                "type": "colonia",
+                "fragrance": "lavanda",
+                "line": "Bebê"
+            },
+            "popular": true,
+            "image_keyword": "granado-bebe-colonia-lavanda"
+        },
+        {
+            "id": "ind-009",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Melu",
+            "name": "Gloss Labial Melu Alta Pigmentação",
+            "category": "labios",
+            "subcategory": "gloss",
+            "base_price": 11.94,
+            "suggested_price": 19.90,
+            "attributes": {
+                "type": "gloss",
+                "line": "Melu"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-melu-gloss"
+        },
+        {
+            "id": "ind-010",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "Olhos",
+            "name": "Delineador Líquido Cat Eyes",
+            "category": "maquiagem",
+            "subcategory": "delineador",
+            "base_price": 20.40,
+            "suggested_price": 34.00,
+            "attributes": {
+                "type": "delineador-liquido",
+                "line": "Cat Eyes"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-delineador-cat-eyes"
+        },
+        {
+            "id": "ind-011",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Farmacia",
+            "name": "Polvilho Antisséptico Sport 100g",
+            "category": "higiene",
+            "subcategory": "talco",
+            "base_price": 13.74,
+            "suggested_price": 22.90,
+            "attributes": {
+                "volume": "100g",
+                "type": "polvilho",
+                "line": "Farmácia"
+            },
+            "popular": true,
+            "image_keyword": "granado-polvilho-sport"
+        },
+        {
+            "id": "ind-012",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Glass",
+            "name": "Base Líquida de Alta Cobertura Glass",
+            "category": "maquiagem",
+            "subcategory": "base",
+            "base_price": 29.94,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "base-liquida",
+                "coverage": "alta",
+                "line": "Glass"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-glass-base"
+        },
+        {
+            "id": "ind-013",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "CoverUp",
+            "name": "Pó Compacto Matte CoverUp",
+            "category": "maquiagem",
+            "subcategory": "po-compacto",
+            "base_price": 19.20,
+            "suggested_price": 32.00,
+            "attributes": {
+                "type": "po-compacto",
+                "line": "CoverUp"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-po-coverup"
+        },
+        {
+            "id": "ind-014",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Terrapeutics",
+            "name": "Hidratante Corporal Lavanda 300ml",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 23.94,
+            "suggested_price": 39.90,
+            "attributes": {
+                "volume": "300ml",
+                "type": "hidratante",
+                "fragrance": "lavanda",
+                "line": "Terrapeutics"
+            },
+            "popular": true,
+            "image_keyword": "granado-hidratante-lavanda"
+        },
+        {
+            "id": "ind-015",
+            "brand": "independent",
+            "brand_display": "Boca Rosa",
+            "line": "Makeup",
+            "name": "Paleta de Sombras #BemBasiquinha",
+            "category": "maquiagem",
+            "subcategory": "paleta-sombras",
+            "base_price": 35.94,
+            "suggested_price": 59.90,
+            "attributes": {
+                "type": "paleta",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "boca-rosa-paleta-basiquinha"
+        },
+        {
+            "id": "ind-016",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Melu",
+            "name": "Sérum Facial Hidratante Melu",
+            "category": "facial",
+            "subcategory": "serum",
+            "base_price": 17.94,
+            "suggested_price": 29.90,
+            "attributes": {
+                "type": "serum",
+                "line": "Melu"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-melu-serum"
+        },
+        {
+            "id": "ind-017",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "Rosto",
+            "name": "Iluminador Compacto Stella",
+            "category": "maquiagem",
+            "subcategory": "iluminador",
+            "base_price": 25.20,
+            "suggested_price": 42.00,
+            "attributes": {
+                "type": "iluminador",
+                "line": "Stella"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-iluminador-stella"
+        },
+        {
+            "id": "ind-018",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Spa",
+            "name": "Óleo Corporal de Calêndula 120ml",
+            "category": "corporal",
+            "subcategory": "oleo-corporal",
+            "base_price": 29.34,
+            "suggested_price": 48.90,
+            "attributes": {
+                "volume": "120ml",
+                "type": "oleo",
+                "fragrance": "calendula",
+                "line": "Spa"
+            },
+            "popular": true,
+            "image_keyword": "granado-oleo-calendula"
+        },
+        {
+            "id": "ind-019",
+            "brand": "independent",
+            "brand_display": "Vizzela",
+            "line": "Olhos",
+            "name": "Caneta Delineadora Cat Lover",
+            "category": "maquiagem",
+            "subcategory": "delineador",
+            "base_price": 26.94,
+            "suggested_price": 44.90,
+            "attributes": {
+                "type": "caneta-delineadora",
+                "line": "Cat Lover"
+            },
+            "popular": true,
+            "image_keyword": "vizzela-delineador-cat-lover"
+        },
+        {
+            "id": "ind-020",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Glass",
+            "name": "Máscara de Cílios Glass Ruby Rose",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 19.74,
+            "suggested_price": 32.90,
+            "attributes": {
+                "type": "mascara",
+                "line": "Glass"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-glass-mascara"
+        },
+        {
+            "id": "ind-021",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "Labios",
+            "name": "Gloss Labial Efeito Volume Mari Maria",
+            "category": "labios",
+            "subcategory": "gloss",
+            "base_price": 16.80,
+            "suggested_price": 28.00,
+            "attributes": {
+                "type": "gloss",
+                "effect": "plump",
+                "line": "Mari Maria"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-gloss-volume"
+        },
+        {
+            "id": "ind-022",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Farmacia",
+            "name": "Sabonete de Glicerina Tradicional 90g",
+            "category": "banho",
+            "subcategory": "sabonete-barra",
+            "base_price": 5.34,
+            "suggested_price": 8.90,
+            "attributes": {
+                "volume": "90g",
+                "type": "sabonete",
+                "line": "Tradicional"
+            },
+            "popular": true,
+            "image_keyword": "granado-sabonete-glicerina"
+        },
+        {
+            "id": "ind-023",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Melu",
+            "name": "Água Micelar Melu 200ml",
+            "category": "limpeza",
+            "subcategory": "agua-micelar",
+            "base_price": 13.74,
+            "suggested_price": 22.90,
+            "attributes": {
+                "volume": "200ml",
+                "type": "agua-micelar",
+                "line": "Melu"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-melu-agua-micelar"
+        },
+        {
+            "id": "ind-024",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "Rosto",
+            "name": "Blush em Pó Dusty Mari Maria",
+            "category": "maquiagem",
+            "subcategory": "blush",
+            "base_price": 21.60,
+            "suggested_price": 36.00,
+            "attributes": {
+                "type": "blush",
+                "line": "Dusty"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-blush-dusty"
+        },
+        {
+            "id": "ind-025",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Terrapeutics",
+            "name": "Manteiga Corporal de Karité 200g",
+            "category": "corporal",
+            "subcategory": "hidratante-corporal",
+            "base_price": 35.94,
+            "suggested_price": 59.90,
+            "attributes": {
+                "volume": "200g",
+                "type": "manteiga-corporal",
+                "main_ingredient": "karite",
+                "line": "Terrapeutics"
+            },
+            "popular": true,
+            "image_keyword": "granado-manteiga-karite"
+        },
+        {
+            "id": "ind-026",
+            "brand": "independent",
+            "brand_display": "Boca Rosa",
+            "line": "Hair",
+            "name": "Shampoo Quartzo Rosa Boca Rosa",
+            "category": "capilar",
+            "subcategory": "shampoo",
+            "base_price": 23.94,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "shampoo",
+                "line": "Quartzo Rosa"
+            },
+            "popular": true,
+            "image_keyword": "boca-rosa-shampoo-quartzo"
+        },
+        {
+            "id": "ind-027",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Glass",
+            "name": "Corretivo Líquido Glass Ruby Rose",
+            "category": "maquiagem",
+            "subcategory": "corretivo",
+            "base_price": 17.94,
+            "suggested_price": 29.90,
+            "attributes": {
+                "type": "corretivo",
+                "line": "Glass"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-glass-corretivo"
+        },
+        {
+            "id": "ind-028",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "Pinceis",
+            "name": "Kit de Pincéis para Olhos Professional",
+            "category": "acessorio",
+            "subcategory": "pinceis",
+            "base_price": 53.40,
+            "suggested_price": 89.00,
+            "attributes": {
+                "type": "kit-pinceis",
+                "usage": "olhos",
+                "line": "Professional"
+            },
+            "popular": false,
+            "image_keyword": "mari-maria-kit-pinceis-olhos"
+        },
+        {
+            "id": "ind-029",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Farmacia",
+            "name": "Talco Cremoso Antisséptico 100g",
+            "category": "higiene",
+            "subcategory": "talco",
+            "base_price": 17.94,
+            "suggested_price": 29.90,
+            "attributes": {
+                "volume": "100g",
+                "type": "talco-cremoso",
+                "line": "Farmácia"
+            },
+            "popular": true,
+            "image_keyword": "granado-talco-cremoso"
+        },
+        {
+            "id": "ind-030",
+            "brand": "independent",
+            "brand_display": "Vizzela",
+            "line": "Makeup",
+            "name": "Pó Fixador Translúcido Vizzela",
+            "category": "maquiagem",
+            "subcategory": "po-solto",
+            "base_price": 29.94,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "po-fixador",
+                "line": "Vizzela"
+            },
+            "popular": true,
+            "image_keyword": "vizzela-po-fixador"
+        },
+        {
+            "id": "ind-031",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Melu",
+            "name": "Batom Bastão Matte Melu",
+            "category": "maquiagem",
+            "subcategory": "batom",
+            "base_price": 8.94,
+            "suggested_price": 14.90,
+            "attributes": {
+                "type": "batom",
+                "finish": "matte",
+                "line": "Melu"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-melu-batom-bastao"
+        },
+        {
+            "id": "ind-032",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "CoverUp",
+            "name": "Esponja de Maquiagem Flat Blend",
+            "category": "acessorio",
+            "subcategory": "esponja",
+            "base_price": 17.40,
+            "suggested_price": 29.00,
+            "attributes": {
+                "type": "esponja",
+                "line": "CoverUp"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-esponja-flat-blend"
+        },
+        {
+            "id": "ind-033",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Spa",
+            "name": "Vela Perfumada Terrapeutics Lavanda",
+            "category": "casa",
+            "subcategory": "vela",
+            "base_price": 44.94,
+            "suggested_price": 74.90,
+            "attributes": {
+                "type": "vela",
+                "fragrance": "lavanda",
+                "line": "Terrapeutics"
+            },
+            "popular": true,
+            "image_keyword": "granado-vela-lavanda"
+        },
+        {
+            "id": "ind-034",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Glass",
+            "name": "Paleta de Blush e Iluminador Glass",
+            "category": "maquiagem",
+            "subcategory": "paleta-rosto",
+            "base_price": 32.94,
+            "suggested_price": 54.90,
+            "attributes": {
+                "type": "paleta",
+                "line": "Glass"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-glass-paleta-rosto"
+        },
+        {
+            "id": "ind-035",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "Rosto",
+            "name": "Primer Facial Perfect Pore",
+            "category": "maquiagem",
+            "subcategory": "primer",
+            "base_price": 31.20,
+            "suggested_price": 52.00,
+            "attributes": {
+                "type": "primer",
+                "function": "poros",
+                "line": "Perfect Pore"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-primer-perfect-pore"
+        },
+        {
+            "id": "ind-036",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Bebe",
+            "name": "Hidratante Granado Bebê Dermocalmante",
+            "category": "infantil",
+            "subcategory": "hidratante-infantil",
+            "base_price": 25.74,
+            "suggested_price": 42.90,
+            "attributes": {
+                "type": "hidratante",
+                "feature": "dermocalmante",
+                "line": "Bebê"
+            },
+            "popular": true,
+            "image_keyword": "granado-bebe-hidratante-dermocalmante"
+        },
+        {
+            "id": "ind-037",
+            "brand": "independent",
+            "brand_display": "Boca Rosa",
+            "line": "Makeup",
+            "name": "Tint Labial #CarinhaDeAnjo",
+            "category": "maquiagem",
+            "subcategory": "lip-tint",
+            "base_price": 20.94,
+            "suggested_price": 34.90,
+            "attributes": {
+                "type": "lip-tint",
+                "line": "Makeup"
+            },
+            "popular": true,
+            "image_keyword": "boca-rosa-tint-carinha-anjo"
+        },
+        {
+            "id": "ind-038",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Melu",
+            "name": "Máscara de Cílios Peel Off Melu",
+            "category": "maquiagem",
+            "subcategory": "mascara-cilios",
+            "base_price": 16.14,
+            "suggested_price": 26.90,
+            "attributes": {
+                "type": "mascara",
+                "feature": "peel-off",
+                "line": "Melu"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-melu-mascara-peel-off"
+        },
+        {
+            "id": "ind-039",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "Labios",
+            "name": "Lápis Labial de Longa Duração",
+            "category": "maquiagem",
+            "subcategory": "lapis-labial",
+            "base_price": 14.40,
+            "suggested_price": 24.00,
+            "attributes": {
+                "type": "lapis",
+                "line": "Mari Maria"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-lapis-labial"
+        },
+        {
+            "id": "ind-040",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Farmacia",
+            "name": "Creme para Mãos de Glicerina 50g",
+            "category": "maos",
+            "subcategory": "creme-maos",
+            "base_price": 16.14,
+            "suggested_price": 26.90,
+            "attributes": {
+                "volume": "50g",
+                "type": "creme",
+                "line": "Glicerina"
+            },
+            "popular": true,
+            "image_keyword": "granado-creme-maos-glicerina"
+        },
+        {
+            "id": "ind-041",
+            "brand": "independent",
+            "brand_display": "Vizzela",
+            "line": "Rosto",
+            "name": "Primer Facial Antiacne Vizzela",
+            "category": "maquiagem",
+            "subcategory": "primer",
+            "base_price": 32.94,
+            "suggested_price": 54.90,
+            "attributes": {
+                "type": "primer",
+                "function": "antiacne",
+                "line": "Vizzela"
+            },
+            "popular": false,
+            "image_keyword": "vizzela-primer-antiacne"
+        },
+        {
+            "id": "ind-042",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Glass",
+            "name": "Batom Líquido Velvet Glass",
+            "category": "maquiagem",
+            "subcategory": "batom-liquido",
+            "base_price": 19.74,
+            "suggested_price": 32.90,
+            "attributes": {
+                "type": "batom-liquido",
+                "finish": "velvet",
+                "line": "Glass"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-glass-batom-velvet"
+        },
+        {
+            "id": "ind-043",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "CoverUp",
+            "name": "Base Líquida (Refil) CoverUp",
+            "category": "maquiagem",
+            "subcategory": "base",
+            "base_price": 17.40,
+            "suggested_price": 29.00,
+            "attributes": {
+                "type": "refil-base",
+                "line": "CoverUp"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-coverup-refil"
+        },
+        {
+            "id": "ind-044",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Terrapeutics",
+            "name": "Kit Presente Miniaturas Terrapeutics",
+            "category": "presente",
+            "subcategory": "kit-presente",
+            "base_price": 53.94,
+            "suggested_price": 89.90,
+            "attributes": {
+                "type": "kit",
+                "line": "Terrapeutics"
+            },
+            "popular": true,
+            "image_keyword": "granado-kit-miniaturas-terrapeutics"
+        },
+        {
+            "id": "ind-045",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Melu",
+            "name": "Blush Compacto Melu Diversas Cores",
+            "category": "maquiagem",
+            "subcategory": "blush",
+            "base_price": 11.94,
+            "suggested_price": 19.90,
+            "attributes": {
+                "type": "blush",
+                "line": "Melu"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-melu-blush"
+        },
+        {
+            "id": "ind-046",
+            "brand": "independent",
+            "brand_display": "Mari Maria",
+            "line": "Olhos",
+            "name": "Paleta de Sombras Greek Mari Maria",
+            "category": "maquiagem",
+            "subcategory": "paleta-sombras",
+            "base_price": 77.40,
+            "suggested_price": 129.00,
+            "attributes": {
+                "type": "paleta",
+                "line": "Greek"
+            },
+            "popular": true,
+            "image_keyword": "mari-maria-paleta-greek"
+        },
+        {
+            "id": "ind-047",
+            "brand": "independent",
+            "brand_display": "Granado",
+            "line": "Spa",
+            "name": "Difusor de Ambiente Calêndula 250ml",
+            "category": "casa",
+            "subcategory": "difusor",
+            "base_price": 69.00,
+            "suggested_price": 115.00,
+            "attributes": {
+                "volume": "250ml",
+                "type": "difusor",
+                "fragrance": "calendula",
+                "line": "Spa"
+            },
+            "popular": true,
+            "image_keyword": "granado-difusor-calendula"
+        },
+        {
+            "id": "ind-048",
+            "brand": "independent",
+            "brand_display": "Boca Rosa",
+            "line": "Hair",
+            "name": "Condicionador Quartzo Rosa 250ml",
+            "category": "capilar",
+            "subcategory": "condicionador",
+            "base_price": 25.74,
+            "suggested_price": 42.90,
+            "attributes": {
+                "volume": "250ml",
+                "type": "condicionador",
+                "line": "Quartzo Rosa"
+            },
+            "popular": true,
+            "image_keyword": "boca-rosa-condicionador-quartzo"
+        },
+        {
+            "id": "ind-049",
+            "brand": "independent",
+            "brand_display": "Ruby Rose",
+            "line": "Glass",
+            "name": "Iluminador Líquido Glass",
+            "category": "maquiagem",
+            "subcategory": "iluminador",
+            "base_price": 23.94,
+            "suggested_price": 39.90,
+            "attributes": {
+                "type": "iluminador-liquido",
+                "line": "Glass"
+            },
+            "popular": true,
+            "image_keyword": "ruby-rose-glass-iluminador"
+        },
+        {
+            "id": "ind-050",
+            "brand": "independent",
+            "brand_display": "Vizzela",
+            "line": "Cabelos",
+            "name": "Shampoo Sólido Vegano Vizzela",
+            "category": "capilar",
+            "subcategory": "shampoo-solido",
+            "base_price": 29.94,
+            "suggested_price": 49.90,
+            "attributes": {
+                "type": "shampoo-solido",
+                "feature": "vegano",
+                "line": "Vizzela"
+            },
+            "popular": false,
+            "image_keyword": "vizzela-shampoo-solido"
+        }
+    ]
+}
