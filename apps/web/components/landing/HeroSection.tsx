@@ -28,29 +28,54 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-6"
         >
-          <div className="flex items-center gap-2">
+          {/* MOBILE CRO HEADER COPIES */}
+          <div className="flex md:hidden items-center gap-2">
             <Badge variant="secondary" className="bg-red-100 text-red-800 hover:bg-red-200 px-3 py-1 font-bold tracking-wide animate-pulse">
               🚨 Pare de Perder Dinheiro
             </Badge>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
+          <h1 className="md:hidden text-4xl font-extrabold tracking-tight leading-[1.1]">
             Adeus fiados e <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">desorganização.</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+          <p className="md:hidden text-lg text-muted-foreground leading-relaxed">
             O único app que organiza clientes, vendas e cobra fiados no automático com IA inteligente.
           </p>
 
-          <div className="flex flex-col w-full mt-4 sm:mt-8 gap-3 relative z-20">
-            <Button asChild size="lg" className="w-full h-16 sm:h-20 text-lg sm:text-xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-[0_8px_30px_rgb(99,102,241,0.4)] hover:shadow-[0_8px_30px_rgb(99,102,241,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all rounded-2xl cursor-pointer">
+          {/* DESKTOP ORIGINAL HEADER COPIES */}
+          <div className="hidden md:flex items-center gap-2">
+            <Badge variant="secondary" className="bg-indigo-100 text-indigo-800 hover:bg-indigo-100 px-3 py-1 animate-pulse">
+              🚀 Nova: Agente IA que cria Reels que viralizam
+            </Badge>
+          </div>
+
+          <h1 className="hidden md:block text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
+            Sua revenda de cosméticos no <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">piloto automático com IA</span>
+          </h1>
+
+          <p className="hidden md:block text-xl text-muted-foreground max-w-xl leading-relaxed">
+            PDV, financeiro, estoque, fiados e 5 agentes de IA — tudo em um só lugar. Gerencia sua revenda enquanto você foca em crescer.
+          </p>
+
+          {/* BUTTONS (Both) */}
+          <div className="flex flex-col md:flex-row w-full mt-4 sm:mt-8 gap-3 relative z-20 md:w-auto">
+            {/* Mobile Extreme CRO Button */}
+            <Button asChild size="lg" className="md:hidden w-full h-16 text-lg font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-[0_8px_30px_rgb(99,102,241,0.4)] hover:shadow-[0_8px_30px_rgb(99,102,241,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all rounded-2xl cursor-pointer">
               <Link href="/signup?ref=landing">
                 Assinar Agora com 7 Dias Grátis
               </Link>
             </Button>
 
-            {/* Social Proof Progressivo (Logo abaixo do botão principal na Thumb Zone) */}
-            <div className="flex flex-col items-center justify-center gap-1 mt-2 mb-4">
+            {/* Desktop Original Button */}
+            <Button asChild size="lg" className="hidden md:flex h-14 px-8 text-base bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all rounded-xl cursor-pointer">
+              <Link href="/signup?ref=landing">
+                Testar Grátis por 7 Dias
+              </Link>
+            </Button>
+
+            {/* Social Proof Progressivo (Somente Mobile) */}
+            <div className="md:hidden flex flex-col items-center justify-center gap-1 mt-2 mb-4">
               <div className="flex items-center gap-1">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400 drop-shadow-sm" />
@@ -64,8 +89,8 @@ export function HeroSection() {
 
             <Dialog>
               <DialogTrigger asChild>
-                <Button size="lg" variant="outline" className="w-full h-14 text-base rounded-2xl border-2 active:bg-gray-100 dark:active:bg-gray-900 transition-colors">
-                  <Play className="mr-2 h-5 w-5 text-indigo-600" /> Ver como funciona na prática
+                <Button size="lg" variant="outline" className="w-full md:w-auto md:h-14 md:px-8 h-14 text-base rounded-2xl md:rounded-xl border-2 active:bg-gray-100 dark:active:bg-gray-900 transition-colors">
+                  <Play className="mr-2 h-5 w-5 text-indigo-600 md:text-black md:dark:text-white" /> Ver demonstração <span className="hidden md:inline">em 2 min</span><span className="md:hidden">na prática</span>
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[800px] p-0 overflow-hidden bg-black/95 border-0">
