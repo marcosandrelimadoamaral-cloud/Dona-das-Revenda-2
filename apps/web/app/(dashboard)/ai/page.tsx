@@ -9,7 +9,7 @@ export default async function AiCentralPage() {
   const settings = await getAiSettings()
 
   return (
-    <div className="flex flex-col h-[calc(100vh-2rem)] bg-white dark:bg-gray-900 rounded-xl shadow-sm border overflow-hidden">
+    <div className="flex flex-col h-[calc(100vh-12rem)] lg:h-[calc(100vh-7rem)] bg-white dark:bg-gray-900 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
       <ChatInterface settings={settings} />
     </div>
   )

@@ -191,7 +191,7 @@ export function DashboardLayoutClient({
     const displayEmail = user?.email || ""
     const planLabel = isPro ? "Plano PRO ✨" : isTrialValid ? `Trial – ${daysRemaining}d restantes` : "Trial expirado"
 
-    const ProfileFooter = ({ side = "left" }: { side?: "left" | "bottom" }) => (
+    const ProfileFooter = ({ side = "left", isHeader = false }: { side?: "left" | "bottom", isHeader?: boolean }) => (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <button className="flex items-center gap-3 w-full hover:bg-gray-100 dark:hover:bg-gray-700/40 rounded-xl p-2 transition-colors group">
@@ -200,11 +200,15 @@ export function DashboardLayoutClient({
                             {profileInitials}
                         </AvatarFallback>
                     </Avatar>
-                    <div className="flex flex-col items-start flex-1 min-w-0">
-                        <span className="text-sm font-semibold leading-none truncate">Revendedora</span>
-                        <span className="text-xs text-muted-foreground mt-0.5 truncate max-w-[130px]">{planLabel}</span>
-                    </div>
-                    <ChevronUp className="w-4 h-4 text-muted-foreground group-hover:text-foreground shrink-0" />
+                    {!isHeader && (
+                        <>
+                            <div className="flex flex-col items-start flex-1 min-w-0">
+                                <span className="text-sm font-semibold leading-none truncate">Revendedora</span>
+                                <span className="text-xs text-muted-foreground mt-0.5 truncate max-w-[130px]">{planLabel}</span>
+                            </div>
+                            <ChevronUp className="w-4 h-4 text-muted-foreground group-hover:text-foreground shrink-0" />
+                        </>
+                    )}
                 </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -329,7 +333,7 @@ export function DashboardLayoutClient({
                     )}
 
                     {/* Header */}
-                    <header className="h-16 flex items-center justify-between px-4 lg:px-8 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shrink-0">
+                    <header className="flex items-center justify-between px-3 lg:px-8 pt-[max(env(safe-area-inset-top),0.75rem)] pb-2 lg:py-0 lg:h-16 lg:pt-0 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shrink-0 min-h-[4rem]">
                         {/* Mobile menu */}
                         <div className="flex items-center gap-4 lg:hidden">
                             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -366,7 +370,7 @@ export function DashboardLayoutClient({
                                     </div>
                                 </SheetContent>
                             </Sheet>
-                            <span className="text-lg font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent lg:hidden">
+                            <span className="text-lg font-black bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent lg:hidden ml-1 truncate max-w-[160px]">
                                 Dona da Revenda
                             </span>
                         </div>
@@ -452,8 +456,8 @@ export function DashboardLayoutClient({
                             </div>
 
                             {/* Mobile-only avatar */}
-                            <div className="lg:hidden">
-                                <ProfileFooter side="bottom" />
+                            <div className="lg:hidden shrink-0">
+                                <ProfileFooter side="bottom" isHeader={true} />
                             </div>
                         </div>
                     </header>
@@ -463,6 +467,13 @@ export function DashboardLayoutClient({
                         <div className="max-w-7xl mx-auto w-full">{children}</div>
                     </main>
                 </div>
+            </div>
+
+            {/* Mobile Floating Action Button (Vender) */}
+            <div className="lg:hidden fixed bottom-20 right-4 z-[60]">
+                <Link href="/pos" className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg shadow-purple-500/30 active:scale-95 transition-transform">
+                    <ShoppingCart className="w-6 h-6" />
+                </Link>
             </div>
 
             {/* PWA Install Prompt */}
