@@ -45,124 +45,25 @@ const PLANS = {
     },
 }
 
-// Inner payment form — rendered inside <Elements>
-function CheckoutForm({ planId, isNewUser, onBack }: { planId: keyof typeof PLANS; isNewUser: boolean; onBack: () => void }) {
-    const stripe = useStripe()
-    const elements = useElements()
-    const router = useRouter()
-    const [processing, setProcessing] = useState(false)
-    const plan = PLANS[planId]
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault()
-        if (!stripe || !elements) return
-        setProcessing(true)
-
-        // New users → onboarding after payment; existing users → billing success
-        const successUrl = isNewUser
-            ? `${window.location.origin}/onboarding?payment=success`
-            : `${window.location.origin}/billing?success=true`
-
-        const { error } = await stripe.confirmPayment({
-            elements,
-            confirmParams: { return_url: successUrl },
-            redirect: "if_required",
-        })
-
-        if (error) {
-            setProcessing(false)
-            toast.error(error.message || "Erro no pagamento. Verifique os dados e tente novamente.")
-        } else {
-            toast.success("🎉 Assinatura ativada com sucesso!")
-            setTimeout(() => router.push(successUrl), 1000)
-        }
-    }
-
-    return (
-        <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Order summary */}
-            <div className="rounded-2xl bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-800 p-5">
-                <div className="flex items-center justify-between mb-3">
-                    <div>
-                        <div className="font-bold text-gray-900 dark:text-white text-lg">{plan.name}</div>
-                        <div className="text-sm text-indigo-600 dark:text-indigo-400 font-medium uppercase tracking-wide">{plan.cycle}</div>
-                    </div>
-                    <div className="text-right">
-                        <div className="text-2xl font-extrabold text-indigo-700 dark:text-indigo-300">R$ {plan.price}</div>
-                        <div className="text-xs text-muted-foreground">/mês</div>
-                    </div>
-                </div>
-                <div className="text-xs text-muted-foreground border-t border-indigo-100 dark:border-indigo-800 pt-3">{plan.billing}</div>
-                <div className="mt-3 space-y-1.5">
-                    {plan.features.map((f, i) => (
-                        <div key={i} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
-                            <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                            {f}
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Stripe PaymentElement */}
-            <div className="rounded-2xl border dark:border-gray-700 overflow-hidden p-4 bg-white dark:bg-gray-900">
-                <div className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4">💳 Dados de Pagamento</div>
-                <PaymentElement options={{ layout: "tabs", fields: { billingDetails: { name: "auto", email: "never" } } }} />
-            </div>
-
-            {/* Security badges */}
-            <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground">
-                <span className="flex items-center gap-1.5"><Lock className="w-3.5 h-3.5 text-green-500" /> SSL Seguro</span>
-                <span className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-green-500" /> Criptografado</span>
-                <span className="flex items-center gap-1.5"><Sparkles className="w-3.5 h-3.5 text-purple-500" /> Powered by Stripe</span>
-            </div>
-
-            {/* Actions */}
-            <div className="flex flex-col gap-3">
-                <Button
-                    type="submit"
-                    disabled={!stripe || processing}
-                    className="w-full h-14 text-base font-bold rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-xl shadow-indigo-200 dark:shadow-indigo-950/50"
-                >
-                    {processing ? (
-                        <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Processando pagamento...</>
-                    ) : (
-                        <>Assinar por R$ {plan.price}/mês</>
-                    )}
-                </Button>
-                <button type="button" onClick={onBack} className="text-sm text-muted-foreground hover:text-foreground transition-colors text-center py-1">
-                    ← Voltar e escolher outro plano
-                </button>
-            </div>
-        </form>
-    )
-}
-
-// Elements loader — fetches clientSecret then renders form
-function CheckoutLoader({ planId, isNewUser }: { planId: keyof typeof PLANS; isNewUser: boolean }) {
-    const [clientSecret, setClientSecret] = useState<string | null>(null)
+// Checkout redirector — fetches Checkout Session URL then redirects
+function CheckoutRedirector({ planId }: { planId: keyof typeof PLANS }) {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
     const router = useRouter()
-    const { resolvedTheme } = useTheme()
-    const isDark = resolvedTheme === "dark"
 
     useEffect(() => {
-        createSubscriptionIntent(planId).then(res => {
-            if (res.success && res.clientSecret) {
-                setClientSecret(res.clientSecret)
-            } else {
-                setError(res.error || "Erro ao iniciar pagamento.")
-            }
-            setLoading(false)
+        // Redireciona para o Checkout nativo da Stripe, que suporta Pix e Boleto nativamente
+        import("@/app/actions/billing/createStripeCheckout").then(({ createStripeCheckout }) => {
+            createStripeCheckout(planId).then((res) => {
+                if (res.success && res.url) {
+                    window.location.href = res.url // Redirect to Stripe Checkout
+                } else {
+                    setError(res.error || "Erro ao gerar checkout. Tente novamente.")
+                    setLoading(false)
+                }
+            })
         })
     }, [planId])
-
-    if (loading) return (
-        <div className="flex flex-col items-center justify-center py-20 gap-4">
-            <Loader2 className="w-12 h-12 animate-spin text-indigo-600" />
-            <p className="text-muted-foreground text-sm">Preparando checkout seguro...</p>
-        </div>
-    )
 
     if (error) return (
         <div className="text-center py-16">
@@ -171,35 +72,12 @@ function CheckoutLoader({ planId, isNewUser }: { planId: keyof typeof PLANS; isN
         </div>
     )
 
-    // Stripe appearance — adapts to dark/light mode
-    const appearance = isDark
-        ? {
-            theme: "night" as const,
-            variables: {
-                colorPrimary: "#818cf8",
-                colorBackground: "#111827",
-                colorText: "#f9fafb",
-                colorDanger: "#f87171",
-                fontFamily: "Inter, system-ui, sans-serif",
-                borderRadius: "10px",
-            },
-        }
-        : {
-            theme: "stripe" as const,
-            variables: {
-                colorPrimary: "#6366f1",
-                colorBackground: "#ffffff",
-                colorText: "#111827",
-                colorDanger: "#ef4444",
-                fontFamily: "Inter, system-ui, sans-serif",
-                borderRadius: "10px",
-            },
-        }
-
     return (
-        <Elements stripe={stripePromise} options={{ clientSecret: clientSecret!, appearance }}>
-            <CheckoutForm planId={planId} isNewUser={isNewUser} onBack={() => router.push("/#precos")} />
-        </Elements>
+        <div className="flex flex-col items-center justify-center py-20 gap-4">
+            <Loader2 className="w-12 h-12 animate-spin text-indigo-600" />
+            <p className="text-muted-foreground font-semibold text-lg">Redirecionando para a Stripe...</p>
+            <p className="text-muted-foreground text-sm">Ambiente 100% seguro para Cartão, Pix ou Boleto.</p>
+        </div>
     )
 }
 
@@ -281,7 +159,7 @@ function CheckoutContent() {
 
                     <div className="bg-white dark:bg-gray-900 rounded-3xl border dark:border-gray-800 shadow-xl shadow-gray-100 dark:shadow-gray-950/50 p-8">
                         {selectedPlan ? (
-                            <CheckoutLoader planId={selectedPlan} isNewUser={isNewUser} />
+                            <CheckoutRedirector planId={selectedPlan} />
                         ) : (
                             <PlanSelector onSelect={setSelectedPlan} />
                         )}

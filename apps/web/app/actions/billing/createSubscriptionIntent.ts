@@ -56,9 +56,7 @@ export async function createSubscriptionIntent(planType: 'monthly' | 'quarterly'
         const stripeSubscription = await stripe.subscriptions.create({
             customer: customerId,
             items: [{ price: priceId }],
-            payment_behavior: 'default_incomplete',
             payment_settings: { save_default_payment_method: 'on_subscription' },
-            expand: ['latest_invoice.payment_intent'],
             metadata: { supabase_user_id: user.id, plan_type: planType },
         })
 
