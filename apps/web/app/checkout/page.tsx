@@ -2,19 +2,17 @@
 
 import { useState, useEffect, Suspense } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
-import { loadStripe } from "@stripe/stripe-js"
-import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js"
-import { useTheme } from "next-themes"
-import { createSubscriptionIntent } from "@/app/actions/billing/createSubscriptionIntent"
-import { createAsaasCheckout } from "@/app/actions/billing/createAsaasCheckout"
+import { createMPPreference } from "@/app/actions/billing/createMPPreference"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Loader2, ShieldCheck, Lock, ArrowLeft, Check, Sparkles } from "lucide-react"
 import { toast } from "sonner"
 import Link from "next/link"
 import Image from "next/image"
+import { initMercadoPago, Payment } from '@mercadopago/sdk-react'
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
+// Initialize Mercado Pago with the Public Key
+initMercadoPago(process.env.NEXT_PUBLIC_MERCADO_PAGO_PUBLIC_KEY as string, { locale: 'pt-BR' })
 
 const PLANS = {
     monthly: {
@@ -46,23 +44,25 @@ const PLANS = {
     },
 }
 
-// Checkout redirector — fetches Checkout Session URL then redirects
-function CheckoutRedirector({ planId }: { planId: keyof typeof PLANS }) {
+// MPCheckoutComponent — fetches Preference ID then renders the Payment Brick
+function MPCheckoutComponent({ planId }: { planId: keyof typeof PLANS }) {
+    const [preferenceId, setPreferenceId] = useState<string | null>(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
     const router = useRouter()
 
     useEffect(() => {
-        // Redireciona para o Checkout nativo do Asaas, que suporta Pix e Boleto nativamente e Parcelamento em 12x
-        createAsaasCheckout(planId).then((res) => {
-            if (res?.success && res.url) {
-                window.location.href = res.url // Redirect to Asaas Checkout
+        // Fetch the Mercado Pago Preference ID
+        createMPPreference(planId).then((res) => {
+            if (res?.success && res.preferenceId) {
+                setPreferenceId(res.preferenceId)
+                setLoading(false)
             } else {
-                setError(res?.error || "Erro ao gerar checkout. Tente novamente.")
+                setError(res?.error || "Erro ao gerar identificador do Mercado Pago.")
                 setLoading(false)
             }
         }).catch((err: any) => {
-            console.error("CheckoutActionError:", err)
+            console.error("MPCheckoutActionError:", err)
             setError(`Erro técnico detalhado: ${err?.message || String(err)}`)
             setLoading(false)
         })
@@ -71,15 +71,63 @@ function CheckoutRedirector({ planId }: { planId: keyof typeof PLANS }) {
     if (error) return (
         <div className="text-center py-16">
             <p className="text-red-500 mb-4">{error}</p>
-            <Button onClick={() => router.back()} variant="outline">Voltar</Button>
+            <Button onClick={() => router.back()} variant="outline">Voltar aos planos</Button>
         </div>
     )
 
-    return (
+    if (loading || !preferenceId) return (
         <div className="flex flex-col items-center justify-center py-20 gap-4">
-            <Loader2 className="w-12 h-12 animate-spin text-indigo-600" />
-            <p className="text-muted-foreground font-semibold text-lg">Criando fatura criptografada...</p>
-            <p className="text-muted-foreground text-sm">Ambiente 100% seguro para Cartão, Pix ou Boleto.</p>
+            <Loader2 className="w-12 h-12 animate-spin text-blue-500" />
+            <p className="text-muted-foreground font-semibold text-lg">Iniciando ambiente seguro...</p>
+            <p className="text-muted-foreground text-xs">Criptografia de ponta-a-ponta Mercado Pago</p>
+        </div>
+    )
+
+    const initialization = {
+        amount: parseFloat(PLANS[planId].price.replace(',', '.')),
+        preferenceId: preferenceId,
+    }
+
+    const customization = {
+        paymentMethods: {
+            bankTransfer: 'all',
+            creditCard: 'all',
+            maxInstallments: planId === 'annual' ? 12 : 1
+        },
+        visual: {
+            // Apply modern UI customizations matching our theme
+            style: {
+                theme: 'default' as const, // We use default but we can force css vars to match our site
+            }
+        }
+    }
+
+    const onSubmit = async () => {
+        // The Payment Brick handles the submission to MP internally when using preferenceId
+        // After approval, it follows the `back_urls.success` defined in the Preference creation!
+        return new Promise<void>((resolve) => {
+            resolve()
+        })
+    }
+
+    const onError = async (error: any) => {
+        console.error("Payment Brick Error:", error)
+        toast.error("Ocorreu um erro ao processar o pagamento na tela.")
+    }
+
+    const onReady = async () => {
+        console.log("Mercado Pago Brick is ready")
+    }
+
+    return (
+        <div className="w-full animation-fade-in">
+            <Payment
+                initialization={initialization}
+                customization={customization as any}
+                onSubmit={onSubmit}
+                onReady={onReady}
+                onError={onError}
+            />
         </div>
     )
 }
@@ -162,15 +210,15 @@ function CheckoutContent() {
 
                     <div className="bg-white dark:bg-gray-900 rounded-3xl border dark:border-gray-800 shadow-xl shadow-gray-100 dark:shadow-gray-950/50 p-8">
                         {selectedPlan ? (
-                            <CheckoutRedirector planId={selectedPlan} />
+                            <MPCheckoutComponent planId={selectedPlan} />
                         ) : (
                             <PlanSelector onSelect={setSelectedPlan} />
                         )}
                     </div>
 
                     <div className="mt-6 text-center text-xs text-muted-foreground flex items-center justify-center gap-2">
-                        <ShieldCheck className="w-3.5 h-3.5 text-green-500" />
-                        Pagamento 100% seguro via Stripe · Cancele quando quiser
+                        <ShieldCheck className="w-3.5 h-3.5 text-blue-500" />
+                        Pagamento 100% seguro via Mercado Pago · Certificado PCI Compliance
                     </div>
                 </div>
             </main>
