@@ -27,11 +27,11 @@ const PLANS = {
     },
     annual: {
         id: "annual" as const,
-        name: "A Líder",
+        name: "VIP Anual",
         cycle: "Anual",
-        price: "77,50",
-        billing: "Cobrado R$ 930 uma vez por ano",
-        features: ["Tudo do plano mensal", "Economia de R$ 234 no ano", "Suporte com prioridade", "IA no WhatsApp (acesso antecipado)", "Próximas funcionalidades em primeira mão"],
+        price: "47,50",
+        billing: "Cobrado R$ 570 uma vez por ano",
+        features: ["Tudo do plano mensal", "Economia livre de R$ 594", "Suporte VIP com prioridade", "IA no WhatsApp (acesso antecipado)", "Funcionalidades em primeira mão"],
         popular: true,
     },
     quarterly: {

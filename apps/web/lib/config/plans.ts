@@ -16,8 +16,8 @@ export const PLANS = {
     yearly: {
         id: 'price_yearly',
         name: 'Anual',
-        price: 930,
+        price: 570,
         period: 'year',
-        label: 'R$ 77,50/mês'
+        label: 'R$ 47,50/mês'
     }
 }
