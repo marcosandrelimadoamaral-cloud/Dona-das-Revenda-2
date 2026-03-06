@@ -40,17 +40,29 @@ export async function POST(req: Request) {
                 if (paymentData.status === 'approved' && paymentData.external_reference) {
                     const userId = paymentData.external_reference
 
+                    // Identify the plan from the preference items
+                    let planId = 'monthly'
+                    if (paymentData.additional_info?.items && paymentData.additional_info.items.length > 0) {
+                        planId = paymentData.additional_info.items[0].id || 'monthly'
+                    }
+
                     const endDate = new Date()
-                    endDate.setDate(endDate.getDate() + 30) // 30 days of pro access
+                    if (planId === 'annual') {
+                        endDate.setDate(endDate.getDate() + 365)
+                    } else if (planId === 'quarterly') {
+                        endDate.setDate(endDate.getDate() + 90)
+                    } else {
+                        endDate.setDate(endDate.getDate() + 30) // Default monthly
+                    }
 
-                    console.log(`Setting User ${userId} active via Mercado Pago`)
+                    console.log(`Setting User ${userId} active via Mercado Pago for plan ${planId}`)
 
-                    const { error } = await supabaseAdmin
+                    const { error: dbError } = await supabaseAdmin
                         .from('subscriptions')
                         .upsert({
                             user_id: userId,
                             status: 'active',
-                            stripe_price_id: 'mercadopago_pix',
+                            stripe_price_id: `mercadopago_${planId}`,
                             stripe_customer_id: `mp_${userId}`,
                             stripe_subscription_id: `mp_sub_${paymentId}`,
                             current_period_end: endDate.toISOString(),
@@ -58,8 +70,8 @@ export async function POST(req: Request) {
                             updated_at: new Date().toISOString()
                         }, { onConflict: 'user_id' })
 
-                    if (error) {
-                        console.error("Supabase Admin Update Error:", error)
+                    if (dbError) {
+                        console.error("Supabase Admin Update Error:", dbError)
                         return NextResponse.json({ error: "DB Error" }, { status: 500 })
                     }
                 }
