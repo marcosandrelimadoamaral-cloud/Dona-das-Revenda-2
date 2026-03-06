@@ -61,9 +61,9 @@ function CheckoutRedirector({ planId }: { planId: keyof typeof PLANS }) {
                     setError(res.error || "Erro ao gerar checkout. Tente novamente.")
                     setLoading(false)
                 }
-            }).catch((err) => {
+            }).catch((err: any) => {
                 console.error("CheckoutActionError:", err)
-                setError("Ocorreu um erro inesperado ao conectar com o banco. Recarregue a página.")
+                setError(`Erro técnico detalhado: ${err.message || String(err)}`)
                 setLoading(false)
             })
         })
