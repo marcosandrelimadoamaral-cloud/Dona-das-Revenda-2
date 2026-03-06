@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
-import { createMPPreference } from "@/app/actions/billing/createMPPreference"
+import { createMPSubscription } from "@/app/actions/billing/createMPSubscription"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Loader2, ShieldCheck, Lock, ArrowLeft, Check, Sparkles } from "lucide-react"
@@ -48,7 +48,7 @@ function CheckoutRedirector({ planId }: { planId: keyof typeof PLANS }) {
 
     useEffect(() => {
         // Fetch the Mercado Pago init_point URL
-        createMPPreference(planId).then((res) => {
+        createMPSubscription(planId).then((res) => {
             if (res?.success && res.init_point) {
                 // Redirect user explicitly to checkout pro
                 window.location.href = res.init_point
