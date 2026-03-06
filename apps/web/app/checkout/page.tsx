@@ -6,7 +6,7 @@ import { loadStripe } from "@stripe/stripe-js"
 import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js"
 import { useTheme } from "next-themes"
 import { createSubscriptionIntent } from "@/app/actions/billing/createSubscriptionIntent"
-import { createStripeCheckout } from "@/app/actions/billing/createStripeCheckout"
+import { createAsaasCheckout } from "@/app/actions/billing/createAsaasCheckout"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Loader2, ShieldCheck, Lock, ArrowLeft, Check, Sparkles } from "lucide-react"
@@ -53,10 +53,10 @@ function CheckoutRedirector({ planId }: { planId: keyof typeof PLANS }) {
     const router = useRouter()
 
     useEffect(() => {
-        // Redireciona para o Checkout nativo da Stripe, que suporta Pix e Boleto nativamente
-        createStripeCheckout(planId).then((res) => {
+        // Redireciona para o Checkout nativo do Asaas, que suporta Pix e Boleto nativamente e Parcelamento em 12x
+        createAsaasCheckout(planId).then((res) => {
             if (res?.success && res.url) {
-                window.location.href = res.url // Redirect to Stripe Checkout
+                window.location.href = res.url // Redirect to Asaas Checkout
             } else {
                 setError(res?.error || "Erro ao gerar checkout. Tente novamente.")
                 setLoading(false)
@@ -78,7 +78,7 @@ function CheckoutRedirector({ planId }: { planId: keyof typeof PLANS }) {
     return (
         <div className="flex flex-col items-center justify-center py-20 gap-4">
             <Loader2 className="w-12 h-12 animate-spin text-indigo-600" />
-            <p className="text-muted-foreground font-semibold text-lg">Redirecionando para a Stripe...</p>
+            <p className="text-muted-foreground font-semibold text-lg">Criando fatura criptografada...</p>
             <p className="text-muted-foreground text-sm">Ambiente 100% seguro para Cartão, Pix ou Boleto.</p>
         </div>
     )
