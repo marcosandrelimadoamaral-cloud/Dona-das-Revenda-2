@@ -61,8 +61,6 @@ export async function createMPPreference(planType: 'monthly' | 'quarterly' | 'an
                 external_reference: `${user.id}_${Date.now()}`,
                 statement_descriptor: "DONA REVENDA",
                 payment_methods: {
-                    // Maximum installments logic. If it's annual, allow 12. Else, block installments.
-                    installments: isAnnual ? 12 : 1,
                     // Excluindo apenas caixa eletrônico
                     excluded_payment_types: [
                         { id: 'atm' },
