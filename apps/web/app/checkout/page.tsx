@@ -82,32 +82,68 @@ function CheckoutRedirector({ planId }: { planId: keyof typeof PLANS }) {
 // Plan selector step
 function PlanSelector({ onSelect }: { onSelect: (planId: keyof typeof PLANS) => void }) {
     return (
-        <div className="space-y-4">
-            <p className="text-center text-muted-foreground mb-6">Escolha o plano que melhor se adapta ao seu negócio:</p>
-            {(Object.values(PLANS) as (typeof PLANS[keyof typeof PLANS])[]).map(plan => (
-                <button
-                    key={plan.id}
-                    onClick={() => onSelect(plan.id)}
-                    className={`w-full text-left p-5 rounded-2xl border-2 transition-all hover:scale-[1.01] ${plan.popular
-                        ? "border-indigo-500 bg-indigo-50 dark:bg-indigo-950/40 dark:border-indigo-500"
-                        : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-indigo-300 dark:hover:border-indigo-700"
-                        }`}
-                >
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <div className="flex items-center gap-2 mb-1">
-                                <span className="font-bold text-gray-900 dark:text-white">{plan.name}</span>
-                                {plan.popular && <Badge className="bg-indigo-600 text-white text-[10px] border-0">🔥 Mais escolhido</Badge>}
+        <div className="space-y-6">
+            <div className="text-center mb-6">
+                <h2 className="text-2xl font-bold mb-2">Escolha seu plano</h2>
+                <p className="text-muted-foreground text-sm">Cancele quando quiser. Sem taxas ocultas.</p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6">
+                {(Object.values(PLANS) as (typeof PLANS[keyof typeof PLANS])[]).map(plan => (
+                    <div
+                        key={plan.id}
+                        className={`relative bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-8 border shadow-sm flex flex-col transition-all overflow-hidden ${plan.popular
+                            ? "ring-2 ring-indigo-600 dark:ring-indigo-500 shadow-xl z-10 border-indigo-100 dark:border-indigo-900"
+                            : "border-gray-200 dark:border-gray-700"
+                            }`}
+                    >
+                        {plan.popular && (
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-0.5 whitespace-nowrap">
+                                <Badge className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white border-0 px-4 py-1.5 text-xs font-bold shadow-md rounded-t-none rounded-b-xl">
+                                    🔥 OFERTA: 51% OFF + 7 DIAS GRÁTIS
+                                </Badge>
                             </div>
-                            <div className="text-xs text-muted-foreground">{plan.billing}</div>
+                        )}
+
+                        <div className={`mt-${plan.popular ? '4' : '0'}`}>
+                            <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
+                            <p className="inline-block text-xs font-bold tracking-wide text-indigo-600 dark:text-indigo-400 uppercase mb-3 bg-indigo-50 dark:bg-indigo-950/50 px-2 py-1 rounded-md">{plan.cycle}</p>
                         </div>
-                        <div className="text-right">
-                            <div className="font-extrabold text-xl text-gray-900 dark:text-white">R$ {plan.price}</div>
-                            <div className="text-xs text-muted-foreground">/mês</div>
+
+                        <div className="mb-6">
+                            {plan.popular && (
+                                <p className="text-sm font-bold text-red-500 line-through decoration-red-500/50 mb-1">De R$ 97,00/mês</p>
+                            )}
+                            <div className={`flex items-baseline gap-1 ${plan.popular ? 'text-indigo-600 dark:text-indigo-400' : ''}`}>
+                                <span className="text-4xl md:text-5xl font-extrabold">R$ {plan.price}</span>
+                                <span className="text-muted-foreground font-medium">/mês</span>
+                            </div>
+                            <div className={`text-sm font-bold mt-2 leading-tight ${plan.popular ? 'text-emerald-600' : 'text-gray-500'}`}>
+                                {plan.billing}
+                            </div>
+                        </div>
+
+                        <Button
+                            onClick={() => onSelect(plan.id)}
+                            className={`w-full mb-6 h-14 rounded-xl text-base md:text-lg font-bold cursor-pointer transition-all ${plan.popular
+                                ? "bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white shadow-[0_4px_14px_rgb(239,68,68,0.3)] hover:shadow-[0_6px_20px_rgb(239,68,68,0.4)]"
+                                : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100"
+                                }`}
+                        >
+                            {plan.popular ? "Garantir 51% de Desconto" : `Assinar ${plan.cycle}`}
+                        </Button>
+
+                        <div className="space-y-3 flex-1">
+                            {plan.features.map((feature, idx) => (
+                                <div key={idx} className="flex items-start gap-3">
+                                    <Check className={`w-5 h-5 shrink-0 ${plan.popular ? 'text-indigo-600' : 'text-emerald-500'}`} />
+                                    <span className={`text-sm font-medium ${plan.popular ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400'}`}>{feature}</span>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                </button>
-            ))}
+                ))}
+            </div>
         </div>
     )
 }
