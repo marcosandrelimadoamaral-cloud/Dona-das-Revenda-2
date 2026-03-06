@@ -11,9 +11,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { initMercadoPago, Payment } from '@mercadopago/sdk-react'
 
-// Initialize Mercado Pago with the Public Key
-initMercadoPago(process.env.NEXT_PUBLIC_MERCADO_PAGO_PUBLIC_KEY as string, { locale: 'pt-BR' })
-
 const PLANS = {
     monthly: {
         id: "monthly" as const,
@@ -50,6 +47,12 @@ function MPCheckoutComponent({ planId }: { planId: keyof typeof PLANS }) {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
     const router = useRouter()
+
+    // Initialize Mercado Pago securely on the client side only
+    useEffect(() => {
+        const mpKey = process.env.NEXT_PUBLIC_MERCADO_PAGO_PUBLIC_KEY || "APP_USR-5a4a1dc6-2150-4b54-970b-f3bb37dc209b"
+        initMercadoPago(mpKey, { locale: 'pt-BR' })
+    }, [])
 
     useEffect(() => {
         // Fetch the Mercado Pago Preference ID
