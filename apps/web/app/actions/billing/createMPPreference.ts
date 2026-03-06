@@ -79,7 +79,7 @@ export async function createMPPreference(planType: 'monthly' | 'quarterly' | 'an
             return { success: false, error: "Falha ao gerar identificador de pagamento." }
         }
 
-        return { success: true, preferenceId: preferenceData.id }
+        return { success: true, init_point: preferenceData.init_point }
     } catch (error: any) {
         console.error("Erro no createMPPreference:", error)
         return { success: false, error: error.message || "Erro interno ao criar preferência do Mercado Pago." }
