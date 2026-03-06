@@ -60,10 +60,10 @@ export async function createMPPreference(planType: 'monthly' | 'quarterly' | 'an
                 payment_methods: {
                     // Maximum installments logic. If it's annual, allow 12. Else, block installments.
                     installments: isAnnual ? 12 : 1,
+                    default_installments: 1, // Default opens as 1x
                     // Excluded payment types to force Pix, Card and Boleto only
                     excluded_payment_types: [
                         { id: 'atm' },
-                        { id: 'ticket' } // ticket is boleto (optional - usually clients allow it) Let's keep Boleto actually.
                     ]
                 },
                 back_urls: {
