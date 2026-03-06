@@ -9,7 +9,6 @@ import { Loader2, ShieldCheck, Lock, ArrowLeft, Check, Sparkles } from "lucide-r
 import { toast } from "sonner"
 import Link from "next/link"
 import Image from "next/image"
-import { initMercadoPago, Payment } from '@mercadopago/sdk-react'
 
 const PLANS = {
     monthly: {
@@ -41,27 +40,20 @@ const PLANS = {
     },
 }
 
-// MPCheckoutComponent — fetches Preference ID then renders the Payment Brick
-function MPCheckoutComponent({ planId }: { planId: keyof typeof PLANS }) {
-    const [preferenceId, setPreferenceId] = useState<string | null>(null)
+// CheckoutRedirector — fetches init_point and redirects to Mercado Pago
+function CheckoutRedirector({ planId }: { planId: keyof typeof PLANS }) {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
     const router = useRouter()
 
-    // Initialize Mercado Pago securely on the client side only
     useEffect(() => {
-        const mpKey = process.env.NEXT_PUBLIC_MERCADO_PAGO_PUBLIC_KEY || "APP_USR-5a4a1dc6-2150-4b54-970b-f3bb37dc209b"
-        initMercadoPago(mpKey, { locale: 'pt-BR' })
-    }, [])
-
-    useEffect(() => {
-        // Fetch the Mercado Pago Preference ID
+        // Fetch the Mercado Pago init_point URL
         createMPPreference(planId).then((res) => {
-            if (res?.success && res.preferenceId) {
-                setPreferenceId(res.preferenceId)
-                setLoading(false)
+            if (res?.success && res.init_point) {
+                // Redirect user explicitly to checkout pro
+                window.location.href = res.init_point
             } else {
-                setError(res?.error || "Erro ao gerar identificador do Mercado Pago.")
+                setError(res?.error || "Erro ao gerar link de pagamento seguro.")
                 setLoading(false)
             }
         }).catch((err: any) => {
@@ -78,60 +70,11 @@ function MPCheckoutComponent({ planId }: { planId: keyof typeof PLANS }) {
         </div>
     )
 
-    if (loading || !preferenceId) return (
+    return (
         <div className="flex flex-col items-center justify-center py-20 gap-4">
             <Loader2 className="w-12 h-12 animate-spin text-blue-500" />
-            <p className="text-muted-foreground font-semibold text-lg">Iniciando ambiente seguro...</p>
-            <p className="text-muted-foreground text-xs">Criptografia de ponta-a-ponta Mercado Pago</p>
-        </div>
-    )
-
-    const initialization = {
-        amount: parseFloat(PLANS[planId].price.replace(',', '.')),
-        preferenceId: preferenceId,
-    }
-
-    const customization = {
-        paymentMethods: {
-            bankTransfer: 'all', // Enables Pix
-            ticket: 'all',       // Enables Boleto
-            creditCard: 'all',   // Enables Credit Cards
-            maxInstallments: planId === 'annual' ? 12 : 1
-        },
-        visual: {
-            // Apply modern UI customizations matching our theme
-            style: {
-                theme: 'default' as const, // We use default but we can force css vars to match our site
-            }
-        }
-    }
-
-    const onSubmit = async () => {
-        // The Payment Brick handles the submission to MP internally when using preferenceId
-        // After approval, it follows the `back_urls.success` defined in the Preference creation!
-        return new Promise<void>((resolve) => {
-            resolve()
-        })
-    }
-
-    const onError = async (error: any) => {
-        console.error("Payment Brick Error:", error)
-        toast.error("Ocorreu um erro ao processar o pagamento na tela.")
-    }
-
-    const onReady = async () => {
-        console.log("Mercado Pago Brick is ready")
-    }
-
-    return (
-        <div className="w-full animation-fade-in">
-            <Payment
-                initialization={initialization}
-                customization={customization as any}
-                onSubmit={onSubmit}
-                onReady={onReady}
-                onError={onError}
-            />
+            <p className="text-muted-foreground font-semibold text-lg">Redirecionando para ambiente seguro...</p>
+            <p className="text-muted-foreground text-xs">Você será levado ao Checkout Oficial do Mercado Pago</p>
         </div>
     )
 }
@@ -214,7 +157,7 @@ function CheckoutContent() {
 
                     <div className="bg-white dark:bg-gray-900 rounded-3xl border dark:border-gray-800 shadow-xl shadow-gray-100 dark:shadow-gray-950/50 p-8">
                         {selectedPlan ? (
-                            <MPCheckoutComponent planId={selectedPlan} />
+                            <CheckoutRedirector planId={selectedPlan} />
                         ) : (
                             <PlanSelector onSelect={setSelectedPlan} />
                         )}
