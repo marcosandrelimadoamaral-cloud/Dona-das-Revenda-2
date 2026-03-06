@@ -46,7 +46,7 @@ export async function createMPPreference(planType: 'monthly' | 'quarterly' | 'an
                 items: [
                     {
                         id: planType,
-                        title: description,
+                        title: `${description} #${Date.now()}`,
                         quantity: 1,
                         unit_price: value,
                         currency_id: 'BRL',
@@ -56,7 +56,9 @@ export async function createMPPreference(planType: 'monthly' | 'quarterly' | 'an
                     email: email,
                     name: name
                 },
-                external_reference: user.id, // VITAL: to identify the user when the webhook fires
+                // VITAL: append timestamp to external_reference and title to force MP to bypass its cache 
+                // and fetch the newly saved 'Vendedor Sem Juros' settings from the dashboard.
+                external_reference: `${user.id}_${Date.now()}`,
                 payment_methods: {
                     // Maximum installments logic. If it's annual, allow 12. Else, block installments.
                     installments: isAnnual ? 12 : 1,
@@ -64,10 +66,7 @@ export async function createMPPreference(planType: 'monthly' | 'quarterly' | 'an
                     // Excluindo apenas caixa eletrônico, mantendo cartão e boleto e pix
                     excluded_payment_types: [
                         { id: 'atm' },
-                    ],
-                    // Aqui dizemos de forma EXPLICITA para o MP na hora de gerar esse link que a taxa é ZERO.
-                    // Isso ignora cache de conta e força o 'Sem Juros' no Checkout Pro
-                    ...(isAnnual ? { installments_rate: 0 } : {})
+                    ]
                 },
                 back_urls: {
                     success: `${process.env.NEXT_PUBLIC_APP_URL || 'https://donadarevenda.com.br'}/billing?success=true`,
