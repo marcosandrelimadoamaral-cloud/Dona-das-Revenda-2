@@ -35,7 +35,7 @@ export async function createStripeCheckout(planType: 'monthly' | 'quarterly' | '
             mode: 'subscription',
             customer_email: user.email,
             client_reference_id: user.id, // VITAL for webhook processing
-            payment_method_types: ['card'],
+            payment_method_types: ['card', 'pix', 'boleto'],
             line_items: [
                 {
                     price: priceId,
