@@ -61,10 +61,13 @@ export async function createMPPreference(planType: 'monthly' | 'quarterly' | 'an
                     // Maximum installments logic. If it's annual, allow 12. Else, block installments.
                     installments: isAnnual ? 12 : 1,
                     default_installments: 1, // Default opens as 1x
-                    // Excluded payment types to force Pix, Card and Boleto only
+                    // Excluindo apenas caixa eletrônico, mantendo cartão e boleto e pix
                     excluded_payment_types: [
                         { id: 'atm' },
-                    ]
+                    ],
+                    // Aqui dizemos de forma EXPLICITA para o MP na hora de gerar esse link que a taxa é ZERO.
+                    // Isso ignora cache de conta e força o 'Sem Juros' no Checkout Pro
+                    ...(isAnnual ? { installments_rate: 0 } : {})
                 },
                 back_urls: {
                     success: `${process.env.NEXT_PUBLIC_APP_URL || 'https://donadarevenda.com.br'}/billing?success=true`,
