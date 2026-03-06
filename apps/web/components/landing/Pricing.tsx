@@ -151,23 +151,26 @@ export function Pricing() {
               <p className="text-sm text-muted-foreground mb-5 min-h-[40px]">{plan.description}</p>
 
               <div className="mb-6">
-                <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-extrabold">R$ {plan.price}</span>
-                  <span className="text-muted-foreground">/mês</span>
+                {plan.popular && (
+                  <p className="text-sm font-bold text-red-500 line-through decoration-red-500/50 mb-1">De R$ 97,00/mês</p>
+                )}
+                <div className={`flex items-baseline gap-1 ${plan.popular ? 'text-indigo-600 dark:text-indigo-400' : ''}`}>
+                  <span className="text-4xl sm:text-5xl font-extrabold">R$ {plan.price}</span>
+                  <span className="text-muted-foreground font-medium">/mês</span>
                 </div>
-                <div className="text-sm font-medium mt-1 text-emerald-600 dark:text-emerald-400 leading-tight">
+                <div className={`text-sm font-bold mt-2 leading-tight ${plan.popular ? 'text-emerald-600' : 'text-gray-500'}`}>
                   {plan.billing}
                 </div>
                 {plan.totalBilling && (
-                  <div className="text-xs text-muted-foreground mt-0.5">{plan.totalBilling}</div>
+                  <div className="text-xs font-semibold text-muted-foreground mt-1 opacity-80">{plan.totalBilling}</div>
                 )}
               </div>
 
               <Button
                 asChild
-                className={`w-full mb-6 h-12 rounded-xl text-base font-semibold cursor-pointer ${plan.popular
-                  ? "bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
-                  : "bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100"
+                className={`w-full mb-6 h-14 sm:h-16 rounded-2xl text-lg font-extrabold cursor-pointer active:scale-95 transition-all ${plan.popular
+                  ? "bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white shadow-[0_8px_20px_rgb(239,68,68,0.3)] animate-pulse hover:animate-none"
+                  : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 shadow-none border border-transparent hover:border-gray-300"
                   }`}
               >
                 <Link href={`/checkout?plan=${plan.cycle === 'Mensal' ? 'monthly' : plan.cycle === 'Anual' ? 'annual' : 'quarterly'}`}>
@@ -255,9 +258,9 @@ export function Pricing() {
 
         <div className="mt-12 flex justify-center w-full px-4">
           <div className="flex flex-col sm:flex-row items-center gap-3 text-sm text-gray-700 dark:text-gray-300 bg-emerald-50 dark:bg-emerald-950/30 px-6 py-4 rounded-2xl border-2 border-emerald-100 dark:border-emerald-900 w-full max-w-2xl text-center sm:text-left">
-            <ShieldCheck className="w-8 h-8 text-emerald-600 shrink-0" />
-            <span className="font-bold">Garantia Blindada: Cancele a qualquer momento com apenas 1 clique. Pagamento 100% seguro pelo Stripe. Teste grátis os 7 primeiros dias.</span>
-          </div>
+            <p className="text-sm font-medium text-emerald-900 dark:text-emerald-100">
+              <span className="font-bold">Garantia Blindada:</span> Cancele a qualquer momento com apenas 1 clique. Pagamento 100% seguro pelo Mercado Pago. Teste grátis os 7 primeiros dias.
+            </p></div>
         </div>
       </div>
     </section>

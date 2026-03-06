@@ -168,48 +168,48 @@ function BillingContent() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 items-stretch">
+                <div className="grid md:grid-cols-3 gap-8 items-stretch pt-4">
                     {plans.map((plan) => (
                         <div
                             key={plan.name}
-                            className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-200 shadow-sm
+                            className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-200 shadow-sm overflow-hidden
                                 ${plan.highlighted
-                                    ? 'border-purple-500 dark:border-purple-400 bg-white dark:bg-gray-900 ring-2 ring-purple-500 ring-offset-2 dark:ring-offset-gray-950 md:scale-105 z-10'
-                                    : 'border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 hover:border-purple-300 dark:hover:border-purple-700'
+                                    ? 'border-indigo-100 dark:border-indigo-900 bg-white dark:bg-gray-800 ring-2 ring-indigo-600 dark:ring-indigo-500 scale-105 z-10 shadow-xl'
+                                    : 'border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 hover:border-indigo-300 dark:hover:border-indigo-700'
                                 }
                             `}
                         >
                             {plan.highlighted && (
-                                <div className="absolute -top-4 left-0 right-0 flex justify-center">
-                                    <span className="bg-gradient-to-r from-purple-600 to-violet-600 text-white text-xs font-bold uppercase tracking-wider py-1 px-4 rounded-full shadow-md">
-                                        {plan.badge}
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-0.5 whitespace-nowrap">
+                                    <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-[10px] md:text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-b-xl shadow-md">
+                                        🔥 OFERTA: 51% OFF + 7 DIAS GRÁTIS
                                     </span>
                                 </div>
                             )}
 
-                            <div className="mb-6">
-                                <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
-                                <div className="flex items-baseline gap-1">
-                                    <span className="text-3xl font-extrabold">R$ {plan.price}</span>
-                                    <span className="text-sm font-medium text-muted-foreground">/{plan.period}</span>
+                            <div className={`mt-${plan.highlighted ? '4' : '0'} mb-6`}>
+                                <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
+                                <p className="inline-block text-xs font-bold tracking-wide text-indigo-600 dark:text-indigo-400 uppercase mb-3 bg-indigo-50 dark:bg-indigo-950/50 px-2 py-1 rounded-md">{plan.period === 'mês' && plan.name === 'Anual' ? 'Anual' : plan.name === 'Trimestral' ? 'Trimestral' : 'Mensal'}</p>
+
+                                <div className="mt-2">
+                                    {plan.highlighted && (
+                                        <p className="text-sm font-bold text-red-500 line-through decoration-red-500/50 mb-1">De R$ 97,00/mês</p>
+                                    )}
+                                    <div className={`flex items-baseline gap-1 ${plan.highlighted ? 'text-indigo-600 dark:text-indigo-400' : ''}`}>
+                                        <span className="text-4xl md:text-5xl font-extrabold">R$ {plan.price}</span>
+                                        <span className="text-muted-foreground font-medium">/mês</span>
+                                    </div>
+                                    <div className={`text-sm font-bold mt-2 leading-tight ${plan.highlighted ? 'text-emerald-600' : 'text-gray-500'}`}>
+                                        {plan.billedAmount || plan.description}
+                                    </div>
                                 </div>
-                                {plan.billedAmount && (
-                                    <p className="text-xs text-purple-600 dark:text-purple-400 font-medium mt-1">
-                                        {plan.billedAmount}
-                                    </p>
-                                )}
-                                <p className="text-sm text-muted-foreground mt-4 min-h-[40px]">
-                                    {plan.description}
-                                </p>
                             </div>
 
-                            <div className="space-y-3 flex-1">
+                            <div className="space-y-3 flex-1 px-1">
                                 {plan.features.map((feature, i) => (
                                     <div key={i} className="flex items-start gap-3">
-                                        <div className={`p-0.5 rounded-full shrink-0 mt-0.5 ${plan.highlighted ? 'bg-purple-100 dark:bg-purple-900/50 text-purple-600' : 'bg-green-100 dark:bg-green-900/30 text-green-600'}`}>
-                                            <Check className="w-3.5 h-3.5 stroke-[3]" />
-                                        </div>
-                                        <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                                        <Check className={`w-5 h-5 shrink-0 ${plan.highlighted ? 'text-indigo-600' : 'text-emerald-500'}`} />
+                                        <span className={`text-sm font-medium ${plan.highlighted ? 'text-gray-900 dark:text-gray-100' : 'text-gray-600 dark:text-gray-400'}`}>{feature}</span>
                                     </div>
                                 ))}
                             </div>
@@ -218,14 +218,15 @@ function BillingContent() {
                                 <Button
                                     onClick={() => handleCheckout(plan.id)}
                                     disabled={isLoadingPayment !== null}
-                                    className={`w-full rounded-xl h-12 font-semibold text-base transition-all ${plan.highlighted
-                                        ? 'bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white shadow-lg shadow-purple-200 dark:shadow-purple-900/30'
-                                        : 'bg-gray-900 hover:bg-gray-800 text-white dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100'}`}
+                                    className={`w-full rounded-xl h-14 font-extrabold text-base md:text-lg transition-all ${plan.highlighted
+                                        ? "bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white shadow-[0_4px_14px_rgb(239,68,68,0.3)] hover:shadow-[0_6px_20px_rgb(239,68,68,0.4)] animate-pulse hover:animate-none"
+                                        : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100"
+                                        }`}
                                 >
                                     {isLoadingPayment === plan.id ? (
                                         <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Aguarde...</>
                                     ) : (
-                                        <><Zap className="w-4 h-4 mr-2" /> Assinar Agora</>
+                                        plan.highlighted ? 'Garantir 51% de Desconto' : `Assinar ${plan.name}`
                                     )}
                                 </Button>
                             </div>
@@ -235,9 +236,9 @@ function BillingContent() {
             </div>
 
             <div className="text-center pt-8 border-t dark:border-gray-800">
-                <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                    <Sparkles className="w-4 h-4" />
-                    <span>Pagamento seguro via Stripe. Cancele quando quiser.</span>
+                <div className="flex items-center justify-center gap-2 text-sm text-emerald-700 dark:text-emerald-400 font-medium">
+                    <Sparkles className="w-4 h-4 text-emerald-500" />
+                    <span>Pagamento Seguro Mercado Pago · 7 Dias Grátis · Cancele quando quiser</span>
                 </div>
             </div>
 
