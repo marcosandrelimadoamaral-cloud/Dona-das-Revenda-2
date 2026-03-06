@@ -15,13 +15,13 @@ export async function createStripeCheckout(planType: 'monthly' | 'quarterly' | '
         let priceId = ''
         switch (planType) {
             case 'monthly':
-                priceId = process.env.STRIPE_PRICE_MONTHLY || ''
+                priceId = process.env.STRIPE_PRICE_MONTHLY || 'price_1T76LkEQsqPL4Bjppo4NqiIl'
                 break
             case 'quarterly':
-                priceId = process.env.STRIPE_PRICE_QUARTERLY || ''
+                priceId = process.env.STRIPE_PRICE_QUARTERLY || 'price_1T76LjEQsqPL4BjpuGX9gjsR'
                 break
             case 'annual':
-                priceId = process.env.STRIPE_PRICE_ANNUAL || ''
+                priceId = process.env.STRIPE_PRICE_ANNUAL || 'price_1T82Z7EQsqPL4Bjp5qHAJltjD'
                 break
             default:
                 return { success: false, error: "Plano inválido." }
