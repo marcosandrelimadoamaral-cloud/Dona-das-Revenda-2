@@ -38,7 +38,10 @@ export async function POST(req: Request) {
                 const paymentData = await paymentRes.json()
 
                 if (paymentData.status === 'approved' && paymentData.external_reference) {
-                    const userId = paymentData.external_reference
+                    // Extract the user ID since external_reference now includes a timestamp to bust cache:
+                    // format is `${user.id}_${timestamp}`
+                    const rawRef = paymentData.external_reference as string
+                    const userId = rawRef.split('_')[0]
 
                     // Identify the plan from the preference items
                     let planId = 'monthly'
