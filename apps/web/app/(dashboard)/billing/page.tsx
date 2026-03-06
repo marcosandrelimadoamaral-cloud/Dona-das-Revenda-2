@@ -55,7 +55,7 @@ function BillingContent() {
         {
             id: "annual" as const,
             name: "Anual",
-            price: "77,50",
+            price: "47,50",
             period: "mês",
             description: "A melhor escolha para revendedoras estabelecidas. Fature mais gastando menos.",
             features: [
@@ -67,7 +67,7 @@ function BillingContent() {
             ],
             highlighted: true,
             badge: "Melhor Custo-Benefício",
-            billedAmount: "Cobrado R$ 930,00 anualmente"
+            billedAmount: "Cobrado R$ 570 anualmente"
         },
         {
             id: "quarterly" as const,
