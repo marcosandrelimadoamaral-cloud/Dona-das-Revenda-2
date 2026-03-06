@@ -25,20 +25,20 @@ const desktopPlans = [
     popular: false
   },
   {
-    name: "A Líder",
+    name: "VIP Anual (A Líder)",
     cycle: "Anual",
-    price: "77,50",
-    billing: "De R$ 97 por R$ 77,50/mês",
-    totalBilling: "Cobrado R$ 930 uma vez por ano",
-    description: "Para quem leva a revenda a sério. Mais economia, mais resultado.",
+    price: "47,50",
+    billing: "De R$ 97 por R$ 47,50/mês",
+    totalBilling: "Cobrado R$ 570 uma vez por ano",
+    description: "Para quem leva a revenda a sério. Economia absurda de R$ 594 no ano.",
     features: [
       "Tudo do plano mensal",
-      "Economia de R$ 234 no ano",
+      "Economia de 51% (R$ 594 livre)",
       "Suporte com prioridade",
       "IA no WhatsApp (acesso antecipado)",
       "Próximas funcionalidades em primeira mão",
     ],
-    badge: "🔥 MAIS ESCOLHIDO",
+    badge: "🔥 OFERTA: 51% OFF + 7 DIAS GRÁTIS",
     cta: "Quero economizar e lucrar mais",
     popular: true
   },
