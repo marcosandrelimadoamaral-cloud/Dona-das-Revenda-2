@@ -59,11 +59,11 @@ export async function createMPPreference(planType: 'monthly' | 'quarterly' | 'an
                 // VITAL: append timestamp to external_reference and title to force MP to bypass its cache 
                 // and fetch the newly saved 'Vendedor Sem Juros' settings from the dashboard.
                 external_reference: `${user.id}_${Date.now()}`,
+                statement_descriptor: "DONA REVENDA",
                 payment_methods: {
                     // Maximum installments logic. If it's annual, allow 12. Else, block installments.
                     installments: isAnnual ? 12 : 1,
-                    default_installments: 1, // Default opens as 1x
-                    // Excluindo apenas caixa eletrônico, mantendo cartão e boleto e pix
+                    // Excluindo apenas caixa eletrônico
                     excluded_payment_types: [
                         { id: 'atm' },
                     ]
