@@ -16,24 +16,25 @@ export async function createMPSubscription(planType: 'monthly' | 'quarterly' | '
         const name = user.user_metadata?.name || "Cliente"
 
         let value = 0
-        // In the SaaS subscription model, ALL plans are billed monthly.
-        // The contract length is what changes, but Mercado Pago PreApproval 
-        // handles the recurring monthly charge of the fractionated amount.
+        let description = ""
+        let frequency = 1
+        let frequencyType = 'months'
+
         switch (planType) {
             case 'monthly':
                 value = 97.00
-                description = "Assinatura O Cauteloso (Mensal)"
+                description = "Assinatura Mensal"
                 frequency = 1
                 break
             case 'quarterly':
-                value = 87.00
-                description = "Assinatura O Equilíbrio (Mensalidade)"
-                frequency = 1
+                value = 261.00
+                description = "Assinatura Trimestral"
+                frequency = 3
                 break
             case 'annual':
-                value = 47.50
-                description = "Assinatura VIP Anual (Mensalidade)"
-                frequency = 1
+                value = 570.00
+                description = "Assinatura Anual VIP"
+                frequency = 12
                 break
             default:
                 return { success: false, error: "Plano inválido." }
