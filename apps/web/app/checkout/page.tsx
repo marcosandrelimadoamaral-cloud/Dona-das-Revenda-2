@@ -6,6 +6,7 @@ import { loadStripe } from "@stripe/stripe-js"
 import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js"
 import { useTheme } from "next-themes"
 import { createSubscriptionIntent } from "@/app/actions/billing/createSubscriptionIntent"
+import { createStripeCheckout } from "@/app/actions/billing/createStripeCheckout"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Loader2, ShieldCheck, Lock, ArrowLeft, Check, Sparkles } from "lucide-react"
@@ -53,19 +54,17 @@ function CheckoutRedirector({ planId }: { planId: keyof typeof PLANS }) {
 
     useEffect(() => {
         // Redireciona para o Checkout nativo da Stripe, que suporta Pix e Boleto nativamente
-        import("@/app/actions/billing/createStripeCheckout").then(({ createStripeCheckout }) => {
-            createStripeCheckout(planId).then((res) => {
-                if (res.success && res.url) {
-                    window.location.href = res.url // Redirect to Stripe Checkout
-                } else {
-                    setError(res.error || "Erro ao gerar checkout. Tente novamente.")
-                    setLoading(false)
-                }
-            }).catch((err: any) => {
-                console.error("CheckoutActionError:", err)
-                setError(`Erro técnico detalhado: ${err.message || String(err)}`)
+        createStripeCheckout(planId).then((res) => {
+            if (res?.success && res.url) {
+                window.location.href = res.url // Redirect to Stripe Checkout
+            } else {
+                setError(res?.error || "Erro ao gerar checkout. Tente novamente.")
                 setLoading(false)
-            })
+            }
+        }).catch((err: any) => {
+            console.error("CheckoutActionError:", err)
+            setError(`Erro técnico detalhado: ${err?.message || String(err)}`)
+            setLoading(false)
         })
     }, [planId])
 
