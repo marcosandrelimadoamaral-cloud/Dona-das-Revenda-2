@@ -21,7 +21,7 @@ export async function createSubscriptionIntent(planType: 'monthly' | 'quarterly'
         const priceMap: Record<string, string | undefined> = {
             monthly: process.env.STRIPE_PRICE_MONTHLY || 'price_1T76LkEQsqPL4Bjppo4NqiIl',
             quarterly: process.env.STRIPE_PRICE_QUARTERLY || 'price_1T76LjEQsqPL4BjpuGX9gjsR',
-            annual: process.env.STRIPE_PRICE_ANNUAL || 'price_1T82Z7EQsqPL4Bjp5qHAJltjD',
+            annual: process.env.STRIPE_PRICE_ANNUAL || 'price_1T82Z7EQsqPL4Bjp5qHAJltj',
         }
 
         const priceId = priceMap[planType]

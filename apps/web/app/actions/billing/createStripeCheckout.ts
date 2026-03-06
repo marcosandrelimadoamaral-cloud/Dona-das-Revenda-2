@@ -21,7 +21,7 @@ export async function createStripeCheckout(planType: 'monthly' | 'quarterly' | '
                 priceId = process.env.STRIPE_PRICE_QUARTERLY || 'price_1T76LjEQsqPL4BjpuGX9gjsR'
                 break
             case 'annual':
-                priceId = process.env.STRIPE_PRICE_ANNUAL || 'price_1T82Z7EQsqPL4Bjp5qHAJltjD'
+                priceId = process.env.STRIPE_PRICE_ANNUAL || 'price_1T82Z7EQsqPL4Bjp5qHAJltj'
                 break
             default:
                 return { success: false, error: "Plano inválido." }
