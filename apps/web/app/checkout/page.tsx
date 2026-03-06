@@ -93,8 +93,9 @@ function MPCheckoutComponent({ planId }: { planId: keyof typeof PLANS }) {
 
     const customization = {
         paymentMethods: {
-            bankTransfer: 'all',
-            creditCard: 'all',
+            bankTransfer: 'all', // Enables Pix
+            ticket: 'all',       // Enables Boleto
+            creditCard: 'all',   // Enables Credit Cards
             maxInstallments: planId === 'annual' ? 12 : 1
         },
         visual: {
