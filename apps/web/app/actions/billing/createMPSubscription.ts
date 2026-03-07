@@ -54,6 +54,10 @@ export async function createMPSubscription(planType: 'monthly' | 'quarterly' | '
                     frequency_type: frequencyType,
                     transaction_amount: value,
                     currency_id: 'BRL',
+                    free_trial: {
+                        frequency: 7,
+                        frequency_type: 'days'
+                    }
                 },
                 payment_methods_allowed: {
                     payment_types: [
