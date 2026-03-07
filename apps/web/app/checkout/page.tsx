@@ -162,7 +162,7 @@ function CheckoutContent() {
             <header className="border-b dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-sm">
                 <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2.5">
-                        <Image src="/logo.png" alt="Dona da Revenda" width={56} height={56} className="rounded-xl" />
+                        <Image src="/logo-transparent.png" alt="Dona da Revenda" width={56} height={56} className="object-contain" />
                         <div className="flex flex-col leading-none">
                             <span className="font-black text-sm bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Dona da</span>
                             <span className="font-black text-sm bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Revenda</span>

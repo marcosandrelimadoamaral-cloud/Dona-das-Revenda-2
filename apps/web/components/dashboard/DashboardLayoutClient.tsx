@@ -267,7 +267,7 @@ export function DashboardLayoutClient({
                 <aside className="hidden lg:flex flex-col w-64 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shrink-0">
                     <div className="h-16 flex items-center px-5 border-b border-gray-100 dark:border-gray-800">
                         <Link href="/" className="flex items-center gap-2.5">
-                            <Image src="/logo.png" alt="Dona da Revenda" width={52} height={52} className="rounded-lg" />
+                            <Image src="/logo-transparent.png" alt="Dona da Revenda" width={52} height={52} className="object-contain" />
                             <div className="flex flex-col leading-none">
                                 <span className="font-black text-sm bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Dona da</span>
                                 <span className="font-black text-sm bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent -mt-0.5">Revenda</span>
