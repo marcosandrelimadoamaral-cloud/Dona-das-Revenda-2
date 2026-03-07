@@ -10,8 +10,8 @@ export function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Image src="/logo-transparent.png" alt="Dona da Revenda" width={64} height={64} className="object-contain" />
+            <Link href="/" className="flex items-center gap-1 mb-4">
+              <Image src="/logo-transparent.png" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
               <span className="font-bold text-xl tracking-tight">Dona da Revenda</span>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm text-sm leading-relaxed">
