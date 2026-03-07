@@ -13,7 +13,7 @@ export function AuthCard({ title, description, children }: AuthCardProps) {
     <div className="sm:mx-auto sm:w-full sm:max-w-md">
       <div className="flex justify-center mb-6">
         <div className="flex items-center gap-2.5">
-          <Image src="/logo.png" alt="Dona da Revenda" width={44} height={44} className="rounded-xl shadow-md" />
+          <Image src="/logo-transparent.png" alt="Dona da Revenda" width={44} height={44} className="object-contain" />
           <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
             Dona da Revenda
           </span>

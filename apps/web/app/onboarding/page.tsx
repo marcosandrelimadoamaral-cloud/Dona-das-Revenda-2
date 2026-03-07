@@ -61,7 +61,7 @@ export default function OnboardingPage() {
                 {/* Logo */}
                 <div className="flex justify-center mb-8">
                     <div className="flex items-center gap-3">
-                        <Image src="/logo.png" alt="Dona da Revenda" width={48} height={48} className="rounded-xl shadow-lg" />
+                        <Image src="/logo-transparent.png" alt="Dona da Revenda" width={48} height={48} className="object-contain" />
                         <div className="flex flex-col leading-none">
                             <span className="font-black text-lg bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Dona da</span>
                             <span className="font-black text-lg bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Revenda</span>

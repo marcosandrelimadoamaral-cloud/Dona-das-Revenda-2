@@ -144,7 +144,7 @@ export function Navbar() {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 safe-area-inset-top ${isScrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent"}`}>
       <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <Image src="/logo.png" alt="Dona da Revenda" width={56} height={56} className="rounded-xl shadow-sm" />
+          <Image src="/logo-transparent.png" alt="Dona da Revenda" width={56} height={56} className="object-contain" />
           <div className="flex flex-col leading-none">
             <span className="font-black text-base tracking-tight bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Dona da</span>
             <span className="font-black text-base tracking-tight bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent -mt-0.5">Revenda</span>
