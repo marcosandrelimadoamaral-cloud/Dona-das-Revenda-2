@@ -94,16 +94,10 @@ export function HeroSection() {
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[800px] p-0 overflow-hidden bg-black/95 border-0">
-                <div className="aspect-video w-full">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-                    title="Dona da Revenda Demonstração"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                <div className="aspect-video w-full flex flex-col items-center justify-center bg-gray-900 text-white">
+                  <Play className="w-16 h-16 text-indigo-500 mb-4 opacity-50" />
+                  <h3 className="text-2xl font-bold mb-2">Vídeo de Demonstração</h3>
+                  <p className="text-gray-400">Em breve...</p>
                 </div>
               </DialogContent>
             </Dialog>
