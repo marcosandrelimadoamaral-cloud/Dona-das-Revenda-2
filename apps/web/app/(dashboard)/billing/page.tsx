@@ -34,7 +34,7 @@ function BillingContent() {
 
     const handleCheckout = (planId: "monthly" | "quarterly" | "annual") => {
         // Route to the embedded Stripe Elements checkout page
-        router.push(`/checkout?plan=${planId}`)
+        router.push(`/checkout?plan=${planId}&t=${Date.now()}`)
     }
 
     const plans = [
