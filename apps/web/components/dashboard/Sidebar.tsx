@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Home, Package, Users, ShoppingCart, Bot, PieChart, Settings, LogOut, ArrowLeftRight, Store as StoreIcon, Calendar, RefreshCcw, CreditCard } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -25,10 +26,8 @@ export function Sidebar({ className }: { className?: string }) {
   return (
     <aside className={cn("flex flex-col h-full bg-white dark:bg-gray-900 border-r", className)}>
       <div className="p-6">
-        <Link href="/dashboard" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
-            <span className="text-white font-bold text-xl">D</span>
-          </div>
+        <Link href="/dashboard" className="flex items-center -gap-2">
+          <Image src="/logo-transparent.png" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
           <span className="font-bold text-xl tracking-tight text-gray-900 dark:text-white">Dona da Revenda</span>
         </Link>
       </div>
