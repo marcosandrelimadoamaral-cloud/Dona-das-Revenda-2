@@ -1,20 +1,61 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Dona da Revenda
 
-# Run and deploy your AI Studio app
+Sistema de gestão para revendedoras — controle de clientes, produtos, pedidos e financeiro em um único lugar.
 
-This contains everything you need to run your app locally.
+## Stack
 
-View your app in AI Studio: https://ai.studio/apps/8b79c4fe-71a5-442f-81cd-08158574a7b0
+- **Frontend / Web:** Next.js 14, TypeScript, Tailwind CSS, Radix UI, Recharts
+- **Mobile:** React Native (Expo)
+- **Backend:** Supabase (banco de dados + autenticação)
+- **Pagamentos:** Stripe
+- **Monorepo:** Turborepo
 
-## Run Locally
+## Estrutura
 
-**Prerequisites:**  Node.js
+```
+apps/
+  web/        # App web (Next.js)
+  mobile/     # App mobile (Expo)
+packages/
+  ui/         # Componentes compartilhados
+  database/   # Tipos e cliente Supabase
+  config/     # Configurações (ESLint, TS)
+  ai-agents/  # Agentes de IA
+```
 
+## Rodando localmente
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**Pré-requisitos:** Node.js 18+, npm
+
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+2. Configure as variáveis de ambiente — copie o arquivo de exemplo e preencha as chaves:
+   ```bash
+   cp apps/web/.env.example apps/web/.env.local
+   ```
+
+   Variáveis necessárias:
+   | Variável | Descrição |
+   |---|---|
+   | `NEXT_PUBLIC_SUPABASE_URL` | URL do projeto Supabase |
+   | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Chave pública do Supabase |
+   | `STRIPE_SECRET_KEY` | Chave secreta do Stripe |
+   | `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Chave pública do Stripe |
+
+3. Inicie em modo de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+   O app web estará disponível em `http://localhost:3000`.
+
+## Scripts disponíveis
+
+| Comando | Descrição |
+|---|---|
+| `npm run dev` | Inicia todos os apps em desenvolvimento |
+| `npm run build` | Gera build de produção |
+| `npm run lint` | Verifica tipos e lint |
