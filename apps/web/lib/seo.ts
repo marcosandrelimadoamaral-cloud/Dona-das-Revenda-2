@@ -1,6 +1,6 @@
 import { faqs } from "@/lib/faqs"
 
-export const SITE_URL = "https://donadarevenda.com.br"
+export const SITE_URL = "https://www.donadarevenda.com.br"
 export const SITE_NAME = "Dona da Revenda"
 
 export const SITE_DESCRIPTION =

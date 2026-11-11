@@ -15,7 +15,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://donadarevenda.com.br"),
+  metadataBase: new URL("https://www.donadarevenda.com.br"),
   title: {
     default: "Dona da Revenda — Gestão para quem revende beleza",
     template: "%s | Dona da Revenda"
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://donadarevenda.com.br",
+    url: "https://www.donadarevenda.com.br",
     title: "Dona da Revenda — Gestão para quem revende beleza",
     description: "Estoque, vendas, fiados e financeiro organizados, com cinco assistentes de IA ajudando você todos os dias.",
     siteName: "Dona da Revenda",

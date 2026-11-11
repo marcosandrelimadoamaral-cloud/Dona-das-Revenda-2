@@ -65,7 +65,7 @@ export async function createMPSubscription(planType: 'monthly' | 'quarterly' | '
                     ],
                     payment_methods: []
                 },
-                back_url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://donadarevenda.com.br'}/billing?success=true`,
+                back_url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://www.donadarevenda.com.br'}/billing?success=true`,
             }
         })
 
