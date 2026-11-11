@@ -201,13 +201,23 @@ export async function payWithPix(orderId: number, plan: PlanId, cpf: string) {
   return { qrcode: String(payment.pix_qrcode ?? ""), emv: String(payment.pix_emv) }
 }
 
+export const SKU_PREFIX = "dona-da-revenda-"
+
 export async function getOrder(orderId: number) {
   const json = await call("GET", `/v1/orders/${orderId}`)
   const order = json?.data?.order
+  const rawProducts: any[] = json?.data?.products ?? order?.products ?? json?.data?.order_products ?? []
+  const skus = Array.isArray(rawProducts) ? rawProducts.map((p) => String(p?.sku ?? "")).filter(Boolean) : []
+  // Na consulta do pedido, os valores vêm em centavos.
+  const subTotal = order?.amounts?.sub_total ?? order?.products_value
   return {
     id: Number(order?.id ?? orderId),
     status: String(order?.status ?? ""),
     customerId: json?.data?.customer?.id ? Number(json.data.customer.id) : null,
     email: (json?.data?.customer?.email as string | undefined) ?? null,
+    // Valor dos produtos em centavos, quando a Appmax informar.
+    subTotalCents: subTotal !== undefined && subTotal !== null ? Number(subTotal) : null,
+    // Códigos dos produtos, quando a Appmax informar.
+    skus,
   }
 }

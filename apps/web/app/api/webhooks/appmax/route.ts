@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import { supabaseAdmin } from "@/lib/supabase/admin"
-import { APPMAX_PLANS, PAID_STATUSES, getOrder, isPlanId } from "@/lib/appmax"
+import { APPMAX_PLANS, PAID_STATUSES, SKU_PREFIX, getOrder, isPlanId } from "@/lib/appmax"
 
 export const dynamic = "force-dynamic"
 export const runtime = "nodejs"
@@ -70,6 +70,15 @@ export async function POST(req: Request) {
         .limit(1)
         .maybeSingle()
       if (!last) return NextResponse.json({ received: true, ignored: "unknown customer" })
+
+      // A conta Appmax é compartilhada com outro negócio: o mesmo cliente pode comprar outras
+      // coisas. Só conta como renovação se o pedido for da Dona da Revenda.
+      const hasOurSku = order.skus.some((s) => s.startsWith(SKU_PREFIX))
+      const otherSkus = order.skus.length > 0 && !hasOurSku
+      const amountMatches = order.subTotalCents === last.amount_cents
+      if (otherSkus || (!hasOurSku && !amountMatches)) {
+        return NextResponse.json({ received: true, ignored: "order from another product" })
+      }
 
       const { data: created } = await supabaseAdmin
         .from("payment_orders")
