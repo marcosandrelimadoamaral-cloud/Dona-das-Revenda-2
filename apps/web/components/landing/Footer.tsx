@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-5" aria-label="Dona da Revenda">
-              <Logo className="h-10 w-auto" />
+              <Logo className="h-12 w-auto" />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm text-sm leading-relaxed">
               Gestão para quem revende beleza: vendas, estoque, fiados, clientes e cinco assistentes de IA num só lugar.

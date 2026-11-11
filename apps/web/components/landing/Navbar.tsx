@@ -144,7 +144,7 @@ export function Navbar() {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 safe-area-inset-top ${isScrolled ? "bg-background/85 backdrop-blur-md border-b border-border" : "bg-transparent"}`}>
       <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center" aria-label="Dona da Revenda">
-          <Logo className="h-9 w-auto" priority />
+          <Logo className="h-11 w-auto" priority />
         </Link>
 
         {/* Desktop Nav */}

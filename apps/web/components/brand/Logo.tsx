@@ -7,8 +7,8 @@ type LogoProps = {
 }
 
 const SRC = {
-  horizontal: { src: "/brand/logo-horizontal.svg", w: 1612, h: 300 },
-  claro: { src: "/brand/logo-horizontal-claro.svg", w: 1612, h: 300 },
+  horizontal: { src: "/brand/logo-horizontal.svg", w: 1806, h: 345 },
+  claro: { src: "/brand/logo-horizontal-claro.svg", w: 1806, h: 345 },
   simbolo: { src: "/brand/simbolo-coroa-dourada.svg", w: 950, h: 990 },
   simboloClaro: { src: "/brand/simbolo-claro-coroa-dourada.svg", w: 950, h: 990 },
 } as const
