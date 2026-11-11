@@ -82,6 +82,18 @@ export async function generateWithFallback(
   let lastError: any;
   let geminiBlocked = false;
 
+  // AI_PREFER_FALLBACK=true: usa primeiro o provedor gratuito (ex.: Groq) e deixa o Gemini como reserva.
+  const preferFallback = process.env.AI_PREFER_FALLBACK === "true";
+  if (preferFallback) {
+    try {
+      const text = await viaFallbackProvider(p);
+      if (text) return { text, model: process.env.FALLBACK_AI_MODEL!, tokensUsed: undefined };
+    } catch (err: any) {
+      console.error(`[IA] provedor principal (reserva) falhou: ${err?.message}`);
+      lastError = err;
+    }
+  }
+
   for (const model of modelQueue(p.model)) {
     if (geminiBlocked) break;
     for (let attempt = 1; attempt <= 2; attempt++) {
@@ -117,12 +129,14 @@ export async function generateWithFallback(
     }
   }
 
-  try {
-    const text = await viaFallbackProvider(p);
-    if (text) return { text, model: process.env.FALLBACK_AI_MODEL!, tokensUsed: undefined };
-  } catch (err: any) {
-    console.error(`[IA] provedor reserva falhou: ${err?.message}`);
-    lastError = err;
+  if (!preferFallback) {
+    try {
+      const text = await viaFallbackProvider(p);
+      if (text) return { text, model: process.env.FALLBACK_AI_MODEL!, tokensUsed: undefined };
+    } catch (err: any) {
+      console.error(`[IA] provedor reserva falhou: ${err?.message}`);
+      lastError = err;
+    }
   }
 
   console.error(`[IA] todas as opções falharam. Último erro: ${String(lastError?.message).slice(0, 200)}`);
