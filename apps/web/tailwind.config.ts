@@ -81,11 +81,6 @@ const config = {
   			sans: [
   				'var(--font-inter)',
   				'sans-serif'
-  			],
-  			display: [
-  				'var(--font-fraunces)',
-  				'Georgia',
-  				'serif'
   			]
   		},
   		keyframes: {

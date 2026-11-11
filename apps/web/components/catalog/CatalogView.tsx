@@ -187,7 +187,7 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                                         <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-white/10" />
                                         <div className="absolute -bottom-6 -left-6 w-28 h-28 rounded-full bg-white/10" />
                                         {/* inicial da marca */}
-                                        <span className="font-display text-5xl mb-1 z-10 text-brand-grena">{(product.brand || "D").charAt(0).toUpperCase()}</span>
+                                        <span className="text-5xl mb-1 z-10 text-brand-grena">{(product.brand || "D").charAt(0).toUpperCase()}</span>
                                         <span className={`text-xs font-bold uppercase tracking-wider z-10 ${bc.icon} dark:opacity-90`}>
                                             {product.attributes?.brand_display || product.brand}
                                         </span>
