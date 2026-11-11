@@ -1,7 +1,9 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Sobre a Dona da Revenda",
+    title: "Sobre nós",
+    description: "Por que a Dona da Revenda existe: ajudar quem revende beleza a organizar o negócio, ganhar tempo e vender com mais clareza.",
+    alternates: { canonical: "/sobre" },
 }
 
 export default function SobrePage() {

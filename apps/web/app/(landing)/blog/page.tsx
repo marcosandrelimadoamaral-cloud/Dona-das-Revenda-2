@@ -2,7 +2,9 @@ import { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-    title: "Blog | Dona da Revenda",
+    title: "Blog",
+    // Posts abaixo são de exemplo: fora do índice até haver conteúdo real (ver marketing/seo/05).
+    robots: { index: false, follow: true },
 }
 
 export default function BlogPage() {

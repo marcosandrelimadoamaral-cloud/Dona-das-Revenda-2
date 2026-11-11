@@ -4,7 +4,9 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 export const metadata: Metadata = {
-    title: "Fale Conosco | Dona da Revenda",
+    title: "Fale conosco",
+    description: "Dúvidas, sugestões ou parcerias com a Dona da Revenda. Fale com a nossa equipe.",
+    alternates: { canonical: "/contato" },
 }
 
 export default function ContatoPage() {

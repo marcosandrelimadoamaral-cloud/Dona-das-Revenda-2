@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Trabalhe Conosco | Dona da Revenda",
+    title: "Trabalhe Conosco",
 }
 
 export default function CarreirasPage() {

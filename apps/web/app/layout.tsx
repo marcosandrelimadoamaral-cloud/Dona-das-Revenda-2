@@ -11,18 +11,17 @@ export const viewport: Viewport = {
   themeColor: "#8B1935",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://donadarevenda.com.br"),
   title: {
     default: "Dona da Revenda — Gestão para quem revende beleza",
     template: "%s | Dona da Revenda"
   },
-  description: "Gestão para quem revende beleza: PDV, estoque, clientes, fiados e financeiro num só lugar, com cinco assistentes de IA que trabalham com você. Teste 7 dias grátis.",
-  keywords: ["gestão para revendedoras", "cosméticos", "natura", "avon", "o boticário", "eudora", "sistema pdv", "controle de fiado", "inteligência artificial", "crm vendas"],
+  description: "Gestão para quem revende beleza: vendas, estoque, clientes, fiados e financeiro num só lugar, com 5 assistentes de IA. Teste 7 dias grátis.",
+  keywords: ["aplicativo para revendedora", "app para revendedora de cosméticos", "controle de estoque para revendedora", "controle de fiado", "sistema para revendedora", "gestão para revenda de cosméticos"],
   authors: [{ name: "Dona da Revenda" }],
   creator: "Dona da Revenda",
   openGraph: {
@@ -33,9 +32,9 @@ export const metadata: Metadata = {
     description: "Estoque, vendas, fiados e financeiro organizados, com cinco assistentes de IA ajudando você todos os dias.",
     siteName: "Dona da Revenda",
     images: [{
-      url: "https://donadarevenda.com.br/icons/icon-512x512.png",
-      width: 512,
-      height: 512,
+      url: "/og-image.png",
+      width: 1200,
+      height: 630,
       alt: "Logo Dona da Revenda"
     }]
   },
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dona da Revenda — Gestão para quem revende beleza",
     description: "Sua revenda organizada. Seu tempo de volta.",
-    images: ["https://donadarevenda.com.br/icons/icon-512x512.png"],
+    images: ["/og-image.png"],
   },
   manifest: "/manifest.json",
   appleWebApp: {

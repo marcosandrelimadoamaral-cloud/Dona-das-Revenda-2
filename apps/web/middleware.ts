@@ -63,6 +63,11 @@ export async function middleware(request: NextRequest) {
   // Landing pages públicas e assets - permitimos acesso livre
   const isPublicRoute =
     pathname === '/' ||
+    // Arquivos que buscadores e o navegador precisam ler sem login (SEO/PWA)
+    pathname === '/sitemap.xml' ||
+    pathname === '/robots.txt' ||
+    pathname === '/manifest.json' ||
+    pathname === '/sw.js' ||
     pathname.startsWith('/termos') ||
     pathname.startsWith('/privacidade') ||
     pathname.startsWith('/sobre') ||

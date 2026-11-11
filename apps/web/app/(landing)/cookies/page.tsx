@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Política de Cookies | Dona da Revenda",
+    title: "Política de Cookies",
 }
 
 export default function CookiesPage() {
