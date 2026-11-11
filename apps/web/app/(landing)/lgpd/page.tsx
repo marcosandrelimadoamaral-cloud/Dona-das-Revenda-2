@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "LGPD | Dona da Revenda",
+    title: "LGPD",
 }
 
 export default function LgpdPage() {

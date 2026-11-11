@@ -75,7 +75,7 @@ export function StripePaymentModal({ open, planId, onOpenChange }: StripePayment
         appearance: {
             theme: "stripe" as const,
             variables: {
-                colorPrimary: "#6366f1",
+                colorPrimary: "#8B1935",
                 colorBackground: "#ffffff",
                 colorText: "#1f2937",
                 colorDanger: "#ef4444",
@@ -91,7 +91,7 @@ export function StripePaymentModal({ open, planId, onOpenChange }: StripePayment
             <DialogContent className="sm:max-w-md">
                 <DialogHeader>
                     <DialogTitle className="flex items-center gap-2 text-xl">
-                        <Sparkles className="w-5 h-5 text-indigo-600" />
+                        <Sparkles className="w-5 h-5 text-brand-grena" />
                         {plan ? `Plano ${plan.name}` : "Assinatura"}
                     </DialogTitle>
                     <DialogDescription>
@@ -102,7 +102,7 @@ export function StripePaymentModal({ open, planId, onOpenChange }: StripePayment
                 <div className="mt-2">
                     {isLoading && (
                         <div className="flex flex-col items-center justify-center py-16 gap-4">
-                            <Loader2 className="w-10 h-10 animate-spin text-indigo-600" />
+                            <Loader2 className="w-10 h-10 animate-spin text-brand-grena" />
                             <p className="text-sm text-muted-foreground">Preparando o pagamento seguro...</p>
                         </div>
                     )}

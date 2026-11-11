@@ -168,7 +168,7 @@ export default function SettingsPage() {
                 <div className="flex flex-col items-center gap-3">
                   <Avatar className="w-24 h-24 border-2">
                     <AvatarImage src="" />
-                    <AvatarFallback className="text-2xl bg-purple-50 text-purple-700">
+                    <AvatarFallback className="text-2xl bg-brand-quartzo-fundo text-brand-grena-hover">
                       {fullName ? fullName.substring(0, 2).toUpperCase() : "DR"}
                     </AvatarFallback>
                   </Avatar>
@@ -218,14 +218,14 @@ export default function SettingsPage() {
                       key={brand.id}
                       onClick={() => handleBrandToggle(brand.id)}
                       className={`flex items-center gap-3 p-3 rounded-xl border-2 transition-all cursor-pointer ${isSelected
-                        ? 'bg-purple-50 border-purple-500 dark:bg-purple-900/20 dark:border-purple-500 transform scale-[1.02]'
+                        ? 'bg-brand-quartzo-fundo border-brand-grena dark:bg-brand-grena-escuro/20 dark:border-brand-grena transform scale-[1.02]'
                         : 'border-transparent hover:border-gray-200 bg-gray-50 dark:bg-gray-900 dark:hover:border-gray-800'
                         }`}
                     >
-                      <div className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${isSelected ? 'bg-purple-600 border-purple-600 text-white' : 'border-gray-300 dark:border-gray-700'}`}>
+                      <div className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${isSelected ? 'bg-brand-grena border-brand-grena text-white' : 'border-gray-300 dark:border-gray-700'}`}>
                         {isSelected && <CheckIcon className="w-3.5 h-3.5 stroke-[4]" />}
                       </div>
-                      <span className={`text-sm font-medium ${isSelected ? 'text-purple-900 dark:text-purple-100' : 'text-gray-600 dark:text-gray-400'}`}>
+                      <span className={`text-sm font-medium ${isSelected ? 'text-brand-grena-escuro dark:text-brand-quartzo-claro' : 'text-gray-600 dark:text-gray-400'}`}>
                         {brand.label}
                       </span>
                     </div>
@@ -246,7 +246,7 @@ export default function SettingsPage() {
                 <div className="flex items-center justify-between p-4 border rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
                   <div className="flex items-center gap-3">
                     <div className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
-                      {theme === 'dark' ? <Moon className="w-5 h-5 text-purple-500" /> : <Sun className="w-5 h-5 text-amber-500" />}
+                      {theme === 'dark' ? <Moon className="w-5 h-5 text-brand-grena" /> : <Sun className="w-5 h-5 text-amber-500" />}
                     </div>
                     <div>
                       <p className="font-semibold text-sm">Modo Escuro (Dark Mode)</p>
@@ -295,8 +295,8 @@ export default function SettingsPage() {
                     <CardDescription>Auto-atendimento inteligente direto no seu WhatsApp.</CardDescription>
                   </div>
                 </div>
-                <Badge className="bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 border border-amber-200 dark:border-amber-800 text-xs font-bold uppercase tracking-wide px-3 py-1">
-                  ✨ Em Breve
+                <Badge className="bg-brand-quartzo-fundo text-brand-ouro-escuro dark:bg-brand-ouro/10 dark:text-brand-ouro border border-brand-ouro/40 text-xs font-bold uppercase tracking-wide px-3 py-1">
+                  Em breve
                 </Badge>
               </div>
             </CardHeader>
@@ -326,22 +326,22 @@ export default function SettingsPage() {
         <TabsContent value="assinatura" className="mt-0 outline-none">
           <Card className="border-0 shadow-sm">
             <CardContent className="p-0">
-              <div className="flex flex-col md:flex-row justify-between items-center p-8 bg-gradient-to-br from-purple-50 via-white to-pink-50 dark:from-purple-950/20 dark:via-gray-950 dark:to-pink-950/20 rounded-2xl border border-purple-100 dark:border-purple-900/50">
+              <div className="flex flex-col md:flex-row justify-between items-center p-8 bg-gradient-to-br from-brand-quartzo-fundo via-white to-brand-quartzo-fundo dark:from-brand-tinta/20 dark:via-gray-950 dark:to-brand-tinta/20 rounded-2xl border border-brand-quartzo-claro dark:border-brand-grena-escuro/50">
                 <div className="mb-6 md:mb-0 text-center md:text-left max-w-lg">
                   <div className="flex justify-center md:justify-start">
-                    <Badge className="bg-purple-600/10 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300 hover:bg-purple-600/20 mb-3 px-3 py-1 font-bold text-xs rounded-full border border-purple-200 dark:border-purple-800">
+                    <Badge className="bg-brand-grena/10 text-brand-grena-hover dark:bg-brand-grena/20 dark:text-brand-quartzo hover:bg-brand-grena/20 mb-3 px-3 py-1 font-bold text-xs rounded-full border border-brand-quartzo-claro dark:border-brand-grena-escuro">
                       Status da Conta: ATIVA (Trial)
                     </Badge>
                   </div>
-                  <h4 className="text-2xl font-extrabold tracking-tight mb-2">Desbloqueie o Sucesso 🚀</h4>
+                  <h4 className="text-2xl font-extrabold tracking-tight mb-2">Tudo liberado durante o teste</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Você está navegando com acesso temporário ilimitado a todas as integrações, faturamento sem tetos e à Central Inteligente de Agentes IA.
+                    Durante o teste você usa tudo: PDV, estoque, financeiro e os cinco assistentes de IA. Escolha um plano quando quiser continuar.
                   </p>
                 </div>
                 <div className="w-full md:w-auto shrink-0 space-y-3">
                   <Button
                     onClick={() => router.push('/billing')}
-                    className="w-full bg-purple-600 hover:bg-purple-700 hover:-translate-y-0.5 transition-transform text-white shadow-lg h-12 px-8 rounded-xl font-bold text-base"
+                    className="w-full bg-brand-grena hover:bg-brand-grena-hover hover:-translate-y-0.5 transition-transform text-white shadow-lg h-12 px-8 rounded-xl font-bold text-base"
                   >
                     Gerenciar Assinatura
                   </Button>

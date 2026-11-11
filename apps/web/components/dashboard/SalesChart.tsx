@@ -1,5 +1,6 @@
 "use client"
 
+import { TrendingDown } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts'
 import { useTheme } from "next-themes"
@@ -42,8 +43,8 @@ export function SalesChart({ data }: SalesChartProps) {
             <CardContent className="h-[300px]">
                 {!hasData ? (
                     <div className="flex flex-col items-center justify-center h-full text-muted-foreground space-y-4">
-                        <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center text-2xl">
-                            📉
+                        <div className="w-16 h-16 bg-brand-quartzo-fundo text-brand-grena rounded-full flex items-center justify-center">
+                            <TrendingDown className="w-7 h-7" />
                         </div>
                         <div className="text-center">
                             <p className="font-medium">Nenhuma venda registrada ainda</p>

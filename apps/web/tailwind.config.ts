@@ -26,15 +26,15 @@ const config = {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			primary: {
-  				DEFAULT: '#7C3AED',
+  				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {
-  				DEFAULT: '#DB2777',
+  				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
   			accent: {
-  				DEFAULT: '#F97316',
+  				DEFAULT: 'hsl(var(--accent))',
   				foreground: 'hsl(var(--accent-foreground))'
   			},
   			destructive: {
@@ -49,6 +49,20 @@ const config = {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
   			},
+  			brand: {
+  				grena: '#8B1935',
+  				'grena-hover': '#74142C',
+  				'grena-escuro': '#5A0F22',
+  				quartzo: '#E8A4B4',
+  				'quartzo-claro': '#F6D9DF',
+  				'quartzo-fundo': '#FBEFF2',
+  				marfim: '#FAF6F2',
+  				ouro: '#C9A24B',
+  				'ouro-escuro': '#A8832F',
+  				tinta: '#2A1218',
+  				vinho: '#6B5A5F',
+  				linho: '#EADFD9'
+  			},
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -59,10 +73,19 @@ const config = {
   			md: 'calc(0.75rem - 2px)',
   			sm: 'calc(0.75rem - 4px)'
   		},
+  		boxShadow: {
+  			soft: '0 8px 30px rgba(139,25,53,.08)',
+  			lift: '0 18px 50px rgba(139,25,53,.14)'
+  		},
   		fontFamily: {
   			sans: [
   				'var(--font-inter)',
   				'sans-serif'
+  			],
+  			display: [
+  				'var(--font-fraunces)',
+  				'Georgia',
+  				'serif'
   			]
   		},
   		keyframes: {

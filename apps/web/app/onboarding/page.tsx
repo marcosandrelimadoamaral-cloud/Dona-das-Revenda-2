@@ -53,18 +53,18 @@ export default function OnboardingPage() {
         <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-4">
             {/* Background Decor */}
             <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
-                <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-b from-purple-100 dark:from-purple-950/30 to-transparent rounded-full blur-3xl opacity-50" />
-                <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-t from-pink-100 dark:from-pink-950/30 to-transparent rounded-full blur-3xl opacity-50" />
+                <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-b from-brand-quartzo-claro dark:from-brand-tinta/30 to-transparent rounded-full blur-3xl opacity-50" />
+                <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-t from-brand-quartzo-claro dark:from-brand-tinta/30 to-transparent rounded-full blur-3xl opacity-50" />
             </div>
 
             <div className="w-full max-w-2xl">
                 {/* Logo */}
                 <div className="flex justify-center mb-8">
                     <div className="flex items-center gap-3">
-                        <Image src="/logo-transparent.png" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
+                        <Image src="/brand/simbolo-coroa-dourada.svg" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
                         <div className="flex flex-col leading-none">
-                            <span className="font-black text-lg bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Dona da</span>
-                            <span className="font-black text-lg bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Revenda</span>
+                            <span className="font-black text-lg bg-brand-grena bg-clip-text text-transparent">Dona da</span>
+                            <span className="font-black text-lg bg-brand-grena bg-clip-text text-transparent">Revenda</span>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ export default function OnboardingPage() {
                     {/* Progress Bar */}
                     <div className="h-1.5 w-full bg-gray-100 dark:bg-gray-800">
                         <div
-                            className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-500 ease-out"
+                            className="h-full bg-brand-grena transition-all duration-500 ease-out"
                             style={{ width: `${(step / 2) * 100}%` }}
                         />
                     </div>
@@ -128,12 +128,12 @@ export default function OnboardingPage() {
                                             key={brand.id}
                                             onClick={() => toggleBrand(brand.id)}
                                             className={`flex flex-col items-center justify-center p-4 rounded-xl border-2 cursor-pointer transition-all text-center ${isSelected
-                                                ? 'border-purple-600 bg-purple-50 dark:bg-purple-950/40 text-purple-900 dark:text-purple-200 shadow-sm scale-105'
-                                                : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-purple-200 dark:hover:border-purple-700 hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                                                ? 'border-brand-grena bg-brand-quartzo-fundo dark:bg-brand-tinta/40 text-brand-grena-escuro dark:text-brand-quartzo-claro shadow-sm scale-105'
+                                                : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-brand-quartzo-claro dark:hover:border-brand-grena-hover hover:bg-gray-50 dark:hover:bg-gray-700/50'
                                                 }`}
                                         >
                                             <div className={`w-6 h-6 rounded-full border-2 mb-2 flex items-center justify-center transition-colors
-                                                ${isSelected ? 'bg-purple-600 border-purple-600' : 'border-gray-300 dark:border-gray-600'}`}
+                                                ${isSelected ? 'bg-brand-grena border-brand-grena' : 'border-gray-300 dark:border-gray-600'}`}
                                             >
                                                 {isSelected && <Check className="w-4 h-4 text-white" />}
                                             </div>
@@ -156,7 +156,7 @@ export default function OnboardingPage() {
                             <Button
                                 onClick={handleNext}
                                 disabled={step === 1 && (!name || whatsapp.replace(/\D/g, '').length < 11)}
-                                className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8"
+                                className="bg-brand-grena hover:bg-brand-grena-hover text-white rounded-full px-8"
                             >
                                 Continuar <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
@@ -164,7 +164,7 @@ export default function OnboardingPage() {
                             <Button
                                 onClick={handleFinish}
                                 disabled={isLoading}
-                                className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-8 shadow-md"
+                                className="bg-brand-grena hover:bg-brand-grena-hover text-white rounded-full px-8 shadow-md"
                             >
                                 {isLoading ? "Preparando Máquina..." : "Finalizar e Entrar"}
                                 {!isLoading && <Sparkles className="w-4 h-4 ml-2" />}

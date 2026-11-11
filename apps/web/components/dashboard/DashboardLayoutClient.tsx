@@ -177,11 +177,11 @@ export function DashboardLayoutClient({
                         key={item.href}
                         href={item.href}
                         className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-150 text-sm font-medium ${isActive
-                            ? "bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800"
+                            ? "bg-brand-quartzo-claro dark:bg-brand-tinta text-brand-grena-hover dark:text-brand-quartzo border border-brand-quartzo-claro dark:border-brand-grena-escuro"
                             : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100/80 dark:hover:bg-gray-800/60"
                             }`}
                     >
-                        <item.icon className={`w-4.5 h-4.5 shrink-0 ${isActive ? "text-purple-600 dark:text-purple-400" : ""}`} />
+                        <item.icon className={`w-4.5 h-4.5 shrink-0 ${isActive ? "text-brand-grena dark:text-brand-quartzo" : ""}`} />
                         {item.label}
                     </Link>
                 )
@@ -191,14 +191,14 @@ export function DashboardLayoutClient({
 
     const profileInitials = user?.email?.substring(0, 2).toUpperCase() || "DR"
     const displayEmail = user?.email || ""
-    const planLabel = isPro ? "Plano PRO ✨" : isTrialValid ? `Trial – ${daysRemaining}d restantes` : "Trial expirado"
+    const planLabel = isPro ? "Plano PRO" : isTrialValid ? `Trial – ${daysRemaining}d restantes` : "Trial expirado"
 
     const ProfileFooter = ({ side = "left", isHeader = false }: { side?: "left" | "bottom", isHeader?: boolean }) => (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <button className="flex items-center gap-3 w-full hover:bg-gray-100 dark:hover:bg-gray-700/40 rounded-xl p-2 transition-colors group">
                     <Avatar className="w-9 h-9 shrink-0">
-                        <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-bold text-sm">
+                        <AvatarFallback className="bg-brand-grena text-white font-bold text-sm">
                             {profileInitials}
                         </AvatarFallback>
                     </Avatar>
@@ -221,7 +221,7 @@ export function DashboardLayoutClient({
                 <DropdownMenuLabel className="font-normal p-2">
                     <div className="flex items-center gap-3">
                         <Avatar className="w-10 h-10">
-                            <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-bold">
+                            <AvatarFallback className="bg-brand-grena text-white font-bold">
                                 {profileInitials}
                             </AvatarFallback>
                         </Avatar>
@@ -267,10 +267,10 @@ export function DashboardLayoutClient({
                 <aside className="hidden lg:flex flex-col w-64 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shrink-0">
                     <div className="h-16 flex items-center px-5 border-b border-gray-100 dark:border-gray-800">
                         <Link href="/" className="flex items-center gap-1">
-                            <Image src="/logo-transparent.png" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
+                            <Image src="/brand/simbolo-coroa-dourada.svg" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
                             <div className="flex flex-col leading-none">
-                                <span className="font-black text-sm bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Dona da</span>
-                                <span className="font-black text-sm bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent -mt-0.5">Revenda</span>
+                                <span className="font-black text-sm bg-brand-grena bg-clip-text text-transparent">Dona da</span>
+                                <span className="font-black text-sm bg-brand-grena bg-clip-text text-transparent -mt-0.5">Revenda</span>
                             </div>
                         </Link>
                     </div>
@@ -282,22 +282,22 @@ export function DashboardLayoutClient({
                     {/* Subscription badge in sidebar */}
                     {!isPro && (
                         <div className="px-3 pb-2">
-                            <Link href="/billing" className="flex items-center justify-between p-3 rounded-xl bg-gradient-to-r from-purple-50 to-violet-50 dark:from-purple-950/40 dark:to-violet-950/30 border border-purple-200 dark:border-purple-800 hover:shadow-sm transition-all group">
+                            <Link href="/billing" className="flex items-center justify-between p-3 rounded-xl bg-brand-quartzo-fundo dark:from-brand-tinta/40 dark:to-brand-tinta/30 border border-brand-quartzo-claro dark:border-brand-grena-escuro hover:shadow-sm transition-all group">
                                 <div className="flex items-center gap-2">
-                                    <div className="w-7 h-7 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center">
+                                    <div className="w-7 h-7 rounded-full bg-brand-quartzo-claro dark:bg-brand-grena-escuro flex items-center justify-center">
                                         {isTrialValid
-                                            ? <Clock className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
+                                            ? <Clock className="w-3.5 h-3.5 text-brand-grena dark:text-brand-quartzo" />
                                             : <AlertTriangle className="w-3.5 h-3.5 text-red-500" />
                                         }
                                     </div>
                                     <div>
-                                        <p className="text-xs font-semibold text-purple-700 dark:text-purple-300">
+                                        <p className="text-xs font-semibold text-brand-grena-hover dark:text-brand-quartzo">
                                             {isTrialValid ? `${daysRemaining} dia${daysRemaining !== 1 ? "s" : ""} no trial` : "Trial expirado"}
                                         </p>
-                                        <p className="text-[10px] text-purple-500 dark:text-purple-500">Toque para assinar</p>
+                                        <p className="text-[10px] text-brand-grena dark:text-brand-grena">Toque para assinar</p>
                                     </div>
                                 </div>
-                                <ChevronRight className="w-4 h-4 text-purple-400 group-hover:translate-x-0.5 transition-transform" />
+                                <ChevronRight className="w-4 h-4 text-brand-quartzo group-hover:translate-x-0.5 transition-transform" />
                             </Link>
                         </div>
                     )}
@@ -347,7 +347,7 @@ export function DashboardLayoutClient({
                                 </SheetTrigger>
                                 <SheetContent side="left" className="w-64 p-0 flex flex-col bg-white dark:bg-gray-900">
                                     <div className="h-16 flex items-center px-5 border-b dark:border-gray-800">
-                                        <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
+                                        <span className="text-xl font-bold bg-brand-grena bg-clip-text text-transparent">
                                             Dona da Revenda
                                         </span>
                                     </div>
@@ -356,14 +356,14 @@ export function DashboardLayoutClient({
                                     </nav>
                                     {!isPro && (
                                         <div className="px-3 pb-2">
-                                            <Link href="/billing" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-between p-3 rounded-xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800">
+                                            <Link href="/billing" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-between p-3 rounded-xl bg-brand-quartzo-fundo dark:bg-brand-tinta/40 border border-brand-quartzo-claro dark:border-brand-grena-escuro">
                                                 <div className="flex items-center gap-2">
-                                                    <Clock className="w-3.5 h-3.5 text-purple-600" />
-                                                    <p className="text-xs font-semibold text-purple-700 dark:text-purple-300">
+                                                    <Clock className="w-3.5 h-3.5 text-brand-grena" />
+                                                    <p className="text-xs font-semibold text-brand-grena-hover dark:text-brand-quartzo">
                                                         {isTrialValid ? `${daysRemaining}d no trial` : "Trial expirado"}
                                                     </p>
                                                 </div>
-                                                <ChevronRight className="w-4 h-4 text-purple-400" />
+                                                <ChevronRight className="w-4 h-4 text-brand-quartzo" />
                                             </Link>
                                         </div>
                                     )}
@@ -372,7 +372,7 @@ export function DashboardLayoutClient({
                                     </div>
                                 </SheetContent>
                             </Sheet>
-                            <span className="text-lg font-black bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent lg:hidden ml-1 truncate max-w-[160px]">
+                            <span className="text-lg font-black bg-brand-grena bg-clip-text text-transparent lg:hidden ml-1 truncate max-w-[160px]">
                                 Dona da Revenda
                             </span>
                         </div>
@@ -420,14 +420,14 @@ export function DashboardLayoutClient({
                                         <div className="space-y-1 mt-1">
                                             {notifications.map((n) => (
                                                 <div key={n.id} className={`flex gap - 3 p - 3 rounded - xl ${n.type === "trial"
-                                                    ? "bg-purple-50 dark:bg-purple-950/30"
+                                                    ? "bg-brand-quartzo-fundo dark:bg-brand-tinta/30"
                                                     : n.type === "stock"
                                                         ? "bg-amber-50 dark:bg-amber-950/30"
                                                         : "bg-gray-50 dark:bg-gray-800"
                                                     } `}>
-                                                    <div className={`w - 8 h - 8 rounded - full flex items - center justify - center shrink - 0 ${n.type === "trial" ? "bg-purple-100 dark:bg-purple-900" : "bg-amber-100 dark:bg-amber-900"} `}>
+                                                    <div className={`w - 8 h - 8 rounded - full flex items - center justify - center shrink - 0 ${n.type === "trial" ? "bg-brand-quartzo-claro dark:bg-brand-grena-escuro" : "bg-amber-100 dark:bg-amber-900"} `}>
                                                         {n.type === "trial"
-                                                            ? <Crown className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                                                            ? <Crown className="w-4 h-4 text-brand-grena dark:text-brand-quartzo" />
                                                             : <PackageOpen className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                                                         }
                                                     </div>
@@ -435,7 +435,7 @@ export function DashboardLayoutClient({
                                                         <p className="text-sm font-semibold truncate">{n.title}</p>
                                                         <p className="text-xs text-muted-foreground mt-0.5">{n.body}</p>
                                                         {n.type === "trial" && (
-                                                            <Link href="/billing" className="text-xs text-purple-600 dark:text-purple-400 font-semibold hover:underline mt-1 block" onClick={() => setNotifOpen(false)}>
+                                                            <Link href="/billing" className="text-xs text-brand-grena dark:text-brand-quartzo font-semibold hover:underline mt-1 block" onClick={() => setNotifOpen(false)}>
                                                                 Ver planos →
                                                             </Link>
                                                         )}
@@ -486,7 +486,7 @@ export function DashboardLayoutClient({
                             router.push('/inventory')
                         }
                     }}
-                    className="lg:hidden fixed z-[60] flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg shadow-purple-500/30 cursor-grab active:cursor-grabbing"
+                    className="lg:hidden fixed z-[60] flex items-center justify-center w-14 h-14 rounded-full bg-brand-grena text-white shadow-lg shadow-brand-grena/30 cursor-grab active:cursor-grabbing"
                     style={{ bottom: 80, right: 16, touchAction: "none" }}
                 >
                     <PackageOpen className="w-6 h-6 pointer-events-none" />

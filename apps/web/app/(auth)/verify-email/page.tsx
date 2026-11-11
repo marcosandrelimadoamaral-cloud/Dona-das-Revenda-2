@@ -42,8 +42,8 @@ function VerifyEmailForm() {
     return (
         <AuthCard title="" description="">
             <div className="flex flex-col items-center justify-center text-center space-y-6 py-4">
-                <div className="w-20 h-20 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
-                    <MailCheck className="w-10 h-10 text-purple-600 dark:text-purple-400" />
+                <div className="w-20 h-20 bg-brand-quartzo-claro dark:bg-brand-grena-escuro/30 rounded-full flex items-center justify-center">
+                    <MailCheck className="w-10 h-10 text-brand-grena dark:text-brand-quartzo" />
                 </div>
 
                 <div className="space-y-2">
@@ -57,15 +57,15 @@ function VerifyEmailForm() {
                 <div className="bg-zinc-50 dark:bg-zinc-900/50 rounded-lg p-4 w-full text-sm text-left border border-zinc-100 dark:border-zinc-800">
                     <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-start gap-2">
-                            <span className="text-purple-600 mt-0.5">•</span>
+                            <span className="text-brand-grena mt-0.5">•</span>
                             Clique no link enviado para ativar sua conta.
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-purple-600 mt-0.5">•</span>
+                            <span className="text-brand-grena mt-0.5">•</span>
                             Não recebeu? Verifique a pasta de spam.
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-purple-600 mt-0.5">•</span>
+                            <span className="text-brand-grena mt-0.5">•</span>
                             O link expira em 24 horas.
                         </li>
                     </ul>
@@ -106,7 +106,7 @@ export default function VerifyEmailPage() {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.4 }}
         >
-            <Suspense fallback={<div className="flex justify-center p-8"><RefreshCw className="w-6 h-6 animate-spin text-purple-600" /></div>}>
+            <Suspense fallback={<div className="flex justify-center p-8"><RefreshCw className="w-6 h-6 animate-spin text-brand-grena" /></div>}>
                 <VerifyEmailForm />
             </Suspense>
         </motion.div>

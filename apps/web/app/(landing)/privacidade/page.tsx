@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Política de Privacidade | Dona da Revenda",
+    title: "Política de Privacidade",
 }
 
 export default function PrivacidadePage() {

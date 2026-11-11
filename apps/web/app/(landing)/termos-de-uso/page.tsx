@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Termos de Uso | Dona da Revenda",
+    title: "Termos de Uso",
 }
 
 export default function TermosPage() {

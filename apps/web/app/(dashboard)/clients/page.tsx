@@ -252,7 +252,7 @@ export default function ClientsPage() {
                         <TableCell className="pl-6">
                           <div className="flex items-center gap-3">
                             <Avatar className="h-9 w-9 border hidden sm:flex">
-                              <AvatarFallback className="bg-purple-100 text-purple-700 text-xs font-semibold">
+                              <AvatarFallback className="bg-brand-quartzo-claro text-brand-grena-hover text-xs font-semibold">
                                 {getInitials(client.name)}
                               </AvatarFallback>
                             </Avatar>
@@ -280,7 +280,7 @@ export default function ClientsPage() {
                           <Button
                             variant="default"
                             size="sm"
-                            className="bg-purple-600 hover:bg-purple-700 text-white shadow-sm h-8 px-2.5 text-xs whitespace-nowrap"
+                            className="bg-brand-grena hover:bg-brand-grena-hover text-white shadow-sm h-8 px-2.5 text-xs whitespace-nowrap"
                             onClick={(e) => handleGenerateApproach(client, e)}
                           >
                             <Sparkles className="w-3.5 h-3.5 sm:mr-1.5" />
@@ -328,7 +328,7 @@ export default function ClientsPage() {
                     <div className="flex justify-between items-start">
                       <div className="flex items-center gap-3">
                         <Avatar className="h-12 w-12 border">
-                          <AvatarFallback className="bg-purple-100 text-purple-700 font-bold">
+                          <AvatarFallback className="bg-brand-quartzo-claro text-brand-grena-hover font-bold">
                             {getInitials(client.name)}
                           </AvatarFallback>
                         </Avatar>
@@ -354,7 +354,7 @@ export default function ClientsPage() {
                       </div>
                       <Button
                         size="sm"
-                        className="bg-purple-100 text-purple-700 hover:bg-purple-200 dark:bg-purple-900/50 dark:text-purple-300 dark:hover:bg-purple-800 h-9 rounded-xl shadow-none px-3"
+                        className="bg-brand-quartzo-claro text-brand-grena-hover hover:bg-brand-quartzo-claro dark:bg-brand-grena-escuro/50 dark:text-brand-quartzo dark:hover:bg-brand-grena-escuro h-9 rounded-xl shadow-none px-3"
                         onClick={(e) => handleGenerateApproach(client, e)}
                       >
                         <Sparkles className="w-4 h-4 mr-2" />
@@ -384,7 +384,7 @@ export default function ClientsPage() {
         <DialogContent className="sm:max-w-[480px]">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-purple-600" />
+              <Sparkles className="w-5 h-5 text-brand-grena" />
               Abordagem com IA
             </DialogTitle>
             <DialogDescription>
@@ -395,7 +395,7 @@ export default function ClientsPage() {
           <div className="py-4">
             {generatingAi ? (
               <div className="flex flex-col items-center justify-center space-y-3 py-6">
-                <div className="w-10 h-10 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin"></div>
+                <div className="w-10 h-10 border-4 border-brand-quartzo-claro border-t-brand-grena rounded-full animate-spin"></div>
                 <p className="text-sm text-muted-foreground font-medium animate-pulse">Clara está digitando...</p>
               </div>
             ) : (
@@ -403,12 +403,12 @@ export default function ClientsPage() {
                 <Textarea
                   value={aiMessage}
                   onChange={(e) => setAiMessage(e.target.value)}
-                  className="min-h-[160px] text-sm resize-none pr-10 border-purple-100 bg-purple-50/30 focus-visible:ring-purple-300 dark:border-purple-900/30 dark:bg-purple-950/20"
+                  className="min-h-[160px] text-sm resize-none pr-10 border-brand-quartzo-claro bg-brand-quartzo-fundo/30 focus-visible:ring-brand-quartzo dark:border-brand-grena-escuro/30 dark:bg-brand-tinta/20"
                 />
                 <Button
                   size="icon"
                   variant="ghost"
-                  className="absolute right-2 top-2 h-8 w-8 text-muted-foreground hover:text-purple-600 hover:bg-purple-100 dark:hover:bg-purple-900/50 transition-colors"
+                  className="absolute right-2 top-2 h-8 w-8 text-muted-foreground hover:text-brand-grena hover:bg-brand-quartzo-claro dark:hover:bg-brand-grena-escuro/50 transition-colors"
                   onClick={handleCopy}
                 >
                   {copied ? <CheckCircle2 className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}

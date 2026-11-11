@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/dashboard', '/onboarding', '/checkout', '/login', '/signup', '/api'],
         },
-        sitemap: 'https://donadarevenda.com.br/sitemap.xml',
+        sitemap: 'https://www.donadarevenda.com.br/sitemap.xml',
     };
 }

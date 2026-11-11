@@ -11,15 +11,15 @@ export function TrialBanner({ daysRemaining = 7 }: { daysRemaining?: number }) {
     if (!isVisible || daysRemaining < 0) return null
 
     return (
-        <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl shadow-lg border border-purple-500/20 mb-6 group">
+        <div className="relative overflow-hidden bg-brand-grena rounded-2xl shadow-lg border border-brand-grena/20 mb-6 group">
             {/* Decorative background elements */}
             <div className="absolute top-0 right-0 -translate-y-12 translate-x-8 w-48 h-48 bg-white/10 rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity"></div>
-            <div className="absolute bottom-0 left-0 translate-y-8 -translate-x-12 w-32 h-32 bg-pink-500/20 rounded-full blur-2xl opacity-50"></div>
+            <div className="absolute bottom-0 left-0 translate-y-8 -translate-x-12 w-32 h-32 bg-brand-grena/20 rounded-full blur-2xl opacity-50"></div>
 
             <div className="relative px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-4 text-white">
                     <div className="p-2.5 bg-white/10 rounded-xl backdrop-blur-sm border border-white/10 shrink-0">
-                        <Clock className="w-6 h-6 text-purple-100" />
+                        <Clock className="w-6 h-6 text-brand-quartzo-claro" />
                     </div>
                     <div>
                         <h3 className="font-bold text-lg leading-tight">
@@ -27,7 +27,7 @@ export function TrialBanner({ daysRemaining = 7 }: { daysRemaining?: number }) {
                             {daysRemaining === 1 && `Seu teste grátis expira AMANHÃ!`}
                             {daysRemaining <= 0 && `Seu teste grátis expira em poucas horas!`}
                         </h3>
-                        <p className="text-purple-100 text-sm mt-0.5">
+                        <p className="text-brand-quartzo-claro text-sm mt-0.5">
                             Não perca o acesso irrestrito à Clara, Zara e Finn. Assine agora e mantenha seu histórico.
                         </p>
                     </div>
@@ -37,7 +37,7 @@ export function TrialBanner({ daysRemaining = 7 }: { daysRemaining?: number }) {
                     <Button
                         asChild
                         variant="secondary"
-                        className="w-full sm:w-auto bg-white text-purple-700 hover:bg-gray-50 border-0 shadow-sm font-semibold transition-all hover:scale-105 active:scale-95"
+                        className="w-full sm:w-auto bg-white text-brand-grena-hover hover:bg-gray-50 border-0 shadow-sm font-semibold transition-all hover:scale-105 active:scale-95"
                     >
                         <Link href="/billing">
                             Garantir Acesso PRO
@@ -47,7 +47,7 @@ export function TrialBanner({ daysRemaining = 7 }: { daysRemaining?: number }) {
 
                     <button
                         onClick={() => setIsVisible(false)}
-                        className="p-2 text-purple-200 hover:text-white hover:bg-white/10 rounded-lg transition-colors hidden sm:block"
+                        className="p-2 text-brand-quartzo-claro hover:text-white hover:bg-white/10 rounded-lg transition-colors hidden sm:block"
                         aria-label="Dispensar aviso"
                     >
                         <X className="w-5 h-5" />

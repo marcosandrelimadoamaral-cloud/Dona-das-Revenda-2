@@ -67,7 +67,7 @@ export function AddClientDialog({ onClientAdded, isFloating = false }: { onClien
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         {isFloating ? (
-          <Button className="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg shadow-purple-500/30 p-0 hover:scale-105 transition-transform">
+          <Button className="w-14 h-14 rounded-full bg-brand-grena text-white shadow-lg shadow-brand-grena/30 p-0 hover:scale-105 transition-transform">
             <Plus className="w-6 h-6" />
           </Button>
         ) : (

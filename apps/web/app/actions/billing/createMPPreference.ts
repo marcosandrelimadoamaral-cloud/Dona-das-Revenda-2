@@ -67,9 +67,9 @@ export async function createMPPreference(planType: 'monthly' | 'quarterly' | 'an
                     ]
                 },
                 back_urls: {
-                    success: `${process.env.NEXT_PUBLIC_APP_URL || 'https://donadarevenda.com.br'}/billing?success=true`,
-                    failure: `${process.env.NEXT_PUBLIC_APP_URL || 'https://donadarevenda.com.br'}/billing?canceled=true`,
-                    pending: `${process.env.NEXT_PUBLIC_APP_URL || 'https://donadarevenda.com.br'}/billing?pending=true`
+                    success: `${process.env.NEXT_PUBLIC_APP_URL || 'https://www.donadarevenda.com.br'}/billing?success=true`,
+                    failure: `${process.env.NEXT_PUBLIC_APP_URL || 'https://www.donadarevenda.com.br'}/billing?canceled=true`,
+                    pending: `${process.env.NEXT_PUBLIC_APP_URL || 'https://www.donadarevenda.com.br'}/billing?pending=true`
                 },
                 auto_return: 'approved'
             }

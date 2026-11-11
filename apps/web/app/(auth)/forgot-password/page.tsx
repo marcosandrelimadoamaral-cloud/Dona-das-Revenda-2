@@ -15,7 +15,7 @@ function SubmitButton() {
     const { pending } = useFormStatus()
 
     return (
-        <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white" disabled={pending}>
+        <Button type="submit" className="w-full bg-brand-grena hover:bg-brand-grena-hover text-white" disabled={pending}>
             {pending ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : null}
             Enviar link de recuperação
         </Button>

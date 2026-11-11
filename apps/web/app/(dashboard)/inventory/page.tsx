@@ -165,8 +165,8 @@ export default function InventoryPage() {
         </div>
       ) : filteredProducts.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-16 px-4 text-center border rounded-lg bg-white dark:bg-gray-900 border-dashed">
-          <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4">
-            <PackageOpen className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+          <div className="w-16 h-16 bg-brand-quartzo-claro dark:bg-brand-grena-escuro/30 rounded-full flex items-center justify-center mb-4">
+            <PackageOpen className="w-8 h-8 text-brand-grena dark:text-brand-quartzo" />
           </div>
           <h3 className="text-lg font-semibold mb-2">Nenhum produto encontrado</h3>
           <p className="text-muted-foreground max-w-sm mb-6">
@@ -319,7 +319,7 @@ export default function InventoryPage() {
               <Button type="button" variant="outline" onClick={() => setEditingProduct(null)}>
                 <X className="w-4 h-4 mr-1" /> Cancelar
               </Button>
-              <Button onClick={handleSaveEdit} disabled={savingEdit} className="bg-purple-600 hover:bg-purple-700 text-white">
+              <Button onClick={handleSaveEdit} disabled={savingEdit} className="bg-brand-grena hover:bg-brand-grena-hover text-white">
                 <Save className="w-4 h-4 mr-1" />
                 {savingEdit ? "Salvando..." : "Salvar Alterações"}
               </Button>

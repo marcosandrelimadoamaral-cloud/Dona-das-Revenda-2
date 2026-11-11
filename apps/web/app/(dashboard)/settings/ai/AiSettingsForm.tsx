@@ -9,17 +9,17 @@ import { updateAiSettings } from "@/app/actions/ai/aiSettings"
 import { Save, Loader2, Sparkles, UserRound, Store, Users, Sliders, Volume2, Zap, Heart, MessageCircle, Clock } from "lucide-react"
 
 const TONE_OPTIONS = [
-    { value: 'amigavel', label: '😊 Amigável', desc: 'Calorosa, próxima e encorajadora' },
-    { value: 'profissional', label: '💼 Profissional', desc: 'Clara, direta e respeitosa' },
-    { value: 'descontraida', label: '🎉 Descontraída', desc: 'Informal, com bom humor e leveza' },
-    { value: 'motivacional', label: '🚀 Motivacional', desc: 'Energética, inspiradora e positiva' },
+    { value: 'amigavel', label: 'Amigável', desc: 'Calorosa, próxima e encorajadora' },
+    { value: 'profissional', label: 'Profissional', desc: 'Clara, direta e respeitosa' },
+    { value: 'descontraida', label: 'Descontraída', desc: 'Informal, com bom humor e leveza' },
+    { value: 'motivacional', label: 'Motivacional', desc: 'Energética, inspiradora e positiva' },
 ]
 
 const STYLE_OPTIONS = [
-    { value: 'detalhado', label: '📖 Detalhado', desc: 'Explicações completas com contexto' },
-    { value: 'objetivo', label: '⚡ Objetivo', desc: 'Respostas curtas e diretas ao ponto' },
-    { value: 'exemplos', label: '💡 Com exemplos', desc: 'Sempre ilustra com exemplos práticos' },
-    { value: 'listas', label: '📋 Organizado em listas', desc: 'Prefere bullet points e listas' },
+    { value: 'detalhado', label: 'Detalhado', desc: 'Explicações completas com contexto' },
+    { value: 'objetivo', label: 'Objetivo', desc: 'Respostas curtas e diretas ao ponto' },
+    { value: 'exemplos', label: 'Com exemplos', desc: 'Sempre ilustra com exemplos práticos' },
+    { value: 'listas', label: 'Organizado em listas', desc: 'Prefere bullet points e listas' },
 ]
 
 export function AiSettingsForm({ initialData }: { initialData: any }) {
@@ -60,9 +60,9 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
     return (
         <form onSubmit={handleSubmit} className="space-y-8 max-w-2xl">
             {/* Info banner */}
-            <div className="bg-purple-50 dark:bg-purple-950/30 p-4 rounded-xl flex items-start gap-3 border border-purple-100 dark:border-purple-900">
-                <Sparkles className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
-                <div className="text-sm text-purple-900 dark:text-purple-300">
+            <div className="bg-brand-quartzo-fundo dark:bg-brand-tinta/30 p-4 rounded-xl flex items-start gap-3 border border-brand-quartzo-claro dark:border-brand-grena-escuro">
+                <Sparkles className="w-5 h-5 text-brand-grena shrink-0 mt-0.5" />
+                <div className="text-sm text-brand-grena-escuro dark:text-brand-quartzo">
                     <p className="font-semibold">Como isso funciona?</p>
                     <p className="mt-1 opacity-80">Estas configurações moldam a personalidade dos 5 Agentes de IA. Quanto mais você personalizar, mais natural e humana será a conversa.</p>
                 </div>
@@ -139,16 +139,16 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
                                 type="button"
                                 onClick={() => setSelectedTone(opt.value)}
                                 className={`flex items-start gap-3 p-3 rounded-xl border-2 text-left transition-all ${selectedTone === opt.value
-                                    ? 'border-purple-500 bg-purple-50 dark:bg-purple-950/30'
+                                    ? 'border-brand-grena bg-brand-quartzo-fundo dark:bg-brand-tinta/30'
                                     : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 bg-white dark:bg-gray-900'
                                     }`}
                             >
                                 <div className="flex-1">
-                                    <p className={`text-sm font-semibold ${selectedTone === opt.value ? 'text-purple-700 dark:text-purple-300' : ''}`}>{opt.label}</p>
+                                    <p className={`text-sm font-semibold ${selectedTone === opt.value ? 'text-brand-grena-hover dark:text-brand-quartzo' : ''}`}>{opt.label}</p>
                                     <p className="text-xs text-muted-foreground mt-0.5">{opt.desc}</p>
                                 </div>
                                 {selectedTone === opt.value && (
-                                    <div className="w-4 h-4 rounded-full bg-purple-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <div className="w-4 h-4 rounded-full bg-brand-grena flex items-center justify-center shrink-0 mt-0.5">
                                         <div className="w-2 h-2 rounded-full bg-white" />
                                     </div>
                                 )}
@@ -169,16 +169,16 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
                                 type="button"
                                 onClick={() => setSelectedStyle(opt.value)}
                                 className={`flex items-start gap-3 p-3 rounded-xl border-2 text-left transition-all ${selectedStyle === opt.value
-                                    ? 'border-purple-500 bg-purple-50 dark:bg-purple-950/30'
+                                    ? 'border-brand-grena bg-brand-quartzo-fundo dark:bg-brand-tinta/30'
                                     : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 bg-white dark:bg-gray-900'
                                     }`}
                             >
                                 <div className="flex-1">
-                                    <p className={`text-sm font-semibold ${selectedStyle === opt.value ? 'text-purple-700 dark:text-purple-300' : ''}`}>{opt.label}</p>
+                                    <p className={`text-sm font-semibold ${selectedStyle === opt.value ? 'text-brand-grena-hover dark:text-brand-quartzo' : ''}`}>{opt.label}</p>
                                     <p className="text-xs text-muted-foreground mt-0.5">{opt.desc}</p>
                                 </div>
                                 {selectedStyle === opt.value && (
-                                    <div className="w-4 h-4 rounded-full bg-purple-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <div className="w-4 h-4 rounded-full bg-brand-grena flex items-center justify-center shrink-0 mt-0.5">
                                         <div className="w-2 h-2 rounded-full bg-white" />
                                     </div>
                                 )}
@@ -189,7 +189,7 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
 
                 {/* Emoji toggle */}
                 <div className="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
-                    <Heart className="w-4 h-4 text-pink-500 shrink-0 mt-1" />
+                    <Heart className="w-4 h-4 text-brand-grena shrink-0 mt-1" />
                     <div className="flex-1">
                         <p className="text-sm font-semibold">Usar emojis nas respostas?</p>
                         <p className="text-xs text-muted-foreground mt-0.5">Deixa o tom mais expressivo e divertido</p>
@@ -197,7 +197,7 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
                     <button
                         type="button"
                         onClick={() => setUseEmoji(!useEmoji)}
-                        className={`relative w-10 h-6 rounded-full transition-colors shrink-0 ${useEmoji ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-600'}`}
+                        className={`relative w-10 h-6 rounded-full transition-colors shrink-0 ${useEmoji ? 'bg-brand-grena' : 'bg-gray-300 dark:bg-gray-600'}`}
                     >
                         <span className={`absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-all ${useEmoji ? 'left-5' : 'left-1'}`} />
                     </button>
@@ -221,7 +221,7 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
             </div>
 
             <div className="pt-4 flex justify-end">
-                <Button type="submit" disabled={loading} className="gap-2 bg-purple-600 hover:bg-purple-700 rounded-xl h-11 px-6">
+                <Button type="submit" disabled={loading} className="gap-2 bg-brand-grena hover:bg-brand-grena-hover rounded-xl h-11 px-6">
                     {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                     {loading ? "Salvando..." : "Salvar Configurações"}
                 </Button>

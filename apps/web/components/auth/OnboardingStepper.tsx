@@ -18,7 +18,7 @@ export function OnboardingStepper({ currentStep, totalSteps }: OnboardingStepper
             <div
               className={`flex items-center justify-center w-8 h-8 rounded-full border-2 font-semibold text-sm transition-colors duration-300 ${
                 isActive
-                  ? "border-purple-600 bg-purple-600 text-white"
+                  ? "border-brand-grena bg-brand-grena text-white"
                   : isCompleted
                   ? "border-emerald-500 bg-emerald-500 text-white"
                   : "border-gray-300 text-gray-400 dark:border-gray-700"

@@ -251,7 +251,7 @@ export default function PosPage() {
                   <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input
                     placeholder="Buscar produto ou escanear código..."
-                    className="pl-12 h-12 text-lg rounded-xl bg-gray-50 dark:bg-gray-900 border-transparent focus-visible:ring-purple-500"
+                    className="pl-12 h-12 text-lg rounded-xl bg-gray-50 dark:bg-gray-900 border-transparent focus-visible:ring-brand-grena"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                   />
@@ -277,7 +277,7 @@ export default function PosPage() {
                     {filteredProducts.map(product => (
                       <Card
                         key={product.id}
-                        className="cursor-pointer hover:border-purple-500 transition-colors overflow-hidden flex flex-col active:scale-95"
+                        className="cursor-pointer hover:border-brand-grena transition-colors overflow-hidden flex flex-col active:scale-95"
                         onClick={() => addToCart(product)}
                       >
                         <div className="h-28 bg-gray-100 dark:bg-gray-800 flex items-center justify-center p-2">
@@ -292,7 +292,7 @@ export default function PosPage() {
                           <h3 className="text-sm font-medium line-clamp-2 leading-tight mb-2 flex-1">{product.name}</h3>
                           <div className="flex items-end justify-between mt-auto">
                             <span className="text-xs text-muted-foreground">{product.stock} un</span>
-                            <span className="text-base font-bold text-purple-600 dark:text-purple-400">
+                            <span className="text-base font-bold text-brand-grena dark:text-brand-quartzo">
                               {formatCurrency(product.price)}
                             </span>
                           </div>
@@ -308,12 +308,12 @@ export default function PosPage() {
                 <div className="lg:hidden absolute bottom-6 left-4 right-4 z-50 animate-in slide-in-from-bottom-4 fade-in duration-300">
                   <button
                     onClick={() => setActiveTab('cart')}
-                    className="w-full flex items-center justify-between bg-purple-600 text-white rounded-2xl p-4 shadow-xl shadow-purple-500/20 active:scale-95 transition-transform"
+                    className="w-full flex items-center justify-between bg-brand-grena text-white rounded-2xl p-4 shadow-xl shadow-brand-grena/20 active:scale-95 transition-transform"
                   >
                     <div className="flex items-center gap-3">
                       <div className="relative">
                         <ShoppingCart className="w-6 h-6" />
-                        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-purple-600">
+                        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-brand-grena">
                           {cart.length}
                         </span>
                       </div>
@@ -374,7 +374,7 @@ export default function PosPage() {
 
                         <div className="flex-1 min-w-0">
                           <h4 className="text-sm font-medium truncate">{item.name}</h4>
-                          <div className="text-sm font-bold text-purple-600">
+                          <div className="text-sm font-bold text-brand-grena">
                             {formatCurrency(item.price * item.qty)}
                           </div>
                         </div>
@@ -427,7 +427,7 @@ export default function PosPage() {
                         {/* Search box inside dropdown */}
                         <div className="px-2 py-1.5 sticky top-0 bg-white dark:bg-gray-950 z-10">
                           <input
-                            className="w-full h-8 px-2 text-sm rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:ring-1 focus:ring-purple-500 placeholder:text-gray-400"
+                            className="w-full h-8 px-2 text-sm rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:ring-1 focus:ring-brand-grena placeholder:text-gray-400"
                             placeholder="Buscar cliente..."
                             value={clientSearch}
                             onChange={e => setClientSearch(e.target.value)}
@@ -452,14 +452,14 @@ export default function PosPage() {
                     <div className="flex">
                       <button
                         type="button"
-                        className={`px-2 text-xs border border-r-0 rounded-l-md transition-colors ${discountType === 'money' ? 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 font-bold' : 'bg-white dark:bg-gray-950 text-muted-foreground'}`}
+                        className={`px-2 text-xs border border-r-0 rounded-l-md transition-colors ${discountType === 'money' ? 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/50 text-brand-grena-hover dark:text-brand-quartzo font-bold' : 'bg-white dark:bg-gray-950 text-muted-foreground'}`}
                         onClick={() => setDiscountType('money')}
                       >
                         R$
                       </button>
                       <button
                         type="button"
-                        className={`px-2 text-xs border border-r-0 transition-colors ${discountType === 'percentage' ? 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 font-bold' : 'bg-white dark:bg-gray-950 text-muted-foreground'}`}
+                        className={`px-2 text-xs border border-r-0 transition-colors ${discountType === 'percentage' ? 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/50 text-brand-grena-hover dark:text-brand-quartzo font-bold' : 'bg-white dark:bg-gray-950 text-muted-foreground'}`}
                         onClick={() => setDiscountType('percentage')}
                       >
                         %
@@ -606,7 +606,7 @@ function PaymentButton({ icon: Icon, label, active, onClick }: { icon: any, labe
     <button
       onClick={onClick}
       className={`flex flex-col items-center justify-center gap-1 p-2 rounded-lg border transition-all ${active
-        ? 'bg-purple-50 border-purple-500 text-purple-700 dark:bg-purple-900/30 dark:border-purple-500 dark:text-purple-300'
+        ? 'bg-brand-quartzo-fundo border-brand-grena text-brand-grena-hover dark:bg-brand-grena-escuro/30 dark:border-brand-grena dark:text-brand-quartzo'
         : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50 dark:bg-gray-950 dark:border-gray-800 dark:text-gray-400 dark:hover:bg-gray-900'
         }`}
     >

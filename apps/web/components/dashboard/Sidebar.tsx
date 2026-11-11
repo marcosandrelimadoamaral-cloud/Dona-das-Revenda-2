@@ -27,7 +27,7 @@ export function Sidebar({ className }: { className?: string }) {
     <aside className={cn("flex flex-col h-full bg-white dark:bg-gray-900 border-r", className)}>
       <div className="p-6">
         <Link href="/dashboard" className="flex items-center -gap-2">
-          <Image src="/logo-transparent.png" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
+          <Image src="/brand/simbolo-coroa-dourada.svg" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
           <span className="font-bold text-xl tracking-tight text-gray-900 dark:text-white">Dona da Revenda</span>
         </Link>
       </div>
@@ -42,11 +42,11 @@ export function Sidebar({ className }: { className?: string }) {
               className={cn(
                 "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors",
                 isActive
-                  ? "bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-400"
+                  ? "bg-brand-quartzo-fundo text-brand-grena-hover dark:bg-brand-grena/10 dark:text-brand-quartzo"
                   : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
               )}
             >
-              <item.icon className={cn("w-5 h-5", isActive ? "text-indigo-600 dark:text-indigo-400" : "text-gray-400")} />
+              <item.icon className={cn("w-5 h-5", isActive ? "text-brand-grena dark:text-brand-quartzo" : "text-gray-400")} />
               {item.name}
             </Link>
           )

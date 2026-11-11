@@ -72,7 +72,7 @@ export function InstallPrompt() {
             <div className="flex flex-col gap-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl p-4 shadow-2xl shadow-black/20">
                 <div className="flex items-start gap-3 w-full">
                     {/* Icon */}
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-brand-grena flex items-center justify-center shrink-0">
                         <Download className="w-6 h-6 text-white" />
                     </div>
 
@@ -95,7 +95,7 @@ export function InstallPrompt() {
                 </div>
 
                 {isIOS ? (
-                    <div className="bg-indigo-50 dark:bg-indigo-950/30 rounded-xl p-3 text-xs text-indigo-800 dark:text-indigo-300 flex items-center gap-2 border border-indigo-100 dark:border-indigo-900/50">
+                    <div className="bg-brand-quartzo-fundo dark:bg-brand-tinta/30 rounded-xl p-3 text-xs text-brand-grena-escuro dark:text-brand-quartzo flex items-center gap-2 border border-brand-quartzo-claro dark:border-brand-grena-escuro/50">
                         <span className="text-xl">⬇️</span>
                         <p>
                             Toque no ícone de <strong>Compartilhar</strong> na barra de navegação e depois em <strong>Adicionar à Tela de Início</strong>
@@ -104,7 +104,7 @@ export function InstallPrompt() {
                 ) : (
                     <button
                         onClick={handleInstall}
-                        className="w-full py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-sm font-bold rounded-xl transition-all shadow-md mt-1"
+                        className="w-full py-2.5 bg-brand-grena hover:from-brand-grena-hover hover:to-brand-grena-hover text-white text-sm font-bold rounded-xl transition-all shadow-md mt-1"
                     >
                         Instalar Agora
                     </button>

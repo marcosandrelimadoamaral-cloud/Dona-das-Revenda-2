@@ -20,7 +20,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white" disabled={pending}>
+    <Button type="submit" className="w-full bg-brand-grena hover:bg-brand-grena-hover text-white" disabled={pending}>
       {pending ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : null}
       Entrar
     </Button>
@@ -140,7 +140,7 @@ function LoginForm() {
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <Label htmlFor="password">Senha</Label>
-              <Link href="/forgot-password" className="text-xs text-purple-600 hover:text-purple-500 font-medium">
+              <Link href="/forgot-password" className="text-xs text-brand-grena hover:text-brand-grena font-medium">
                 Esqueci minha senha
               </Link>
             </div>
@@ -177,7 +177,7 @@ function LoginForm() {
 
         <div className="mt-6 text-center text-sm">
           <span className="text-muted-foreground">Ainda não tem conta? </span>
-          <Link href="/signup" className="text-purple-600 hover:text-purple-500 font-medium">
+          <Link href="/signup" className="text-brand-grena hover:text-brand-grena font-medium">
             Cadastre-se grátis
           </Link>
         </div>
@@ -188,7 +188,7 @@ function LoginForm() {
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={<div className="flex items-center justify-center min-h-[400px]"><Loader2 className="w-8 h-8 animate-spin text-purple-600" /></div>}>
+    <Suspense fallback={<div className="flex items-center justify-center min-h-[400px]"><Loader2 className="w-8 h-8 animate-spin text-brand-grena" /></div>}>
       <LoginForm />
     </Suspense>
   )

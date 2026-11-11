@@ -102,7 +102,7 @@ export default function FinancePage() {
     setPayingId(null)
 
     if (res.success) {
-      toast.success("Pagamento registrado! 🎉", { id: toastId })
+      toast.success("Pagamento registrado!", { id: toastId })
       loadData(period)
     } else {
       toast.error(res.error || "Erro ao registrar o pagamento", { id: toastId })

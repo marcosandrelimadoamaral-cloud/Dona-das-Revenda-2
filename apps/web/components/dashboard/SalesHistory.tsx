@@ -104,7 +104,7 @@ export function SalesHistory() {
                                                 </span>
                                             ))}
                                             {sale.sale_items?.length > 2 && (
-                                                <span className="text-[10px] font-medium text-purple-600">
+                                                <span className="text-[10px] font-medium text-brand-grena">
                                                     + {sale.sale_items.length - 2} itens
                                                 </span>
                                             )}

@@ -58,7 +58,7 @@ export function GreetingClock() {
     return (
         <div>
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
-                {greeting}! 👋
+                {greeting}!
             </h1>
             <p className="text-muted-foreground capitalize">
                 {today}, {formattedTime}

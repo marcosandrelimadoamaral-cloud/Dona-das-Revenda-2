@@ -2,7 +2,9 @@ import { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-    title: "Blog | Dona da Revenda",
+    title: "Blog",
+    // Posts abaixo são de exemplo: fora do índice até haver conteúdo real (ver marketing/seo/05).
+    robots: { index: false, follow: true },
 }
 
 export default function BlogPage() {
@@ -41,16 +43,16 @@ export default function BlogPage() {
                 {posts.map((post, i) => (
                     <article key={i} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                            <span className="text-purple-600 font-medium bg-purple-50 dark:bg-purple-900/20 px-2.5 py-0.5 rounded-full">{post.category}</span>
+                            <span className="text-brand-grena font-medium bg-brand-quartzo-fundo dark:bg-brand-grena-escuro/20 px-2.5 py-0.5 rounded-full">{post.category}</span>
                             <span>{post.date}</span>
                             <span>•</span>
                             <span>Leitura de {post.time}</span>
                         </div>
                         <h2 className="text-2xl font-semibold mb-3">
-                            <Link href="#" className="hover:text-purple-600 transition-colors">{post.title}</Link>
+                            <Link href="#" className="hover:text-brand-grena transition-colors">{post.title}</Link>
                         </h2>
                         <p className="text-muted-foreground mb-4">{post.excerpt}</p>
-                        <Link href="#" className="text-purple-600 font-medium hover:text-purple-700">Ler artigo completo →</Link>
+                        <Link href="#" className="text-brand-grena font-medium hover:text-brand-grena-hover">Ler artigo completo →</Link>
                     </article>
                 ))}
             </div>

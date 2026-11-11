@@ -93,28 +93,28 @@ function PlanSelector({ onSelect }: { onSelect: (planId: keyof typeof PLANS) => 
                     <div
                         key={plan.id}
                         className={`relative bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-8 border shadow-sm flex flex-col transition-all overflow-hidden ${plan.popular
-                            ? "ring-2 ring-indigo-600 dark:ring-indigo-500 shadow-xl z-10 border-indigo-100 dark:border-indigo-900"
+                            ? "ring-2 ring-brand-grena dark:ring-brand-grena shadow-xl z-10 border-brand-quartzo-claro dark:border-brand-grena-escuro"
                             : "border-gray-200 dark:border-gray-700"
                             }`}
                     >
                         {plan.popular && (
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-0.5 whitespace-nowrap">
-                                <Badge className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white border-0 px-4 py-1.5 text-xs font-bold shadow-md rounded-t-none rounded-b-xl">
-                                    🔥 OFERTA: 51% OFF + 7 DIAS GRÁTIS
+                                <Badge className="bg-brand-grena text-white border-0 px-4 py-1.5 text-xs font-bold shadow-md rounded-t-none rounded-b-xl">
+                                    Melhor valor: 51% de desconto + 7 dias grátis
                                 </Badge>
                             </div>
                         )}
 
                         <div className={`mt-${plan.popular ? '4' : '0'}`}>
                             <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
-                            <p className="inline-block text-xs font-bold tracking-wide text-indigo-600 dark:text-indigo-400 uppercase mb-3 bg-indigo-50 dark:bg-indigo-950/50 px-2 py-1 rounded-md">{plan.cycle}</p>
+                            <p className="inline-block text-xs font-bold tracking-wide text-brand-grena dark:text-brand-quartzo uppercase mb-3 bg-brand-quartzo-fundo dark:bg-brand-tinta/50 px-2 py-1 rounded-md">{plan.cycle}</p>
                         </div>
 
                         <div className="mb-6">
                             {plan.popular && (
                                 <p className="text-sm font-bold text-red-500 line-through decoration-red-500/50 mb-1">De R$ 97,00/mês</p>
                             )}
-                            <div className={`flex items-baseline gap-1 ${plan.popular ? 'text-indigo-600 dark:text-indigo-400' : ''}`}>
+                            <div className={`flex items-baseline gap-1 ${plan.popular ? 'text-brand-grena dark:text-brand-quartzo' : ''}`}>
                                 <span className="text-4xl md:text-5xl font-extrabold">R$ {plan.price}</span>
                                 <span className="text-muted-foreground font-medium">/mês</span>
                             </div>
@@ -136,7 +136,7 @@ function PlanSelector({ onSelect }: { onSelect: (planId: keyof typeof PLANS) => 
                         <div className="space-y-3 flex-1">
                             {plan.features.map((feature, idx) => (
                                 <div key={idx} className="flex items-start gap-3">
-                                    <Check className={`w-5 h-5 shrink-0 ${plan.popular ? 'text-indigo-600' : 'text-emerald-500'}`} />
+                                    <Check className={`w-5 h-5 shrink-0 ${plan.popular ? 'text-brand-grena' : 'text-emerald-500'}`} />
                                     <span className={`text-sm font-medium ${plan.popular ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400'}`}>{feature}</span>
                                 </div>
                             ))}
@@ -157,15 +157,15 @@ function CheckoutContent() {
     )
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-indigo-50/30 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950/20 flex flex-col">
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-brand-quartzo-fundo/30 dark:from-gray-950 dark:via-gray-900 dark:to-brand-tinta/20 flex flex-col">
             {/* Header */}
             <header className="border-b dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-sm">
                 <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2.5">
-                        <Image src="/logo-transparent.png" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
+                        <Image src="/brand/simbolo-coroa-dourada.svg" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
                         <div className="flex flex-col leading-none">
-                            <span className="font-black text-sm bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Dona da</span>
-                            <span className="font-black text-sm bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Revenda</span>
+                            <span className="font-black text-sm bg-brand-grena bg-clip-text text-transparent">Dona da</span>
+                            <span className="font-black text-sm bg-brand-grena bg-clip-text text-transparent">Revenda</span>
                         </div>
                     </Link>
                     <Link href="/" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -178,7 +178,7 @@ function CheckoutContent() {
             <main className="flex-1 flex items-center justify-center px-4 py-12">
                 <div className="w-full max-w-lg">
                     <div className="text-center mb-8">
-                        <div className="inline-flex items-center gap-2 bg-indigo-100 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-4 py-2 rounded-full mb-4">
+                        <div className="inline-flex items-center gap-2 bg-brand-quartzo-claro dark:bg-brand-tinta/60 text-brand-grena-hover dark:text-brand-quartzo text-xs font-bold px-4 py-2 rounded-full mb-4">
                             <Sparkles className="w-3.5 h-3.5" /> Ative sua conta — 7 dias grátis
                         </div>
                         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
@@ -211,7 +211,7 @@ function CheckoutContent() {
 
 export default function CheckoutPage() {
     return (
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><Loader2 className="w-10 h-10 animate-spin text-indigo-600" /></div>}>
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><Loader2 className="w-10 h-10 animate-spin text-brand-grena" /></div>}>
             <CheckoutContent />
         </Suspense>
     )
