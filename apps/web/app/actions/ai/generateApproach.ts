@@ -1,6 +1,7 @@
 'use server';
 
 import { GoogleGenAI } from '@google/genai';
+import { generateWithFallback, AI_UNAVAILABLE_MESSAGE } from 'ai-agents';
 import { createClient } from '@/lib/supabase/server';
 
 export async function generateApproach(
@@ -48,14 +49,11 @@ export async function generateApproach(
 ${userContextRule}
 `;
 
-        const response = await ai.models.generateContent({
-            model: 'gemini-3.1-pro-preview',
-            contents: prompt,
-        });
+        const response = await generateWithFallback(ai, { model: 'gemini-3.1-pro-preview', contents: prompt });
 
         return { success: true, message: response.text };
     } catch (error: any) {
         console.error('Error generating approach:', error);
-        return { error: 'Falha ao gerar mensagem com IA' };
+        return { error: AI_UNAVAILABLE_MESSAGE };
     }
 }

@@ -32,7 +32,7 @@ export default function PrivacidadePage() {
 
                 <section>
                     <h2 className="text-xl font-semibold text-foreground mb-3">Compartilhamento</h2>
-                    <p>Seus dados podem ser compartilhados com: Processadores de Pagamento (Stripe, Mercado Pago); Serviços de IA (Google AI - dados anonimizados para geração de conteúdo); Provedores de Infraestrutura (Supabase, Vercel); Autoridades Legais (quando exigido por lei). Não vendemos seus dados para terceiros para fins de marketing.</p>
+                    <p>Seus dados podem ser compartilhados com: Processador de Pagamento (Appmax, que recebe os dados necessários para cobrar via Pix ou cartão de crédito); Serviços de IA (Google AI - dados anonimizados para geração de conteúdo); Provedores de Infraestrutura (Supabase, Vercel); Autoridades Legais (quando exigido por lei). Não vendemos seus dados para terceiros para fins de marketing.</p>
                 </section>
 
                 <section>

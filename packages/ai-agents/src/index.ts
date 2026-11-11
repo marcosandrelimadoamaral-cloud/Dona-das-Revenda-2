@@ -40,3 +40,5 @@ export function getAI(): DonaRevendaAI {
 
 export { ClaraAgent, FinnAgent, ZaraAgent, NinaAgent, LiaAgent };
 export type { AgentResponse } from './BaseAgent';
+
+export { generateWithFallback, AIUnavailableError, AI_UNAVAILABLE_MESSAGE } from './generate';
