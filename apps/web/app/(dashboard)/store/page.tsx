@@ -8,7 +8,7 @@ export default function StorePage() {
         <div className="flex flex-col items-center justify-center min-h-[70vh] text-center px-4">
             <div className="w-32 h-32 bg-brand-quartzo-claro dark:bg-brand-grena-escuro/40 rounded-full flex items-center justify-center mb-6 shadow-inner relative overflow-hidden group">
                 <div className="absolute inset-0 bg-brand-grena/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <Store className="w-16 h-16 text-brand-grena z-10" />
+                <Store className="w-16 h-16 text-brand-grena dark:text-brand-quartzo z-10" />
             </div>
 
             <h1 className="text-4xl font-extrabold tracking-tight mb-4 flex items-center gap-3">

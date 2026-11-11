@@ -92,9 +92,9 @@ function PlanSelector({ onSelect }: { onSelect: (planId: keyof typeof PLANS) => 
                 {(Object.values(PLANS) as (typeof PLANS[keyof typeof PLANS])[]).map(plan => (
                     <div
                         key={plan.id}
-                        className={`relative bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-8 border shadow-sm flex flex-col transition-all overflow-hidden ${plan.popular
+                        className={`relative bg-white dark:bg-muted rounded-3xl p-6 md:p-8 border shadow-sm flex flex-col transition-all overflow-hidden ${plan.popular
                             ? "ring-2 ring-brand-grena dark:ring-brand-grena shadow-xl z-10 border-brand-quartzo-claro dark:border-brand-grena-escuro"
-                            : "border-gray-200 dark:border-gray-700"
+                            : "border-gray-200 dark:border-border"
                             }`}
                     >
                         {plan.popular && (
@@ -118,7 +118,7 @@ function PlanSelector({ onSelect }: { onSelect: (planId: keyof typeof PLANS) => 
                                 <span className="text-4xl md:text-5xl font-extrabold">R$ {plan.price}</span>
                                 <span className="text-muted-foreground font-medium">/mês</span>
                             </div>
-                            <div className={`text-sm font-bold mt-2 leading-tight ${plan.popular ? 'text-emerald-600' : 'text-gray-500'}`}>
+                            <div className={`text-sm font-bold mt-2 leading-tight ${plan.popular ? 'text-emerald-600' : 'text-gray-500 dark:text-muted-foreground'}`}>
                                 {plan.billing}
                             </div>
                         </div>
@@ -127,7 +127,7 @@ function PlanSelector({ onSelect }: { onSelect: (planId: keyof typeof PLANS) => 
                             onClick={() => onSelect(plan.id)}
                             className={`w-full mb-6 h-14 rounded-xl text-base md:text-lg font-bold cursor-pointer transition-all ${plan.popular
                                 ? "bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white shadow-[0_4px_14px_rgb(239,68,68,0.3)] hover:shadow-[0_6px_20px_rgb(239,68,68,0.4)]"
-                                : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100"
+                                : "bg-gray-100 dark:bg-muted hover:bg-gray-200 dark:hover:bg-muted text-gray-900 dark:text-foreground"
                                 }`}
                         >
                             {plan.popular ? "Garantir 51% de Desconto" : `Assinar ${plan.cycle}`}
@@ -136,8 +136,8 @@ function PlanSelector({ onSelect }: { onSelect: (planId: keyof typeof PLANS) => 
                         <div className="space-y-3 flex-1">
                             {plan.features.map((feature, idx) => (
                                 <div key={idx} className="flex items-start gap-3">
-                                    <Check className={`w-5 h-5 shrink-0 ${plan.popular ? 'text-brand-grena' : 'text-emerald-500'}`} />
-                                    <span className={`text-sm font-medium ${plan.popular ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400'}`}>{feature}</span>
+                                    <Check className={`w-5 h-5 shrink-0 ${plan.popular ? 'text-brand-grena dark:text-brand-quartzo' : 'text-emerald-500'}`} />
+                                    <span className={`text-sm font-medium ${plan.popular ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-muted-foreground'}`}>{feature}</span>
                                 </div>
                             ))}
                         </div>
@@ -157,9 +157,9 @@ function CheckoutContent() {
     )
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-brand-quartzo-fundo/30 dark:from-gray-950 dark:via-gray-900 dark:to-brand-tinta/20 flex flex-col">
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-brand-quartzo-fundo/30 dark:from-background dark:via-background dark:to-brand-tinta/20 flex flex-col">
             {/* Header */}
-            <header className="border-b dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-sm">
+            <header className="border-b dark:border-border bg-white/80 dark:bg-background/80 backdrop-blur-sm">
                 <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2.5">
                         <Image src="/brand/simbolo-coroa-dourada.svg" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
@@ -179,7 +179,7 @@ function CheckoutContent() {
                 <div className="w-full max-w-lg">
                     <div className="text-center mb-8">
                         <div className="inline-flex items-center gap-2 bg-brand-quartzo-claro dark:bg-brand-tinta/60 text-brand-grena-hover dark:text-brand-quartzo text-xs font-bold px-4 py-2 rounded-full mb-4">
-                            <Sparkles className="w-3.5 h-3.5" /> Ative sua conta — 7 dias grátis
+                            <Sparkles className="w-3.5 h-3.5" /> Ative sua conta: 7 dias grátis
                         </div>
                         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                             {selectedPlan ? "Confirme seu pagamento" : "Escolha seu plano"}
@@ -191,7 +191,7 @@ function CheckoutContent() {
                         </p>
                     </div>
 
-                    <div className="bg-white dark:bg-gray-900 rounded-3xl border dark:border-gray-800 shadow-xl shadow-gray-100 dark:shadow-gray-950/50 p-8">
+                    <div className="bg-white dark:bg-card rounded-3xl border dark:border-border shadow-xl shadow-gray-100 dark:shadow-gray-950/50 p-8">
                         {selectedPlan ? (
                             <CheckoutRedirector planId={selectedPlan} />
                         ) : (
@@ -211,7 +211,7 @@ function CheckoutContent() {
 
 export default function CheckoutPage() {
     return (
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><Loader2 className="w-10 h-10 animate-spin text-brand-grena" /></div>}>
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><Loader2 className="w-10 h-10 animate-spin text-brand-grena dark:text-brand-quartzo" /></div>}>
             <CheckoutContent />
         </Suspense>
     )

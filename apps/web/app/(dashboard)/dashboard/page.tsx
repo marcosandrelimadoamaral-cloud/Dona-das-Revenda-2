@@ -70,9 +70,9 @@ export default async function DashboardPage({
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5 order-2 lg:order-none">
 
             {/* Card: Vendas */}
-            <div className="relative overflow-hidden bg-white/70 dark:bg-gray-950/50 backdrop-blur-xl border border-white/20 dark:border-gray-800 shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
+            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Activity className="w-24 h-24 text-brand-grena" />
+                <Activity className="w-24 h-24 text-brand-grena dark:text-brand-quartzo" />
               </div>
               <div className="flex items-center justify-between mb-4">
                 <div className="w-10 h-10 rounded-full bg-brand-quartzo-claro dark:bg-brand-grena-escuro/50 flex items-center justify-center">
@@ -98,7 +98,7 @@ export default async function DashboardPage({
             </div>
 
             {/* Card: Receitas */}
-            <div className="relative overflow-hidden bg-white/70 dark:bg-gray-950/50 backdrop-blur-xl border border-white/20 dark:border-gray-800 shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
+            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <DollarSign className="w-24 h-24 text-blue-600" />
               </div>
@@ -128,7 +128,7 @@ export default async function DashboardPage({
             </div>
 
             {/* Card: Despesas / Custos */}
-            <div className="relative overflow-hidden bg-white/70 dark:bg-gray-950/50 backdrop-blur-xl border border-white/20 dark:border-gray-800 shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
+            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <ArrowDown className="w-24 h-24 text-red-600" />
               </div>
@@ -157,7 +157,7 @@ export default async function DashboardPage({
             </div>
 
             {/* Card: Capital em Estoque */}
-            <div className="relative overflow-hidden bg-white/70 dark:bg-gray-950/50 backdrop-blur-xl border border-white/20 dark:border-gray-800 shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
+            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <ShoppingBag className="w-24 h-24 text-amber-500" />
               </div>
@@ -198,7 +198,7 @@ export default async function DashboardPage({
                   <TooltipTrigger>
                     <Info className="w-4 h-4 text-emerald-100 hover:text-white transition-colors" />
                   </TooltipTrigger>
-                  <TooltipContent className="bg-white border-0 text-emerald-900 shadow-xl">
+                  <TooltipContent className="bg-white dark:bg-card border-0 text-emerald-900 shadow-xl">
                     <p className="flex items-center gap-2 font-medium">
                       Receitas menos Custos. O dinheiro que realmente sobra na sua mão.
                     </p>
@@ -225,22 +225,22 @@ export default async function DashboardPage({
           <div className="space-y-6">
             <NinaStockAlert />
             {/* Quick Actions or related shortcuts */}
-            <div className="bg-white dark:bg-gray-950 border rounded-3xl p-6 shadow-sm">
+            <div className="bg-white dark:bg-background border rounded-3xl p-6 shadow-sm">
               <h3 className="font-semibold text-lg mb-4">Acesso Rápido</h3>
               <div className="space-y-3">
-                <Link href="/exchanges" className="flex items-center p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors border border-transparent hover:border-gray-100 text-sm font-medium">
+                <Link href="/exchanges" className="flex items-center p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-card transition-colors border border-transparent hover:border-gray-100 text-sm font-medium">
                   <div className="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mr-3">
                     <ArrowDown className="w-4 h-4" />
                   </div>
                   Minhas Trocas e Devoluções
                 </Link>
-                <Link href="/store" className="flex items-center p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors border border-transparent hover:border-gray-100 text-sm font-medium">
+                <Link href="/store" className="flex items-center p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-card transition-colors border border-transparent hover:border-gray-100 text-sm font-medium">
                   <div className="w-8 h-8 rounded-full bg-brand-quartzo-claro text-brand-grena flex items-center justify-center mr-3">
                     <Plus className="w-4 h-4" />
                   </div>
                   Minha Loja Digital
                 </Link>
-                <Link href="/clients" className="flex items-center p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors border border-transparent hover:border-gray-100 text-sm font-medium">
+                <Link href="/clients" className="flex items-center p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-card transition-colors border border-transparent hover:border-gray-100 text-sm font-medium">
                   <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">
                     <Users className="w-4 h-4" />
                   </div>

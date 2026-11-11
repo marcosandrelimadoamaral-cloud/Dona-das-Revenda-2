@@ -137,7 +137,7 @@ export default function ExchangesPage() {
 
             <div className="grid md:grid-cols-3 gap-6">
                 <div className="md:col-span-2 space-y-4">
-                    <Card className="border-0 shadow-sm bg-white/70 dark:bg-gray-950/50 backdrop-blur-xl">
+                    <Card className="border-0 shadow-sm bg-white/70 dark:bg-background/50 backdrop-blur-xl">
                         <CardHeader className="pb-3">
                             <div className="flex justify-between items-center flex-wrap gap-2">
                                 <CardTitle>Histórico de Trocas</CardTitle>
@@ -145,7 +145,7 @@ export default function ExchangesPage() {
                                     <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                                     <Input
                                         placeholder="Buscar cliente ou produto..."
-                                        className="pl-9 bg-white dark:bg-gray-900"
+                                        className="pl-9 bg-white dark:bg-card"
                                         value={searchTerm}
                                         onChange={(e) => setSearchTerm(e.target.value)}
                                     />
@@ -168,13 +168,13 @@ export default function ExchangesPage() {
                                     </div>
                                 ) : (
                                     filteredExchanges.map((ex) => (
-                                        <div key={ex.id} className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 rounded-2xl border bg-white dark:bg-gray-900/50 hover:shadow-md transition-shadow gap-4">
+                                        <div key={ex.id} className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 rounded-2xl border bg-white dark:bg-card hover:shadow-md transition-shadow gap-4">
                                             <div className="flex items-center gap-4">
                                                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${ex.type === 'defect' ? 'bg-red-100 text-red-600' : 'bg-orange-100 text-orange-600'}`}>
                                                     {ex.type === 'defect' ? <Package className="w-6 h-6" /> : <ArrowLeftRight className="w-6 h-6" />}
                                                 </div>
                                                 <div>
-                                                    <h4 className="font-semibold text-gray-900 dark:text-gray-100">{ex.product_name}</h4>
+                                                    <h4 className="font-semibold text-gray-900 dark:text-foreground">{ex.product_name}</h4>
                                                     <p className="text-sm text-muted-foreground">Cliente: {ex.client_name} • {ex.reason}</p>
                                                 </div>
                                             </div>

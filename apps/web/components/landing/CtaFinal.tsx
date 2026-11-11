@@ -11,7 +11,7 @@ export function CtaFinal() {
           <div className="mx-auto mb-6 w-fit">
             <Logo variant="simboloClaro" className="h-14 w-auto" />
           </div>
-          <h2 className="font-display text-3xl md:text-5xl font-semibold leading-[1.1] max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold leading-[1.1] max-w-2xl mx-auto">
             Sua revenda merece uma dona organizada.
           </h2>
           <p className="mt-5 text-lg text-brand-quartzo-claro max-w-xl mx-auto">

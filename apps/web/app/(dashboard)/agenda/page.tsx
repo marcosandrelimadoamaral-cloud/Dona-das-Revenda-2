@@ -110,7 +110,7 @@ export default function AgendaPage() {
         <div className="space-y-6 max-w-7xl mx-auto h-[calc(100vh-100px)] flex flex-col">
             <div>
                 <h1 className="text-3xl font-bold tracking-tight flex items-center gap-2">
-                    <CalendarIcon className="w-8 h-8 text-brand-grena" />
+                    <CalendarIcon className="w-8 h-8 text-brand-grena dark:text-brand-quartzo" />
                     Agenda
                 </h1>
                 <p className="text-muted-foreground mt-1 text-sm">
@@ -121,7 +121,7 @@ export default function AgendaPage() {
             <div className="flex flex-col lg:flex-row gap-6 flex-1 min-h-0">
                 {/* 1. COLUNA ESQUERDA: Calendário e Filtros */}
                 <div className="w-full lg:w-[400px] flex flex-col gap-6 overflow-y-auto pr-1">
-                    <Card className="border-none shadow-sm rounded-3xl bg-white dark:bg-gray-950 overflow-hidden shrink-0">
+                    <Card className="border-none shadow-sm rounded-3xl bg-white dark:bg-background overflow-hidden shrink-0">
                         <CardContent className="p-6">
                             <style>{`
                                 .rdp-day_selected { background-color: #9333ea !important; color: white !important; font-weight: bold; border-radius: 9999px !important; }
@@ -130,13 +130,13 @@ export default function AgendaPage() {
 
                             {/* CABEÇALHO CUSTOMIZADO: Fix para setas não vazarem container */}
                             <div className="flex items-center justify-between mb-4 w-full">
-                                <Button variant="ghost" size="icon" onClick={prevMonth} className="rounded-full h-8 w-8 text-gray-500 hover:text-gray-900 border border-gray-100 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800">
+                                <Button variant="ghost" size="icon" onClick={prevMonth} className="rounded-full h-8 w-8 text-gray-500 dark:text-muted-foreground hover:text-gray-900 border border-gray-100 hover:bg-gray-100 dark:border-border dark:hover:bg-muted">
                                     <ChevronLeft className="w-4 h-4" />
                                 </Button>
-                                <h2 className="text-xl font-bold capitalize text-gray-900 dark:text-gray-100">
+                                <h2 className="text-xl font-bold capitalize text-gray-900 dark:text-foreground">
                                     {format(currentMonth, 'MMMM yyyy', { locale: ptBR })}
                                 </h2>
-                                <Button variant="ghost" size="icon" onClick={nextMonth} className="rounded-full h-8 w-8 text-gray-500 hover:text-gray-900 border border-gray-100 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800">
+                                <Button variant="ghost" size="icon" onClick={nextMonth} className="rounded-full h-8 w-8 text-gray-500 dark:text-muted-foreground hover:text-gray-900 border border-gray-100 hover:bg-gray-100 dark:border-border dark:hover:bg-muted">
                                     <ChevronRight className="w-4 h-4" />
                                 </Button>
                             </div>
@@ -195,9 +195,9 @@ export default function AgendaPage() {
                         </CardContent>
                     </Card>
 
-                    <Card className="border-none shadow-sm rounded-3xl bg-white dark:bg-gray-950 shrink-0">
+                    <Card className="border-none shadow-sm rounded-3xl bg-white dark:bg-background shrink-0">
                         <CardHeader className="pb-3 pt-5">
-                            <CardTitle className="text-base font-semibold text-gray-800 dark:text-gray-100">Filtros de Exibição</CardTitle>
+                            <CardTitle className="text-base font-semibold text-gray-800 dark:text-foreground">Filtros de Exibição</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4 pb-5">
                             <div className="flex items-center space-x-3">
@@ -233,7 +233,7 @@ export default function AgendaPage() {
                                     Aniversários
                                 </label>
                             </div>
-                            <div className="flex items-center space-x-3 pt-4 border-t border-gray-100 dark:border-gray-800">
+                            <div className="flex items-center space-x-3 pt-4 border-t border-gray-100 dark:border-border">
                                 <Checkbox
                                     id="pending"
                                     checked={filters.pendingOnly}
@@ -249,13 +249,13 @@ export default function AgendaPage() {
 
                 {/* 2. COLUNA DIREITA: Detalhes do Dia Selecionado */}
                 <div className="flex-1 min-w-0">
-                    <Card className="border-none shadow-sm rounded-3xl bg-white dark:bg-gray-950 h-full flex flex-col">
-                        <CardHeader className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gray-100 dark:border-gray-800 shrink-0 px-6 sm:px-8 pt-6">
+                    <Card className="border-none shadow-sm rounded-3xl bg-white dark:bg-background h-full flex flex-col">
+                        <CardHeader className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gray-100 dark:border-border shrink-0 px-6 sm:px-8 pt-6">
                             <div>
-                                <h2 className="text-xl sm:text-2xl font-bold capitalize text-gray-900 dark:text-gray-100 tracking-tight">
+                                <h2 className="text-xl sm:text-2xl font-bold capitalize text-gray-900 dark:text-foreground tracking-tight">
                                     {selectedDate ? format(selectedDate, "dd 'de' MMMM, yyyy", { locale: ptBR }) : 'Selecione uma data'}
                                 </h2>
-                                <p className="text-sm text-brand-grena font-semibold mt-1">
+                                <p className="text-sm text-brand-grena dark:text-brand-quartzo font-semibold mt-1">
                                     {filteredEvents.length} {filteredEvents.length === 1 ? 'compromisso agendado' : 'compromissos agendados'}
                                 </p>
                             </div>
@@ -331,7 +331,7 @@ export default function AgendaPage() {
                             ) : filteredEvents.length > 0 ? (
                                 <div className="space-y-4">
                                     {filteredEvents.map(event => (
-                                        <div key={event.id} className="p-5 rounded-2xl border border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row sm:items-center gap-5 hover:border-brand-quartzo-claro hover:shadow-md transition-all bg-gray-50/50 dark:bg-gray-900/50 group">
+                                        <div key={event.id} className="p-5 rounded-2xl border border-gray-100 dark:border-border flex flex-col sm:flex-row sm:items-center gap-5 hover:border-brand-quartzo-claro hover:shadow-md transition-all bg-gray-50/50 dark:bg-card group">
                                             <div className="shrink-0 flex items-center gap-3">
                                                 {event.type === 'receivable' && (
                                                     <div className="p-3 bg-red-100 text-red-600 rounded-2xl group-hover:bg-red-200 group-hover:shadow-sm transition-all shadow-sm">
@@ -350,7 +350,7 @@ export default function AgendaPage() {
                                                 )}
 
                                                 <div className="sm:hidden flex-1">
-                                                    <h5 className="font-semibold text-base text-gray-900 dark:text-gray-100">{event.title}</h5>
+                                                    <h5 className="font-semibold text-base text-gray-900 dark:text-foreground">{event.title}</h5>
                                                     <Badge variant="outline" className={`mt-1 mb-1 text-[10px] uppercase font-bold tracking-wider rounded-md border-transparent
                                                         ${event.type === 'receivable' ? 'bg-red-100 text-red-700' :
                                                             event.type === 'birthday' ? 'bg-brand-quartzo-claro text-brand-grena-hover' :
@@ -363,7 +363,7 @@ export default function AgendaPage() {
 
                                             <div className="flex-1 hidden sm:block">
                                                 <div className="flex items-center gap-3">
-                                                    <h5 className="font-semibold text-lg text-gray-900 dark:text-gray-100">{event.title}</h5>
+                                                    <h5 className="font-semibold text-lg text-gray-900 dark:text-foreground">{event.title}</h5>
                                                     <Badge variant="outline" className={`text-[10px] uppercase font-bold tracking-wider rounded-md border-transparent
                                                         ${event.type === 'receivable' ? 'bg-red-100 text-red-700' :
                                                             event.type === 'birthday' ? 'bg-brand-quartzo-claro text-brand-grena-hover' :
@@ -385,11 +385,11 @@ export default function AgendaPage() {
                                 </div>
                             ) : (
                                 <div className="flex flex-col items-center justify-center h-full min-h-[400px] text-center text-muted-foreground">
-                                    <div className="bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800 rounded-full p-8 mb-6 shadow-sm">
+                                    <div className="bg-gray-50 dark:bg-card border border-gray-100 dark:border-border rounded-full p-8 mb-6 shadow-sm">
                                         <CalendarClock className="w-10 h-10 text-gray-400 dark:text-gray-600" />
                                     </div>
-                                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2 mt-2">Nenhum compromisso para este dia.</h3>
-                                    <p className="max-w-md text-sm leading-relaxed mx-auto text-gray-500">
+                                    <h3 className="text-xl font-semibold text-gray-800 dark:text-foreground mb-2 mt-2">Nenhum compromisso para este dia.</h3>
+                                    <p className="max-w-md text-sm leading-relaxed mx-auto text-gray-500 dark:text-muted-foreground">
                                         Excelente! Sabia que pode adicionar compromissos e lembretes manuais clicando no botão acima?
                                     </p>
                                 </div>

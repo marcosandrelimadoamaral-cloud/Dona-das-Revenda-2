@@ -31,19 +31,19 @@ const BRANDS = [
 ]
 
 const BRAND_COLORS: Record<string, { bg: string; icon: string }> = {
-    natura: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
-    avon: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
-    boticario: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
-    marykay: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
-    jequiti: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
-    eudora: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
-    hinode: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
-    racco: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
-    yanbal: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
-    independentes: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
+    natura: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena dark:text-brand-quartzo' },
+    avon: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena dark:text-brand-quartzo' },
+    boticario: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena dark:text-brand-quartzo' },
+    marykay: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena dark:text-brand-quartzo' },
+    jequiti: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena dark:text-brand-quartzo' },
+    eudora: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena dark:text-brand-quartzo' },
+    hinode: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena dark:text-brand-quartzo' },
+    racco: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena dark:text-brand-quartzo' },
+    yanbal: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena dark:text-brand-quartzo' },
+    independentes: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena dark:text-brand-quartzo' },
 }
 
-const DEFAULT_BRAND = { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' }
+const DEFAULT_BRAND = { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena dark:text-brand-quartzo' }
 
 export function CatalogView({ initialProducts, initialCount }: { initialProducts: any[], initialCount: number }) {
     const [products, setProducts] = useState<CatalogProduct[]>(initialProducts)
@@ -106,7 +106,7 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
             />
 
             {/* Sidebar de Filtros */}
-            <aside className="w-full lg:w-60 flex-shrink-0 space-y-5 bg-white dark:bg-gray-900 p-5 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm h-fit">
+            <aside className="w-full lg:w-60 flex-shrink-0 space-y-5 bg-white dark:bg-card p-5 rounded-2xl border border-gray-100 dark:border-border shadow-sm h-fit">
                 <div>
                     <h3 className="font-semibold mb-3 flex justify-between items-center text-sm">
                         Filtros
@@ -141,7 +141,7 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                                     onClick={() => toggleBrand(brand)}
                                     className={`flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full border transition-all capitalize ${isSelected
                                         ? 'border-brand-grena bg-brand-quartzo-claro dark:bg-brand-grena-escuro/40 text-brand-grena-hover dark:text-brand-quartzo'
-                                        : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 bg-gray-50 dark:bg-gray-800'
+                                        : 'border-gray-200 dark:border-border text-gray-600 dark:text-muted-foreground hover:border-gray-300 dark:hover:border-border bg-gray-50 dark:bg-muted'
                                         }`}
                                 >
                                     {brand}
@@ -165,7 +165,7 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                 </div>
 
                 {products.length === 0 && !loading ? (
-                    <div className="bg-white dark:bg-gray-900 border border-dashed border-gray-200 dark:border-gray-700 rounded-2xl p-12 text-center flex flex-col items-center">
+                    <div className="bg-white dark:bg-card border border-dashed border-gray-200 dark:border-border rounded-2xl p-12 text-center flex flex-col items-center">
                         <FilterX className="w-12 h-12 text-gray-300 dark:text-gray-600 mb-4" />
                         <h3 className="text-lg font-bold mb-1">Nenhum produto encontrado</h3>
                         <p className="text-muted-foreground max-w-sm mt-1 mb-6 text-sm">Tente ajustar seus filtros ou mudar o termo de busca.</p>
@@ -180,14 +180,14 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                             const isGoodMargin = margin >= 40
 
                             return (
-                                <div key={product.id} className="group flex flex-col bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden shadow-sm hover:shadow-lg hover:border-brand-quartzo dark:hover:border-brand-grena-hover transition-all duration-200">
+                                <div key={product.id} className="group flex flex-col bg-white dark:bg-card rounded-2xl border border-gray-100 dark:border-border overflow-hidden shadow-sm hover:shadow-lg hover:border-brand-quartzo dark:hover:border-brand-grena-hover transition-all duration-200">
                                     {/* Product image placeholder — branded gradient */}
                                     <div className={`h-36 bg-gradient-to-br ${bc.bg} flex flex-col items-center justify-center relative overflow-hidden`}>
                                         {/* decorative circles */}
                                         <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-white/10" />
                                         <div className="absolute -bottom-6 -left-6 w-28 h-28 rounded-full bg-white/10" />
                                         {/* inicial da marca */}
-                                        <span className="font-display text-5xl mb-1 z-10 text-brand-grena">{(product.brand || "D").charAt(0).toUpperCase()}</span>
+                                        <span className="text-5xl mb-1 z-10 text-brand-grena dark:text-brand-quartzo">{(product.brand || "D").charAt(0).toUpperCase()}</span>
                                         <span className={`text-xs font-bold uppercase tracking-wider z-10 ${bc.icon} dark:opacity-90`}>
                                             {product.attributes?.brand_display || product.brand}
                                         </span>
@@ -202,7 +202,7 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                                         <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-0.5">
                                             {product.category}
                                         </p>
-                                        <h3 className="font-semibold text-sm leading-tight mb-1 line-clamp-2 text-gray-900 dark:text-gray-100" title={product.name}>
+                                        <h3 className="font-semibold text-sm leading-tight mb-1 line-clamp-2 text-gray-900 dark:text-foreground" title={product.name}>
                                             {product.name}
                                         </h3>
                                         <p className="text-xs text-muted-foreground capitalize mb-3">
@@ -213,7 +213,7 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                                             <div className="flex justify-between items-end">
                                                 <div>
                                                     <p className="text-[10px] text-gray-400 uppercase font-semibold">Custo</p>
-                                                    <p className="font-medium text-sm text-gray-700 dark:text-gray-300">{formatCurrency(product.base_price)}</p>
+                                                    <p className="font-medium text-sm text-gray-700 dark:text-muted-foreground">{formatCurrency(product.base_price)}</p>
                                                 </div>
                                                 <div className="text-right">
                                                     <p className="text-[10px] text-gray-400 uppercase font-semibold">Sugestão de Venda</p>

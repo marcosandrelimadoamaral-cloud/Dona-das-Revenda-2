@@ -21,7 +21,7 @@ export function OnboardingStepper({ currentStep, totalSteps }: OnboardingStepper
                   ? "border-brand-grena bg-brand-grena text-white"
                   : isCompleted
                   ? "border-emerald-500 bg-emerald-500 text-white"
-                  : "border-gray-300 text-gray-400 dark:border-gray-700"
+                  : "border-gray-300 text-gray-400 dark:border-border"
               }`}
             >
               {isCompleted ? <Check className="w-4 h-4" /> : stepNumber}
@@ -29,7 +29,7 @@ export function OnboardingStepper({ currentStep, totalSteps }: OnboardingStepper
             {stepNumber < totalSteps && (
               <div
                 className={`w-12 h-1 mx-2 rounded-full transition-colors duration-300 ${
-                  isCompleted ? "bg-emerald-500" : "bg-gray-200 dark:bg-gray-800"
+                  isCompleted ? "bg-emerald-500" : "bg-gray-200 dark:bg-muted"
                 }`}
               />
             )}

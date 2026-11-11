@@ -164,7 +164,7 @@ export default function InventoryPage() {
           ))}
         </div>
       ) : filteredProducts.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-16 px-4 text-center border rounded-lg bg-white dark:bg-gray-900 border-dashed">
+        <div className="flex flex-col items-center justify-center py-16 px-4 text-center border rounded-lg bg-white dark:bg-card border-dashed">
           <div className="w-16 h-16 bg-brand-quartzo-claro dark:bg-brand-grena-escuro/30 rounded-full flex items-center justify-center mb-4">
             <PackageOpen className="w-8 h-8 text-brand-grena dark:text-brand-quartzo" />
           </div>
@@ -191,7 +191,7 @@ export default function InventoryPage() {
 
             return (
               <Card key={product.id} className="overflow-hidden flex flex-col">
-                <div className="h-32 bg-gray-100 dark:bg-gray-800 relative flex items-center justify-center">
+                <div className="h-32 bg-gray-100 dark:bg-muted relative flex items-center justify-center">
                   {product.catalog_products?.image_url ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={product.catalog_products.image_url} alt={name} className="h-full object-contain" />

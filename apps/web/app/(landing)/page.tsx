@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { organizationJsonLd, softwareApplicationJsonLd, faqJsonLd, SITE_DESCRIPTION } from "@/lib/seo"
 import { HeroSection } from "@/components/landing/HeroSection"
+import { BrandsMarquee } from "@/components/landing/BrandsMarquee"
 import { ProblemSolution } from "@/components/landing/ProblemSolution"
 import { AgentsShowcase } from "@/components/landing/AgentsShowcase"
 import { FeaturesBento } from "@/components/landing/FeaturesBento"
@@ -27,6 +28,7 @@ export default function LandingPage() {
       <Navbar />
       <main>
         <HeroSection />
+        <BrandsMarquee />
         <ProblemSolution />
         <AgentsShowcase />
         <FeaturesBento />

@@ -41,9 +41,9 @@ export default function BlogPage() {
 
             <div className="grid gap-8">
                 {posts.map((post, i) => (
-                    <article key={i} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <article key={i} className="bg-white dark:bg-card border border-zinc-200 dark:border-border rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                            <span className="text-brand-grena font-medium bg-brand-quartzo-fundo dark:bg-brand-grena-escuro/20 px-2.5 py-0.5 rounded-full">{post.category}</span>
+                            <span className="text-brand-grena dark:text-brand-quartzo font-medium bg-brand-quartzo-fundo dark:bg-brand-grena-escuro/20 px-2.5 py-0.5 rounded-full">{post.category}</span>
                             <span>{post.date}</span>
                             <span>•</span>
                             <span>Leitura de {post.time}</span>
@@ -52,7 +52,7 @@ export default function BlogPage() {
                             <Link href="#" className="hover:text-brand-grena transition-colors">{post.title}</Link>
                         </h2>
                         <p className="text-muted-foreground mb-4">{post.excerpt}</p>
-                        <Link href="#" className="text-brand-grena font-medium hover:text-brand-grena-hover">Ler artigo completo →</Link>
+                        <Link href="#" className="text-brand-grena dark:text-brand-quartzo font-medium hover:text-brand-grena-hover">Ler artigo completo →</Link>
                     </article>
                 ))}
             </div>

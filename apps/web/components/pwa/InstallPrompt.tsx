@@ -69,7 +69,7 @@ export function InstallPrompt() {
 
     return (
         <div className="fixed bottom-20 lg:bottom-4 left-1/2 -translate-x-1/2 z-[9999] w-[calc(100%-2rem)] max-w-sm animate-in slide-in-from-bottom-4 duration-300">
-            <div className="flex flex-col gap-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl p-4 shadow-2xl shadow-black/20">
+            <div className="flex flex-col gap-3 bg-white dark:bg-card border border-gray-200 dark:border-border rounded-2xl p-4 shadow-2xl shadow-black/20">
                 <div className="flex items-start gap-3 w-full">
                     {/* Icon */}
                     <div className="w-12 h-12 rounded-xl bg-brand-grena flex items-center justify-center shrink-0">
@@ -79,7 +79,7 @@ export function InstallPrompt() {
                     {/* Text */}
                     <div className="flex-1 min-w-0 pr-2">
                         <p className="font-bold text-sm text-gray-900 dark:text-white">Instalar Dona da Revenda</p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                        <p className="text-xs text-gray-500 dark:text-muted-foreground mt-0.5">
                             {isIOS ? "Acesse mais rápido adicionando à sua Tela de Início." : "Acesso rápido direto na sua tela inicial."}
                         </p>
                     </div>
@@ -87,7 +87,7 @@ export function InstallPrompt() {
                     {/* Close Action */}
                     <button
                         onClick={handleDismiss}
-                        className="w-7 h-7 flex items-center justify-center shrink-0 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        className="w-7 h-7 flex items-center justify-center shrink-0 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-muted transition-colors"
                         aria-label="Fechar"
                     >
                         <X className="w-4 h-4" />

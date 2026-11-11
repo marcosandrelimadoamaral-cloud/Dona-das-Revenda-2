@@ -19,7 +19,7 @@ export default function SobrePage() {
 
                 <section>
                     <h2 className="text-2xl font-semibold text-foreground mb-4">Missão</h2>
-                    <p className="text-lg text-brand-grena font-medium">Ajudar quem revende beleza a organizar o negócio, ganhar tempo e vender com mais clareza.</p>
+                    <p className="text-lg text-brand-grena dark:text-brand-quartzo font-medium">Ajudar quem revende beleza a organizar o negócio, ganhar tempo e vender com mais clareza.</p>
                 </section>
 
                 <section>
@@ -33,7 +33,7 @@ export default function SobrePage() {
 
                 <section>
                     <h2 className="text-xl font-semibold text-foreground mb-3">Fale com a gente</h2>
-                    <p>Dúvidas, sugestões ou parcerias: use a página de <a href="/contato" className="text-brand-grena underline underline-offset-4">contato</a>.</p>
+                    <p>Dúvidas, sugestões ou parcerias: use a página de <a href="/contato" className="text-brand-grena dark:text-brand-quartzo underline underline-offset-4">contato</a>.</p>
                 </section>
             </div>
         </div>

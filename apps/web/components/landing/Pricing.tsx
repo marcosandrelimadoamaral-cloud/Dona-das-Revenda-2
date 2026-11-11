@@ -66,10 +66,10 @@ export function Pricing() {
                   Melhor valor
                 </span>
               )}
-              <h3 className="font-display text-2xl font-semibold">{plan.name}</h3>
+              <h3 className="text-2xl font-bold">{plan.name}</h3>
               <p className="mt-5 flex items-baseline gap-1">
                 <span className="text-sm opacity-70">R$</span>
-                <span className="font-display text-5xl font-semibold">{plan.price}</span>
+                <span className="text-5xl font-bold">{plan.price}</span>
                 <span className="text-sm opacity-70">/mês</span>
               </p>
               <p className={`mt-2 text-sm min-h-[40px] ${plan.highlight ? "text-brand-quartzo-claro" : "text-muted-foreground"}`}>

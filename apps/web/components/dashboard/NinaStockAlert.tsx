@@ -22,17 +22,17 @@ export async function NinaStockAlert() {
 
     if (lowStockItems.length === 0) {
         return (
-            <div className="bg-white dark:bg-gray-950 border rounded-3xl p-6 shadow-sm">
+            <div className="bg-white dark:bg-background border rounded-3xl p-6 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
                         <Sparkles className="w-5 h-5" />
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg text-emerald-900 dark:text-emerald-400">Nina Informa</h3>
-                        <p className="text-xs text-gray-500">Seu estoque está sob controle!</p>
+                        <p className="text-xs text-gray-500 dark:text-muted-foreground">Seu estoque está sob controle!</p>
                     </div>
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 relative">
+                <p className="text-sm text-gray-600 dark:text-muted-foreground relative">
                     &quot;Nenhum produto está abaixo do limite mínimo definido. Ótimo trabalho revendedora!&quot;
                 </p>
             </div>
@@ -57,7 +57,7 @@ export async function NinaStockAlert() {
 
             <div className="space-y-3 max-h-48 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-amber-200">
                 {lowStockItems.slice(0, 5).map(item => (
-                    <div key={item.id} className="flex items-center justify-between text-sm bg-white/50 dark:bg-black/20 p-2 rounded-lg border border-amber-100 dark:border-amber-900/30">
+                    <div key={item.id} className="flex items-center justify-between text-sm bg-white/50 dark:bg-background/20 p-2 rounded-lg border border-amber-100 dark:border-amber-900/30">
                         <div className="flex items-center gap-2 overflow-hidden flex-1 mr-2">
                             <PackageOpen className="w-4 h-4 text-amber-600/70 flex-shrink-0" />
                             <span className="font-medium text-amber-900 dark:text-amber-100 truncate">{item.custom_name || 'Produto sem nome'}</span>

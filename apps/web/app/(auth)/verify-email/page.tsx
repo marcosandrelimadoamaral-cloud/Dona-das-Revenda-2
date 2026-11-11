@@ -54,18 +54,18 @@ function VerifyEmailForm() {
                     </p>
                 </div>
 
-                <div className="bg-zinc-50 dark:bg-zinc-900/50 rounded-lg p-4 w-full text-sm text-left border border-zinc-100 dark:border-zinc-800">
+                <div className="bg-zinc-50 dark:bg-card rounded-lg p-4 w-full text-sm text-left border border-zinc-100 dark:border-border">
                     <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-start gap-2">
-                            <span className="text-brand-grena mt-0.5">•</span>
+                            <span className="text-brand-grena dark:text-brand-quartzo mt-0.5">•</span>
                             Clique no link enviado para ativar sua conta.
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-brand-grena mt-0.5">•</span>
+                            <span className="text-brand-grena dark:text-brand-quartzo mt-0.5">•</span>
                             Não recebeu? Verifique a pasta de spam.
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-brand-grena mt-0.5">•</span>
+                            <span className="text-brand-grena dark:text-brand-quartzo mt-0.5">•</span>
                             O link expira em 24 horas.
                         </li>
                     </ul>
@@ -106,7 +106,7 @@ export default function VerifyEmailPage() {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.4 }}
         >
-            <Suspense fallback={<div className="flex justify-center p-8"><RefreshCw className="w-6 h-6 animate-spin text-brand-grena" /></div>}>
+            <Suspense fallback={<div className="flex justify-center p-8"><RefreshCw className="w-6 h-6 animate-spin text-brand-grena dark:text-brand-quartzo" /></div>}>
                 <VerifyEmailForm />
             </Suspense>
         </motion.div>

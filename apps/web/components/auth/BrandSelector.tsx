@@ -29,12 +29,12 @@ export function BrandSelector({ brands, selected, onChange }: BrandSelectorProps
             className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${
               isSelected
                 ? "bg-brand-quartzo-fundo border-brand-grena dark:bg-brand-grena-escuro/20 dark:border-brand-grena"
-                : "hover:bg-gray-50 dark:hover:bg-gray-800"
+                : "hover:bg-gray-50 dark:hover:bg-muted"
             }`}
           >
             <div
               className={`w-4 h-4 rounded border flex items-center justify-center ${
-                isSelected ? "bg-brand-grena border-brand-grena text-white" : "border-gray-300"
+                isSelected ? "bg-brand-grena border-brand-grena text-white" : "border-gray-300 dark:border-border"
               }`}
             >
               {isSelected && <Check className="w-3 h-3" />}

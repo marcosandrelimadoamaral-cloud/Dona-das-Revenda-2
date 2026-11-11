@@ -61,7 +61,7 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
         <form onSubmit={handleSubmit} className="space-y-8 max-w-2xl">
             {/* Info banner */}
             <div className="bg-brand-quartzo-fundo dark:bg-brand-tinta/30 p-4 rounded-xl flex items-start gap-3 border border-brand-quartzo-claro dark:border-brand-grena-escuro">
-                <Sparkles className="w-5 h-5 text-brand-grena shrink-0 mt-0.5" />
+                <Sparkles className="w-5 h-5 text-brand-grena dark:text-brand-quartzo shrink-0 mt-0.5" />
                 <div className="text-sm text-brand-grena-escuro dark:text-brand-quartzo">
                     <p className="font-semibold">Como isso funciona?</p>
                     <p className="mt-1 opacity-80">Estas configurações moldam a personalidade dos 5 Agentes de IA. Quanto mais você personalizar, mais natural e humana será a conversa.</p>
@@ -121,7 +121,7 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
             </div>
 
             {/* Persona Preferences */}
-            <div className="space-y-5 pt-2 border-t dark:border-gray-800">
+            <div className="space-y-5 pt-2 border-t dark:border-border">
                 <h3 className="font-bold text-sm uppercase tracking-wider text-muted-foreground flex items-center gap-2 pt-4">
                     <Sliders className="w-4 h-4" /> Personalidade das IAs
                 </h3>
@@ -140,7 +140,7 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
                                 onClick={() => setSelectedTone(opt.value)}
                                 className={`flex items-start gap-3 p-3 rounded-xl border-2 text-left transition-all ${selectedTone === opt.value
                                     ? 'border-brand-grena bg-brand-quartzo-fundo dark:bg-brand-tinta/30'
-                                    : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 bg-white dark:bg-gray-900'
+                                    : 'border-gray-200 dark:border-border hover:border-gray-300 dark:hover:border-border bg-white dark:bg-card'
                                     }`}
                             >
                                 <div className="flex-1">
@@ -149,7 +149,7 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
                                 </div>
                                 {selectedTone === opt.value && (
                                     <div className="w-4 h-4 rounded-full bg-brand-grena flex items-center justify-center shrink-0 mt-0.5">
-                                        <div className="w-2 h-2 rounded-full bg-white" />
+                                        <div className="w-2 h-2 rounded-full bg-white dark:bg-card" />
                                     </div>
                                 )}
                             </button>
@@ -170,7 +170,7 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
                                 onClick={() => setSelectedStyle(opt.value)}
                                 className={`flex items-start gap-3 p-3 rounded-xl border-2 text-left transition-all ${selectedStyle === opt.value
                                     ? 'border-brand-grena bg-brand-quartzo-fundo dark:bg-brand-tinta/30'
-                                    : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 bg-white dark:bg-gray-900'
+                                    : 'border-gray-200 dark:border-border hover:border-gray-300 dark:hover:border-border bg-white dark:bg-card'
                                     }`}
                             >
                                 <div className="flex-1">
@@ -179,7 +179,7 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
                                 </div>
                                 {selectedStyle === opt.value && (
                                     <div className="w-4 h-4 rounded-full bg-brand-grena flex items-center justify-center shrink-0 mt-0.5">
-                                        <div className="w-2 h-2 rounded-full bg-white" />
+                                        <div className="w-2 h-2 rounded-full bg-white dark:bg-card" />
                                     </div>
                                 )}
                             </button>
@@ -188,8 +188,8 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
                 </div>
 
                 {/* Emoji toggle */}
-                <div className="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
-                    <Heart className="w-4 h-4 text-brand-grena shrink-0 mt-1" />
+                <div className="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-border bg-white dark:bg-card">
+                    <Heart className="w-4 h-4 text-brand-grena dark:text-brand-quartzo shrink-0 mt-1" />
                     <div className="flex-1">
                         <p className="text-sm font-semibold">Usar emojis nas respostas?</p>
                         <p className="text-xs text-muted-foreground mt-0.5">Deixa o tom mais expressivo e divertido</p>
@@ -197,9 +197,9 @@ export function AiSettingsForm({ initialData }: { initialData: any }) {
                     <button
                         type="button"
                         onClick={() => setUseEmoji(!useEmoji)}
-                        className={`relative w-10 h-6 rounded-full transition-colors shrink-0 ${useEmoji ? 'bg-brand-grena' : 'bg-gray-300 dark:bg-gray-600'}`}
+                        className={`relative w-10 h-6 rounded-full transition-colors shrink-0 ${useEmoji ? 'bg-brand-grena' : 'bg-gray-300 dark:bg-muted'}`}
                     >
-                        <span className={`absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-all ${useEmoji ? 'left-5' : 'left-1'}`} />
+                        <span className={`absolute top-1 w-4 h-4 rounded-full bg-white dark:bg-card shadow transition-all ${useEmoji ? 'left-5' : 'left-1'}`} />
                     </button>
                 </div>
 

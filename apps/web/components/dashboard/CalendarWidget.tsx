@@ -38,11 +38,11 @@ export function CalendarWidget() {
     const selectedEvents = events.filter(e => selectedDate && isSameDay(new Date(e.date), selectedDate))
 
     return (
-        <div className="flex flex-col md:flex-row gap-6 bg-white dark:bg-gray-950 p-6 rounded-3xl border shadow-sm">
+        <div className="flex flex-col md:flex-row gap-6 bg-white dark:bg-background p-6 rounded-3xl border shadow-sm">
             {/* Calendar Side */}
             <div className="flex-1 md:max-w-[350px]">
                 <div className="flex items-center gap-2 font-semibold text-lg mb-4">
-                    <CalendarIcon className="w-5 h-5 text-brand-grena" />
+                    <CalendarIcon className="w-5 h-5 text-brand-grena dark:text-brand-quartzo" />
                     Agenda Inteligente
                 </div>
 
@@ -52,13 +52,13 @@ export function CalendarWidget() {
         `}</style>
 
                 <div className="flex items-center justify-between mb-4 w-full px-2">
-                    <button onClick={prevMonth} className="h-8 w-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors">
+                    <button onClick={prevMonth} className="h-8 w-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-muted text-gray-500 dark:text-muted-foreground transition-colors">
                         <ChevronLeft className="w-4 h-4" />
                     </button>
-                    <h3 className="text-lg font-bold capitalize text-gray-900 dark:text-gray-100">
+                    <h3 className="text-lg font-bold capitalize text-gray-900 dark:text-foreground">
                         {format(currentMonth, 'MMMM yyyy', { locale: ptBR })}
                     </h3>
-                    <button onClick={nextMonth} className="h-8 w-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors">
+                    <button onClick={nextMonth} className="h-8 w-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-muted text-gray-500 dark:text-muted-foreground transition-colors">
                         <ChevronRight className="w-4 h-4" />
                     </button>
                 </div>
@@ -116,7 +116,7 @@ export function CalendarWidget() {
                 />
             </div>
 
-            <div className="hidden md:block w-px bg-gray-100 dark:bg-gray-800"></div>
+            <div className="hidden md:block w-px bg-gray-100 dark:bg-muted"></div>
 
             {/* Details Side */}
             <div className="flex-1 flex flex-col h-full min-h-[300px]">
@@ -135,14 +135,14 @@ export function CalendarWidget() {
                         </div>
                     ) : selectedEvents.length > 0 ? (
                         selectedEvents.map(event => (
-                            <div key={event.id} className="p-3 rounded-xl border flex gap-4 hover:border-brand-quartzo-claro hover:shadow-sm transition-all bg-white dark:bg-gray-950">
+                            <div key={event.id} className="p-3 rounded-xl border flex gap-4 hover:border-brand-quartzo-claro hover:shadow-sm transition-all bg-white dark:bg-background">
                                 <div className="shrink-0 mt-1">
                                     {event.type === 'receivable' && <div className="p-2 bg-emerald-100 text-emerald-600 rounded-lg"><CreditCard className="w-4 h-4" /></div>}
                                     {event.type === 'birthday' && <div className="p-2 bg-brand-quartzo-claro text-brand-grena rounded-lg"><Gift className="w-4 h-4" /></div>}
                                     {event.type === 'cycle' && <div className="p-2 bg-blue-100 text-blue-600 rounded-lg"><ShoppingBag className="w-4 h-4" /></div>}
                                 </div>
                                 <div>
-                                    <h5 className="font-medium text-sm text-gray-900 dark:text-gray-100">{event.title}</h5>
+                                    <h5 className="font-medium text-sm text-gray-900 dark:text-foreground">{event.title}</h5>
                                     {event.description && <p className="text-xs text-muted-foreground mt-0.5 leading-snug">{event.description}</p>}
                                     {event.amount && <p className="text-sm font-semibold text-emerald-600 mt-1">R$ {event.amount.toFixed(2)}</p>}
                                 </div>

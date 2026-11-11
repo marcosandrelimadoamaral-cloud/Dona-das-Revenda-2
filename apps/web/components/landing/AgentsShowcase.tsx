@@ -54,7 +54,7 @@ export function AgentsShowcase() {
                   <Icon className="h-5 w-5" />
                 </span>
                 <div>
-                  <h3 className="font-display text-2xl font-semibold leading-none">{name}</h3>
+                  <h3 className="text-2xl font-bold leading-none">{name}</h3>
                   <p className="text-xs uppercase tracking-widest text-brand-ouro-escuro mt-1.5">{role}</p>
                 </div>
               </div>

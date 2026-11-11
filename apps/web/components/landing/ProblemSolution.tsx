@@ -31,7 +31,7 @@ export function ProblemSolution() {
                 <Icon className="h-5 w-5" />
               </span>
               <p className="text-sm text-muted-foreground line-through decoration-brand-quartzo mb-3">{pain}</p>
-              <p className="font-display text-xl font-semibold leading-snug">{fix}</p>
+              <p className="text-xl font-bold leading-snug">{fix}</p>
             </div>
           ))}
         </div>

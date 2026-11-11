@@ -89,7 +89,7 @@ function BillingContent() {
     return (
         <div className="max-w-6xl mx-auto space-y-8 pb-10">
             {!loadedStatus && (
-                <div className="h-32 rounded-3xl bg-gray-100 dark:bg-gray-800 animate-pulse" />
+                <div className="h-32 rounded-3xl bg-gray-100 dark:bg-muted animate-pulse" />
             )}
 
             {loadedStatus && isPro && (
@@ -127,12 +127,12 @@ function BillingContent() {
                                 <Sparkles className="w-5 h-5" />
                                 <span>{daysLeft > 0 ? `Seu período de teste acaba em ${daysLeft} dia${daysLeft === 1 ? '' : 's'}!` : 'Seu período de teste expirou!'}</span>
                             </div>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
+                            <p className="text-sm text-gray-600 dark:text-muted-foreground leading-relaxed max-w-xl">
                                 Você tem acesso total de cortesia a todas as ferramentas premium da Dona da Revenda.
                                 Escolha um plano abaixo para garantir que seu sistema não será bloqueado ao final do teste.
                             </p>
                             <div className="space-y-1.5 pt-2">
-                                <div className="flex justify-between text-xs font-medium text-gray-500">
+                                <div className="flex justify-between text-xs font-medium text-gray-500 dark:text-muted-foreground">
                                     <span>Dia 1</span>
                                     <span>Dia 7</span>
                                 </div>
@@ -145,7 +145,7 @@ function BillingContent() {
                             </div>
                         </div>
                         <div className="shrink-0 w-full md:w-auto text-center">
-                            <p className="text-xs uppercase tracking-wider font-bold text-gray-500 dark:text-gray-400 mb-2">Próximo Passo</p>
+                            <p className="text-xs uppercase tracking-wider font-bold text-gray-500 dark:text-muted-foreground mb-2">Próximo Passo</p>
                             <Button
                                 onClick={() => handleCheckout("annual")}
                                 disabled={isLoadingPayment !== null}
@@ -174,8 +174,8 @@ function BillingContent() {
                             key={plan.name}
                             className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-200 shadow-sm overflow-hidden
                                 ${plan.highlighted
-                                    ? 'border-brand-quartzo-claro dark:border-brand-grena-escuro bg-white dark:bg-gray-800 ring-2 ring-brand-grena dark:ring-brand-grena scale-105 z-10 shadow-xl'
-                                    : 'border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 hover:border-brand-quartzo dark:hover:border-brand-grena-hover'
+                                    ? 'border-brand-quartzo-claro dark:border-brand-grena-escuro bg-white dark:bg-muted ring-2 ring-brand-grena dark:ring-brand-grena scale-105 z-10 shadow-xl'
+                                    : 'border-gray-200 dark:border-border bg-white dark:bg-background hover:border-brand-quartzo dark:hover:border-brand-grena-hover'
                                 }
                             `}
                         >
@@ -199,7 +199,7 @@ function BillingContent() {
                                         <span className="text-4xl md:text-5xl font-extrabold">R$ {plan.price}</span>
                                         <span className="text-muted-foreground font-medium">/mês</span>
                                     </div>
-                                    <div className={`text-sm font-bold mt-2 leading-tight ${plan.highlighted ? 'text-emerald-600' : 'text-gray-500'}`}>
+                                    <div className={`text-sm font-bold mt-2 leading-tight ${plan.highlighted ? 'text-emerald-600' : 'text-gray-500 dark:text-muted-foreground'}`}>
                                         {plan.billedAmount || plan.description}
                                     </div>
                                 </div>
@@ -208,8 +208,8 @@ function BillingContent() {
                             <div className="space-y-3 flex-1 px-1">
                                 {plan.features.map((feature, i) => (
                                     <div key={i} className="flex items-start gap-3">
-                                        <Check className={`w-5 h-5 shrink-0 ${plan.highlighted ? 'text-brand-grena' : 'text-emerald-500'}`} />
-                                        <span className={`text-sm font-medium ${plan.highlighted ? 'text-gray-900 dark:text-gray-100' : 'text-gray-600 dark:text-gray-400'}`}>{feature}</span>
+                                        <Check className={`w-5 h-5 shrink-0 ${plan.highlighted ? 'text-brand-grena dark:text-brand-quartzo' : 'text-emerald-500'}`} />
+                                        <span className={`text-sm font-medium ${plan.highlighted ? 'text-gray-900 dark:text-foreground' : 'text-gray-600 dark:text-muted-foreground'}`}>{feature}</span>
                                     </div>
                                 ))}
                             </div>
@@ -220,7 +220,7 @@ function BillingContent() {
                                     disabled={isLoadingPayment !== null}
                                     className={`w-full rounded-xl h-14 font-extrabold text-base md:text-lg transition-all ${plan.highlighted
                                         ? "bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white shadow-[0_4px_14px_rgb(239,68,68,0.3)] hover:shadow-[0_6px_20px_rgb(239,68,68,0.4)] animate-pulse hover:animate-none"
-                                        : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100"
+                                        : "bg-gray-100 dark:bg-muted hover:bg-gray-200 dark:hover:bg-muted text-gray-900 dark:text-foreground"
                                         }`}
                                 >
                                     {isLoadingPayment === plan.id ? (
@@ -235,7 +235,7 @@ function BillingContent() {
                 </div>
             </div>
 
-            <div className="text-center pt-8 border-t dark:border-gray-800">
+            <div className="text-center pt-8 border-t dark:border-border">
                 <div className="flex items-center justify-center gap-2 text-sm text-emerald-700 dark:text-emerald-400 font-medium">
                     <Sparkles className="w-4 h-4 text-emerald-500" />
                     <span>Pagamento Seguro Mercado Pago · 7 Dias Grátis · Cancele quando quiser</span>

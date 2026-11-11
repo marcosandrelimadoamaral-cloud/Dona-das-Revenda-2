@@ -56,9 +56,9 @@ export function StripePaymentForm({ onSuccess, onCancel, planName, planPrice }: 
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
             {/* Order summary */}
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 flex items-center justify-between">
+            <div className="bg-gray-50 dark:bg-muted rounded-xl p-4 flex items-center justify-between">
                 <div>
-                    <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Plano {planName}</div>
+                    <div className="text-sm font-semibold text-gray-700 dark:text-muted-foreground">Plano {planName}</div>
                     <div className="text-xs text-muted-foreground">Assinatura recorrente · Cancele quando quiser</div>
                 </div>
                 <div className="text-xl font-bold text-brand-grena dark:text-brand-quartzo">
@@ -67,7 +67,7 @@ export function StripePaymentForm({ onSuccess, onCancel, planName, planPrice }: 
             </div>
 
             {/* Stripe Elements payment form */}
-            <div className="rounded-xl border dark:border-gray-700 overflow-hidden">
+            <div className="rounded-xl border dark:border-border overflow-hidden">
                 <div className="p-4">
                     <PaymentElement
                         options={{

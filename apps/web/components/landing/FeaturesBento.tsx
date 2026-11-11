@@ -21,7 +21,7 @@ export function FeaturesBento() {
           {features.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="rounded-2xl bg-white dark:bg-card border border-border p-6">
               <Icon className="h-6 w-6 text-primary mb-4" strokeWidth={1.5} />
-              <h3 className="font-display text-lg font-semibold mb-2">{title}</h3>
+              <h3 className="text-lg font-bold mb-2">{title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
             </div>
           ))}

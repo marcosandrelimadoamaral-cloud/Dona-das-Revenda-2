@@ -80,14 +80,14 @@ export default function EstoqueClient({ initialProducts, userBrands }: EstoqueCl
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <Input
                     placeholder="Buscar produto por nome ou marca..."
-                    className="pl-9 w-full bg-white dark:bg-gray-950"
+                    className="pl-9 w-full bg-white dark:bg-background"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
             </div>
 
             {filteredProducts.length === 0 ? (
-                <div className="flex flex-col items-center justify-center py-16 px-4 text-center border rounded-2xl bg-white dark:bg-gray-950 border-dashed">
+                <div className="flex flex-col items-center justify-center py-16 px-4 text-center border rounded-2xl bg-white dark:bg-background border-dashed">
                     <div className="w-16 h-16 bg-brand-quartzo-claro dark:bg-brand-grena-escuro/30 rounded-full flex items-center justify-center mb-4">
                         <PackageOpen className="w-8 h-8 text-brand-grena dark:text-brand-quartzo" />
                     </div>
@@ -109,10 +109,10 @@ export default function EstoqueClient({ initialProducts, userBrands }: EstoqueCl
                         }
 
                         return (
-                            <Card key={product.id} className="overflow-hidden flex flex-col group border-gray-100 dark:border-gray-800 hover:border-brand-quartzo transition-colors">
+                            <Card key={product.id} className="overflow-hidden flex flex-col group border-gray-100 dark:border-border hover:border-brand-quartzo transition-colors">
                                 <CardContent className="p-5 flex-1 flex flex-col">
                                     <div className="flex justify-between items-start mb-3">
-                                        <Badge variant="secondary" className="bg-brand-quartzo-fundo text-brand-grena-hover dark:bg-brand-grena-escuro/30 font-medium">
+                                        <Badge variant="secondary" className="bg-brand-quartzo-fundo text-brand-grena-hover dark:text-brand-quartzo dark:bg-brand-grena-escuro/30 font-medium">
                                             {product.brand || "Sem marca"}
                                         </Badge>
                                         {product.stock_quantity <= product.min_stock && (
@@ -123,22 +123,22 @@ export default function EstoqueClient({ initialProducts, userBrands }: EstoqueCl
                                     </div>
 
                                     <h3 className="font-semibold text-lg line-clamp-2 h-14 mb-1">{product.name}</h3>
-                                    <div className="flex items-center gap-1 text-sm text-gray-500 mb-4">
+                                    <div className="flex items-center gap-1 text-sm text-gray-500 dark:text-muted-foreground mb-4">
                                         <Tag className="w-3 h-3" /> {product.category || "Geral"}
                                     </div>
 
-                                    <div className="grid grid-cols-2 gap-2 mb-4 mt-auto bg-gray-50 dark:bg-gray-900 p-3 rounded-xl text-sm">
+                                    <div className="grid grid-cols-2 gap-2 mb-4 mt-auto bg-gray-50 dark:bg-card p-3 rounded-xl text-sm">
                                         <div className="flex flex-col">
-                                            <span className="text-gray-500 text-xs">Custo (und)</span>
-                                            <span className="font-medium text-gray-700 dark:text-gray-300">R$ {product.cost_price.toFixed(2)}</span>
+                                            <span className="text-gray-500 dark:text-muted-foreground text-xs">Custo (und)</span>
+                                            <span className="font-medium text-gray-700 dark:text-muted-foreground">R$ {product.cost_price.toFixed(2)}</span>
                                         </div>
                                         <div className="flex flex-col">
-                                            <span className="text-gray-500 text-xs">Venda (und)</span>
+                                            <span className="text-gray-500 dark:text-muted-foreground text-xs">Venda (und)</span>
                                             <span className="font-bold text-gray-900 dark:text-white">R$ {product.sale_price.toFixed(2)}</span>
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100 dark:border-border">
                                         <div className="flex flex-col">
                                             <span className="text-xs text-muted-foreground mb-1">Qtd Atual</span>
                                             <Badge className={`font-semibold w-fit shadow-none rounded-md px-2 ${stockColor}`} variant="outline">

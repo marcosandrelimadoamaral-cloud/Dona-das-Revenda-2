@@ -12,7 +12,7 @@ export function AuthCard({ title, description, children }: AuthCardProps) {
   return (
     <div className="sm:mx-auto sm:w-full sm:max-w-md">
       <div className="flex justify-center mb-6">
-        <Logo className="h-11 w-auto" priority />
+        <Logo className="h-14 w-auto" priority />
       </div>
 
       <Card className="shadow-xl border-brand-quartzo-claro dark:border-brand-grena-escuro/50">

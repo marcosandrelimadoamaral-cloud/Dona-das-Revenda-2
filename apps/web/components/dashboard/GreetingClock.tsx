@@ -22,10 +22,10 @@ export function GreetingClock() {
         // Return a placeholder structure during SSR to avoid layout shift
         return (
             <div>
-                <h1 className="text-3xl font-bold tracking-tight text-transparent bg-gray-200 dark:bg-gray-800 rounded w-48 h-9 mb-2 animate-pulse select-none">
+                <h1 className="text-3xl font-bold tracking-tight text-transparent bg-gray-200 dark:bg-muted rounded w-48 h-9 mb-2 animate-pulse select-none">
                     Carregando...
                 </h1>
-                <p className="text-transparent bg-gray-200 dark:bg-gray-800 rounded w-64 h-5 animate-pulse select-none">
+                <p className="text-transparent bg-gray-200 dark:bg-muted rounded w-64 h-5 animate-pulse select-none">
                     Carregando data
                 </p>
             </div>
@@ -57,7 +57,7 @@ export function GreetingClock() {
 
     return (
         <div>
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-foreground">
                 {greeting}!
             </h1>
             <p className="text-muted-foreground capitalize">

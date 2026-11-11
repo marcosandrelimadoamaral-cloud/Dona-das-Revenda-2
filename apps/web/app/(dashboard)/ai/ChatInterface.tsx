@@ -14,11 +14,11 @@ import { getUserProducts } from "@/app/actions/inventory/getProducts"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 
 const AGENTS = [
-    { id: 'clara', name: 'Clara', role: 'Marketing & Conteúdo', icon: Sparkles, color: 'text-brand-grena', bg: 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/40', greeting: 'Oi! Sou a Clara. Vamos criar uma campanha que vai bombar no seu Instagram hoje?' },
+    { id: 'clara', name: 'Clara', role: 'Marketing & Conteúdo', icon: Sparkles, color: 'text-brand-grena dark:text-brand-quartzo', bg: 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/40', greeting: 'Oi! Sou a Clara. Vamos criar uma campanha que vai bombar no seu Instagram hoje?' },
     { id: 'finn', name: 'Finn', role: 'Analista Financeiro', icon: TrendingUp, color: 'text-emerald-500', bg: 'bg-emerald-100 dark:bg-emerald-900/40', greeting: 'Olá. Finn aqui. Pronto para analisarmos as margens e garantir que você não está perdendo dinheiro?' },
     { id: 'zara', name: 'Zara', role: 'Treinadora de Vendas', icon: MessageCircle, color: 'text-blue-500', bg: 'bg-blue-100 dark:bg-blue-900/40', greeting: 'Ei! A cliente achou caro? Me mande o que ela falou que eu te dou a resposta perfeita para fechar essa venda.' },
     { id: 'nina', name: 'Nina', role: 'Gestão de Estoque', icon: PackageSearch, color: 'text-amber-500', bg: 'bg-amber-100 dark:bg-amber-900/40', greeting: 'Produto parado é dinheiro jogado fora! Quer ajuda para montar uns kits com aquele estoque antigo?' },
-    { id: 'lia', name: 'Lia', role: 'Secretária Executiva', icon: CalendarCheck, color: 'text-brand-grena', bg: 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/40', greeting: 'Bom dia! Sou a Lia. Posso te ajudar a organizar seu dia ou cobrar aquele fiado atrasado de forma bem educada.' }
+    { id: 'lia', name: 'Lia', role: 'Secretária Executiva', icon: CalendarCheck, color: 'text-brand-grena dark:text-brand-quartzo', bg: 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/40', greeting: 'Bom dia! Sou a Lia. Posso te ajudar a organizar seu dia ou cobrar aquele fiado atrasado de forma bem educada.' }
 ]
 
 export function ChatInterface({ settings }: { settings: any }) {
@@ -85,7 +85,7 @@ export function ChatInterface({ settings }: { settings: any }) {
     return (
         <div className="flex h-full">
             {/* Sidebar - Agent Selection */}
-            <div className="w-64 border-r bg-gray-50/50 dark:bg-gray-900/50 hidden md:flex flex-col">
+            <div className="w-64 border-r bg-gray-50/50 dark:bg-card hidden md:flex flex-col">
                 <div className="p-4 border-b">
                     <h2 className="font-semibold text-lg">Central de IA</h2>
                     <p className="text-xs text-muted-foreground">Especialistas à disposição</p>
@@ -96,15 +96,15 @@ export function ChatInterface({ settings }: { settings: any }) {
                             key={agent.id}
                             onClick={() => setActiveAgent(agent.id)}
                             className={`w-full flex items-center gap-3 p-3 rounded-xl text-left transition-colors ${activeAgent === agent.id
-                                ? 'bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700'
-                                : 'hover:bg-gray-100 dark:hover:bg-gray-800 border border-transparent'
+                                ? 'bg-white dark:bg-muted shadow-sm border border-gray-200 dark:border-border'
+                                : 'hover:bg-gray-100 dark:hover:bg-muted border border-transparent'
                                 }`}
                         >
                             <div className={`w-10 h-10 rounded-full flex items-center justify-center ${agent.bg}`}>
                                 <agent.icon className={`w-5 h-5 ${agent.color}`} />
                             </div>
                             <div className="overflow-hidden">
-                                <p className="font-medium text-sm truncate dark:text-gray-200">{agent.name}</p>
+                                <p className="font-medium text-sm truncate dark:text-foreground">{agent.name}</p>
                                 <p className="text-[10px] text-muted-foreground truncate">{agent.role}</p>
                             </div>
                         </button>
@@ -116,22 +116,22 @@ export function ChatInterface({ settings }: { settings: any }) {
             </div>
 
             {/* Main Chat Area */}
-            <div className="flex-1 flex flex-col min-w-0 bg-white dark:bg-gray-950">
-                <div className="md:hidden border-b bg-gray-50 dark:bg-gray-900 border-gray-100 dark:border-gray-800">
+            <div className="flex-1 flex flex-col min-w-0 bg-white dark:bg-background">
+                <div className="md:hidden border-b bg-gray-50 dark:bg-card border-gray-100 dark:border-border">
                     <div className="flex gap-2 p-3 overflow-x-auto hide-scrollbar snap-x">
                         {AGENTS.map((agent) => (
                             <button
                                 key={agent.id}
                                 onClick={() => setActiveAgent(agent.id)}
                                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all shrink-0 snap-start ${activeAgent === agent.id
-                                        ? 'bg-white dark:bg-gray-800 border-brand-quartzo-claro dark:border-brand-grena-hover shadow-sm ring-1 ring-brand-grena/10'
-                                        : 'bg-white/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800'
+                                        ? 'bg-white dark:bg-muted border-brand-quartzo-claro dark:border-brand-grena-hover shadow-sm ring-1 ring-brand-grena/10'
+                                        : 'bg-white/50 dark:bg-muted border-gray-200 dark:border-border hover:bg-white dark:hover:bg-muted'
                                     }`}
                             >
                                 <div className={`w-6 h-6 rounded-full flex items-center justify-center ${agent.bg}`}>
                                     <agent.icon className={`w-3 h-3 ${agent.color}`} />
                                 </div>
-                                <span className={`text-xs font-semibold ${activeAgent === agent.id ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'}`}>
+                                <span className={`text-xs font-semibold ${activeAgent === agent.id ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-muted-foreground'}`}>
                                     {agent.name}
                                 </span>
                             </button>
@@ -167,7 +167,7 @@ export function ChatInterface({ settings }: { settings: any }) {
 
                                 <div className={`max-w-[85%] sm:max-w-[75%] px-4 py-3 sm:px-5 sm:py-3.5 shadow-sm border border-transparent ${msg.role === 'user'
                                     ? 'bg-brand-grena text-white rounded-3xl rounded-br-md shadow-brand-grena/20'
-                                    : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-3xl rounded-tl-md border-gray-100 dark:border-gray-700 shadow-black/5'
+                                    : 'bg-white dark:bg-muted text-gray-900 dark:text-foreground rounded-3xl rounded-tl-md border-gray-100 dark:border-border shadow-black/5'
                                     }`}>
                                     <div className="prose prose-sm dark:prose-invert max-w-none break-words leading-relaxed">
                                         <ReactMarkdown remarkPlugins={[remarkGfm]}>{msg.content}</ReactMarkdown>
@@ -189,7 +189,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                                         <currentAgent.icon className={`w-4 h-4 ${currentAgent.color} animate-pulse`} />
                                     </AvatarFallback>
                                 </Avatar>
-                                <div className="bg-white dark:bg-gray-800 border border-brand-quartzo-claro dark:border-brand-grena-escuro/50 shadow-sm rounded-3xl rounded-tl-md px-5 py-4 flex items-center gap-2">
+                                <div className="bg-white dark:bg-muted border border-brand-quartzo-claro dark:border-brand-grena-escuro/50 shadow-sm rounded-3xl rounded-tl-md px-5 py-4 flex items-center gap-2">
                                     <span className="text-sm font-medium text-brand-grena dark:text-brand-quartzo animate-pulse">Analisando seus dados reais...</span>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                 </div>
 
                 {/* Input Area */}
-                <div className="p-4 bg-white dark:bg-gray-950 border-t">
+                <div className="p-4 bg-white dark:bg-background border-t">
                     <div className="max-w-3xl mx-auto">
                         {/* Contexto RAG */}
                         {selectedProduct && (
@@ -218,7 +218,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                             <Popover>
                                 <PopoverTrigger asChild>
                                     <Button variant="outline" size="icon" className="shrink-0 rounded-full w-10 h-10" title="Anexar Produto">
-                                        <Box className="w-4 h-4 text-gray-500" />
+                                        <Box className="w-4 h-4 text-gray-500 dark:text-muted-foreground" />
                                     </Button>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-64 p-0" align="start">
@@ -231,7 +231,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                                                 <button
                                                     key={p.id}
                                                     onClick={() => setSelectedProduct(p)}
-                                                    className="w-full text-left px-2 py-1.5 text-sm rounded hover:bg-gray-100 dark:hover:bg-gray-800 truncate"
+                                                    className="w-full text-left px-2 py-1.5 text-sm rounded hover:bg-gray-100 dark:hover:bg-muted truncate"
                                                 >
                                                     {p.custom_name}
                                                 </button>
@@ -248,7 +248,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                                     onChange={e => setInput(e.target.value)}
                                     onKeyDown={handleKeyDown}
                                     placeholder={`Pergunte algo para a ${currentAgent.name}...`}
-                                    className="pr-12 rounded-2xl h-12 bg-gray-50 dark:bg-gray-900 border-transparent focus-visible:ring-1"
+                                    className="pr-12 rounded-2xl h-12 bg-gray-50 dark:bg-card border-transparent focus-visible:ring-1"
                                     disabled={isLoading}
                                 />
                                 <Button
@@ -292,9 +292,9 @@ export function ChatInterface({ settings }: { settings: any }) {
 
                         {/* Personalize tip */}
                         <div className="hidden sm:flex mt-3 items-center gap-2 bg-brand-quartzo-fundo dark:bg-brand-tinta/30 border border-brand-quartzo-claro dark:border-brand-grena-escuro rounded-xl px-3 py-2">
-                            <Settings2 className="w-3.5 h-3.5 text-brand-grena shrink-0" />
+                            <Settings2 className="w-3.5 h-3.5 text-brand-grena dark:text-brand-quartzo shrink-0" />
                             <p className="text-xs text-brand-grena-hover dark:text-brand-quartzo flex-1">
-                                <span className="font-semibold">Personalize sua experiência</span> — adicione contexto da sua loja para respostas mais precisas.
+                                <span className="font-semibold">Personalize sua experiência</span>: adicione contexto da sua loja para respostas mais precisas.
                             </p>
                             <a
                                 href="/settings?tab=ai"
@@ -306,7 +306,7 @@ export function ChatInterface({ settings }: { settings: any }) {
 
                         {/* Legal Disclaimer */}
                         <div className="mt-3 text-center hidden sm:block">
-                            <p className="text-xs text-gray-400 dark:text-gray-500">
+                            <p className="text-xs text-gray-400 dark:text-muted-foreground">
                                 {currentAgent.name} é uma Inteligência Artificial e pode cometer erros. Verifique as informações.
                             </p>
                         </div>
@@ -321,7 +321,7 @@ function PromptBadge({ text, onClick }: { text: string, onClick: () => void }) {
     return (
         <button
             onClick={onClick}
-            className="shrink-0 px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-xs text-gray-600 dark:text-gray-300 hover:border-brand-quartzo hover:text-brand-grena transition-colors whitespace-nowrap"
+            className="shrink-0 px-3 py-1.5 rounded-full border border-gray-200 dark:border-border bg-white dark:bg-background text-xs text-gray-600 dark:text-muted-foreground hover:border-brand-quartzo hover:text-brand-grena transition-colors whitespace-nowrap"
         >
             <ArrowRight className="w-3 h-3 inline mr-1 opacity-50" />
             {text}

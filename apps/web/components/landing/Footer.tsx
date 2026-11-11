@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-5" aria-label="Dona da Revenda">
-              <Logo className="h-10 w-auto" />
+              <Logo className="h-12 w-auto" />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm text-sm leading-relaxed">
               Gestão para quem revende beleza: vendas, estoque, fiados, clientes e cinco assistentes de IA num só lugar.
@@ -22,7 +22,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold mb-5 text-base">Produto</h4>
+            <h4 className="font-bold mb-5 text-base">Produto</h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="#funcionalidades" className={linkClass}>Funcionalidades</Link></li>
               <li><Link href="#agentes" className={linkClass}>Assistentes de IA</Link></li>
@@ -32,7 +32,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold mb-5 text-base">Legal</h4>
+            <h4 className="font-bold mb-5 text-base">Legal</h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/termos-de-uso" className={linkClass}>Termos de uso</Link></li>
               <li><Link href="/privacidade" className={linkClass}>Privacidade</Link></li>
@@ -44,7 +44,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-muted-foreground text-sm">© 2026 Dona da Revenda. Todos os direitos reservados.</p>
-          <p className="text-muted-foreground text-xs">Pagamento seguro via Stripe</p>
+          <p className="text-muted-foreground text-xs">Pagamento seguro</p>
         </div>
       </div>
     </footer>

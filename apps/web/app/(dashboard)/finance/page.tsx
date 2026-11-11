@@ -241,11 +241,11 @@ export default function FinancePage() {
 
       {!loading && !errorMsg && metrics.totalSales === 0 && (
         <div className="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900 p-8 rounded-2xl text-center shadow-sm">
-          <div className="w-16 h-16 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+          <div className="w-16 h-16 bg-white dark:bg-muted rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
             <ShoppingBag className="w-8 h-8 text-emerald-500" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Nenhuma venda registrada</h3>
-          <p className="text-gray-600 dark:text-gray-400 max-w-md mx-auto mb-6">Seus relatórios financeiros aparecerão aqui automaticamente assim que você realizar a primeira venda pelo seu PDV.</p>
+          <p className="text-gray-600 dark:text-muted-foreground max-w-md mx-auto mb-6">Seus relatórios financeiros aparecerão aqui automaticamente assim que você realizar a primeira venda pelo seu PDV.</p>
           <Button asChild className="bg-emerald-600 hover:bg-emerald-700 text-white gap-2">
             <Link href="/pos">
               Ir para o PDV
@@ -263,7 +263,7 @@ export default function FinancePage() {
           <SalesChart data={chartData} />
 
           <Card className="col-span-12 lg:col-span-4 flex flex-col shadow-sm">
-            <CardHeader className="pb-3 border-b dark:border-gray-800">
+            <CardHeader className="pb-3 border-b dark:border-border">
               <CardTitle className="text-lg">Fiados a Receber</CardTitle>
               <CardDescription className="text-xs">Acompanhe quem está devendo.</CardDescription>
             </CardHeader>
@@ -282,7 +282,7 @@ export default function FinancePage() {
                     const clientName = sale.clientName
 
                     return (
-                      <div key={sale.id} className="p-4 hover:bg-gray-50/50 dark:hover:bg-gray-800/50 transition-colors">
+                      <div key={sale.id} className="p-4 hover:bg-gray-50/50 dark:hover:bg-muted transition-colors">
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex flex-col">
                             <span className="font-semibold text-sm truncate max-w-[150px]">{clientName}</span>
