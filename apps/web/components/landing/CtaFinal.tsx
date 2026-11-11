@@ -6,8 +6,8 @@ import { Logo } from "@/components/brand/Logo"
 export function CtaFinal() {
   return (
     <section className="px-4 pb-20 md:pb-28 bg-background">
-      <div className="container mx-auto">
-        <div className="rounded-[2rem] bg-brand-grena text-brand-marfim px-6 py-16 md:py-20 text-center">
+      <div className="mx-auto max-w-6xl">
+        <div className="rounded-[2rem] bg-brand-grena text-brand-marfim px-5 sm:px-6 py-14 md:py-20 text-center">
           <div className="mx-auto mb-6 w-fit">
             <Logo variant="simboloClaro" className="h-14 w-auto" />
           </div>
@@ -20,7 +20,7 @@ export function CtaFinal() {
           <Button
             asChild
             size="lg"
-            className="mt-9 h-14 px-9 text-base rounded-xl bg-brand-marfim text-brand-grena hover:bg-white"
+            className="mt-9 h-14 w-full sm:w-auto px-6 sm:px-9 text-base rounded-xl bg-brand-marfim text-brand-grena hover:bg-white"
           >
             <Link href="/signup?ref=cta-final">
               Criar minha conta grátis <ArrowRight className="ml-2 h-5 w-5" />

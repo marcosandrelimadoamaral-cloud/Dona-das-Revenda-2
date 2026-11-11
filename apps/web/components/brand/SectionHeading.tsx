@@ -15,7 +15,6 @@ export function SectionHeading({
         <p
           className={`inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-brand-ouro-escuro mb-4`}
         >
-          <span className="h-px w-8 bg-brand-ouro" aria-hidden />
           {eyebrow}
         </p>
       )}

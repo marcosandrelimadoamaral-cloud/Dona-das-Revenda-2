@@ -55,7 +55,7 @@ export function Pricing() {
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className={`relative flex flex-col rounded-3xl p-8 border ${
+              className={`relative flex flex-col rounded-3xl p-6 sm:p-8 border ${plan.highlight ? "order-first md:order-none " : ""}${
                 plan.highlight
                   ? "bg-brand-grena text-brand-marfim border-brand-grena shadow-lift"
                   : "bg-background border-border"
