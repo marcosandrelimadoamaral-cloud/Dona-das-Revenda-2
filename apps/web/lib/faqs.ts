@@ -1,37 +1,31 @@
 export const faqs = [
   {
-    question: "Preciso saber usar tecnologia/computador?",
+    question: "Preciso saber usar tecnologia?",
     answer:
-      "Não! A Dona da Revenda foi desenhada para ser tão fácil quanto usar o WhatsApp. Além disso, a Clara (nossa IA) aprende com você e sugere o que fazer a cada passo.",
+      "Não. A Dona da Revenda foi pensada para ser tão simples quanto usar o WhatsApp, e os assistentes de IA sugerem o próximo passo em cada tela.",
   },
   {
-    question: "E se eu vender de várias marcas (Natura, Avon, Boticário)?",
+    question: "Posso usar com várias marcas ao mesmo tempo?",
     answer:
-      "É exatamente para isso que existimos. Unificamos todas as suas marcas em um só lugar. Você não precisa mais ter 3 cadernos diferentes.",
+      "Pode. Natura, Avon, Boticário e outras ficam juntas no mesmo catálogo e no mesmo estoque. Chega de um caderno para cada marca.",
   },
   {
-    question: "Funciona sem internet?",
+    question: "Como a Clara sabe o que sugerir para o meu Instagram?",
     answer:
-      "Sim! O aplicativo funciona offline. Você pode registrar vendas na rua ou em feiras sem internet, e ele sincroniza tudo automaticamente quando você conectar no Wi-Fi.",
+      "Ela olha o que você tem em estoque e o seu jeito de comunicar para sugerir posts e roteiros. Você revisa e publica como preferir.",
   },
   {
-    question: "Como a IA sabe o que postar no meu Instagram?",
+    question: "Meus dados estão seguros?",
     answer:
-      "A Clara analisa o seu estoque atual (para focar no que você precisa vender), as tendências do momento nas redes sociais e o seu estilo de comunicação para gerar roteiros que realmente engajam o seu público.",
-  },
-  {
-    question: "É seguro? Minhas informações estão protegidas?",
-    answer:
-      "Sim, usamos criptografia de nível bancário e seguimos a LGPD rigorosamente. Seus dados de clientes e vendas são seus e nunca serão compartilhados.",
+      "Seguimos a LGPD. Os dados dos seus clientes e das suas vendas são seus e não são compartilhados com terceiros. Detalhes na nossa página de Privacidade.",
   },
   {
     question: "Posso cancelar quando quiser?",
-    answer:
-      "Sim, sem taxa de cancelamento ou fidelidade. Você pode exportar todos os seus dados para uma planilha a qualquer momento se decidir sair.",
+    answer: "Sim, sem multa e sem fidelidade. Se decidir sair, você exporta seus dados para uma planilha.",
   },
   {
     question: "Quanto custa a Dona da Revenda?",
     answer:
-      "O plano mensal custa R$ 97,00 por mês. O trimestral sai por R$ 261 a cada três meses (R$ 87,00 por mês) e o anual por R$ 570 por ano (R$ 47,50 por mês). Todos têm 7 dias grátis e incluem os cinco agentes de IA.",
+      "O plano mensal custa R$ 97,00 por mês. O trimestral sai por R$ 261 a cada três meses (R$ 87,00 por mês) e o anual por R$ 570 por ano (R$ 47,50 por mês). Todos têm 7 dias grátis e incluem os cinco assistentes de IA.",
   },
 ]
