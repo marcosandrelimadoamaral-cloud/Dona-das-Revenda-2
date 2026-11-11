@@ -129,3 +129,24 @@
   }
 }
 
+
+/* Páginas públicas: sem seleção de texto nem arrastar imagens (ContentProtection) */
+html[data-protected] body {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+html[data-protected] input,
+html[data-protected] textarea,
+html[data-protected] select,
+html[data-protected] [contenteditable] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+html[data-protected] img,
+html[data-protected] svg {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
