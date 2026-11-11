@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-background pt-28 pb-20 md:pt-36 md:pb-28">
+    <section className="relative overflow-hidden bg-background pt-24 pb-16 md:pt-36 md:pb-28">
       <div className="container mx-auto px-4 grid lg:grid-cols-[1.05fr_0.95fr] gap-14 items-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -16,7 +16,6 @@ export function HeroSection() {
           className="flex flex-col gap-7"
         >
           <p className="inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-brand-ouro-escuro">
-            <span className="h-px w-8 bg-brand-ouro" aria-hidden />
             Gestão para quem revende beleza
           </p>
 
@@ -72,17 +71,17 @@ export function HeroSection() {
 
             {/* Conteúdo da janela */}
             <div className="p-5 sm:p-6 bg-brand-marfim/60 dark:bg-[#181115]">
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div className="rounded-xl bg-white dark:bg-[#251B20] p-4 border border-brand-linho dark:border-white/10">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
+                <div className="rounded-xl bg-white dark:bg-[#251B20] p-3 sm:p-4 border border-brand-linho dark:border-white/10">
                   <p className="text-xs text-muted-foreground mb-1">Vendas Hoje</p>
-                  <p className="text-2xl font-bold">R$ 845,00</p>
+                  <p className="text-xl sm:text-2xl font-bold whitespace-nowrap">R$ 845,00</p>
                   <p className="mt-1 inline-flex items-center gap-1 text-xs text-[#2F7D5B] dark:text-[#5FCF9A]">
                     <TrendingUp className="h-3 w-3" /> 12% vs ontem
                   </p>
                 </div>
-                <div className="rounded-xl bg-white dark:bg-[#251B20] p-4 border border-brand-linho dark:border-white/10">
+                <div className="rounded-xl bg-white dark:bg-[#251B20] p-3 sm:p-4 border border-brand-linho dark:border-white/10">
                   <p className="text-xs text-muted-foreground mb-1">Mensagens IA</p>
-                  <p className="text-2xl font-bold">42</p>
+                  <p className="text-xl sm:text-2xl font-bold">42</p>
                   <p className="mt-1 text-xs text-[#2F7D5B] dark:text-[#5FCF9A]">3 vendas fechadas</p>
                 </div>
               </div>
@@ -117,7 +116,7 @@ export function HeroSection() {
           <motion.div
             animate={{ y: [-8, 8, -8] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            className="absolute -right-1 sm:-right-8 -top-5 flex items-center gap-3 rounded-xl bg-white dark:bg-[#2A1F24] text-foreground border border-black/10 dark:border-white/10 shadow-xl p-3 sm:p-4"
+            className="absolute -right-1 sm:-right-8 -top-5 hidden sm:flex items-center gap-3 rounded-xl bg-white dark:bg-[#2A1F24] text-foreground border border-black/10 dark:border-white/10 shadow-xl p-3 sm:p-4"
           >
             <span className="h-10 w-10 rounded-full bg-[#E3F2EB] dark:bg-[#5FCF9A]/15 text-[#2F7D5B] dark:text-[#5FCF9A] grid place-items-center">
               <Wallet className="h-5 w-5" />
