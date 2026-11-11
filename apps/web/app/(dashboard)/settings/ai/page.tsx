@@ -17,7 +17,7 @@ export default async function AiSettingsPage() {
                 </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 border dark:border-gray-800 rounded-2xl shadow-sm p-6">
+            <div className="bg-white dark:bg-card border dark:border-border rounded-2xl shadow-sm p-6">
                 <AiSettingsForm initialData={settings} />
             </div>
         </div>

@@ -25,8 +25,8 @@ export default function SettingsLayout({ children }: { children: React.ReactNode
                                 className={cn(
                                     "text-sm font-medium pb-4 border-b-2 transition-colors",
                                     isActive
-                                        ? "border-brand-grena text-brand-grena"
-                                        : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-300"
+                                        ? "border-brand-grena text-brand-grena dark:text-brand-quartzo"
+                                        : "border-transparent text-gray-500 dark:text-muted-foreground hover:text-gray-900 hover:border-gray-300"
                                 )}
                             >
                                 {tab.name}

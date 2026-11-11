@@ -132,12 +132,12 @@ export function ClientProfileSheet({ client, open, onOpenChange }: ClientProfile
           <TabsContent value="dados" className="space-y-6 mt-6">
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-sm">
-                <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center shrink-0">
-                  <Phone className="w-4 h-4 text-gray-500" />
+                <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-muted flex items-center justify-center shrink-0">
+                  <Phone className="w-4 h-4 text-gray-500 dark:text-muted-foreground" />
                 </div>
                 <div>
                   <p className="text-muted-foreground text-xs">Telefone / WhatsApp</p>
-                  <a href={`https://wa.me/55${client.phone.replace(/\D/g, '')}`} target="_blank" rel="noreferrer" className="font-medium text-brand-grena hover:underline">
+                  <a href={`https://wa.me/55${client.phone.replace(/\D/g, '')}`} target="_blank" rel="noreferrer" className="font-medium text-brand-grena dark:text-brand-quartzo hover:underline">
                     {client.phone}
                   </a>
                 </div>
@@ -145,8 +145,8 @@ export function ClientProfileSheet({ client, open, onOpenChange }: ClientProfile
 
               {client.email && (
                 <div className="flex items-center gap-3 text-sm">
-                  <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center shrink-0">
-                    <Mail className="w-4 h-4 text-gray-500" />
+                  <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-muted flex items-center justify-center shrink-0">
+                    <Mail className="w-4 h-4 text-gray-500 dark:text-muted-foreground" />
                   </div>
                   <div>
                     <p className="text-muted-foreground text-xs">Email</p>
@@ -157,8 +157,8 @@ export function ClientProfileSheet({ client, open, onOpenChange }: ClientProfile
 
               {client.birth_date && (
                 <div className="flex items-center gap-3 text-sm">
-                  <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center shrink-0">
-                    <Calendar className="w-4 h-4 text-gray-500" />
+                  <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-muted flex items-center justify-center shrink-0">
+                    <Calendar className="w-4 h-4 text-gray-500 dark:text-muted-foreground" />
                   </div>
                   <div>
                     <p className="text-muted-foreground text-xs">Aniversário</p>
@@ -172,8 +172,8 @@ export function ClientProfileSheet({ client, open, onOpenChange }: ClientProfile
 
               {client.address && Object.keys(client.address).length > 0 && (
                 <div className="flex items-center gap-3 text-sm">
-                  <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center shrink-0">
-                    <MapPin className="w-4 h-4 text-gray-500" />
+                  <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-muted flex items-center justify-center shrink-0">
+                    <MapPin className="w-4 h-4 text-gray-500 dark:text-muted-foreground" />
                   </div>
                   <div>
                     <p className="text-muted-foreground text-xs">Endereço</p>
@@ -199,8 +199,8 @@ export function ClientProfileSheet({ client, open, onOpenChange }: ClientProfile
           <TabsContent value="historico" className="mt-6 flex-1 overflow-y-auto pr-2 pb-6">
             {loadingHistory ? (
               <div className="space-y-3">
-                <div className="h-16 bg-gray-100 dark:bg-gray-800 rounded-lg animate-pulse" />
-                <div className="h-16 bg-gray-100 dark:bg-gray-800 rounded-lg animate-pulse" />
+                <div className="h-16 bg-gray-100 dark:bg-muted rounded-lg animate-pulse" />
+                <div className="h-16 bg-gray-100 dark:bg-muted rounded-lg animate-pulse" />
               </div>
             ) : history.length === 0 ? (
               <div className="text-center py-8 text-muted-foreground flex flex-col items-center">
@@ -210,7 +210,7 @@ export function ClientProfileSheet({ client, open, onOpenChange }: ClientProfile
             ) : (
               <div className="space-y-3">
                 {history.map((sale) => (
-                  <div key={sale.id} className="p-3 rounded-lg border bg-white dark:bg-gray-950 flex flex-col gap-2">
+                  <div key={sale.id} className="p-3 rounded-lg border bg-white dark:bg-background flex flex-col gap-2">
                     <div className="flex justify-between items-start">
                       <span className="font-semibold text-sm">
                         {new Date(sale.created_at).toLocaleDateString('pt-BR')}

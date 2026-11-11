@@ -25,7 +25,7 @@ export function BrandsMarquee() {
           {/* Lista duplicada para o loop ficar contínuo */}
           {[...BRANDS, ...BRANDS].map((brand, i) => (
             <div key={i} className="flex items-center justify-center min-w-[120px] pr-16">
-              <h3 className="text-2xl font-bold text-brand-vinho opacity-50 hover:opacity-100 hover:text-brand-grena transition-all duration-300">
+              <h3 className="text-2xl font-bold text-brand-vinho dark:text-brand-quartzo opacity-50 hover:opacity-100 hover:text-brand-grena dark:hover:text-brand-quartzo transition-all duration-300">
                 {brand}
               </h3>
             </div>

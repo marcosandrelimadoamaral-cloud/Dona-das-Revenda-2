@@ -48,7 +48,7 @@ export function HeroSection() {
           <p className="text-sm text-muted-foreground">Cancele quando quiser. Sem fidelidade.</p>
         </motion.div>
 
-        {/* Preview do sistema em janela estilo macOS */}
+        {/* Preview do sistema em janela estilo macOS (claro e escuro) */}
         <motion.div
           initial={{ opacity: 0, y: 24, scale: 0.97 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -56,56 +56,56 @@ export function HeroSection() {
           className="relative mx-auto w-full max-w-[560px] pt-4 pb-10"
           aria-hidden
         >
-          <div className="rounded-xl overflow-hidden bg-white border border-black/10 shadow-[0_30px_80px_-20px_rgba(42,18,24,0.35),0_8px_24px_-8px_rgba(42,18,24,0.18)] [color-scheme:light] text-brand-tinta">
+          <div className="rounded-xl overflow-hidden bg-white dark:bg-[#1E1519] border border-black/10 dark:border-white/10 shadow-[0_30px_80px_-20px_rgba(42,18,24,0.35),0_8px_24px_-8px_rgba(42,18,24,0.18)] dark:shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] text-foreground">
             {/* Barra de título macOS */}
-            <div className="relative flex items-center h-11 px-4 bg-gradient-to-b from-[#F7F5F3] to-[#EBE7E3] border-b border-black/10">
+            <div className="relative flex items-center h-11 px-4 bg-gradient-to-b from-[#F7F5F3] to-[#EBE7E3] dark:from-[#30252A] dark:to-[#271D21] border-b border-black/10 dark:border-white/10">
               <div className="flex items-center gap-2">
                 <span className="h-3 w-3 rounded-full bg-[#FF5F57] border border-[#E0443E]/60" />
                 <span className="h-3 w-3 rounded-full bg-[#FEBC2E] border border-[#DEA123]/60" />
                 <span className="h-3 w-3 rounded-full bg-[#28C840] border border-[#1AAB29]/60" />
               </div>
-              <div className="absolute inset-x-0 flex items-center justify-center gap-1.5 text-xs font-medium text-[#6B5A5F] pointer-events-none">
+              <div className="absolute inset-x-0 flex items-center justify-center gap-1.5 text-xs font-medium text-muted-foreground pointer-events-none">
                 <Lock className="h-3 w-3" />
                 donadarevenda.com.br
               </div>
             </div>
 
             {/* Conteúdo da janela */}
-            <div className="p-5 sm:p-6 bg-brand-marfim/60">
+            <div className="p-5 sm:p-6 bg-brand-marfim/60 dark:bg-[#181115]">
               <div className="grid grid-cols-2 gap-4 mb-4">
-                <div className="rounded-xl bg-white p-4 border border-brand-linho">
-                  <p className="text-xs text-brand-vinho mb-1">Vendas Hoje</p>
+                <div className="rounded-xl bg-white dark:bg-[#251B20] p-4 border border-brand-linho dark:border-white/10">
+                  <p className="text-xs text-muted-foreground mb-1">Vendas Hoje</p>
                   <p className="text-2xl font-bold">R$ 845,00</p>
-                  <p className="mt-1 inline-flex items-center gap-1 text-xs text-[#2F7D5B]">
+                  <p className="mt-1 inline-flex items-center gap-1 text-xs text-[#2F7D5B] dark:text-[#5FCF9A]">
                     <TrendingUp className="h-3 w-3" /> 12% vs ontem
                   </p>
                 </div>
-                <div className="rounded-xl bg-white p-4 border border-brand-linho">
-                  <p className="text-xs text-brand-vinho mb-1">Mensagens IA</p>
+                <div className="rounded-xl bg-white dark:bg-[#251B20] p-4 border border-brand-linho dark:border-white/10">
+                  <p className="text-xs text-muted-foreground mb-1">Mensagens IA</p>
                   <p className="text-2xl font-bold">42</p>
-                  <p className="mt-1 text-xs text-[#2F7D5B]">3 vendas fechadas</p>
+                  <p className="mt-1 text-xs text-[#2F7D5B] dark:text-[#5FCF9A]">3 vendas fechadas</p>
                 </div>
               </div>
 
-              <div className="rounded-xl bg-white border border-brand-linho p-4 min-h-[170px]">
+              <div className="rounded-xl bg-white dark:bg-[#251B20] border border-brand-linho dark:border-white/10 p-4 min-h-[170px]">
                 <p className="text-sm font-semibold mb-4">Atividade Recente</p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <span className="h-8 w-8 shrink-0 rounded-full bg-brand-quartzo-fundo text-brand-grena grid place-items-center">
+                    <span className="h-8 w-8 shrink-0 rounded-full bg-brand-quartzo-fundo dark:bg-white/10 text-brand-grena dark:text-brand-quartzo grid place-items-center">
                       <MessageCircle className="h-4 w-4" />
                     </span>
                     <div className="min-w-0">
                       <p className="text-sm font-medium">Zara respondeu Maria</p>
-                      <p className="text-xs text-brand-vinho">Venda de Kit Natura concluída</p>
+                      <p className="text-xs text-muted-foreground">Venda de Kit Natura concluída</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="h-8 w-8 shrink-0 rounded-full bg-brand-quartzo-fundo text-brand-grena grid place-items-center">
+                    <span className="h-8 w-8 shrink-0 rounded-full bg-brand-quartzo-fundo dark:bg-white/10 text-brand-grena dark:text-brand-quartzo grid place-items-center">
                       <Sparkles className="h-4 w-4" />
                     </span>
                     <div className="min-w-0">
                       <p className="text-sm font-medium">Clara gerou 3 Reels</p>
-                      <p className="text-xs text-brand-vinho">Prontos para postar</p>
+                      <p className="text-xs text-muted-foreground">Prontos para postar</p>
                     </div>
                   </div>
                 </div>
@@ -113,32 +113,32 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Cartões flutuantes (do preview original) */}
+          {/* Cartões flutuantes */}
           <motion.div
             animate={{ y: [-8, 8, -8] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            className="absolute -right-1 sm:-right-8 -top-5 flex items-center gap-3 rounded-xl bg-white text-brand-tinta border border-black/10 shadow-xl p-3 sm:p-4 [color-scheme:light]"
+            className="absolute -right-1 sm:-right-8 -top-5 flex items-center gap-3 rounded-xl bg-white dark:bg-[#2A1F24] text-foreground border border-black/10 dark:border-white/10 shadow-xl p-3 sm:p-4"
           >
-            <span className="h-10 w-10 rounded-full bg-[#E3F2EB] text-[#2F7D5B] grid place-items-center">
+            <span className="h-10 w-10 rounded-full bg-[#E3F2EB] dark:bg-[#5FCF9A]/15 text-[#2F7D5B] dark:text-[#5FCF9A] grid place-items-center">
               <Wallet className="h-5 w-5" />
             </span>
             <div>
               <p className="text-sm font-bold">Venda Registrada</p>
-              <p className="text-xs text-brand-vinho">R$ 150,00 via PDV</p>
+              <p className="text-xs text-muted-foreground">R$ 150,00 via PDV</p>
             </div>
           </motion.div>
 
           <motion.div
             animate={{ y: [8, -8, 8] }}
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-            className="absolute left-2 sm:-left-8 -bottom-1 flex items-center gap-3 rounded-xl bg-white text-brand-tinta border border-black/10 shadow-xl p-3 sm:p-4 [color-scheme:light]"
+            className="absolute left-2 sm:-left-8 -bottom-1 flex items-center gap-3 rounded-xl bg-white dark:bg-[#2A1F24] text-foreground border border-black/10 dark:border-white/10 shadow-xl p-3 sm:p-4"
           >
-            <span className="h-10 w-10 rounded-full bg-brand-quartzo-claro text-brand-grena grid place-items-center">
+            <span className="h-10 w-10 rounded-full bg-brand-quartzo-claro dark:bg-white/10 text-brand-grena dark:text-brand-quartzo grid place-items-center">
               <Package className="h-5 w-5" />
             </span>
             <div>
               <p className="text-sm font-bold">Alerta de Estoque</p>
-              <p className="text-xs text-brand-vinho">Repor Hidratante Ekos</p>
+              <p className="text-xs text-muted-foreground">Repor Hidratante Ekos</p>
             </div>
           </motion.div>
         </motion.div>

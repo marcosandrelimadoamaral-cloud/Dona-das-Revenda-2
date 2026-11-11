@@ -178,7 +178,7 @@ export function DashboardLayoutClient({
                         href={item.href}
                         className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-150 text-sm font-medium ${isActive
                             ? "bg-brand-quartzo-claro dark:bg-brand-tinta text-brand-grena-hover dark:text-brand-quartzo border border-brand-quartzo-claro dark:border-brand-grena-escuro"
-                            : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100/80 dark:hover:bg-gray-800/60"
+                            : "text-gray-600 dark:text-muted-foreground hover:text-gray-900 dark:hover:text-foreground hover:bg-gray-100/80 dark:hover:bg-muted"
                             }`}
                     >
                         <item.icon className={`w-4.5 h-4.5 shrink-0 ${isActive ? "text-brand-grena dark:text-brand-quartzo" : ""}`} />
@@ -191,12 +191,12 @@ export function DashboardLayoutClient({
 
     const profileInitials = user?.email?.substring(0, 2).toUpperCase() || "DR"
     const displayEmail = user?.email || ""
-    const planLabel = isPro ? "Plano PRO" : isTrialValid ? `Trial – ${daysRemaining}d restantes` : "Trial expirado"
+    const planLabel = isPro ? "Plano PRO" : isTrialValid ? `Trial: ${daysRemaining}d restantes` : "Trial expirado"
 
     const ProfileFooter = ({ side = "left", isHeader = false }: { side?: "left" | "bottom", isHeader?: boolean }) => (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <button className="flex items-center gap-3 w-full hover:bg-gray-100 dark:hover:bg-gray-700/40 rounded-xl p-2 transition-colors group">
+                <button className="flex items-center gap-3 w-full hover:bg-gray-100 dark:hover:bg-muted rounded-xl p-2 transition-colors group">
                     <Avatar className="w-9 h-9 shrink-0">
                         <AvatarFallback className="bg-brand-grena text-white font-bold text-sm">
                             {profileInitials}
@@ -216,7 +216,7 @@ export function DashboardLayoutClient({
             <DropdownMenuContent
                 side={side === "bottom" ? "top" : "right"}
                 align={side === "bottom" ? "end" : "end"}
-                className="w-64 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-1 mb-1"
+                className="w-64 rounded-2xl shadow-2xl border border-gray-200 dark:border-border p-1 mb-1"
             >
                 <DropdownMenuLabel className="font-normal p-2">
                     <div className="flex items-center gap-3">
@@ -262,10 +262,10 @@ export function DashboardLayoutClient({
 
     return (
         <>
-            <div className="flex h-screen bg-gray-50 dark:bg-gray-950 overflow-hidden">
+            <div className="flex h-screen bg-gray-50 dark:bg-background overflow-hidden">
                 {/* Sidebar Desktop */}
-                <aside className="hidden lg:flex flex-col w-64 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shrink-0">
-                    <div className="h-16 flex items-center px-5 border-b border-gray-100 dark:border-gray-800">
+                <aside className="hidden lg:flex flex-col w-64 border-r border-gray-200 dark:border-border bg-white dark:bg-card shrink-0">
+                    <div className="h-16 flex items-center px-5 border-b border-gray-100 dark:border-border">
                         <Link href="/" className="flex items-center gap-1">
                             <Image src="/brand/simbolo-coroa-dourada.svg" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
                             <div className="flex flex-col leading-none">
@@ -302,7 +302,7 @@ export function DashboardLayoutClient({
                         </div>
                     )}
 
-                    <div className="p-3 border-t border-gray-100 dark:border-gray-800">
+                    <div className="p-3 border-t border-gray-100 dark:border-border">
                         <ProfileFooter side="left" />
                     </div>
                 </aside>
@@ -335,7 +335,7 @@ export function DashboardLayoutClient({
                     )}
 
                     {/* Header */}
-                    <header className="flex items-center justify-between px-3 lg:px-8 pt-[max(env(safe-area-inset-top),0.75rem)] pb-2 lg:py-0 lg:h-16 lg:pt-0 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shrink-0 min-h-[4rem]">
+                    <header className="flex items-center justify-between px-3 lg:px-8 pt-[max(env(safe-area-inset-top),0.75rem)] pb-2 lg:py-0 lg:h-16 lg:pt-0 border-b border-gray-200 dark:border-border bg-white dark:bg-card shrink-0 min-h-[4rem]">
                         {/* Mobile menu */}
                         <div className="flex items-center gap-4 lg:hidden">
                             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -345,8 +345,8 @@ export function DashboardLayoutClient({
                                         <span className="sr-only">Abrir menu</span>
                                     </Button>
                                 </SheetTrigger>
-                                <SheetContent side="left" className="w-64 p-0 flex flex-col bg-white dark:bg-gray-900">
-                                    <div className="h-16 flex items-center px-5 border-b dark:border-gray-800">
+                                <SheetContent side="left" className="w-64 p-0 flex flex-col bg-white dark:bg-card">
+                                    <div className="h-16 flex items-center px-5 border-b dark:border-border">
                                         <span className="text-xl font-bold bg-brand-grena bg-clip-text text-transparent">
                                             Dona da Revenda
                                         </span>
@@ -358,7 +358,7 @@ export function DashboardLayoutClient({
                                         <div className="px-3 pb-2">
                                             <Link href="/billing" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-between p-3 rounded-xl bg-brand-quartzo-fundo dark:bg-brand-tinta/40 border border-brand-quartzo-claro dark:border-brand-grena-escuro">
                                                 <div className="flex items-center gap-2">
-                                                    <Clock className="w-3.5 h-3.5 text-brand-grena" />
+                                                    <Clock className="w-3.5 h-3.5 text-brand-grena dark:text-brand-quartzo" />
                                                     <p className="text-xs font-semibold text-brand-grena-hover dark:text-brand-quartzo">
                                                         {isTrialValid ? `${daysRemaining}d no trial` : "Trial expirado"}
                                                     </p>
@@ -367,7 +367,7 @@ export function DashboardLayoutClient({
                                             </Link>
                                         </div>
                                     )}
-                                    <div className="p-3 border-t dark:border-gray-800">
+                                    <div className="p-3 border-t dark:border-border">
                                         <ProfileFooter side="bottom" />
                                     </div>
                                 </SheetContent>
@@ -402,8 +402,8 @@ export function DashboardLayoutClient({
                                         )}
                                     </Button>
                                 </DropdownMenuTrigger>
-                                <DropdownMenuContent align="end" className="w-80 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-2">
-                                    <div className="flex items-center justify-between px-2 pb-2 border-b dark:border-gray-700">
+                                <DropdownMenuContent align="end" className="w-80 rounded-2xl shadow-2xl border border-gray-200 dark:border-border p-2">
+                                    <div className="flex items-center justify-between px-2 pb-2 border-b dark:border-border">
                                         <p className="font-semibold text-sm">Notificações</p>
                                         {notifications.length > 0 && (
                                             <span className="text-xs bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 font-bold rounded-full px-1.5 py-0.5">
@@ -423,7 +423,7 @@ export function DashboardLayoutClient({
                                                     ? "bg-brand-quartzo-fundo dark:bg-brand-tinta/30"
                                                     : n.type === "stock"
                                                         ? "bg-amber-50 dark:bg-amber-950/30"
-                                                        : "bg-gray-50 dark:bg-gray-800"
+                                                        : "bg-gray-50 dark:bg-muted"
                                                     } `}>
                                                     <div className={`w - 8 h - 8 rounded - full flex items - center justify - center shrink - 0 ${n.type === "trial" ? "bg-brand-quartzo-claro dark:bg-brand-grena-escuro" : "bg-amber-100 dark:bg-amber-900"} `}>
                                                         {n.type === "trial"
@@ -465,7 +465,7 @@ export function DashboardLayoutClient({
                     </header>
 
                     {/* Page Content */}
-                    <main className="flex-1 overflow-y-auto p-4 lg:p-8 pb-20 lg:pb-8 bg-gray-50 dark:bg-gray-950">
+                    <main className="flex-1 overflow-y-auto p-4 lg:p-8 pb-20 lg:pb-8 bg-gray-50 dark:bg-background">
                         <div className="max-w-7xl mx-auto w-full">{children}</div>
                     </main>
                 </div>
@@ -490,7 +490,7 @@ export function DashboardLayoutClient({
                     style={{ bottom: 80, right: 16, touchAction: "none" }}
                 >
                     <PackageOpen className="w-6 h-6 pointer-events-none" />
-                    <div className="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-white dark:border-gray-900 rounded-full flex items-center justify-center pointer-events-none">
+                    <div className="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-white dark:border-border rounded-full flex items-center justify-center pointer-events-none">
                         <span className="text-[10px] font-bold text-white">+</span>
                     </div>
                 </motion.div>

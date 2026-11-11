@@ -50,7 +50,7 @@ export default function OnboardingPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gray-50 dark:bg-background flex items-center justify-center p-4">
             {/* Background Decor */}
             <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
                 <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-b from-brand-quartzo-claro dark:from-brand-tinta/30 to-transparent rounded-full blur-3xl opacity-50" />
@@ -69,9 +69,9 @@ export default function OnboardingPage() {
                     </div>
                 </div>
 
-                <Card className="border-0 shadow-xl rounded-2xl overflow-hidden bg-white dark:bg-gray-900 backdrop-blur-xl">
+                <Card className="border-0 shadow-xl rounded-2xl overflow-hidden bg-white dark:bg-card backdrop-blur-xl">
                     {/* Progress Bar */}
-                    <div className="h-1.5 w-full bg-gray-100 dark:bg-gray-800">
+                    <div className="h-1.5 w-full bg-gray-100 dark:bg-muted">
                         <div
                             className="h-full bg-brand-grena transition-all duration-500 ease-out"
                             style={{ width: `${(step / 2) * 100}%` }}
@@ -83,7 +83,7 @@ export default function OnboardingPage() {
                             {step === 1 && "Bem-vinda à Dona da Revenda!"}
                             {step === 2 && "Quais marcas você revende?"}
                         </CardTitle>
-                        <CardDescription className="text-base mt-2 text-gray-600 dark:text-gray-400">
+                        <CardDescription className="text-base mt-2 text-gray-600 dark:text-muted-foreground">
                             {step === 1 && "Vamos configurar seu espaço. Como os clientes devem te chamar?"}
                             {step === 2 && "Sua IA vai montar vitrines exclusivas baseadas nestas marcas."}
                         </CardDescription>
@@ -93,17 +93,17 @@ export default function OnboardingPage() {
                         {step === 1 && (
                             <div className="space-y-5 animate-in fade-in slide-in-from-right-4 duration-500">
                                 <div className="space-y-2">
-                                    <Label htmlFor="name" className="text-base text-gray-700 dark:text-gray-300">Nome Completo</Label>
+                                    <Label htmlFor="name" className="text-base text-gray-700 dark:text-muted-foreground">Nome Completo</Label>
                                     <Input
                                         id="name"
                                         placeholder="Ex: Maria Antonieta"
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
-                                        className="h-12 text-lg bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                                        className="h-12 text-lg bg-white dark:bg-muted border-gray-200 dark:border-border text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <Label htmlFor="whatsapp" className="text-base text-gray-700 dark:text-gray-300">WhatsApp de Vendas</Label>
+                                    <Label htmlFor="whatsapp" className="text-base text-gray-700 dark:text-muted-foreground">WhatsApp de Vendas</Label>
                                     <PatternFormat
                                         id="whatsapp"
                                         format="(##) #####-####"
@@ -112,9 +112,9 @@ export default function OnboardingPage() {
                                         value={whatsapp}
                                         onValueChange={(values: any) => setWhatsapp(values.value)}
                                         customInput={Input}
-                                        className="h-12 text-lg bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                                        className="h-12 text-lg bg-white dark:bg-muted border-gray-200 dark:border-border text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
                                     />
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">A IA usará este número para processar seus pedidos futuramente.</p>
+                                    <p className="text-sm text-gray-500 dark:text-muted-foreground">A IA usará este número para processar seus pedidos futuramente.</p>
                                 </div>
                             </div>
                         )}
@@ -129,15 +129,15 @@ export default function OnboardingPage() {
                                             onClick={() => toggleBrand(brand.id)}
                                             className={`flex flex-col items-center justify-center p-4 rounded-xl border-2 cursor-pointer transition-all text-center ${isSelected
                                                 ? 'border-brand-grena bg-brand-quartzo-fundo dark:bg-brand-tinta/40 text-brand-grena-escuro dark:text-brand-quartzo-claro shadow-sm scale-105'
-                                                : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-brand-quartzo-claro dark:hover:border-brand-grena-hover hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                                                : 'border-gray-200 dark:border-border bg-white dark:bg-muted hover:border-brand-quartzo-claro dark:hover:border-brand-grena-hover hover:bg-gray-50 dark:hover:bg-muted'
                                                 }`}
                                         >
                                             <div className={`w-6 h-6 rounded-full border-2 mb-2 flex items-center justify-center transition-colors
-                                                ${isSelected ? 'bg-brand-grena border-brand-grena' : 'border-gray-300 dark:border-gray-600'}`}
+                                                ${isSelected ? 'bg-brand-grena border-brand-grena' : 'border-gray-300 dark:border-border'}`}
                                             >
                                                 {isSelected && <Check className="w-4 h-4 text-white" />}
                                             </div>
-                                            <span className="font-semibold text-sm text-gray-800 dark:text-gray-200">{brand.label}</span>
+                                            <span className="font-semibold text-sm text-gray-800 dark:text-foreground">{brand.label}</span>
                                         </div>
                                     )
                                 })}
@@ -147,7 +147,7 @@ export default function OnboardingPage() {
 
                     <CardFooter className="p-8 pt-0 flex justify-between">
                         {step > 1 ? (
-                            <Button variant="ghost" onClick={handlePrev} className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                            <Button variant="ghost" onClick={handlePrev} className="text-gray-500 dark:text-muted-foreground hover:text-gray-700 dark:hover:text-foreground">
                                 Voltar
                             </Button>
                         ) : <div />}

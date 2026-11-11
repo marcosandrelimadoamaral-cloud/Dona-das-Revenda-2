@@ -159,7 +159,7 @@ export default function ClientsPage() {
         </div>
       </div>
 
-      <Card className="border-none shadow-sm rounded-3xl bg-white/70 dark:bg-gray-950/50 backdrop-blur-xl">
+      <Card className="border-none shadow-sm rounded-3xl bg-white/70 dark:bg-background/50 backdrop-blur-xl">
         <CardHeader className="p-6 pb-2">
           <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
             <div>
@@ -167,28 +167,28 @@ export default function ClientsPage() {
               <CardDescription>Acesse o histórico e use IA para abordagens.</CardDescription>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-              <div className="flex bg-gray-100/50 dark:bg-gray-800/50 p-1 rounded-lg border border-gray-200/50 dark:border-gray-700/50 w-full sm:w-auto overflow-x-auto">
+              <div className="flex bg-gray-100/50 dark:bg-muted p-1 rounded-lg border border-gray-200/50 dark:border-border w-full sm:w-auto overflow-x-auto">
                 <button
                   onClick={() => setFilter("todos")}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${filter === "todos" ? "bg-white dark:bg-gray-700 shadow-sm text-gray-900 dark:text-gray-100" : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"}`}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${filter === "todos" ? "bg-white dark:bg-muted shadow-sm text-gray-900 dark:text-foreground" : "text-gray-500 hover:text-gray-700 dark:text-muted-foreground dark:hover:text-foreground"}`}
                 >
                   Todos
                 </button>
                 <button
                   onClick={() => setFilter("vip")}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${filter === "vip" ? "bg-white dark:bg-gray-700 shadow-sm text-emerald-600 dark:text-emerald-400" : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"}`}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${filter === "vip" ? "bg-white dark:bg-muted shadow-sm text-emerald-600 dark:text-emerald-400" : "text-gray-500 hover:text-gray-700 dark:text-muted-foreground dark:hover:text-foreground"}`}
                 >
                   VIPs
                 </button>
                 <button
                   onClick={() => setFilter("ativos")}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${filter === "ativos" ? "bg-white dark:bg-gray-700 shadow-sm text-blue-600 dark:text-blue-400" : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"}`}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${filter === "ativos" ? "bg-white dark:bg-muted shadow-sm text-blue-600 dark:text-blue-400" : "text-gray-500 hover:text-gray-700 dark:text-muted-foreground dark:hover:text-foreground"}`}
                 >
                   Ativos
                 </button>
                 <button
                   onClick={() => setFilter("inativos")}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${filter === "inativos" ? "bg-white dark:bg-gray-700 shadow-sm text-red-600 dark:text-red-400" : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"}`}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${filter === "inativos" ? "bg-white dark:bg-muted shadow-sm text-red-600 dark:text-red-400" : "text-gray-500 hover:text-gray-700 dark:text-muted-foreground dark:hover:text-foreground"}`}
                 >
                   Inativos
                 </button>
@@ -197,7 +197,7 @@ export default function ClientsPage() {
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <Input
                   placeholder="Buscar cliente..."
-                  className="pl-9 w-full bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800"
+                  className="pl-9 w-full bg-white dark:bg-card border-gray-200 dark:border-border"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -209,8 +209,8 @@ export default function ClientsPage() {
           {/* DESKTOP TABLE VIEW */}
           <div className="hidden lg:block overflow-x-auto w-full">
             <Table>
-              <TableHeader className="bg-gray-50/50 dark:bg-gray-900/50">
-                <TableRow className="border-gray-100 dark:border-gray-800">
+              <TableHeader className="bg-gray-50/50 dark:bg-card">
+                <TableRow className="border-gray-100 dark:border-border">
                   <TableHead className="w-[300px] pl-6 font-semibold">Nome</TableHead>
                   <TableHead className="font-semibold">Status</TableHead>
                   <TableHead className="font-semibold">Faturamento</TableHead>
@@ -234,7 +234,7 @@ export default function ClientsPage() {
                     <TableCell colSpan={5} className="text-center py-16 text-muted-foreground">
                       <div className="flex flex-col items-center justify-center">
                         <User className="w-10 h-10 text-gray-300 mb-3" />
-                        <p className="font-medium text-gray-900 dark:text-gray-100">Nenhum cliente encontrado</p>
+                        <p className="font-medium text-gray-900 dark:text-foreground">Nenhum cliente encontrado</p>
                         <p className="text-sm mt-1">{searchTerm ? "Tente usar outro termo de busca." : "Cadastre seu primeiro cliente."}</p>
                       </div>
                     </TableCell>
@@ -246,7 +246,7 @@ export default function ClientsPage() {
                     return (
                       <TableRow
                         key={client.id}
-                        className="cursor-pointer hover:bg-gray-50/80 dark:hover:bg-gray-900/80 transition-colors border-gray-100 dark:border-gray-800"
+                        className="cursor-pointer hover:bg-gray-50/80 dark:hover:bg-card transition-colors border-gray-100 dark:border-border"
                         onClick={() => handleOpenProfile(client)}
                       >
                         <TableCell className="pl-6">
@@ -257,7 +257,7 @@ export default function ClientsPage() {
                               </AvatarFallback>
                             </Avatar>
                             <div>
-                              <p className="font-medium text-gray-900 dark:text-gray-100">{client.name}</p>
+                              <p className="font-medium text-gray-900 dark:text-foreground">{client.name}</p>
                               <div className="flex items-center text-xs text-muted-foreground mt-0.5">
                                 <Phone className="w-3 h-3 mr-1 shrink-0" />
                                 {client.phone || 'Sem telefone'}
@@ -273,7 +273,7 @@ export default function ClientsPage() {
                         <TableCell className="font-medium text-emerald-600 dark:text-emerald-400">
                           {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(client.total_spent || 0)}
                         </TableCell>
-                        <TableCell className="text-sm text-gray-600 dark:text-gray-300">
+                        <TableCell className="text-sm text-gray-600 dark:text-muted-foreground">
                           {client.last_purchase_date ? new Date(client.last_purchase_date).toLocaleDateString('pt-BR') : 'Nenhuma'}
                         </TableCell>
                         <TableCell className="text-right pr-6">
@@ -299,7 +299,7 @@ export default function ClientsPage() {
           <div className="lg:hidden flex flex-col gap-3 p-4 pt-2">
             {loading ? (
               Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className="flex items-center gap-4 p-4 border rounded-2xl bg-white dark:bg-gray-900 border-gray-100 dark:border-gray-800">
+                <div key={i} className="flex items-center gap-4 p-4 border rounded-2xl bg-white dark:bg-card border-gray-100 dark:border-border">
                   <Skeleton className="h-12 w-12 rounded-full" />
                   <div className="space-y-2 flex-1">
                     <Skeleton className="h-4 w-32" />
@@ -308,7 +308,7 @@ export default function ClientsPage() {
                 </div>
               ))
             ) : filteredClients.length === 0 ? (
-              <div className="flex flex-col items-center justify-center p-8 text-center border border-dashed rounded-2xl border-gray-200 dark:border-gray-800">
+              <div className="flex flex-col items-center justify-center p-8 text-center border border-dashed rounded-2xl border-gray-200 dark:border-border">
                 <User className="w-12 h-12 text-gray-300 dark:text-gray-600 mb-4" />
                 <p className="font-semibold text-gray-900 dark:text-white">Nenhum cliente</p>
                 <p className="text-sm text-muted-foreground mt-1">
@@ -323,7 +323,7 @@ export default function ClientsPage() {
                   <div
                     key={client.id}
                     onClick={() => handleOpenProfile(client)}
-                    className="flex flex-col p-4 gap-3 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl shadow-sm hover:shadow-md transition-all active:scale-[0.98]"
+                    className="flex flex-col p-4 gap-3 bg-white dark:bg-card border border-gray-100 dark:border-border rounded-2xl shadow-sm hover:shadow-md transition-all active:scale-[0.98]"
                   >
                     <div className="flex justify-between items-start">
                       <div className="flex items-center gap-3">
@@ -333,7 +333,7 @@ export default function ClientsPage() {
                           </AvatarFallback>
                         </Avatar>
                         <div>
-                          <p className="font-semibold text-gray-900 dark:text-gray-100 leading-tight block">{client.name}</p>
+                          <p className="font-semibold text-gray-900 dark:text-foreground leading-tight block">{client.name}</p>
                           <div className="flex items-center text-xs text-muted-foreground mt-1">
                             <Phone className="w-3 h-3 mr-1 shrink-0" />
                             {client.phone || 'S/ N'}
@@ -345,7 +345,7 @@ export default function ClientsPage() {
                       </Badge>
                     </div>
 
-                    <div className="flex items-center justify-between border-t border-gray-100 dark:border-gray-800 pt-3 mt-1">
+                    <div className="flex items-center justify-between border-t border-gray-100 dark:border-border pt-3 mt-1">
                       <div>
                         <p className="text-[10px] text-muted-foreground uppercase tracking-wide font-semibold">Total Gasto</p>
                         <p className="font-bold text-emerald-600 dark:text-emerald-400">
@@ -384,7 +384,7 @@ export default function ClientsPage() {
         <DialogContent className="sm:max-w-[480px]">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-brand-grena" />
+              <Sparkles className="w-5 h-5 text-brand-grena dark:text-brand-quartzo" />
               Abordagem com IA
             </DialogTitle>
             <DialogDescription>

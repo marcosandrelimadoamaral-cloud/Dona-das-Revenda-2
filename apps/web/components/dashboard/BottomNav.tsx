@@ -17,14 +17,14 @@ export function BottomNav({ className }: { className?: string }) {
   const pathname = usePathname()
 
   return (
-    <nav className={cn("bg-white dark:bg-gray-900 border-t pb-safe pt-2 px-2 flex justify-around items-center z-40 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]", className)}>
+    <nav className={cn("bg-white dark:bg-card border-t pb-safe pt-2 px-2 flex justify-around items-center z-40 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]", className)}>
       {navItems.map((item) => {
         const isActive = pathname === item.href || (item.href !== "/dashboard" && pathname.startsWith(`${item.href}/`))
         
         if (item.isPrimary) {
           return (
             <Link key={item.href} href={item.href} className="flex flex-col items-center justify-center -mt-6">
-              <div className="w-14 h-14 rounded-full bg-brand-grena flex items-center justify-center text-white shadow-lg shadow-brand-quartzo-claro dark:shadow-none border-4 border-white dark:border-gray-900">
+              <div className="w-14 h-14 rounded-full bg-brand-grena flex items-center justify-center text-white shadow-lg shadow-brand-quartzo-claro dark:shadow-none border-4 border-white dark:border-border">
                 <item.icon className="w-6 h-6" />
               </div>
               <span className="text-[10px] font-medium mt-1 text-brand-grena dark:text-brand-quartzo">{item.name}</span>
@@ -40,7 +40,7 @@ export function BottomNav({ className }: { className?: string }) {
               "flex flex-col items-center justify-center w-16 h-12 gap-1 rounded-xl transition-colors",
               isActive 
                 ? "text-brand-grena dark:text-brand-quartzo" 
-                : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                : "text-gray-500 hover:text-gray-900 dark:text-muted-foreground dark:hover:text-white"
             )}
           >
             <item.icon className={cn("w-5 h-5", isActive ? "fill-brand-quartzo-fundo dark:fill-brand-grena-escuro/50" : "")} />

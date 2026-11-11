@@ -29,14 +29,14 @@ export function StatsCard({
         {(trendValue || description) && (
           <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
             {trend === "up" && <ArrowUpRight className="w-3 h-3 text-emerald-500" />}
-            {trend === "down" && <ArrowDownRight className="w-3 h-3 text-brand-grena" />}
+            {trend === "down" && <ArrowDownRight className="w-3 h-3 text-brand-grena dark:text-brand-quartzo" />}
             {trendValue && (
               <span
                 className={
                   trend === "up"
                     ? "text-emerald-500 font-medium"
                     : trend === "down"
-                    ? "text-brand-grena font-medium"
+                    ? "text-brand-grena dark:text-brand-quartzo font-medium"
                     : "text-muted-foreground"
                 }
               >

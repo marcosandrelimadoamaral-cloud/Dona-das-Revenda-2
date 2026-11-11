@@ -129,7 +129,7 @@ export default function SettingsPage() {
       </div>
 
       <Tabs defaultValue="perfil" className="w-full mt-6">
-        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto p-1 mb-8 bg-gray-100 dark:bg-gray-900 shadow-inner rounded-xl">
+        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto p-1 mb-8 bg-gray-100 dark:bg-card shadow-inner rounded-xl">
           <TabsTrigger value="perfil" className="py-3 px-4 rounded-lg data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 data-[state=active]:shadow-sm">
             <div className="flex items-center gap-2">
               <UserIcon className="w-4 h-4 hidden sm:block" />
@@ -159,7 +159,7 @@ export default function SettingsPage() {
         {/* PERFIL */}
         <TabsContent value="perfil" className="mt-0 outline-none">
           <Card className="border-0 shadow-sm">
-            <CardHeader className="pb-3 border-b border-gray-100 dark:border-gray-800 mb-6">
+            <CardHeader className="pb-3 border-b border-gray-100 dark:border-border mb-6">
               <CardTitle>Perfil Pessoal</CardTitle>
               <CardDescription>Atualize suas informações de contato e foto.</CardDescription>
             </CardHeader>
@@ -185,7 +185,7 @@ export default function SettingsPage() {
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-medium">Email (Login)</label>
-                      <Input value={email} disabled className="bg-gray-50 dark:bg-gray-950 text-muted-foreground" />
+                      <Input value={email} disabled className="bg-gray-50 dark:bg-background text-muted-foreground" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-medium">Telefone Principal</label>
@@ -205,7 +205,7 @@ export default function SettingsPage() {
         {/* MINHA LOJA */}
         <TabsContent value="loja" className="mt-0 outline-none space-y-6">
           <Card className="border-0 shadow-sm">
-            <CardHeader className="pb-3 border-b border-gray-100 dark:border-gray-800 mb-6">
+            <CardHeader className="pb-3 border-b border-gray-100 dark:border-border mb-6">
               <CardTitle>Marcas que Revendo</CardTitle>
               <CardDescription>Selecione as marcas que você trabalha para personalizar o catálogo e as sugestões da IA.</CardDescription>
             </CardHeader>
@@ -219,13 +219,13 @@ export default function SettingsPage() {
                       onClick={() => handleBrandToggle(brand.id)}
                       className={`flex items-center gap-3 p-3 rounded-xl border-2 transition-all cursor-pointer ${isSelected
                         ? 'bg-brand-quartzo-fundo border-brand-grena dark:bg-brand-grena-escuro/20 dark:border-brand-grena transform scale-[1.02]'
-                        : 'border-transparent hover:border-gray-200 bg-gray-50 dark:bg-gray-900 dark:hover:border-gray-800'
+                        : 'border-transparent hover:border-gray-200 bg-gray-50 dark:bg-card dark:hover:border-border'
                         }`}
                     >
-                      <div className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${isSelected ? 'bg-brand-grena border-brand-grena text-white' : 'border-gray-300 dark:border-gray-700'}`}>
+                      <div className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${isSelected ? 'bg-brand-grena border-brand-grena text-white' : 'border-gray-300 dark:border-border'}`}>
                         {isSelected && <CheckIcon className="w-3.5 h-3.5 stroke-[4]" />}
                       </div>
-                      <span className={`text-sm font-medium ${isSelected ? 'text-brand-grena-escuro dark:text-brand-quartzo-claro' : 'text-gray-600 dark:text-gray-400'}`}>
+                      <span className={`text-sm font-medium ${isSelected ? 'text-brand-grena-escuro dark:text-brand-quartzo-claro' : 'text-gray-600 dark:text-muted-foreground'}`}>
                         {brand.label}
                       </span>
                     </div>
@@ -236,17 +236,17 @@ export default function SettingsPage() {
           </Card>
 
           <Card className="border-0 shadow-sm">
-            <CardHeader className="pb-3 border-b border-gray-100 dark:border-gray-800 mb-6">
+            <CardHeader className="pb-3 border-b border-gray-100 dark:border-border mb-6">
               <CardTitle>Preferências do Sistema</CardTitle>
               <CardDescription>Ajuste aparência e notificações a seu gosto.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-4">
                 <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Aparência</h4>
-                <div className="flex items-center justify-between p-4 border rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                <div className="flex items-center justify-between p-4 border rounded-xl hover:bg-gray-50 dark:hover:bg-card transition-colors">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
-                      {theme === 'dark' ? <Moon className="w-5 h-5 text-brand-grena" /> : <Sun className="w-5 h-5 text-amber-500" />}
+                    <div className="p-2 rounded-lg bg-gray-100 dark:bg-muted">
+                      {theme === 'dark' ? <Moon className="w-5 h-5 text-brand-grena dark:text-brand-quartzo" /> : <Sun className="w-5 h-5 text-amber-500" />}
                     </div>
                     <div>
                       <p className="font-semibold text-sm">Modo Escuro (Dark Mode)</p>
@@ -262,14 +262,14 @@ export default function SettingsPage() {
 
               <div className="space-y-4">
                 <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Notificações</h4>
-                <div className="flex items-center justify-between p-4 border rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                <div className="flex items-center justify-between p-4 border rounded-xl hover:bg-gray-50 dark:hover:bg-card transition-colors">
                   <div>
                     <p className="font-semibold text-sm">Alertas de Estoque Baixo</p>
                     <p className="text-xs text-muted-foreground">Receber aviso quando produtos atingirem limite</p>
                   </div>
                   <Switch checked={notifyPush} onCheckedChange={(c) => { setIsDirty(true); setNotifyPush(c) }} />
                 </div>
-                <div className="flex items-center justify-between p-4 border rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                <div className="flex items-center justify-between p-4 border rounded-xl hover:bg-gray-50 dark:hover:bg-card transition-colors">
                   <div>
                     <p className="font-semibold text-sm">Resumo Financeiro Semanal</p>
                     <p className="text-xs text-muted-foreground">Receber relatório por email toda segunda-feira</p>
@@ -284,7 +284,7 @@ export default function SettingsPage() {
         {/* INTEGRAÇÕES */}
         <TabsContent value="integracoes" className="mt-0 outline-none">
           <Card className="border-0 shadow-sm overflow-hidden">
-            <CardHeader className="pb-6 border-b border-gray-100 dark:border-gray-800 mb-6">
+            <CardHeader className="pb-6 border-b border-gray-100 dark:border-border mb-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center">
@@ -308,11 +308,11 @@ export default function SettingsPage() {
                 <div>
                   <h4 className="font-bold text-lg mb-1">Integração WhatsApp em desenvolvimento</h4>
                   <p className="text-sm text-muted-foreground max-w-md">
-                    Em breve você poderá conectar sua conta do WhatsApp e deixar a Zara responder seus clientes automaticamente — cobranças de fiados, consulta de pedidos e muito mais.
+                    Em breve você poderá conectar sua conta do WhatsApp e deixar a Zara responder seus clientes automaticamente: cobranças de fiados, consulta de pedidos e muito mais.
                   </p>
                 </div>
                 <div className="flex gap-3 mt-2">
-                  <div className="flex items-center gap-2 text-xs bg-gray-100 dark:bg-gray-800 rounded-full px-3 py-1.5 text-muted-foreground">
+                  <div className="flex items-center gap-2 text-xs bg-gray-100 dark:bg-muted rounded-full px-3 py-1.5 text-muted-foreground">
                     <div className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
                     Previsão: em breve
                   </div>
@@ -326,7 +326,7 @@ export default function SettingsPage() {
         <TabsContent value="assinatura" className="mt-0 outline-none">
           <Card className="border-0 shadow-sm">
             <CardContent className="p-0">
-              <div className="flex flex-col md:flex-row justify-between items-center p-8 bg-gradient-to-br from-brand-quartzo-fundo via-white to-brand-quartzo-fundo dark:from-brand-tinta/20 dark:via-gray-950 dark:to-brand-tinta/20 rounded-2xl border border-brand-quartzo-claro dark:border-brand-grena-escuro/50">
+              <div className="flex flex-col md:flex-row justify-between items-center p-8 bg-gradient-to-br from-brand-quartzo-fundo via-white to-brand-quartzo-fundo dark:from-brand-tinta/20 dark:via-background dark:to-brand-tinta/20 rounded-2xl border border-brand-quartzo-claro dark:border-brand-grena-escuro/50">
                 <div className="mb-6 md:mb-0 text-center md:text-left max-w-lg">
                   <div className="flex justify-center md:justify-start">
                     <Badge className="bg-brand-grena/10 text-brand-grena-hover dark:bg-brand-grena/20 dark:text-brand-quartzo hover:bg-brand-grena/20 mb-3 px-3 py-1 font-bold text-xs rounded-full border border-brand-quartzo-claro dark:border-brand-grena-escuro">
@@ -334,7 +334,7 @@ export default function SettingsPage() {
                     </Badge>
                   </div>
                   <h4 className="text-2xl font-extrabold tracking-tight mb-2">Tudo liberado durante o teste</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="text-sm text-gray-600 dark:text-muted-foreground leading-relaxed">
                     Durante o teste você usa tudo: PDV, estoque, financeiro e os cinco assistentes de IA. Escolha um plano quando quiser continuar.
                   </p>
                 </div>

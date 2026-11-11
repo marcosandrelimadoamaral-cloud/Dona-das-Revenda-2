@@ -37,7 +37,7 @@ export function TrialBanner({ daysRemaining = 7 }: { daysRemaining?: number }) {
                     <Button
                         asChild
                         variant="secondary"
-                        className="w-full sm:w-auto bg-white text-brand-grena-hover hover:bg-gray-50 border-0 shadow-sm font-semibold transition-all hover:scale-105 active:scale-95"
+                        className="w-full sm:w-auto bg-white dark:bg-card text-brand-grena-hover dark:text-brand-quartzo hover:bg-gray-50 border-0 shadow-sm font-semibold transition-all hover:scale-105 active:scale-95"
                     >
                         <Link href="/billing">
                             Garantir Acesso PRO

@@ -16,7 +16,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.donadarevenda.com.br"),
   title: {
-    default: "Dona da Revenda — Gestão para quem revende beleza",
+    default: "Dona da Revenda | Gestão para quem revende beleza",
     template: "%s | Dona da Revenda"
   },
   description: "Gestão para quem revende beleza: vendas, estoque, clientes, fiados e financeiro num só lugar, com 5 assistentes de IA. Teste 7 dias grátis.",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://www.donadarevenda.com.br",
-    title: "Dona da Revenda — Gestão para quem revende beleza",
+    title: "Dona da Revenda | Gestão para quem revende beleza",
     description: "Estoque, vendas, fiados e financeiro organizados, com cinco assistentes de IA ajudando você todos os dias.",
     siteName: "Dona da Revenda",
     images: [{
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dona da Revenda — Gestão para quem revende beleza",
+    title: "Dona da Revenda | Gestão para quem revende beleza",
     description: "Sua revenda organizada. Seu tempo de volta.",
     images: ["/og-image.png"],
   },

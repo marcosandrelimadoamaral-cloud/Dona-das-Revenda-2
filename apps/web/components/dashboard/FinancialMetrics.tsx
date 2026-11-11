@@ -65,7 +65,7 @@ export function FinancialMetrics({ data }: FinancialMetricsProps) {
                                 <TooltipContent className="bg-gray-800 border-0 text-white">Quantidade de pedidos processados com sucesso no mês.</TooltipContent>
                             </Tooltip>
                         </div>
-                        <div className="p-2 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg">
+                        <div className="p-2 bg-gray-100 dark:bg-muted text-gray-600 dark:text-muted-foreground rounded-lg">
                             <ShoppingBag className="w-4 h-4" />
                         </div>
                     </CardHeader>
@@ -87,7 +87,7 @@ export function FinancialMetrics({ data }: FinancialMetricsProps) {
                                 <TooltipContent className="bg-gray-800 border-0 text-white">Valor médio gasto por cliente nas suas vendas.</TooltipContent>
                             </Tooltip>
                         </div>
-                        <div className="p-2 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg">
+                        <div className="p-2 bg-gray-100 dark:bg-muted text-gray-600 dark:text-muted-foreground rounded-lg">
                             <CreditCard className="w-4 h-4" />
                         </div>
                     </CardHeader>

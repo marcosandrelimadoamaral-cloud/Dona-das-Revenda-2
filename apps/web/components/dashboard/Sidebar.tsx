@@ -24,7 +24,7 @@ export function Sidebar({ className }: { className?: string }) {
   const pathname = usePathname()
 
   return (
-    <aside className={cn("flex flex-col h-full bg-white dark:bg-gray-900 border-r", className)}>
+    <aside className={cn("flex flex-col h-full bg-white dark:bg-card border-r", className)}>
       <div className="p-6">
         <Link href="/dashboard" className="flex items-center -gap-2">
           <Image src="/brand/simbolo-coroa-dourada.svg" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
@@ -43,7 +43,7 @@ export function Sidebar({ className }: { className?: string }) {
                 "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors",
                 isActive
                   ? "bg-brand-quartzo-fundo text-brand-grena-hover dark:bg-brand-grena/10 dark:text-brand-quartzo"
-                  : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+                  : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white"
               )}
             >
               <item.icon className={cn("w-5 h-5", isActive ? "text-brand-grena dark:text-brand-quartzo" : "text-gray-400")} />
@@ -54,7 +54,7 @@ export function Sidebar({ className }: { className?: string }) {
       </nav>
 
       <div className="p-4 mt-auto border-t">
-        <button className="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-gray-600 hover:bg-red-50 hover:text-red-600 dark:text-gray-400 dark:hover:bg-red-500/10 dark:hover:text-red-400 transition-colors">
+        <button className="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-gray-600 hover:bg-red-50 hover:text-red-600 dark:text-muted-foreground dark:hover:bg-red-500/10 dark:hover:text-red-400 transition-colors">
           <LogOut className="w-5 h-5 text-gray-400 group-hover:text-red-500" />
           Sair
         </button>

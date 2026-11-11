@@ -229,7 +229,7 @@ export default function PosPage() {
             <h1 className="text-2xl font-bold tracking-tight">Ponto de Venda</h1>
             <p className="text-muted-foreground text-sm">Registre suas vendas e acompanhe o histórico detalhado.</p>
           </div>
-          <TabsList className="bg-gray-100/80 dark:bg-gray-800 shrink-0">
+          <TabsList className="bg-gray-100/80 dark:bg-muted shrink-0">
             <TabsTrigger value="vender" className="px-6 rounded-full">Vender</TabsTrigger>
             <TabsTrigger value="historico" className="px-6 rounded-full">Histórico de Vendas</TabsTrigger>
           </TabsList>
@@ -244,14 +244,14 @@ export default function PosPage() {
 
           <div className="flex flex-1 overflow-hidden relative">
             {/* LEFT SIDE: CATALOG */}
-            <div className={`w-full lg:w-[65%] flex flex-col bg-gray-50/50 dark:bg-gray-900/50 ${activeTab === 'catalog' ? 'flex' : 'hidden lg:flex'}`}>
+            <div className={`w-full lg:w-[65%] flex flex-col bg-gray-50/50 dark:bg-card ${activeTab === 'catalog' ? 'flex' : 'hidden lg:flex'}`}>
               {/* Catalog Header */}
-              <div className="p-4 bg-white dark:bg-gray-800 border-b shrink-0">
+              <div className="p-4 bg-white dark:bg-muted border-b shrink-0">
                 <div className="relative max-w-2xl mx-auto">
                   <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input
                     placeholder="Buscar produto ou escanear código..."
-                    className="pl-12 h-12 text-lg rounded-xl bg-gray-50 dark:bg-gray-900 border-transparent focus-visible:ring-brand-grena"
+                    className="pl-12 h-12 text-lg rounded-xl bg-gray-50 dark:bg-card border-transparent focus-visible:ring-brand-grena"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                   />
@@ -263,7 +263,7 @@ export default function PosPage() {
                 {loading ? (
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                     {[1, 2, 3, 4, 5, 6, 7, 8].map(i => (
-                      <div key={i} className="bg-white dark:bg-gray-800 rounded-xl h-48 animate-pulse" />
+                      <div key={i} className="bg-white dark:bg-muted rounded-xl h-48 animate-pulse" />
                     ))}
                   </div>
                 ) : filteredProducts.length === 0 ? (
@@ -280,7 +280,7 @@ export default function PosPage() {
                         className="cursor-pointer hover:border-brand-grena transition-colors overflow-hidden flex flex-col active:scale-95"
                         onClick={() => addToCart(product)}
                       >
-                        <div className="h-28 bg-gray-100 dark:bg-gray-800 flex items-center justify-center p-2">
+                        <div className="h-28 bg-gray-100 dark:bg-muted flex items-center justify-center p-2">
                           {product.image_url ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img src={product.image_url} alt={product.name} className="h-full object-contain mix-blend-multiply dark:mix-blend-normal" />
@@ -326,19 +326,19 @@ export default function PosPage() {
             </div>
 
             {/* RIGHT SIDE: CART */}
-            <div className={`w-full lg:w-[35%] flex flex-col bg-white dark:bg-gray-800 border-l ${activeTab === 'cart' ? 'flex' : 'hidden lg:flex'}`}>
+            <div className={`w-full lg:w-[35%] flex flex-col bg-white dark:bg-muted border-l ${activeTab === 'cart' ? 'flex' : 'hidden lg:flex'}`}>
               {/* Cart Header */}
-              <div className="p-4 border-b shrink-0 flex items-center justify-between bg-white dark:bg-gray-800 relative z-10">
+              <div className="p-4 border-b shrink-0 flex items-center justify-between bg-white dark:bg-muted relative z-10">
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setActiveTab('catalog')}
-                    className="lg:hidden w-8 h-8 flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors"
+                    className="lg:hidden w-8 h-8 flex flex-col items-center justify-center bg-gray-100 dark:bg-card hover:bg-gray-200 dark:hover:bg-muted rounded-full transition-colors"
                   >
                     <Minus className="w-5 h-5 rotate-90" />
                   </button>
                   <h2 className="text-lg font-bold flex items-center gap-2">
                     Carrinho
-                    <span className="bg-gray-100 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-full text-muted-foreground hidden sm:inline-flex">
+                    <span className="bg-gray-100 dark:bg-muted text-sm px-2 py-0.5 rounded-full text-muted-foreground hidden sm:inline-flex">
                       {cart.length} itens
                     </span>
                   </h2>
@@ -354,7 +354,7 @@ export default function PosPage() {
               <ScrollArea className="flex-1">
                 {cart.length === 0 ? (
                   <div className="flex flex-col items-center justify-center h-full text-muted-foreground py-20">
-                    <div className="w-16 h-16 bg-gray-50 dark:bg-gray-900 rounded-full flex items-center justify-center mb-4">
+                    <div className="w-16 h-16 bg-gray-50 dark:bg-card rounded-full flex items-center justify-center mb-4">
                       <ShoppingCartIcon className="w-8 h-8 text-gray-300" />
                     </div>
                     <p>Seu carrinho está vazio</p>
@@ -362,8 +362,8 @@ export default function PosPage() {
                 ) : (
                   <div className="p-4 space-y-3">
                     {cart.map(item => (
-                      <div key={item.product_id} className="flex gap-3 items-center p-2 hover:bg-gray-50 dark:hover:bg-gray-900/50 rounded-lg group">
-                        <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-md flex items-center justify-center shrink-0">
+                      <div key={item.product_id} className="flex gap-3 items-center p-2 hover:bg-gray-50 dark:hover:bg-card rounded-lg group">
+                        <div className="w-12 h-12 bg-gray-100 dark:bg-muted rounded-md flex items-center justify-center shrink-0">
                           {item.image_url ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img src={item.image_url} alt={item.name} className="h-10 object-contain" />
@@ -374,13 +374,13 @@ export default function PosPage() {
 
                         <div className="flex-1 min-w-0">
                           <h4 className="text-sm font-medium truncate">{item.name}</h4>
-                          <div className="text-sm font-bold text-brand-grena">
+                          <div className="text-sm font-bold text-brand-grena dark:text-brand-quartzo">
                             {formatCurrency(item.price * item.qty)}
                           </div>
                         </div>
 
                         <div className="flex items-center gap-2">
-                          <div className="flex items-center border rounded-md bg-white dark:bg-gray-950">
+                          <div className="flex items-center border rounded-md bg-white dark:bg-background">
                             <button
                               className="w-8 h-8 flex items-center justify-center text-muted-foreground hover:text-foreground"
                               onClick={() => item.qty > 1 ? updateQty(item.product_id, -1) : removeFromCart(item.product_id)}
@@ -410,7 +410,7 @@ export default function PosPage() {
               </ScrollArea>
 
               {/* Checkout Section */}
-              <div className="border-t bg-gray-50 dark:bg-gray-900/30 p-4 shrink-0 space-y-4">
+              <div className="border-t bg-gray-50 dark:bg-card p-4 shrink-0 space-y-4">
 
                 {/* Client & Discount */}
                 <div className="space-y-3">
@@ -420,14 +420,14 @@ export default function PosPage() {
                       <User className="w-3 h-3" /> Cliente
                     </label>
                     <Select value={selectedClient} onValueChange={setSelectedClient}>
-                      <SelectTrigger className="h-9 text-sm bg-white dark:bg-gray-950">
+                      <SelectTrigger className="h-9 text-sm bg-white dark:bg-background">
                         <SelectValue placeholder="Selecione..." />
                       </SelectTrigger>
                       <SelectContent>
                         {/* Search box inside dropdown */}
-                        <div className="px-2 py-1.5 sticky top-0 bg-white dark:bg-gray-950 z-10">
+                        <div className="px-2 py-1.5 sticky top-0 bg-white dark:bg-background z-10">
                           <input
-                            className="w-full h-8 px-2 text-sm rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:ring-1 focus:ring-brand-grena placeholder:text-gray-400"
+                            className="w-full h-8 px-2 text-sm rounded-md border border-gray-200 dark:border-border bg-gray-50 dark:bg-card focus:outline-none focus:ring-1 focus:ring-brand-grena placeholder:text-gray-400"
                             placeholder="Buscar cliente..."
                             value={clientSearch}
                             onChange={e => setClientSearch(e.target.value)}
@@ -452,21 +452,21 @@ export default function PosPage() {
                     <div className="flex">
                       <button
                         type="button"
-                        className={`px-2 text-xs border border-r-0 rounded-l-md transition-colors ${discountType === 'money' ? 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/50 text-brand-grena-hover dark:text-brand-quartzo font-bold' : 'bg-white dark:bg-gray-950 text-muted-foreground'}`}
+                        className={`px-2 text-xs border border-r-0 rounded-l-md transition-colors ${discountType === 'money' ? 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/50 text-brand-grena-hover dark:text-brand-quartzo font-bold' : 'bg-white dark:bg-background text-muted-foreground'}`}
                         onClick={() => setDiscountType('money')}
                       >
                         R$
                       </button>
                       <button
                         type="button"
-                        className={`px-2 text-xs border border-r-0 transition-colors ${discountType === 'percentage' ? 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/50 text-brand-grena-hover dark:text-brand-quartzo font-bold' : 'bg-white dark:bg-gray-950 text-muted-foreground'}`}
+                        className={`px-2 text-xs border border-r-0 transition-colors ${discountType === 'percentage' ? 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/50 text-brand-grena-hover dark:text-brand-quartzo font-bold' : 'bg-white dark:bg-background text-muted-foreground'}`}
                         onClick={() => setDiscountType('percentage')}
                       >
                         %
                       </button>
                       <Input
                         type="number"
-                        className="h-9 text-sm rounded-l-none bg-white dark:bg-gray-950"
+                        className="h-9 text-sm rounded-l-none bg-white dark:bg-background"
                         placeholder="0"
                         value={discountValue}
                         onChange={(e) => setDiscountValue(e.target.value)}
@@ -511,7 +511,7 @@ export default function PosPage() {
                   <div className="flex items-center gap-2 animate-in fade-in slide-in-from-top-2">
                     <label className="text-xs font-medium text-muted-foreground whitespace-nowrap">Parcelas:</label>
                     <Select value={installments} onValueChange={setInstallments}>
-                      <SelectTrigger className="h-8 text-sm bg-white dark:bg-gray-950">
+                      <SelectTrigger className="h-8 text-sm bg-white dark:bg-background">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
@@ -528,7 +528,7 @@ export default function PosPage() {
                     <label className="text-xs font-medium text-muted-foreground whitespace-nowrap">Vencimento *:</label>
                     <Input
                       type="date"
-                      className="h-8 text-sm bg-white dark:bg-gray-950"
+                      className="h-8 text-sm bg-white dark:bg-background"
                       value={dueDate}
                       onChange={(e) => setDueDate(e.target.value)}
                     />
@@ -607,7 +607,7 @@ function PaymentButton({ icon: Icon, label, active, onClick }: { icon: any, labe
       onClick={onClick}
       className={`flex flex-col items-center justify-center gap-1 p-2 rounded-lg border transition-all ${active
         ? 'bg-brand-quartzo-fundo border-brand-grena text-brand-grena-hover dark:bg-brand-grena-escuro/30 dark:border-brand-grena dark:text-brand-quartzo'
-        : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50 dark:bg-gray-950 dark:border-gray-800 dark:text-gray-400 dark:hover:bg-gray-900'
+        : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50 dark:bg-background dark:border-border dark:text-muted-foreground dark:hover:bg-card'
         }`}
     >
       <Icon className="w-5 h-5" />

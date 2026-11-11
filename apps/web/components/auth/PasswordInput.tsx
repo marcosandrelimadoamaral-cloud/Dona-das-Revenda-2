@@ -64,10 +64,10 @@ export function PasswordInput({ name, id, placeholder = "Sua senha", showStrengt
 
       {showStrength && val.length > 0 && (
         <div className="flex gap-1 mt-1">
-          <div className={`h-1 w-full rounded-full ${strength >= 1 ? 'bg-red-500' : 'bg-gray-200 dark:bg-gray-800'}`} />
-          <div className={`h-1 w-full rounded-full ${strength >= 2 ? 'bg-amber-500' : 'bg-gray-200 dark:bg-gray-800'}`} />
-          <div className={`h-1 w-full rounded-full ${strength >= 3 ? 'bg-emerald-500' : 'bg-gray-200 dark:bg-gray-800'}`} />
-          <div className={`h-1 w-full rounded-full ${strength >= 4 ? 'bg-emerald-600' : 'bg-gray-200 dark:bg-gray-800'}`} />
+          <div className={`h-1 w-full rounded-full ${strength >= 1 ? 'bg-red-500' : 'bg-gray-200 dark:bg-muted'}`} />
+          <div className={`h-1 w-full rounded-full ${strength >= 2 ? 'bg-amber-500' : 'bg-gray-200 dark:bg-muted'}`} />
+          <div className={`h-1 w-full rounded-full ${strength >= 3 ? 'bg-emerald-500' : 'bg-gray-200 dark:bg-muted'}`} />
+          <div className={`h-1 w-full rounded-full ${strength >= 4 ? 'bg-emerald-600' : 'bg-gray-200 dark:bg-muted'}`} />
         </div>
       )}
     </div>

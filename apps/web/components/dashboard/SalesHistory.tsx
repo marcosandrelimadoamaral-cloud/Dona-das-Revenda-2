@@ -50,8 +50,8 @@ export function SalesHistory() {
 
     if (sales.length === 0) {
         return (
-            <div className="flex flex-col items-center justify-center h-[50vh] bg-white dark:bg-gray-900 rounded-3xl border border-dashed text-muted-foreground p-6 text-center">
-                <div className="w-16 h-16 bg-gray-50 dark:bg-gray-800 rounded-full flex items-center justify-center mb-4">
+            <div className="flex flex-col items-center justify-center h-[50vh] bg-white dark:bg-card rounded-3xl border border-dashed text-muted-foreground p-6 text-center">
+                <div className="w-16 h-16 bg-gray-50 dark:bg-muted rounded-full flex items-center justify-center mb-4">
                     <Receipt className="w-8 h-8 opacity-50" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">Nenhuma venda registrada</h3>
@@ -61,8 +61,8 @@ export function SalesHistory() {
     }
 
     return (
-        <Card className="border-none shadow-sm rounded-3xl overflow-hidden bg-white dark:bg-gray-950">
-            <div className="p-6 border-b flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between bg-gray-50/50 dark:bg-gray-900/50">
+        <Card className="border-none shadow-sm rounded-3xl overflow-hidden bg-white dark:bg-background">
+            <div className="p-6 border-b flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between bg-gray-50/50 dark:bg-card">
                 <div>
                     <h2 className="text-lg font-bold">Histórico Recente</h2>
                     <p className="text-sm text-muted-foreground">Últimas 50 vendas registradas no sistema.</p>
@@ -72,7 +72,7 @@ export function SalesHistory() {
                 <div className="overflow-x-auto">
                     <Table>
                         <TableHeader>
-                            <TableRow className="bg-gray-50/50 dark:bg-gray-900/50 hover:bg-transparent">
+                            <TableRow className="bg-gray-50/50 dark:bg-card hover:bg-transparent">
                                 <TableHead className="font-semibold w-[100px]">Data</TableHead>
                                 <TableHead className="font-semibold">Cliente</TableHead>
                                 <TableHead className="font-semibold">Itens</TableHead>
@@ -82,7 +82,7 @@ export function SalesHistory() {
                         </TableHeader>
                         <TableBody>
                             {sales.map((sale) => (
-                                <TableRow key={sale.id} className="cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors">
+                                <TableRow key={sale.id} className="cursor-pointer hover:bg-gray-50 dark:hover:bg-card transition-colors">
                                     <TableCell className="font-medium">
                                         <div className="flex flex-col">
                                             <span>{format(new Date(sale.created_at || new Date()), "dd MMM", { locale: ptBR })}</span>
@@ -91,7 +91,7 @@ export function SalesHistory() {
                                     </TableCell>
                                     <TableCell>
                                         {sale.clients?.name ? (
-                                            <span className="font-medium text-gray-900 dark:text-gray-100">{sale.clients.name}</span>
+                                            <span className="font-medium text-gray-900 dark:text-foreground">{sale.clients.name}</span>
                                         ) : (
                                             <span className="text-muted-foreground italic text-xs">Não informado</span>
                                         )}
@@ -104,7 +104,7 @@ export function SalesHistory() {
                                                 </span>
                                             ))}
                                             {sale.sale_items?.length > 2 && (
-                                                <span className="text-[10px] font-medium text-brand-grena">
+                                                <span className="text-[10px] font-medium text-brand-grena dark:text-brand-quartzo">
                                                     + {sale.sale_items.length - 2} itens
                                                 </span>
                                             )}
