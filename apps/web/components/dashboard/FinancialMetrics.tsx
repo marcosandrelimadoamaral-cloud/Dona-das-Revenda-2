@@ -98,18 +98,18 @@ export function FinancialMetrics({ data }: FinancialMetricsProps) {
                 </Card>
 
                 {/* Capital em Estoque */}
-                <Card className="shadow-sm border-purple-100 dark:border-purple-900/50">
+                <Card className="shadow-sm border-brand-quartzo-claro dark:border-brand-grena-escuro/50">
                     <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
                         <div className="flex items-center gap-1.5">
-                            <CardTitle className="text-sm font-medium text-purple-700 dark:text-purple-400">Capital em Estoque</CardTitle>
+                            <CardTitle className="text-sm font-medium text-brand-grena-hover dark:text-brand-quartzo">Capital em Estoque</CardTitle>
                             <Tooltip>
                                 <TooltipTrigger>
-                                    <Info className="w-3.5 h-3.5 text-purple-400 hover:text-purple-600 transition" />
+                                    <Info className="w-3.5 h-3.5 text-brand-quartzo hover:text-brand-grena transition" />
                                 </TooltipTrigger>
-                                <TooltipContent className="bg-purple-900 border-0 text-white">Faturamento estimado se todo o estoque fosse vendido hoje.</TooltipContent>
+                                <TooltipContent className="bg-brand-grena-escuro border-0 text-white">Faturamento estimado se todo o estoque fosse vendido hoje.</TooltipContent>
                             </Tooltip>
                         </div>
-                        <div className="p-2 bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 rounded-lg">
+                        <div className="p-2 bg-brand-quartzo-claro dark:bg-brand-grena-escuro/40 text-brand-grena dark:text-brand-quartzo rounded-lg">
                             <ShoppingBag className="w-4 h-4" />
                         </div>
                     </CardHeader>

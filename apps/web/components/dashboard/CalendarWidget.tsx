@@ -42,7 +42,7 @@ export function CalendarWidget() {
             {/* Calendar Side */}
             <div className="flex-1 md:max-w-[350px]">
                 <div className="flex items-center gap-2 font-semibold text-lg mb-4">
-                    <CalendarIcon className="w-5 h-5 text-purple-600" />
+                    <CalendarIcon className="w-5 h-5 text-brand-grena" />
                     Agenda Inteligente
                 </div>
 
@@ -84,7 +84,7 @@ export function CalendarWidget() {
                         weeks: "w-full block",
                         week: "grid grid-cols-7 w-full mt-2 gap-y-2",
                         day: "text-center text-sm p-0 relative min-h-[48px] overflow-visible w-full flex flex-col items-center justify-start focus-within:relative focus-within:z-20",
-                        day_button: "h-10 w-10 p-0 font-normal aria-selected:opacity-100 rounded-lg flex flex-col items-center justify-center hover:bg-purple-50 dark:hover:bg-purple-900/40 transition-colors mx-auto relative",
+                        day_button: "h-10 w-10 p-0 font-normal aria-selected:opacity-100 rounded-lg flex flex-col items-center justify-center hover:bg-brand-quartzo-fundo dark:hover:bg-brand-grena-escuro/40 transition-colors mx-auto relative",
                         outside: "text-muted-foreground opacity-30",
                         disabled: "text-muted-foreground opacity-30",
                         hidden: "invisible",
@@ -106,7 +106,7 @@ export function CalendarWidget() {
                                     <span>{day.date.getDate()}</span>
                                     <div className="flex gap-0.5 absolute bottom-1">
                                         {hasReceivable && <span className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-sm" title="Fiado"></span>}
-                                        {hasBirthday && <span className="w-1.5 h-1.5 rounded-full bg-purple-500 shadow-sm" title="Aniversário"></span>}
+                                        {hasBirthday && <span className="w-1.5 h-1.5 rounded-full bg-brand-grena shadow-sm" title="Aniversário"></span>}
                                         {hasCycle && <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-sm" title="Ciclo"></span>}
                                     </div>
                                 </button>
@@ -122,7 +122,7 @@ export function CalendarWidget() {
             <div className="flex-1 flex flex-col h-full min-h-[300px]">
                 <h4 className="font-semibold text-lg mb-4 flex items-center justify-between">
                     <span>{selectedDate ? format(selectedDate, "d 'de' MMMM", { locale: ptBR }) : 'Selecione uma data'}</span>
-                    <Badge variant="outline" className="bg-purple-50 text-purple-700 border-purple-200">
+                    <Badge variant="outline" className="bg-brand-quartzo-fundo text-brand-grena-hover border-brand-quartzo-claro">
                         {selectedEvents.length} {selectedEvents.length === 1 ? 'evento' : 'eventos'}
                     </Badge>
                 </h4>
@@ -135,10 +135,10 @@ export function CalendarWidget() {
                         </div>
                     ) : selectedEvents.length > 0 ? (
                         selectedEvents.map(event => (
-                            <div key={event.id} className="p-3 rounded-xl border flex gap-4 hover:border-purple-200 hover:shadow-sm transition-all bg-white dark:bg-gray-950">
+                            <div key={event.id} className="p-3 rounded-xl border flex gap-4 hover:border-brand-quartzo-claro hover:shadow-sm transition-all bg-white dark:bg-gray-950">
                                 <div className="shrink-0 mt-1">
                                     {event.type === 'receivable' && <div className="p-2 bg-emerald-100 text-emerald-600 rounded-lg"><CreditCard className="w-4 h-4" /></div>}
-                                    {event.type === 'birthday' && <div className="p-2 bg-purple-100 text-purple-600 rounded-lg"><Gift className="w-4 h-4" /></div>}
+                                    {event.type === 'birthday' && <div className="p-2 bg-brand-quartzo-claro text-brand-grena rounded-lg"><Gift className="w-4 h-4" /></div>}
                                     {event.type === 'cycle' && <div className="p-2 bg-blue-100 text-blue-600 rounded-lg"><ShoppingBag className="w-4 h-4" /></div>}
                                 </div>
                                 <div>

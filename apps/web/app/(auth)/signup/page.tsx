@@ -20,7 +20,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white" disabled={pending}>
+    <Button type="submit" className="w-full bg-brand-grena hover:bg-brand-grena-hover text-white" disabled={pending}>
       {pending ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : null}
       Criar conta grátis
     </Button>
@@ -129,7 +129,7 @@ export default function SignupPage({
               htmlFor="terms"
               className="text-sm leading-tight text-muted-foreground"
             >
-              Ao criar conta, você aceita os <Link href="/termos-de-uso" className="text-purple-600 hover:text-purple-500">Termos de Uso</Link> e <Link href="/privacidade" className="text-purple-600 hover:text-purple-500">Política de Privacidade</Link>
+              Ao criar conta, você aceita os <Link href="/termos-de-uso" className="text-brand-grena hover:text-brand-grena">Termos de Uso</Link> e <Link href="/privacidade" className="text-brand-grena hover:text-brand-grena">Política de Privacidade</Link>
             </label>
           </div>
 
@@ -153,7 +153,7 @@ export default function SignupPage({
 
         <div className="mt-6 text-center text-sm">
           <span className="text-muted-foreground">Já tem conta? </span>
-          <Link href="/login" className="text-purple-600 hover:text-purple-500 font-medium">
+          <Link href="/login" className="text-brand-grena hover:text-brand-grena font-medium">
             Entre aqui
           </Link>
         </div>

@@ -58,7 +58,7 @@ export default async function DashboardPage({
         <GreetingClock />
         <div className="hidden sm:flex gap-3">
           <Link href="/pos">
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white shadow-md">
+            <Button className="bg-brand-grena hover:bg-brand-grena-hover text-white shadow-md">
               <Plus className="w-4 h-4 mr-2" /> Vender
             </Button>
           </Link>
@@ -72,17 +72,17 @@ export default async function DashboardPage({
             {/* Card: Vendas */}
             <div className="relative overflow-hidden bg-white/70 dark:bg-gray-950/50 backdrop-blur-xl border border-white/20 dark:border-gray-800 shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Activity className="w-24 h-24 text-purple-600" />
+                <Activity className="w-24 h-24 text-brand-grena" />
               </div>
               <div className="flex items-center justify-between mb-4">
-                <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center">
-                  <Activity className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                <div className="w-10 h-10 rounded-full bg-brand-quartzo-claro dark:bg-brand-grena-escuro/50 flex items-center justify-center">
+                  <Activity className="w-5 h-5 text-brand-grena dark:text-brand-quartzo" />
                 </div>
                 <Tooltip>
                   <TooltipTrigger>
-                    <Info className="w-4 h-4 text-gray-400 hover:text-purple-600 transition-colors" />
+                    <Info className="w-4 h-4 text-gray-400 hover:text-brand-grena transition-colors" />
                   </TooltipTrigger>
-                  <TooltipContent className="bg-purple-900 border-purple-800 text-white">
+                  <TooltipContent className="bg-brand-grena-escuro border-brand-grena-escuro text-white">
                     <p className="flex items-center gap-2">Quantidade de pedidos processados com sucesso neste mês.</p>
                   </TooltipContent>
                 </Tooltip>
@@ -91,7 +91,7 @@ export default async function DashboardPage({
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white">{metrics.totalSales}</h3>
               <div className="mt-4 h-8 w-full">
                 {/* Simple SVG Sparkline placeholder */}
-                <svg viewBox="0 0 100 20" className="w-full h-full stroke-purple-500 fill-none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 100 20" className="w-full h-full stroke-brand-grena fill-none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M0,15 L20,10 L40,12 L60,5 L80,8 L100,2" />
                 </svg>
               </div>
@@ -110,7 +110,7 @@ export default async function DashboardPage({
                   <TooltipTrigger>
                     <Info className="w-4 h-4 text-gray-400 hover:text-blue-600 transition-colors" />
                   </TooltipTrigger>
-                  <TooltipContent className="bg-indigo-900 border-indigo-800 text-white">
+                  <TooltipContent className="bg-brand-grena-escuro border-brand-grena-escuro text-white">
                     <p className="flex items-center gap-2">Faturamento bruto das vendas que já foram pagas.</p>
                   </TooltipContent>
                 </Tooltip>
@@ -140,7 +140,7 @@ export default async function DashboardPage({
                   <TooltipTrigger>
                     <Info className="w-4 h-4 text-gray-400 hover:text-red-600 transition-colors" />
                   </TooltipTrigger>
-                  <TooltipContent className="bg-rose-900 border-rose-800 text-white">
+                  <TooltipContent className="bg-brand-grena-escuro border-brand-grena-escuro text-white">
                     <p className="flex items-center gap-2">Custo de compra apenas das mercadorias que foram vendidas.</p>
                   </TooltipContent>
                 </Tooltip>
@@ -235,7 +235,7 @@ export default async function DashboardPage({
                   Minhas Trocas e Devoluções
                 </Link>
                 <Link href="/store" className="flex items-center p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors border border-transparent hover:border-gray-100 text-sm font-medium">
-                  <div className="w-8 h-8 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center mr-3">
+                  <div className="w-8 h-8 rounded-full bg-brand-quartzo-claro text-brand-grena flex items-center justify-center mr-3">
                     <Plus className="w-4 h-4" />
                   </div>
                   Minha Loja Digital

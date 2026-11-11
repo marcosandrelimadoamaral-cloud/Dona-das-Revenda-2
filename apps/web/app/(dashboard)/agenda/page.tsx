@@ -110,7 +110,7 @@ export default function AgendaPage() {
         <div className="space-y-6 max-w-7xl mx-auto h-[calc(100vh-100px)] flex flex-col">
             <div>
                 <h1 className="text-3xl font-bold tracking-tight flex items-center gap-2">
-                    <CalendarIcon className="w-8 h-8 text-purple-600" />
+                    <CalendarIcon className="w-8 h-8 text-brand-grena" />
                     Agenda
                 </h1>
                 <p className="text-muted-foreground mt-1 text-sm">
@@ -162,7 +162,7 @@ export default function AgendaPage() {
                                     weeks: "w-full block",
                                     week: "grid grid-cols-7 w-full mt-2 gap-y-2",
                                     day: "text-center text-sm p-0 flex items-center justify-center relative min-h-[56px] w-full focus-within:relative focus-within:z-20",
-                                    day_button: "h-12 w-12 p-0 font-medium aria-selected:opacity-100 rounded-full flex flex-col items-center justify-center hover:bg-purple-50 dark:hover:bg-purple-900/40 transition-colors mx-auto relative",
+                                    day_button: "h-12 w-12 p-0 font-medium aria-selected:opacity-100 rounded-full flex flex-col items-center justify-center hover:bg-brand-quartzo-fundo dark:hover:bg-brand-grena-escuro/40 transition-colors mx-auto relative",
                                     outside: "text-muted-foreground opacity-30",
                                     disabled: "text-muted-foreground opacity-30",
                                     hidden: "invisible",
@@ -184,7 +184,7 @@ export default function AgendaPage() {
                                                 <span className="z-10">{day.date.getDate()}</span>
                                                 <div className="flex gap-1 absolute bottom-1.5 z-10 w-full justify-center pb-0.5">
                                                     {filters.receivables && hasReceivable && <span className="w-[5px] h-[5px] rounded-full bg-red-500 shadow-sm" title="Fiado"></span>}
-                                                    {filters.birthdays && hasBirthday && <span className="w-[5px] h-[5px] rounded-full bg-purple-500 shadow-sm" title="Aniversário"></span>}
+                                                    {filters.birthdays && hasBirthday && <span className="w-[5px] h-[5px] rounded-full bg-brand-grena shadow-sm" title="Aniversário"></span>}
                                                     {filters.appointments && hasAppointment && <span className="w-[5px] h-[5px] rounded-full bg-blue-500 shadow-sm" title="Compromisso"></span>}
                                                 </div>
                                             </button>
@@ -229,7 +229,7 @@ export default function AgendaPage() {
                                     onCheckedChange={(checked) => setFilters(f => ({ ...f, birthdays: checked as boolean }))}
                                 />
                                 <label htmlFor="birthdays" className="flex items-center gap-2 text-sm font-medium leading-none cursor-pointer select-none">
-                                    <span className="w-2.5 h-2.5 rounded-full bg-purple-500 shadow-sm"></span>
+                                    <span className="w-2.5 h-2.5 rounded-full bg-brand-grena shadow-sm"></span>
                                     Aniversários
                                 </label>
                             </div>
@@ -255,14 +255,14 @@ export default function AgendaPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold capitalize text-gray-900 dark:text-gray-100 tracking-tight">
                                     {selectedDate ? format(selectedDate, "dd 'de' MMMM, yyyy", { locale: ptBR }) : 'Selecione uma data'}
                                 </h2>
-                                <p className="text-sm text-purple-600 font-semibold mt-1">
+                                <p className="text-sm text-brand-grena font-semibold mt-1">
                                     {filteredEvents.length} {filteredEvents.length === 1 ? 'compromisso agendado' : 'compromissos agendados'}
                                 </p>
                             </div>
 
                             <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                                 <DialogTrigger asChild>
-                                    <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-5 sm:px-6 shadow-sm font-medium shrink-0 self-start sm:self-auto">
+                                    <Button className="bg-brand-grena hover:bg-brand-grena-hover text-white rounded-full px-5 sm:px-6 shadow-sm font-medium shrink-0 self-start sm:self-auto">
                                         <Plus className="w-4 h-4 mr-2" />
                                         <span>Novo compromisso</span>
                                     </Button>
@@ -312,7 +312,7 @@ export default function AgendaPage() {
                                             <Button type="button" variant="outline" className="rounded-full px-6" onClick={() => setIsDialogOpen(false)} disabled={isSubmitting}>
                                                 Cancelar
                                             </Button>
-                                            <Button type="submit" className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6" disabled={isSubmitting}>
+                                            <Button type="submit" className="bg-brand-grena hover:bg-brand-grena-hover text-white rounded-full px-6" disabled={isSubmitting}>
                                                 {isSubmitting ? "Salvando..." : "Salvar Compromisso"}
                                             </Button>
                                         </div>
@@ -331,7 +331,7 @@ export default function AgendaPage() {
                             ) : filteredEvents.length > 0 ? (
                                 <div className="space-y-4">
                                     {filteredEvents.map(event => (
-                                        <div key={event.id} className="p-5 rounded-2xl border border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row sm:items-center gap-5 hover:border-purple-200 hover:shadow-md transition-all bg-gray-50/50 dark:bg-gray-900/50 group">
+                                        <div key={event.id} className="p-5 rounded-2xl border border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row sm:items-center gap-5 hover:border-brand-quartzo-claro hover:shadow-md transition-all bg-gray-50/50 dark:bg-gray-900/50 group">
                                             <div className="shrink-0 flex items-center gap-3">
                                                 {event.type === 'receivable' && (
                                                     <div className="p-3 bg-red-100 text-red-600 rounded-2xl group-hover:bg-red-200 group-hover:shadow-sm transition-all shadow-sm">
@@ -339,7 +339,7 @@ export default function AgendaPage() {
                                                     </div>
                                                 )}
                                                 {event.type === 'birthday' && (
-                                                    <div className="p-3 bg-purple-100 text-purple-600 rounded-2xl group-hover:bg-purple-200 group-hover:shadow-sm transition-all shadow-sm">
+                                                    <div className="p-3 bg-brand-quartzo-claro text-brand-grena rounded-2xl group-hover:bg-brand-quartzo-claro group-hover:shadow-sm transition-all shadow-sm">
                                                         <Gift className="w-6 h-6" />
                                                     </div>
                                                 )}
@@ -353,7 +353,7 @@ export default function AgendaPage() {
                                                     <h5 className="font-semibold text-base text-gray-900 dark:text-gray-100">{event.title}</h5>
                                                     <Badge variant="outline" className={`mt-1 mb-1 text-[10px] uppercase font-bold tracking-wider rounded-md border-transparent
                                                         ${event.type === 'receivable' ? 'bg-red-100 text-red-700' :
-                                                            event.type === 'birthday' ? 'bg-purple-100 text-purple-700' :
+                                                            event.type === 'birthday' ? 'bg-brand-quartzo-claro text-brand-grena-hover' :
                                                                 'bg-blue-100 text-blue-700'}`}>
                                                         {event.type === 'receivable' ? 'FIADO' : event.type === 'birthday' ? 'ANIVERSÁRIO' : 'COMPROMISSO'}
                                                     </Badge>
@@ -366,7 +366,7 @@ export default function AgendaPage() {
                                                     <h5 className="font-semibold text-lg text-gray-900 dark:text-gray-100">{event.title}</h5>
                                                     <Badge variant="outline" className={`text-[10px] uppercase font-bold tracking-wider rounded-md border-transparent
                                                         ${event.type === 'receivable' ? 'bg-red-100 text-red-700' :
-                                                            event.type === 'birthday' ? 'bg-purple-100 text-purple-700' :
+                                                            event.type === 'birthday' ? 'bg-brand-quartzo-claro text-brand-grena-hover' :
                                                                 'bg-blue-100 text-blue-700'}`}>
                                                         {event.type === 'receivable' ? 'FIADO' : event.type === 'birthday' ? 'ANIVERSÁRIO' : 'MANUAL'}
                                                     </Badge>

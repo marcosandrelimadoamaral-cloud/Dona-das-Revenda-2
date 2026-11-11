@@ -30,20 +30,20 @@ const BRANDS = [
     'eudora', 'hinode', 'racco', 'yanbal', 'independentes'
 ]
 
-const BRAND_COLORS: Record<string, { bg: string; icon: string; emoji: string }> = {
-    natura: { bg: 'from-emerald-500/20 to-teal-500/10', icon: 'text-emerald-500', emoji: '🌿' },
-    avon: { bg: 'from-pink-500/20 to-rose-500/10', icon: 'text-pink-500', emoji: '🌸' },
-    boticario: { bg: 'from-blue-500/20 to-indigo-500/10', icon: 'text-blue-500', emoji: '✨' },
-    marykay: { bg: 'from-fuchsia-500/20 to-pink-500/10', icon: 'text-fuchsia-500', emoji: '💄' },
-    jequiti: { bg: 'from-amber-500/20 to-orange-500/10', icon: 'text-amber-500', emoji: '🍃' },
-    eudora: { bg: 'from-purple-500/20 to-violet-500/10', icon: 'text-purple-500', emoji: '🌺' },
-    hinode: { bg: 'from-sky-500/20 to-cyan-500/10', icon: 'text-sky-500', emoji: '💠' },
-    racco: { bg: 'from-red-500/20 to-orange-500/10', icon: 'text-red-500', emoji: '🔴' },
-    yanbal: { bg: 'from-yellow-500/20 to-amber-500/10', icon: 'text-yellow-500', emoji: '⭐' },
-    independentes: { bg: 'from-gray-500/20 to-slate-500/10', icon: 'text-gray-500', emoji: '🏷️' },
+const BRAND_COLORS: Record<string, { bg: string; icon: string }> = {
+    natura: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
+    avon: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
+    boticario: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
+    marykay: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
+    jequiti: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
+    eudora: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
+    hinode: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
+    racco: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
+    yanbal: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
+    independentes: { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' },
 }
 
-const DEFAULT_BRAND = { bg: 'from-purple-500/20 to-violet-500/10', icon: 'text-purple-500', emoji: '🛍️' }
+const DEFAULT_BRAND = { bg: 'from-brand-quartzo-claro to-brand-quartzo-fundo', icon: 'text-brand-grena' }
 
 export function CatalogView({ initialProducts, initialCount }: { initialProducts: any[], initialCount: number }) {
     const [products, setProducts] = useState<CatalogProduct[]>(initialProducts)
@@ -140,11 +140,11 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                                     key={brand}
                                     onClick={() => toggleBrand(brand)}
                                     className={`flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full border transition-all capitalize ${isSelected
-                                        ? 'border-purple-500 bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300'
+                                        ? 'border-brand-grena bg-brand-quartzo-claro dark:bg-brand-grena-escuro/40 text-brand-grena-hover dark:text-brand-quartzo'
                                         : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 bg-gray-50 dark:bg-gray-800'
                                         }`}
                                 >
-                                    {bc.emoji} {brand}
+                                    {brand}
                                 </button>
                             )
                         })}
@@ -180,14 +180,14 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                             const isGoodMargin = margin >= 40
 
                             return (
-                                <div key={product.id} className="group flex flex-col bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden shadow-sm hover:shadow-lg hover:border-purple-300 dark:hover:border-purple-700 transition-all duration-200">
+                                <div key={product.id} className="group flex flex-col bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden shadow-sm hover:shadow-lg hover:border-brand-quartzo dark:hover:border-brand-grena-hover transition-all duration-200">
                                     {/* Product image placeholder — branded gradient */}
                                     <div className={`h-36 bg-gradient-to-br ${bc.bg} flex flex-col items-center justify-center relative overflow-hidden`}>
                                         {/* decorative circles */}
                                         <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-white/10" />
                                         <div className="absolute -bottom-6 -left-6 w-28 h-28 rounded-full bg-white/10" />
-                                        {/* brand emoji icon */}
-                                        <span className="text-4xl mb-1 drop-shadow z-10">{bc.emoji}</span>
+                                        {/* inicial da marca */}
+                                        <span className="font-display text-5xl mb-1 z-10 text-brand-grena">{(product.brand || "D").charAt(0).toUpperCase()}</span>
                                         <span className={`text-xs font-bold uppercase tracking-wider z-10 ${bc.icon} dark:opacity-90`}>
                                             {product.attributes?.brand_display || product.brand}
                                         </span>
@@ -218,7 +218,7 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                                                 <div className="text-right">
                                                     <p className="text-[10px] text-gray-400 uppercase font-semibold">Sugestão de Venda</p>
                                                     <div className="flex items-center gap-1.5 justify-end">
-                                                        <p className="font-bold text-sm text-purple-600 dark:text-purple-400">{formatCurrency(product.suggested_price)}</p>
+                                                        <p className="font-bold text-sm text-brand-grena dark:text-brand-quartzo">{formatCurrency(product.suggested_price)}</p>
                                                         <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${isGoodMargin ? 'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-400' : 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400'}`}>
                                                             +{margin}%
                                                         </span>
@@ -229,7 +229,7 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                                             <Button
                                                 variant="default"
                                                 size="sm"
-                                                className="w-full text-xs font-semibold h-8 bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-purple-600 dark:hover:bg-purple-600 dark:hover:text-white transition-colors mt-1 rounded-xl"
+                                                className="w-full text-xs font-semibold h-8 bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-brand-grena dark:hover:bg-brand-grena dark:hover:text-white transition-colors mt-1 rounded-xl"
                                                 onClick={() => handleAddProduct(product)}
                                             >
                                                 <Import className="w-3.5 h-3.5 mr-1.5" />

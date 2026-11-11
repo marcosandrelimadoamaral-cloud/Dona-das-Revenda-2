@@ -12,7 +12,7 @@ export function Header() {
         <Button variant="ghost" size="icon" className="lg:hidden">
           <Menu className="w-5 h-5" />
         </Button>
-        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
+        <div className="w-8 h-8 rounded-lg bg-brand-grena flex items-center justify-center">
           <span className="text-white font-bold text-lg">D</span>
         </div>
       </div>

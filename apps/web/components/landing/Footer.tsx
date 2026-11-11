@@ -1,60 +1,50 @@
 import Link from "next/link"
-import Image from "next/image"
-import { Instagram, Youtube } from "lucide-react"
+import { Instagram } from "lucide-react"
+import { Logo } from "@/components/brand/Logo"
+
+const linkClass = "text-muted-foreground hover:text-primary transition-colors"
 
 export function Footer() {
   return (
-    <footer className="bg-gray-50 dark:bg-gray-950 border-t dark:border-gray-800 pt-16 pb-10">
+    <footer className="bg-white dark:bg-card border-t border-border pt-16 pb-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-
-          {/* Brand */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-1 mb-4">
-              <Image src="/logo-transparent.png" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
-              <span className="font-bold text-xl tracking-tight">Dona da Revenda</span>
+            <Link href="/" className="inline-block mb-5" aria-label="Dona da Revenda">
+              <Logo className="h-10 w-auto" />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm text-sm leading-relaxed">
-              A primeira plataforma de gestão para revendedoras de cosméticos 100% movida a Inteligência Artificial. PDV, fiados, estoque, financeiro e 5 agentes de IA — tudo em um só lugar.
+              Gestão para quem revende beleza: vendas, estoque, fiados, clientes e cinco assistentes de IA num só lugar.
             </p>
-            <div className="flex items-center gap-4">
-              <Link href="#" className="text-muted-foreground hover:text-pink-600 dark:hover:text-pink-400 transition-colors">
-                <Instagram className="w-5 h-5" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-red-600 dark:hover:text-red-400 transition-colors">
-                <Youtube className="w-5 h-5" />
-              </Link>
-            </div>
+            <Link href="#" className={linkClass} aria-label="Instagram">
+              <Instagram className="w-5 h-5" />
+            </Link>
           </div>
 
-          {/* Links */}
           <div>
-            <h4 className="font-semibold mb-5 text-sm uppercase tracking-wider">Produto</h4>
+            <h4 className="font-display font-semibold mb-5 text-base">Produto</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="#funcionalidades" className="text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Funcionalidades</Link></li>
-              <li><Link href="#precos" className="text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Preços</Link></li>
-              <li><Link href="#agentes" className="text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Agentes IA</Link></li>
-              <li><Link href="/signup" className="text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Começar grátis</Link></li>
+              <li><Link href="#funcionalidades" className={linkClass}>Funcionalidades</Link></li>
+              <li><Link href="#agentes" className={linkClass}>Assistentes de IA</Link></li>
+              <li><Link href="#precos" className={linkClass}>Planos</Link></li>
+              <li><Link href="/signup" className={linkClass}>Começar grátis</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-5 text-sm uppercase tracking-wider">Legal</h4>
+            <h4 className="font-display font-semibold mb-5 text-base">Legal</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/termos-de-uso" className="text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Termos de Uso</Link></li>
-              <li><Link href="/privacidade" className="text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacidade</Link></li>
-              <li><Link href="/lgpd" className="text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">LGPD</Link></li>
+              <li><Link href="/termos-de-uso" className={linkClass}>Termos de uso</Link></li>
+              <li><Link href="/privacidade" className={linkClass}>Privacidade</Link></li>
+              <li><Link href="/lgpd" className={linkClass}>LGPD</Link></li>
+              <li><Link href="/contato" className={linkClass}>Contato</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-muted-foreground text-sm">
-            © 2026 Dona da Revenda. Todos os direitos reservados.
-          </p>
-          <p className="text-muted-foreground text-xs">
-            Pagamento seguro via 🔒 Stripe
-          </p>
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-muted-foreground text-sm">© 2026 Dona da Revenda. Todos os direitos reservados.</p>
+          <p className="text-muted-foreground text-xs">Pagamento seguro via Stripe</p>
         </div>
       </div>
     </footer>

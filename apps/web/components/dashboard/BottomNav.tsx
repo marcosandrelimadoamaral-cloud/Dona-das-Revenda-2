@@ -24,10 +24,10 @@ export function BottomNav({ className }: { className?: string }) {
         if (item.isPrimary) {
           return (
             <Link key={item.href} href={item.href} className="flex flex-col items-center justify-center -mt-6">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-200 dark:shadow-none border-4 border-white dark:border-gray-900">
+              <div className="w-14 h-14 rounded-full bg-brand-grena flex items-center justify-center text-white shadow-lg shadow-brand-quartzo-claro dark:shadow-none border-4 border-white dark:border-gray-900">
                 <item.icon className="w-6 h-6" />
               </div>
-              <span className="text-[10px] font-medium mt-1 text-indigo-600 dark:text-indigo-400">{item.name}</span>
+              <span className="text-[10px] font-medium mt-1 text-brand-grena dark:text-brand-quartzo">{item.name}</span>
             </Link>
           )
         }
@@ -39,11 +39,11 @@ export function BottomNav({ className }: { className?: string }) {
             className={cn(
               "flex flex-col items-center justify-center w-16 h-12 gap-1 rounded-xl transition-colors",
               isActive 
-                ? "text-indigo-600 dark:text-indigo-400" 
+                ? "text-brand-grena dark:text-brand-quartzo" 
                 : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
             )}
           >
-            <item.icon className={cn("w-5 h-5", isActive ? "fill-indigo-50 dark:fill-indigo-900/50" : "")} />
+            <item.icon className={cn("w-5 h-5", isActive ? "fill-brand-quartzo-fundo dark:fill-brand-grena-escuro/50" : "")} />
             <span className="text-[10px] font-medium">{item.name}</span>
           </Link>
         )

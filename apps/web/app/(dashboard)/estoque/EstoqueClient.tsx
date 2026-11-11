@@ -88,14 +88,14 @@ export default function EstoqueClient({ initialProducts, userBrands }: EstoqueCl
 
             {filteredProducts.length === 0 ? (
                 <div className="flex flex-col items-center justify-center py-16 px-4 text-center border rounded-2xl bg-white dark:bg-gray-950 border-dashed">
-                    <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4">
-                        <PackageOpen className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+                    <div className="w-16 h-16 bg-brand-quartzo-claro dark:bg-brand-grena-escuro/30 rounded-full flex items-center justify-center mb-4">
+                        <PackageOpen className="w-8 h-8 text-brand-grena dark:text-brand-quartzo" />
                     </div>
                     <h3 className="text-lg font-semibold mb-2">Seu estoque está vazio</h3>
                     <p className="text-muted-foreground max-w-sm mb-6">
                         {searchTerm ? "Nenhum produto bate com sua busca." : "Comece a adicionar produtos para ver a mágica da inteligência artificial acontecer."}
                     </p>
-                    {!searchTerm && <Button onClick={() => setIsModalOpen(true)} className="bg-purple-600 hover:bg-purple-700">Adicionar Primeiro Produto</Button>}
+                    {!searchTerm && <Button onClick={() => setIsModalOpen(true)} className="bg-brand-grena hover:bg-brand-grena-hover">Adicionar Primeiro Produto</Button>}
                 </div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -109,10 +109,10 @@ export default function EstoqueClient({ initialProducts, userBrands }: EstoqueCl
                         }
 
                         return (
-                            <Card key={product.id} className="overflow-hidden flex flex-col group border-gray-100 dark:border-gray-800 hover:border-purple-300 transition-colors">
+                            <Card key={product.id} className="overflow-hidden flex flex-col group border-gray-100 dark:border-gray-800 hover:border-brand-quartzo transition-colors">
                                 <CardContent className="p-5 flex-1 flex flex-col">
                                     <div className="flex justify-between items-start mb-3">
-                                        <Badge variant="secondary" className="bg-purple-50 text-purple-700 dark:bg-purple-900/30 font-medium">
+                                        <Badge variant="secondary" className="bg-brand-quartzo-fundo text-brand-grena-hover dark:bg-brand-grena-escuro/30 font-medium">
                                             {product.brand || "Sem marca"}
                                         </Badge>
                                         {product.stock_quantity <= product.min_stock && (

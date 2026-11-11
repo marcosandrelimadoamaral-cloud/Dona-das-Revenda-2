@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 import { useTheme } from "next-themes"
 import { Menu, LayoutDashboard, LogOut, Settings, ChevronDown, Sun, Moon } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { Logo } from "@/components/brand/Logo"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import {
@@ -70,8 +70,8 @@ export function Navbar() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <button className={`flex items-center gap-2 rounded-full hover:opacity-80 transition-opacity ${mobile ? 'w-full justify-start p-2' : ''}`}>
-              <Avatar className="w-8 h-8 ring-2 ring-purple-500/30">
-                <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white text-xs font-bold">
+              <Avatar className="w-8 h-8 ring-2 ring-brand-grena/30">
+                <AvatarFallback className="bg-primary text-primary-foreground text-xs font-bold">
                   {userInitials}
                 </AvatarFallback>
               </Avatar>
@@ -120,8 +120,8 @@ export function Navbar() {
         <>
           <Link href="/login" className="text-lg font-medium">Entrar</Link>
           <Link href="/signup">
-            <Button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white mt-4">
-              Começar Grátis
+            <Button className="w-full bg-primary text-primary-foreground hover:bg-brand-grena-hover mt-4">
+              Começar grátis
             </Button>
           </Link>
         </>
@@ -132,8 +132,8 @@ export function Navbar() {
       <>
         <Link href="/login" className="text-sm font-medium hover:text-primary transition-colors">Entrar</Link>
         <Link href="/signup">
-          <Button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-0">
-            Começar Grátis
+          <Button className="bg-primary text-primary-foreground hover:bg-brand-grena-hover">
+            Começar grátis
           </Button>
         </Link>
       </>
@@ -141,25 +141,21 @@ export function Navbar() {
   }
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 safe-area-inset-top ${isScrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent"}`}>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 safe-area-inset-top ${isScrolled ? "bg-background/85 backdrop-blur-md border-b border-border" : "bg-transparent"}`}>
       <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-1 group">
-          <Image src="/logo-transparent.png" alt="Dona da Revenda" width={100} height={100} className="object-contain" />
-          <div className="flex flex-col leading-none">
-            <span className="font-black text-base tracking-tight bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Dona da</span>
-            <span className="font-black text-base tracking-tight bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent -mt-0.5">Revenda</span>
-          </div>
+        <Link href="/" className="flex items-center" aria-label="Dona da Revenda">
+          <Logo className="h-9 w-auto" priority />
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
           <Link href="#funcionalidades" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Funcionalidades</Link>
-          <Link href="#agentes" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Agentes IA</Link>
-          <Link href="#precos" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Preços</Link>
+          <Link href="#agentes" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Assistentes de IA</Link>
+          <Link href="#precos" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Planos</Link>
           {mounted && (
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
               title="Alternar tema"
             >
               {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -179,8 +175,8 @@ export function Navbar() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px] safe-area-inset-top">
               <nav className="flex flex-col gap-6 mt-8">
                 <Link href="#funcionalidades" className="text-lg font-medium">Funcionalidades</Link>
-                <Link href="#agentes" className="text-lg font-medium">Agentes IA</Link>
-                <Link href="#precos" className="text-lg font-medium">Preços</Link>
+                <Link href="#agentes" className="text-lg font-medium">Assistentes de IA</Link>
+                <Link href="#precos" className="text-lg font-medium">Planos</Link>
                 <div className="h-px bg-border my-4" />
                 <AuthSection mobile />
               </nav>

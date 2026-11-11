@@ -37,10 +37,10 @@ export function MobileBottomNav() {
                                 href={item.href}
                                 className="relative flex-1 flex justify-center h-full"
                             >
-                                <div className={`absolute -top-5 flex flex-col items-center justify-center w-14 h-14 rounded-full border-4 border-white dark:border-gray-900 shadow-lg transition-transform ${isActive ? 'bg-gradient-to-r from-purple-600 to-indigo-600 scale-105' : 'bg-gradient-to-r from-purple-500 to-indigo-500 hover:scale-105'}`}>
+                                <div className={`absolute -top-5 flex flex-col items-center justify-center w-14 h-14 rounded-full border-4 border-white dark:border-gray-900 shadow-lg transition-transform ${isActive ? 'bg-brand-grena scale-105' : 'bg-brand-grena hover:scale-105'}`}>
                                     <item.icon className="w-6 h-6 text-white" />
                                 </div>
-                                <span className={`absolute bottom-1 text-[10px] font-bold ${isActive ? "text-purple-600 dark:text-purple-400" : "text-gray-500 dark:text-gray-400"}`}>{item.label}</span>
+                                <span className={`absolute bottom-1 text-[10px] font-bold ${isActive ? "text-brand-grena dark:text-brand-quartzo" : "text-gray-500 dark:text-gray-400"}`}>{item.label}</span>
                             </Link>
                         )
                     }
@@ -50,7 +50,7 @@ export function MobileBottomNav() {
                             key={item.href}
                             href={item.href}
                             className={`flex flex-col items-center justify-center flex-1 h-full gap-0.5 transition-colors ${isActive
-                                ? "text-purple-600 dark:text-purple-400"
+                                ? "text-brand-grena dark:text-brand-quartzo"
                                 : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
                                 }`}
                         >

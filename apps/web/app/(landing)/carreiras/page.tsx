@@ -40,21 +40,21 @@ export default function CarreirasPage() {
                             <h2 className="text-2xl font-semibold mb-2">{vaga.title}</h2>
                             <div className="flex flex-wrap gap-2 mb-4">
                                 <span className="bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 text-sm px-3 py-1 rounded-full font-medium">{vaga.type}</span>
-                                <span className="bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 text-sm px-3 py-1 rounded-full font-medium">{vaga.level}</span>
+                                <span className="bg-brand-quartzo-fundo dark:bg-brand-grena-escuro/20 text-brand-grena-hover dark:text-brand-quartzo text-sm px-3 py-1 rounded-full font-medium">{vaga.level}</span>
                             </div>
                             <p className="text-muted-foreground">{vaga.description}</p>
                         </div>
-                        <button className="bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-2 rounded-lg transition-colors whitespace-nowrap w-full sm:w-auto">
+                        <button className="bg-brand-grena hover:bg-brand-grena-hover text-white font-medium px-6 py-2 rounded-lg transition-colors whitespace-nowrap w-full sm:w-auto">
                             Candidatar-se
                         </button>
                     </div>
                 ))}
             </div>
 
-            <div className="mt-16 text-center bg-purple-50 dark:bg-purple-950/20 rounded-2xl p-8">
+            <div className="mt-16 text-center bg-brand-quartzo-fundo dark:bg-brand-tinta/20 rounded-2xl p-8">
                 <h3 className="text-xl font-semibold mb-2">Não encontrou sua vaga?</h3>
                 <p className="text-muted-foreground mb-4">Envie seu currículo e entraremos em contato quando surgir uma oportunidade.</p>
-                <a href="mailto:rh@donadarevenda.com.br" className="text-purple-600 font-medium bg-white dark:bg-zinc-900 px-6 py-3 rounded-lg border border-purple-100 dark:border-purple-800 inline-block hover:border-purple-300 transition-colors">rh@donadarevenda.com.br</a>
+                <a href="mailto:rh@donadarevenda.com.br" className="text-brand-grena font-medium bg-white dark:bg-zinc-900 px-6 py-3 rounded-lg border border-brand-quartzo-claro dark:border-brand-grena-escuro inline-block hover:border-brand-quartzo transition-colors">rh@donadarevenda.com.br</a>
             </div>
         </div>
     )

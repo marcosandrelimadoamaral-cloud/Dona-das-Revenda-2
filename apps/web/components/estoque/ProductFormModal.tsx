@@ -64,7 +64,7 @@ export function ProductFormModal({ isOpen, setIsOpen, userBrands, onSuccess }: P
     return (
         <>
             {!isOpen && (
-                <Button onClick={() => setIsOpen(true)} className="bg-purple-600 hover:bg-purple-700 text-white shadow-md">
+                <Button onClick={() => setIsOpen(true)} className="bg-brand-grena hover:bg-brand-grena-hover text-white shadow-md">
                     <Plus className="w-4 h-4 mr-2" /> Novo Produto
                 </Button>
             )}
@@ -135,7 +135,7 @@ export function ProductFormModal({ isOpen, setIsOpen, userBrands, onSuccess }: P
 
                         <DialogFooter>
                             <Button type="button" variant="outline" onClick={() => setIsOpen(false)}>Cancelar</Button>
-                            <Button type="submit" disabled={isLoading} className="bg-purple-600 hover:bg-purple-700 text-white">
+                            <Button type="submit" disabled={isLoading} className="bg-brand-grena hover:bg-brand-grena-hover text-white">
                                 {isLoading ? "Salvando..." : "Salvar Produto"}
                             </Button>
                         </DialogFooter>

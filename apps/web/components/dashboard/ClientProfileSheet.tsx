@@ -98,14 +98,14 @@ export function ClientProfileSheet({ client, open, onOpenChange }: ClientProfile
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-4">
               <Avatar className="w-16 h-16">
-                <AvatarFallback className="bg-purple-100 text-purple-700 text-xl">
+                <AvatarFallback className="bg-brand-quartzo-claro text-brand-grena-hover text-xl">
                   {getInitials(client.name)}
                 </AvatarFallback>
               </Avatar>
               <div>
                 <SheetTitle className="text-xl">{client.name}</SheetTitle>
                 <div className="flex gap-2 mt-1">
-                  <Badge variant={client.client_segment === 'vip' ? 'default' : 'secondary'} className={client.client_segment === 'vip' ? 'bg-purple-600' : ''}>
+                  <Badge variant={client.client_segment === 'vip' ? 'default' : 'secondary'} className={client.client_segment === 'vip' ? 'bg-brand-grena' : ''}>
                     {client.client_segment === 'vip' ? 'VIP' : 'Ativo'}
                   </Badge>
                 </div>
@@ -113,7 +113,7 @@ export function ClientProfileSheet({ client, open, onOpenChange }: ClientProfile
             </div>
           </div>
           <Button
-            className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0"
+            className="w-full mt-4 bg-brand-grena hover:from-brand-grena-hover hover:to-brand-grena-hover text-white border-0"
             onClick={handleGenerateMessage}
             disabled={isGenerating}
           >
@@ -137,7 +137,7 @@ export function ClientProfileSheet({ client, open, onOpenChange }: ClientProfile
                 </div>
                 <div>
                   <p className="text-muted-foreground text-xs">Telefone / WhatsApp</p>
-                  <a href={`https://wa.me/55${client.phone.replace(/\D/g, '')}`} target="_blank" rel="noreferrer" className="font-medium text-purple-600 hover:underline">
+                  <a href={`https://wa.me/55${client.phone.replace(/\D/g, '')}`} target="_blank" rel="noreferrer" className="font-medium text-brand-grena hover:underline">
                     {client.phone}
                   </a>
                 </div>

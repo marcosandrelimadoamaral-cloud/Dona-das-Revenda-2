@@ -11,41 +11,27 @@ export default function SobrePage() {
 
             <div className="space-y-8 text-muted-foreground leading-relaxed">
                 <section>
-                    <h2 className="text-2xl font-semibold text-foreground mb-4">História</h2>
-                    <p>A Dona da Revenda nasceu da dor real de quem vive o dia a dia das vendas diretas. Criada em 2024 por empreendedores que cresceram vendendo cosméticos nas ruas do Brasil, entendemos que a tecnologia deveria ser aliada da revendedora, não mais uma complicação. Hoje, somos a primeira plataforma do Brasil a oferecer inteligência artificial nativa para quem vende Natura, Avon, Boticário e outras marcas. Nossa missão é empoderar milhões de mulheres a profissionalizarem seus negócios e conquistarem sua independência financeira.</p>
+                    <h2 className="text-2xl font-semibold text-foreground mb-4">Por que existimos</h2>
+                    <p>Quem revende beleza tem um negócio de verdade: estoque, clientes, fiados, entregas, redes sociais. Quase sempre tudo isso vive num caderno, numa planilha e em dezenas de conversas de WhatsApp. A Dona da Revenda reúne esse trabalho num só lugar e coloca assistentes de inteligência artificial para ajudar, sempre com a revendedora no comando.</p>
                 </section>
 
                 <section>
                     <h2 className="text-2xl font-semibold text-foreground mb-4">Missão</h2>
-                    <p className="text-lg text-purple-600 font-medium">Transformar revendedores em empresários da beleza, através da tecnologia e inteligência artificial acessível.</p>
-                </section>
-
-                <section className="bg-purple-50 dark:bg-purple-950/20 p-8 rounded-2xl">
-                    <h2 className="text-2xl font-semibold text-foreground mb-6 text-center">Números</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <div>
-                            <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
-                            <div className="font-medium text-foreground">Revendedoras ativas</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl font-bold text-purple-600 mb-2">R$ 2.4M</div>
-                            <div className="font-medium text-foreground">Em vendas gerenciadas</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl font-bold text-purple-600 mb-2">94%</div>
-                            <div className="font-medium text-foreground">Satisfação dos clientes</div>
-                        </div>
-                    </div>
+                    <p className="text-lg text-brand-grena font-medium">Ajudar quem revende beleza a organizar o negócio, ganhar tempo e vender com mais clareza.</p>
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-semibold text-foreground mb-4">Time</h2>
-                    <p>Somos um time diverso de desenvolvedores, designers e especialistas em vendas diretas, unidos pelo propósito de democratizar o acesso à tecnologia de ponta para microempreendedoras.</p>
+                    <h2 className="text-2xl font-semibold text-foreground mb-4">No que acreditamos</h2>
+                    <ul className="list-disc pl-5 space-y-2">
+                        <li><strong>A dona é você.</strong> A tecnologia trabalha para a revendedora, não o contrário.</li>
+                        <li><strong>Simples antes de sofisticado.</strong> Se é difícil de usar, não serve.</li>
+                        <li><strong>Transparência.</strong> Preço claro, dados seus e cancelamento sem burocracia.</li>
+                    </ul>
                 </section>
 
                 <section>
-                    <h2 className="text-xl font-semibold text-foreground mb-3">Onde Estamos</h2>
-                    <p><strong>Sede:</strong> São Paulo, SP - Brasil.<br /><strong>Atuação:</strong> 100% digital, atendendo todo o território nacional.</p>
+                    <h2 className="text-xl font-semibold text-foreground mb-3">Fale com a gente</h2>
+                    <p>Dúvidas, sugestões ou parcerias: use a página de <a href="/contato" className="text-brand-grena underline underline-offset-4">contato</a>.</p>
                 </section>
             </div>
         </div>

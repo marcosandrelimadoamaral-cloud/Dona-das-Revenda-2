@@ -48,7 +48,7 @@ export function StripePaymentForm({ onSuccess, onCancel, planName, planPrice }: 
                 toast.error("Ocorreu um erro inesperado. Tente novamente.")
             }
         } else {
-            toast.success("✅ Assinatura ativada com sucesso!")
+            toast.success("Assinatura ativada com sucesso!")
             onSuccess()
         }
     }
@@ -61,7 +61,7 @@ export function StripePaymentForm({ onSuccess, onCancel, planName, planPrice }: 
                     <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Plano {planName}</div>
                     <div className="text-xs text-muted-foreground">Assinatura recorrente · Cancele quando quiser</div>
                 </div>
-                <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <div className="text-xl font-bold text-brand-grena dark:text-brand-quartzo">
                     R$ {planPrice}<span className="text-xs font-normal text-muted-foreground">/mês</span>
                 </div>
             </div>
@@ -103,7 +103,7 @@ export function StripePaymentForm({ onSuccess, onCancel, planName, planPrice }: 
                 <Button
                     type="submit"
                     disabled={!stripe || isProcessing}
-                    className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold h-12 text-base"
+                    className="flex-1 bg-brand-grena hover:from-brand-grena-hover hover:to-brand-grena-hover text-white font-bold h-12 text-base"
                 >
                     {isProcessing ? (
                         <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Processando...</>

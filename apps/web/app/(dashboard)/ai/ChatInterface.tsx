@@ -14,11 +14,11 @@ import { getUserProducts } from "@/app/actions/inventory/getProducts"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 
 const AGENTS = [
-    { id: 'clara', name: 'Clara', role: 'Marketing & Conteúdo', icon: Sparkles, color: 'text-pink-500', bg: 'bg-pink-100 dark:bg-pink-900/40', greeting: 'Oi! Sou a Clara. Vamos criar uma campanha que vai bombar no seu Instagram hoje?' },
+    { id: 'clara', name: 'Clara', role: 'Marketing & Conteúdo', icon: Sparkles, color: 'text-brand-grena', bg: 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/40', greeting: 'Oi! Sou a Clara. Vamos criar uma campanha que vai bombar no seu Instagram hoje?' },
     { id: 'finn', name: 'Finn', role: 'Analista Financeiro', icon: TrendingUp, color: 'text-emerald-500', bg: 'bg-emerald-100 dark:bg-emerald-900/40', greeting: 'Olá. Finn aqui. Pronto para analisarmos as margens e garantir que você não está perdendo dinheiro?' },
     { id: 'zara', name: 'Zara', role: 'Treinadora de Vendas', icon: MessageCircle, color: 'text-blue-500', bg: 'bg-blue-100 dark:bg-blue-900/40', greeting: 'Ei! A cliente achou caro? Me mande o que ela falou que eu te dou a resposta perfeita para fechar essa venda.' },
     { id: 'nina', name: 'Nina', role: 'Gestão de Estoque', icon: PackageSearch, color: 'text-amber-500', bg: 'bg-amber-100 dark:bg-amber-900/40', greeting: 'Produto parado é dinheiro jogado fora! Quer ajuda para montar uns kits com aquele estoque antigo?' },
-    { id: 'lia', name: 'Lia', role: 'Secretária Executiva', icon: CalendarCheck, color: 'text-purple-500', bg: 'bg-purple-100 dark:bg-purple-900/40', greeting: 'Bom dia! Sou a Lia. Posso te ajudar a organizar seu dia ou cobrar aquele fiado atrasado de forma bem educada.' }
+    { id: 'lia', name: 'Lia', role: 'Secretária Executiva', icon: CalendarCheck, color: 'text-brand-grena', bg: 'bg-brand-quartzo-claro dark:bg-brand-grena-escuro/40', greeting: 'Bom dia! Sou a Lia. Posso te ajudar a organizar seu dia ou cobrar aquele fiado atrasado de forma bem educada.' }
 ]
 
 export function ChatInterface({ settings }: { settings: any }) {
@@ -124,7 +124,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                                 key={agent.id}
                                 onClick={() => setActiveAgent(agent.id)}
                                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all shrink-0 snap-start ${activeAgent === agent.id
-                                        ? 'bg-white dark:bg-gray-800 border-indigo-200 dark:border-indigo-700 shadow-sm ring-1 ring-indigo-500/10'
+                                        ? 'bg-white dark:bg-gray-800 border-brand-quartzo-claro dark:border-brand-grena-hover shadow-sm ring-1 ring-brand-grena/10'
                                         : 'bg-white/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800'
                                     }`}
                             >
@@ -166,7 +166,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                                 )}
 
                                 <div className={`max-w-[85%] sm:max-w-[75%] px-4 py-3 sm:px-5 sm:py-3.5 shadow-sm border border-transparent ${msg.role === 'user'
-                                    ? 'bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-3xl rounded-br-md shadow-purple-500/20'
+                                    ? 'bg-brand-grena text-white rounded-3xl rounded-br-md shadow-brand-grena/20'
                                     : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-3xl rounded-tl-md border-gray-100 dark:border-gray-700 shadow-black/5'
                                     }`}>
                                     <div className="prose prose-sm dark:prose-invert max-w-none break-words leading-relaxed">
@@ -176,7 +176,7 @@ export function ChatInterface({ settings }: { settings: any }) {
 
                                 {msg.role === 'user' && (
                                     <Avatar className="w-8 h-8 border shrink-0 hidden sm:block">
-                                        <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white"><User className="w-4 h-4" /></AvatarFallback>
+                                        <AvatarFallback className="bg-brand-grena text-white"><User className="w-4 h-4" /></AvatarFallback>
                                     </Avatar>
                                 )}
                             </div>
@@ -189,8 +189,8 @@ export function ChatInterface({ settings }: { settings: any }) {
                                         <currentAgent.icon className={`w-4 h-4 ${currentAgent.color} animate-pulse`} />
                                     </AvatarFallback>
                                 </Avatar>
-                                <div className="bg-white dark:bg-gray-800 border border-indigo-100 dark:border-indigo-800/50 shadow-sm rounded-3xl rounded-tl-md px-5 py-4 flex items-center gap-2">
-                                    <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400 animate-pulse">Analisando seus dados reais...</span>
+                                <div className="bg-white dark:bg-gray-800 border border-brand-quartzo-claro dark:border-brand-grena-escuro/50 shadow-sm rounded-3xl rounded-tl-md px-5 py-4 flex items-center gap-2">
+                                    <span className="text-sm font-medium text-brand-grena dark:text-brand-quartzo animate-pulse">Analisando seus dados reais...</span>
                                 </div>
                             </div>
                         )}
@@ -202,12 +202,12 @@ export function ChatInterface({ settings }: { settings: any }) {
                     <div className="max-w-3xl mx-auto">
                         {/* Contexto RAG */}
                         {selectedProduct && (
-                            <div className="mb-3 inline-flex items-center gap-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 text-xs px-3 py-1.5 rounded-full border border-indigo-100 dark:border-indigo-800/50">
+                            <div className="mb-3 inline-flex items-center gap-2 bg-brand-quartzo-fundo dark:bg-brand-grena-escuro/30 text-brand-grena-hover dark:text-brand-quartzo text-xs px-3 py-1.5 rounded-full border border-brand-quartzo-claro dark:border-brand-grena-escuro/50">
                                 <Box className="w-3.5 h-3.5" />
                                 <span>Contexto Ativo: <b>{selectedProduct.custom_name}</b></span>
                                 <button
                                     onClick={() => setSelectedProduct(null)}
-                                    className="ml-1 hover:text-indigo-900 dark:hover:text-indigo-100"
+                                    className="ml-1 hover:text-brand-grena-escuro dark:hover:text-brand-quartzo-claro"
                                 >
                                     &times;
                                 </button>
@@ -255,7 +255,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                                     size="icon"
                                     onClick={handleSend}
                                     disabled={!input.trim() || isLoading}
-                                    className="absolute right-1.5 top-1.5 w-9 h-9 rounded-xl bg-purple-600 hover:bg-purple-700"
+                                    className="absolute right-1.5 top-1.5 w-9 h-9 rounded-xl bg-brand-grena hover:bg-brand-grena-hover"
                                 >
                                     <Send className="w-4 h-4" />
                                 </Button>
@@ -291,14 +291,14 @@ export function ChatInterface({ settings }: { settings: any }) {
                         </div>
 
                         {/* Personalize tip */}
-                        <div className="hidden sm:flex mt-3 items-center gap-2 bg-purple-50 dark:bg-purple-950/30 border border-purple-100 dark:border-purple-900 rounded-xl px-3 py-2">
-                            <Settings2 className="w-3.5 h-3.5 text-purple-500 shrink-0" />
-                            <p className="text-xs text-purple-700 dark:text-purple-300 flex-1">
+                        <div className="hidden sm:flex mt-3 items-center gap-2 bg-brand-quartzo-fundo dark:bg-brand-tinta/30 border border-brand-quartzo-claro dark:border-brand-grena-escuro rounded-xl px-3 py-2">
+                            <Settings2 className="w-3.5 h-3.5 text-brand-grena shrink-0" />
+                            <p className="text-xs text-brand-grena-hover dark:text-brand-quartzo flex-1">
                                 <span className="font-semibold">Personalize sua experiência</span> — adicione contexto da sua loja para respostas mais precisas.
                             </p>
                             <a
                                 href="/settings?tab=ai"
-                                className="text-xs font-bold text-purple-600 dark:text-purple-400 hover:underline shrink-0"
+                                className="text-xs font-bold text-brand-grena dark:text-brand-quartzo hover:underline shrink-0"
                             >
                                 Configurar →
                             </a>
@@ -321,7 +321,7 @@ function PromptBadge({ text, onClick }: { text: string, onClick: () => void }) {
     return (
         <button
             onClick={onClick}
-            className="shrink-0 px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-xs text-gray-600 dark:text-gray-300 hover:border-purple-300 hover:text-purple-600 transition-colors whitespace-nowrap"
+            className="shrink-0 px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-xs text-gray-600 dark:text-gray-300 hover:border-brand-quartzo hover:text-brand-grena transition-colors whitespace-nowrap"
         >
             <ArrowRight className="w-3 h-3 inline mr-1 opacity-50" />
             {text}

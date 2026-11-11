@@ -1,13 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import Script from "next/script";
 import "../styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", weight: ["500", "600", "700"] });
 
 export const viewport: Viewport = {
-  themeColor: "#6366f1",
+  themeColor: "#8B1935",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -17,10 +18,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Dona da Revenda — Gestão com IA para Consultoras de Beleza",
+    default: "Dona da Revenda — Gestão para quem revende beleza",
     template: "%s | Dona da Revenda"
   },
-  description: "A primeira plataforma de gestão para revendedoras de cosméticos 100% movida a Inteligência Artificial. Controle seu PDV, estoque, clientes (fiado) e financeiro em um só lugar.",
+  description: "Gestão para quem revende beleza: PDV, estoque, clientes, fiados e financeiro num só lugar, com cinco assistentes de IA que trabalham com você. Teste 7 dias grátis.",
   keywords: ["gestão para revendedoras", "cosméticos", "natura", "avon", "o boticário", "eudora", "sistema pdv", "controle de fiado", "inteligência artificial", "crm vendas"],
   authors: [{ name: "Dona da Revenda" }],
   creator: "Dona da Revenda",
@@ -28,8 +29,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://donadarevenda.com.br",
-    title: "Dona da Revenda — Gestão com IA para Consultoras",
-    description: "Controle seu estoque, fluxo de caixa e fiados com a ajuda de 5 Agentes de IA trabalhando para você 24h por dia.",
+    title: "Dona da Revenda — Gestão para quem revende beleza",
+    description: "Estoque, vendas, fiados e financeiro organizados, com cinco assistentes de IA ajudando você todos os dias.",
     siteName: "Dona da Revenda",
     images: [{
       url: "https://donadarevenda.com.br/icons/icon-512x512.png",
@@ -40,14 +41,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dona da Revenda — Gestão com IA para Consultoras",
-    description: "A IA que cuida do seu negócio de beleza.",
+    title: "Dona da Revenda — Gestão para quem revende beleza",
+    description: "Sua revenda organizada. Seu tempo de volta.",
     images: ["https://donadarevenda.com.br/icons/icon-512x512.png"],
   },
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "default",
     title: "Dona da Revenda",
   },
   icons: {
@@ -71,11 +72,11 @@ export default function RootLayout({
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Dona da Revenda" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${fraunces.variable} font-sans antialiased`} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
         </ThemeProvider>
