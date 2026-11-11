@@ -107,7 +107,7 @@ export default function AgendaPage() {
     })
 
     return (
-        <div className="space-y-6 max-w-7xl mx-auto h-[calc(100vh-100px)] flex flex-col">
+        <div className="space-y-6 max-w-7xl mx-auto lg:h-[calc(100vh-100px)] flex flex-col">
             <div>
                 <h1 className="text-3xl font-bold tracking-tight flex items-center gap-2">
                     <CalendarIcon className="w-8 h-8 text-brand-grena dark:text-brand-quartzo" />
@@ -120,12 +120,12 @@ export default function AgendaPage() {
 
             <div className="flex flex-col lg:flex-row gap-6 flex-1 min-h-0">
                 {/* 1. COLUNA ESQUERDA: Calendário e Filtros */}
-                <div className="w-full lg:w-[400px] flex flex-col gap-6 overflow-y-auto pr-1">
+                <div className="w-full lg:w-[400px] flex flex-col gap-6 shrink-0 lg:shrink lg:overflow-y-auto pr-1">
                     <Card className="border-none shadow-sm rounded-3xl bg-white dark:bg-background overflow-hidden shrink-0">
                         <CardContent className="p-6">
                             <style>{`
-                                .rdp-day_selected { background-color: #9333ea !important; color: white !important; font-weight: bold; border-radius: 9999px !important; }
-                                .rdp-day_selected:hover { background-color: #7e22ce !important; }
+                                .rdp-day_selected { background-color: #8B1935 !important; color: white !important; font-weight: bold; border-radius: 9999px !important; }
+                                .rdp-day_selected:hover { background-color: #6F1329 !important; }
                             `}</style>
 
                             {/* CABEÇALHO CUSTOMIZADO: Fix para setas não vazarem container */}

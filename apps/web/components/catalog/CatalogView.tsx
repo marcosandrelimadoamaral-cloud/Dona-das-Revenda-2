@@ -229,7 +229,7 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                                             <Button
                                                 variant="default"
                                                 size="sm"
-                                                className="w-full text-xs font-semibold h-8 bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-brand-grena dark:hover:bg-brand-grena dark:hover:text-white transition-colors mt-1 rounded-xl"
+                                                className="w-full text-xs font-semibold h-8 bg-primary text-primary-foreground hover:bg-brand-grena-hover transition-colors mt-1 rounded-xl"
                                                 onClick={() => handleAddProduct(product)}
                                             >
                                                 <Import className="w-3.5 h-3.5 mr-1.5" />

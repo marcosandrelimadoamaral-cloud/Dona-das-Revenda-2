@@ -302,7 +302,7 @@ export default function SettingsPage() {
             </CardHeader>
             <CardContent>
               <div className="flex flex-col items-center justify-center py-10 text-center gap-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 rounded-2xl flex items-center justify-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-emerald-100 to-brand-quartzo-claro dark:from-emerald-900/30 dark:to-brand-grena-escuro/30 rounded-2xl flex items-center justify-center">
                   <Smartphone className="w-10 h-10 text-emerald-400" />
                 </div>
                 <div>

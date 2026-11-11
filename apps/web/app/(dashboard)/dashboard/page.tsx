@@ -67,11 +67,11 @@ export default async function DashboardPage({
 
       <div className="flex flex-col-reverse lg:flex-col gap-6">
         <TooltipProvider>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5 order-2 lg:order-none">
+          <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-5 order-2 lg:order-none">
 
             {/* Card: Vendas */}
-            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-4 sm:p-6 group hover:shadow-md transition-all">
+              <div className="absolute top-0 right-0 p-4 opacity-10 hidden sm:block group-hover:opacity-20 transition-opacity">
                 <Activity className="w-24 h-24 text-brand-grena dark:text-brand-quartzo" />
               </div>
               <div className="flex items-center justify-between mb-4">
@@ -88,7 +88,7 @@ export default async function DashboardPage({
                 </Tooltip>
               </div>
               <p className="text-sm font-medium text-muted-foreground mb-1">Vendas (Mês)</p>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white">{metrics.totalSales}</h3>
+              <h3 className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-white">{metrics.totalSales}</h3>
               <div className="mt-4 h-8 w-full">
                 {/* Simple SVG Sparkline placeholder */}
                 <svg viewBox="0 0 100 20" className="w-full h-full stroke-brand-grena fill-none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -98,8 +98,8 @@ export default async function DashboardPage({
             </div>
 
             {/* Card: Receitas */}
-            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-4 sm:p-6 group hover:shadow-md transition-all">
+              <div className="absolute top-0 right-0 p-4 opacity-10 hidden sm:block group-hover:opacity-20 transition-opacity">
                 <DollarSign className="w-24 h-24 text-blue-600" />
               </div>
               <div className="flex items-center justify-between mb-4">
@@ -116,7 +116,7 @@ export default async function DashboardPage({
                 </Tooltip>
               </div>
               <p className="text-sm font-medium text-muted-foreground mb-1">Receita Realizada</p>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+              <h3 className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-white">
                 {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(metrics.revenue)}
               </h3>
               <div className="mt-4 h-8 w-full">
@@ -128,8 +128,8 @@ export default async function DashboardPage({
             </div>
 
             {/* Card: Despesas / Custos */}
-            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-4 sm:p-6 group hover:shadow-md transition-all">
+              <div className="absolute top-0 right-0 p-4 opacity-10 hidden sm:block group-hover:opacity-20 transition-opacity">
                 <ArrowDown className="w-24 h-24 text-red-600" />
               </div>
               <div className="flex items-center justify-between mb-4">
@@ -146,7 +146,7 @@ export default async function DashboardPage({
                 </Tooltip>
               </div>
               <p className="text-sm font-medium text-muted-foreground mb-1">Custos (CMV)</p>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+              <h3 className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-white">
                 {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(metrics.cost)}
               </h3>
               <div className="mt-4 h-8 w-full">
@@ -157,8 +157,8 @@ export default async function DashboardPage({
             </div>
 
             {/* Card: Capital em Estoque */}
-            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-6 group hover:shadow-md transition-all">
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <div className="relative overflow-hidden bg-white/70 dark:bg-background/50 backdrop-blur-xl border border-white/20 dark:border-border shadow-sm rounded-3xl p-4 sm:p-6 group hover:shadow-md transition-all">
+              <div className="absolute top-0 right-0 p-4 opacity-10 hidden sm:block group-hover:opacity-20 transition-opacity">
                 <ShoppingBag className="w-24 h-24 text-amber-500" />
               </div>
               <div className="flex items-center justify-between mb-4">
@@ -175,7 +175,7 @@ export default async function DashboardPage({
                 </Tooltip>
               </div>
               <p className="text-sm font-medium text-muted-foreground mb-1">Capital em Estoque</p>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+              <h3 className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-white">
                 {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(metrics.stockCapital || 0)}
               </h3>
               <div className="mt-4 h-8 w-full">
@@ -186,8 +186,8 @@ export default async function DashboardPage({
             </div>
 
             {/* Card: Lucro Líquido */}
-            <div className="relative overflow-hidden bg-gradient-to-br from-emerald-500 to-teal-600 shadow-lg rounded-3xl p-6 group hover:shadow-xl transition-all text-white">
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <div className="relative overflow-hidden bg-gradient-to-br from-emerald-500 to-teal-600 shadow-lg rounded-3xl p-4 sm:p-6 group col-span-2 lg:col-span-1 hover:shadow-xl transition-all text-white">
+              <div className="absolute top-0 right-0 p-4 opacity-10 hidden sm:block group-hover:opacity-20 transition-opacity">
                 <TrendingUp className="w-24 h-24 text-white" />
               </div>
               <div className="flex items-center justify-between mb-4">
@@ -206,7 +206,7 @@ export default async function DashboardPage({
                 </Tooltip>
               </div>
               <p className="text-emerald-50 font-medium mb-1 drop-shadow-sm">Lucro Líquido</p>
-              <h3 className="text-3xl font-bold drop-shadow-sm">
+              <h3 className="text-xl sm:text-3xl font-bold drop-shadow-sm">
                 {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(metrics.profit)}
               </h3>
               <div className="mt-4 h-8 w-full flex items-end">

@@ -43,12 +43,13 @@ function BillingContent() {
             name: "Mensal",
             price: "97,00",
             period: "mês",
-            description: "Perfeito para começar a organizar suas vendas e cobranças.",
+            description: "Cobrado todo mês. Sem fidelidade.",
             features: [
-                "Gestão de Fiados ilimitada",
-                "Catálogo Digital (vitrine)",
-                "IA Assistente (básico)",
-                "Suporte por email"
+                "5 assistentes de IA",
+                "PDV, estoque, clientes e fiados",
+                "Catálogo multimarca",
+                "Financeiro e relatórios em Excel",
+                "Agenda e trocas"
             ],
             highlighted: false,
         },
@@ -57,13 +58,15 @@ function BillingContent() {
             name: "Anual",
             price: "47,50",
             period: "mês",
-            description: "A melhor escolha para revendedoras estabelecidas. Fature mais gastando menos.",
+            description: "R$ 570 por ano. Economia de R$ 594.",
             features: [
-                "Gestão de Fiados ilimitada",
-                "Catálogo Digital (vitrine premium)",
-                "IA Assistente (ilimitado)",
-                "Suporte prioritário via WhatsApp",
-                "Relatórios financeiros avançados"
+                "5 assistentes de IA",
+                "PDV, estoque, clientes e fiados",
+                "Catálogo multimarca",
+                "Financeiro e relatórios em Excel",
+                "Agenda e trocas",
+                "Suporte com prioridade",
+                "Novidades em primeira mão"
             ],
             highlighted: true,
             badge: "Melhor Custo-Benefício",
@@ -74,12 +77,13 @@ function BillingContent() {
             name: "Trimestral",
             price: "87,00",
             period: "mês",
-            description: "Ideal para quem busca um compromisso a médio prazo com desconto inicial.",
+            description: "R$ 261 a cada 3 meses. 10% de desconto.",
             features: [
-                "Gestão de Fiados ilimitada",
-                "Catálogo Digital (vitrine)",
-                "IA Assistente (intermediário)",
-                "Suporte por email e chat"
+                "5 assistentes de IA",
+                "PDV, estoque, clientes e fiados",
+                "Catálogo multimarca",
+                "Financeiro e relatórios em Excel",
+                "Agenda e trocas"
             ],
             highlighted: false,
             billedAmount: "Cobrado R$ 261,00 a cada 3 meses"
@@ -182,7 +186,7 @@ function BillingContent() {
                             {plan.highlighted && (
                                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-0.5 whitespace-nowrap">
                                     <span className="bg-brand-grena text-white text-[10px] md:text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-b-xl shadow-md">
-                                        Melhor valor: 51% de desconto + 7 dias grátis
+                                        Melhor valor: 51% de desconto
                                     </span>
                                 </div>
                             )}
@@ -219,7 +223,7 @@ function BillingContent() {
                                     onClick={() => handleCheckout(plan.id)}
                                     disabled={isLoadingPayment !== null}
                                     className={`w-full rounded-xl h-14 font-extrabold text-base md:text-lg transition-all ${plan.highlighted
-                                        ? "bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white shadow-[0_4px_14px_rgb(239,68,68,0.3)] hover:shadow-[0_6px_20px_rgb(239,68,68,0.4)] animate-pulse hover:animate-none"
+                                        ? "bg-gradient-to-r from-red-500 to-brand-grena hover:from-red-600 hover:to-brand-grena text-white shadow-[0_4px_14px_rgb(239,68,68,0.3)] hover:shadow-[0_6px_20px_rgb(239,68,68,0.4)] animate-pulse hover:animate-none"
                                         : "bg-gray-100 dark:bg-muted hover:bg-gray-200 dark:hover:bg-muted text-gray-900 dark:text-foreground"
                                         }`}
                                 >

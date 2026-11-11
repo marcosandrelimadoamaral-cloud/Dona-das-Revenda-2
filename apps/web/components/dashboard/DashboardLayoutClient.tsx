@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useTransition, useEffect } from "react"
-import { motion } from "framer-motion"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { useTheme } from "next-themes"
@@ -78,7 +77,6 @@ export function DashboardLayoutClient({
     const pathname = usePathname()
     const router = useRouter()
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-    const [isDraggingFab, setIsDraggingFab] = useState(false)
     const [isPending, startTransition] = useTransition()
     const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
@@ -143,7 +141,7 @@ export function DashboardLayoutClient({
         }
         if (isTrialValid && daysRemaining > 3) {
             return (
-                <div className="flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 rounded-full px-2.5 py-1">
+                <div className="flex items-center gap-1.5 text-xs font-semibold text-brand-grena dark:text-brand-quartzo bg-brand-quartzo-fundo dark:bg-brand-grena-escuro/50 border border-brand-quartzo dark:border-brand-grena-escuro rounded-full px-2.5 py-1">
                     <Clock className="w-3 h-3" />
                     Trial: {daysRemaining}d
                 </div>
@@ -316,7 +314,7 @@ export function DashboardLayoutClient({
                     {showStickyBanner && (
                         <div className={`flex items - center justify - between px - 4 py - 2.5 text - sm font - medium ${daysRemaining <= 1
                             ? "bg-red-600 text-white"
-                            : "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
+                            : "bg-gradient-to-r from-amber-500 to-brand-grena text-white"
                             } `}>
                             <div className="flex items-center gap-2">
                                 <AlertTriangle className="w-4 h-4 shrink-0" />
@@ -471,31 +469,6 @@ export function DashboardLayoutClient({
                     </main>
                 </div>
             </div>
-
-            {/* Mobile Floating Action Button (Estoque / Novo Produto) */}
-            {!["/pos", "/ai", "/billing", "/settings", "/clients"].includes(pathname) && (
-                <motion.div
-                    drag
-                    dragMomentum={false}
-                    onDragStart={() => setIsDraggingFab(true)}
-                    onDragEnd={() => {
-                        // Tiny delay to ensure we don't trigger click right after drag finishes
-                        setTimeout(() => setIsDraggingFab(false), 150)
-                    }}
-                    onClick={(e) => {
-                        if (!isDraggingFab) {
-                            router.push('/inventory')
-                        }
-                    }}
-                    className="lg:hidden fixed z-[60] flex items-center justify-center w-14 h-14 rounded-full bg-brand-grena text-white shadow-lg shadow-brand-grena/30 cursor-grab active:cursor-grabbing"
-                    style={{ bottom: 80, right: 16, touchAction: "none" }}
-                >
-                    <PackageOpen className="w-6 h-6 pointer-events-none" />
-                    <div className="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-white dark:border-border rounded-full flex items-center justify-center pointer-events-none">
-                        <span className="text-[10px] font-bold text-white">+</span>
-                    </div>
-                </motion.div>
-            )}
 
             {/* PWA Install Prompt */}
             <InstallPrompt />
