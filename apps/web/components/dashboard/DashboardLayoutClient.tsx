@@ -30,7 +30,8 @@ import {
     ChevronRight,
     PackageOpen,
 } from "lucide-react"
-import Image from "next/image"
+import { Logo } from "@/components/brand/Logo"
+import { TrialLockScreen } from "@/components/dashboard/TrialLockScreen"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
@@ -260,18 +261,20 @@ export function DashboardLayoutClient({
 
     const showStickyBanner = !isPro && daysRemaining <= 3 && showTrialBanner
 
+    // Teste grátis acabou e não há assinatura: trava o painel inteiro (só a tela de assinatura fica livre).
+    if (!isPro && !isTrialValid && !pathname.startsWith("/billing")) {
+        const firstName = String(user?.user_metadata?.full_name || user?.user_metadata?.name || "").split(" ")[0]
+        return <TrialLockScreen name={firstName || undefined} />
+    }
+
     return (
         <>
             <div className="flex h-screen bg-gray-50 dark:bg-background overflow-hidden">
                 {/* Sidebar Desktop */}
                 <aside className="hidden lg:flex flex-col w-64 border-r border-gray-200 dark:border-border bg-white dark:bg-card shrink-0">
                     <div className="h-16 flex items-center px-5 border-b border-gray-100 dark:border-border">
-                        <Link href="/" className="flex items-center gap-1">
-                            <Image src="/brand/simbolo-coroa-dourada.svg" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
-                            <div className="flex flex-col leading-none">
-                                <span className="font-black text-sm bg-brand-grena bg-clip-text text-transparent">Dona da</span>
-                                <span className="font-black text-sm bg-brand-grena bg-clip-text text-transparent -mt-0.5">Revenda</span>
-                            </div>
+                        <Link href="/dashboard" className="flex items-center" aria-label="Dona da Revenda">
+                            <Logo variant="horizontal" className="h-8 w-auto" />
                         </Link>
                     </div>
 
@@ -347,9 +350,7 @@ export function DashboardLayoutClient({
                                 </SheetTrigger>
                                 <SheetContent side="left" className="w-64 p-0 flex flex-col bg-white dark:bg-card">
                                     <div className="h-16 flex items-center px-5 border-b dark:border-border">
-                                        <span className="text-xl font-bold bg-brand-grena bg-clip-text text-transparent">
-                                            Dona da Revenda
-                                        </span>
+                                        <Logo variant="horizontal" className="h-8 w-auto" />
                                     </div>
                                     <nav className="flex-1 py-4 px-3 space-y-0.5 overflow-y-auto">
                                         <NavLinks />
@@ -372,9 +373,9 @@ export function DashboardLayoutClient({
                                     </div>
                                 </SheetContent>
                             </Sheet>
-                            <span className="text-lg font-black bg-brand-grena bg-clip-text text-transparent lg:hidden ml-1 truncate max-w-[160px]">
-                                Dona da Revenda
-                            </span>
+                            <Link href="/dashboard" className="lg:hidden ml-1" aria-label="Dona da Revenda">
+                                <Logo variant="horizontal" className="h-7 w-auto" />
+                            </Link>
                         </div>
 
                         {/* Right side actions */}

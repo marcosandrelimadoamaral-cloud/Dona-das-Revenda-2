@@ -44,7 +44,8 @@ export default async function DashboardLayout({ children }: { children: React.Re
   if (subscription) {
     const periodEnd = new Date(subscription.current_period_end).getTime()
 
-    isPro = subscription.status === 'active'
+    // Só vale como assinante se o período pago ainda não terminou.
+    isPro = subscription.status === 'active' && periodEnd > now
 
     if (subscription.status === 'trialing') {
       daysRemaining = Math.ceil((periodEnd - now) / (1000 * 60 * 60 * 24))
