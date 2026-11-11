@@ -27,7 +27,7 @@ export default function TermosPage() {
 
                 <section>
                     <h2 className="text-xl font-semibold text-foreground mb-3">Seção 4 - Planos e Pagamentos</h2>
-                    <p>Oferecemos planos gratuitos e pagos: Plano Free: Gratuito com limitações de uso; Plano Pro: R$ 97/mês ou R$ 930/ano; Plano Business: R$ 197/mês ou R$ 1.890/ano. Pagamentos são processados via Stripe e Mercado Pago. O não pagamento resultará na suspensão dos serviços premium.</p>
+                    <p>Oferecemos 7 dias de teste gratuito e planos pagos com todos os recursos: Mensal (R$ 97 por mês), Trimestral (R$ 261 a cada 3 meses) e Anual (R$ 570 por ano). Os pagamentos são processados pela Appmax, por Pix ou cartão de crédito, e as assinaturas são renovadas automaticamente ao fim de cada período. Você pode cancelar quando quiser e continua com acesso até o fim do período já pago. O não pagamento resultará na suspensão do acesso.</p>
                 </section>
 
                 <section>

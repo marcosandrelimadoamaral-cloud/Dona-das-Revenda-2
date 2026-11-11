@@ -1,4 +1,5 @@
 import { GoogleGenAI, Schema } from "@google/genai";
+import { generateWithFallback } from "./generate";
 
 export interface AgentConfig {
   apiKey: string;
@@ -32,48 +33,28 @@ export abstract class BaseAgent {
       ? `${prompt}\n\nContexto: ${JSON.stringify(context, null, 2)}`
       : prompt;
 
-    let lastError: any;
-    
-    // Retry logic (3 attempts)
-    for (let attempt = 1; attempt <= 3; attempt++) {
-      try {
-        const response = await this.ai.models.generateContent({
-          model: "gemini-3.1-pro-preview",
-          contents: enrichedPrompt,
-          config: {
-            systemInstruction,
-            temperature: this.config.temperature ?? 0.7,
-            topP: 0.8,
-            topK: 40,
-            responseMimeType: "application/json",
-            responseSchema: responseSchema
-          }
-        });
+    const { text: responseText, tokensUsed } = await generateWithFallback(this.ai, {
+      model: process.env.GEMINI_MODEL || "gemini-3.1-pro-preview",
+      contents: enrichedPrompt,
+      systemInstruction,
+      temperature: this.config.temperature ?? 0.7,
+      json: true,
+      responseSchema,
+    });
 
-        const responseText = response.text || "{}";
-        
-        let data: T;
-        try {
-          data = JSON.parse(responseText);
-        } catch {
-          data = { rawResponse: responseText } as unknown as T;
-        }
-
-        return {
-          data,
-          rawText: responseText,
-          confidence: this.calculateConfidence(responseText),
-          tokensUsed: response.usageMetadata?.totalTokenCount
-        };
-      } catch (error: any) {
-        lastError = error;
-        console.error(`Attempt ${attempt} failed:`, error.message);
-        if (attempt === 3) break;
-        await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
-      }
+    let data: T;
+    try {
+      data = JSON.parse(responseText);
+    } catch {
+      data = { rawResponse: responseText } as unknown as T;
     }
-    
-    throw new Error(`Erro na geração do agente após 3 tentativas: ${lastError?.message}`);
+
+    return {
+      data,
+      rawText: responseText,
+      confidence: this.calculateConfidence(responseText),
+      tokensUsed,
+    };
   }
 
   private calculateConfidence(text: string): number {

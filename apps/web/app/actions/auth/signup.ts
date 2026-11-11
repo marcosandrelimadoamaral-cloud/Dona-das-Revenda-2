@@ -75,7 +75,7 @@ export async function signup(formData: FormData) {
   const normalizedPlan = plan ? planMap[plan.toLowerCase()] ?? null : null;
 
   if (normalizedPlan) {
-    // Flow: Signup → Checkout (Stripe Elements) → Onboarding → Dashboard
+    // Flow: Signup → Checkout (Appmax: Pix ou cartão, ou 7 dias grátis) → Onboarding → Dashboard
     console.log('[SIGNUP] Plan selected:', normalizedPlan, '→ redirecting to /checkout');
     redirect(`/checkout?plan=${normalizedPlan}&newUser=true`);
   }

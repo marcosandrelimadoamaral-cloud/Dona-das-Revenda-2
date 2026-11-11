@@ -33,7 +33,7 @@ function BillingContent() {
     const router = useRouter()
 
     const handleCheckout = (planId: "monthly" | "quarterly" | "annual") => {
-        // Route to the embedded Stripe Elements checkout page
+        // Leva para a tela de checkout (Appmax)
         router.push(`/checkout?plan=${planId}&t=${Date.now()}`)
     }
 
@@ -238,7 +238,7 @@ function BillingContent() {
             <div className="text-center pt-8 border-t dark:border-border">
                 <div className="flex items-center justify-center gap-2 text-sm text-emerald-700 dark:text-emerald-400 font-medium">
                     <Sparkles className="w-4 h-4 text-emerald-500" />
-                    <span>Pagamento Seguro Mercado Pago · 7 Dias Grátis · Cancele quando quiser</span>
+                    <span>Pagamento seguro pela Appmax · Pix ou cartão · Cancele quando quiser</span>
                 </div>
             </div>
 

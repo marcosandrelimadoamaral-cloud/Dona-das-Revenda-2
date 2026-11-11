@@ -94,7 +94,7 @@ export function Pricing() {
                     : "bg-primary text-primary-foreground hover:bg-brand-grena-hover"
                 }`}
               >
-                <Link href={`/checkout?plan=${plan.id}`}>{plan.cta}</Link>
+                <Link href={`/signup?plan=${plan.id}&ref=pricing`}>{plan.cta}</Link>
               </Button>
             </div>
           ))}

@@ -1,218 +1,377 @@
 "use client"
 
-import { useState, useEffect, Suspense } from "react"
+import { useEffect, useMemo, useRef, useState, Suspense } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
-import { createMPSubscription } from "@/app/actions/billing/createMPSubscription"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Loader2, ShieldCheck, Lock, ArrowLeft, Check, Sparkles } from "lucide-react"
-import { toast } from "sonner"
 import Link from "next/link"
-import Image from "next/image"
+import { ArrowLeft, Check, Copy, CreditCard, Loader2, Lock, QrCode, ShieldCheck } from "lucide-react"
+import { toast } from "sonner"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Logo } from "@/components/brand/Logo"
+import { createClient } from "@/lib/supabase/client"
 
-const PLANS = {
-    monthly: {
-        id: "monthly" as const,
-        name: "O Cauteloso",
-        cycle: "Mensal",
-        price: "97,00",
-        billing: "Cobrado mensalmente",
-        features: ["5 Agentes de IA incluídos", "Catálogo multi-marca ilimitado", "PDV, Fiados e Estoque", "Dashboard Financeiro completo", "Relatórios Excel"],
-        popular: false,
-    },
-    annual: {
-        id: "annual" as const,
-        name: "VIP Anual",
-        cycle: "Anual",
-        price: "47,50",
-        billing: "Cobrado R$ 570 uma vez por ano",
-        features: ["Tudo do plano mensal", "Economia livre de R$ 594", "Suporte VIP com prioridade", "IA no WhatsApp (acesso antecipado)", "Funcionalidades em primeira mão"],
-        popular: true,
-    },
-    quarterly: {
-        id: "quarterly" as const,
-        name: "O Equilíbrio",
-        cycle: "Trimestral",
-        price: "87,00",
-        billing: "R$ 261 a cada 3 meses",
-        features: ["Tudo do plano mensal", "10% de desconto", "Renovação automática a cada 90 dias"],
-        popular: false,
-    },
+type PlanId = "monthly" | "quarterly" | "annual"
+type Method = "pix" | "card"
+
+const PLANS: Record<PlanId, { name: string; price: string; billing: string; badge?: string }> = {
+  monthly: { name: "Mensal", price: "97,00", billing: "Cobrado todo mês. Sem fidelidade." },
+  quarterly: { name: "Trimestral", price: "87,00", billing: "R$ 261 a cada 3 meses. 10% de desconto." },
+  annual: { name: "Anual", price: "47,50", billing: "R$ 570 por ano. Economia de R$ 594.", badge: "Melhor valor" },
 }
 
-// CheckoutRedirector — fetches init_point and redirects to Mercado Pago
-function CheckoutRedirector({ planId }: { planId: keyof typeof PLANS }) {
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState<string | null>(null)
-    const router = useRouter()
+const maskCpf = (v: string) =>
+  v
+    .replace(/\D/g, "")
+    .slice(0, 11)
+    .replace(/(\d{3})(\d)/, "$1.$2")
+    .replace(/(\d{3})(\d)/, "$1.$2")
+    .replace(/(\d{3})(\d{1,2})$/, "$1-$2")
 
-    useEffect(() => {
-        // Fetch the Mercado Pago init_point URL
-        createMPSubscription(planId).then((res) => {
-            if (res?.success && res.init_point) {
-                // Redirect user explicitly to checkout pro
-                window.location.href = res.init_point
-            } else {
-                setError(res?.error || "Erro ao gerar link de pagamento seguro.")
-                setLoading(false)
-            }
-        }).catch((err: any) => {
-            console.error("MPCheckoutActionError:", err)
-            setError(`Erro técnico detalhado: ${err?.message || String(err)}`)
-            setLoading(false)
-        })
-    }, [planId])
-
-    if (error) return (
-        <div className="text-center py-16">
-            <p className="text-red-500 mb-4">{error}</p>
-            <Button onClick={() => router.back()} variant="outline">Voltar aos planos</Button>
-        </div>
-    )
-
-    return (
-        <div className="flex flex-col items-center justify-center py-20 gap-4">
-            <Loader2 className="w-12 h-12 animate-spin text-blue-500" />
-            <p className="text-muted-foreground font-semibold text-lg">Redirecionando para ambiente seguro...</p>
-            <p className="text-muted-foreground text-xs">Você será levado ao Checkout Oficial do Mercado Pago</p>
-        </div>
-    )
+const maskPhone = (v: string) => {
+  const d = v.replace(/\D/g, "").slice(0, 11)
+  if (d.length <= 2) return d
+  if (d.length <= 6) return `(${d.slice(0, 2)}) ${d.slice(2)}`
+  if (d.length <= 10) return `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`
+  return `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`
 }
 
-// Plan selector step
-function PlanSelector({ onSelect }: { onSelect: (planId: keyof typeof PLANS) => void }) {
-    return (
-        <div className="space-y-6">
-            <div className="text-center mb-6">
-                <h2 className="text-2xl font-bold mb-2">Escolha seu plano</h2>
-                <p className="text-muted-foreground text-sm">Cancele quando quiser. Sem taxas ocultas.</p>
-            </div>
+const maskCard = (v: string) =>
+  v
+    .replace(/\D/g, "")
+    .slice(0, 19)
+    .replace(/(.{4})/g, "$1 ")
+    .trim()
 
-            <div className="grid grid-cols-1 gap-6">
-                {(Object.values(PLANS) as (typeof PLANS[keyof typeof PLANS])[]).map(plan => (
-                    <div
-                        key={plan.id}
-                        className={`relative bg-white dark:bg-muted rounded-3xl p-6 md:p-8 border shadow-sm flex flex-col transition-all overflow-hidden ${plan.popular
-                            ? "ring-2 ring-brand-grena dark:ring-brand-grena shadow-xl z-10 border-brand-quartzo-claro dark:border-brand-grena-escuro"
-                            : "border-gray-200 dark:border-border"
-                            }`}
-                    >
-                        {plan.popular && (
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-0.5 whitespace-nowrap">
-                                <Badge className="bg-brand-grena text-white border-0 px-4 py-1.5 text-xs font-bold shadow-md rounded-t-none rounded-b-xl">
-                                    Melhor valor: 51% de desconto + 7 dias grátis
-                                </Badge>
-                            </div>
-                        )}
+const maskExp = (v: string) => {
+  const d = v.replace(/\D/g, "").slice(0, 4)
+  return d.length > 2 ? `${d.slice(0, 2)}/${d.slice(2)}` : d
+}
 
-                        <div className={`mt-${plan.popular ? '4' : '0'}`}>
-                            <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
-                            <p className="inline-block text-xs font-bold tracking-wide text-brand-grena dark:text-brand-quartzo uppercase mb-3 bg-brand-quartzo-fundo dark:bg-brand-tinta/50 px-2 py-1 rounded-md">{plan.cycle}</p>
-                        </div>
-
-                        <div className="mb-6">
-                            {plan.popular && (
-                                <p className="text-sm font-bold text-red-500 line-through decoration-red-500/50 mb-1">De R$ 97,00/mês</p>
-                            )}
-                            <div className={`flex items-baseline gap-1 ${plan.popular ? 'text-brand-grena dark:text-brand-quartzo' : ''}`}>
-                                <span className="text-4xl md:text-5xl font-extrabold">R$ {plan.price}</span>
-                                <span className="text-muted-foreground font-medium">/mês</span>
-                            </div>
-                            <div className={`text-sm font-bold mt-2 leading-tight ${plan.popular ? 'text-emerald-600' : 'text-gray-500 dark:text-muted-foreground'}`}>
-                                {plan.billing}
-                            </div>
-                        </div>
-
-                        <Button
-                            onClick={() => onSelect(plan.id)}
-                            className={`w-full mb-6 h-14 rounded-xl text-base md:text-lg font-bold cursor-pointer transition-all ${plan.popular
-                                ? "bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white shadow-[0_4px_14px_rgb(239,68,68,0.3)] hover:shadow-[0_6px_20px_rgb(239,68,68,0.4)]"
-                                : "bg-gray-100 dark:bg-muted hover:bg-gray-200 dark:hover:bg-muted text-gray-900 dark:text-foreground"
-                                }`}
-                        >
-                            {plan.popular ? "Garantir 51% de Desconto" : `Assinar ${plan.cycle}`}
-                        </Button>
-
-                        <div className="space-y-3 flex-1">
-                            {plan.features.map((feature, idx) => (
-                                <div key={idx} className="flex items-start gap-3">
-                                    <Check className={`w-5 h-5 shrink-0 ${plan.popular ? 'text-brand-grena dark:text-brand-quartzo' : 'text-emerald-500'}`} />
-                                    <span className={`text-sm font-medium ${plan.popular ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-muted-foreground'}`}>{feature}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
+function pixImageSrc(qr: string) {
+  if (!qr) return ""
+  return qr.startsWith("data:") || qr.startsWith("http") ? qr : `data:image/png;base64,${qr}`
 }
 
 function CheckoutContent() {
-    const searchParams = useSearchParams()
-    const planParam = searchParams.get("plan") as keyof typeof PLANS | null
-    const isNewUser = searchParams.get("newUser") === "true"
-    const [selectedPlan, setSelectedPlan] = useState<keyof typeof PLANS | null>(
-        planParam && PLANS[planParam] ? planParam : null
-    )
+  const params = useSearchParams()
+  const router = useRouter()
+  const isNewUser = params.get("newUser") === "true"
+  const initial = params.get("plan") as PlanId | null
 
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-brand-quartzo-fundo/30 dark:from-background dark:via-background dark:to-brand-tinta/20 flex flex-col">
-            {/* Header */}
-            <header className="border-b dark:border-border bg-white/80 dark:bg-background/80 backdrop-blur-sm">
-                <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2.5">
-                        <Image src="/brand/simbolo-coroa-dourada.svg" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
-                        <div className="flex flex-col leading-none">
-                            <span className="font-black text-sm bg-brand-grena bg-clip-text text-transparent">Dona da</span>
-                            <span className="font-black text-sm bg-brand-grena bg-clip-text text-transparent">Revenda</span>
-                        </div>
-                    </Link>
-                    <Link href="/" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                        <ArrowLeft className="w-4 h-4" /> Voltar ao site
-                    </Link>
-                </div>
-            </header>
+  const [plan, setPlan] = useState<PlanId>(initial && PLANS[initial] ? initial : "annual")
+  const [method, setMethod] = useState<Method>("pix")
+  const [name, setName] = useState("")
+  const [cpf, setCpf] = useState("")
+  const [phone, setPhone] = useState("")
+  const [card, setCard] = useState({ number: "", exp: "", cvv: "", holderName: "" })
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [pix, setPix] = useState<{ qrcode: string; emv: string } | null>(null)
+  const [orderId, setOrderId] = useState<number | null>(null)
+  const [waiting, setWaiting] = useState<"pix" | "card" | null>(null)
+  const [paid, setPaid] = useState(false)
+  const timer = useRef<ReturnType<typeof setInterval> | null>(null)
 
-            {/* Main */}
-            <main className="flex-1 flex items-center justify-center px-4 py-12">
-                <div className="w-full max-w-lg">
-                    <div className="text-center mb-8">
-                        <div className="inline-flex items-center gap-2 bg-brand-quartzo-claro dark:bg-brand-tinta/60 text-brand-grena-hover dark:text-brand-quartzo text-xs font-bold px-4 py-2 rounded-full mb-4">
-                            <Sparkles className="w-3.5 h-3.5" /> Ative sua conta: 7 dias grátis
-                        </div>
-                        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                            {selectedPlan ? "Confirme seu pagamento" : "Escolha seu plano"}
-                        </h1>
-                        <p className="text-muted-foreground text-sm">
-                            {selectedPlan
-                                ? "Seus dados são protegidos com criptografia de nível bancário."
-                                : "Todos os planos incluem 7 dias de teste grátis. Cancele quando quiser."}
-                        </p>
-                    </div>
+  const nextUrl = useMemo(() => (isNewUser ? "/onboarding" : "/dashboard"), [isNewUser])
 
-                    <div className="bg-white dark:bg-card rounded-3xl border dark:border-border shadow-xl shadow-gray-100 dark:shadow-gray-950/50 p-8">
-                        {selectedPlan ? (
-                            <CheckoutRedirector planId={selectedPlan} />
-                        ) : (
-                            <PlanSelector onSelect={setSelectedPlan} />
-                        )}
-                    </div>
+  useEffect(() => {
+    createClient()
+      .auth.getUser()
+      .then(({ data }) => {
+        const n = data.user?.user_metadata?.full_name || data.user?.user_metadata?.name
+        if (n) setName((cur) => cur || n)
+      })
+      .catch(() => {})
+  }, [])
 
-                    <div className="mt-6 text-center text-xs text-muted-foreground flex items-center justify-center gap-2">
-                        <ShieldCheck className="w-3.5 h-3.5 text-blue-500" />
-                        Pagamento 100% seguro via Mercado Pago · Certificado PCI Compliance
-                    </div>
-                </div>
-            </main>
+  // Acompanha a confirmação do pagamento (Pix ou cartão) a cada 4 segundos.
+  useEffect(() => {
+    if (!orderId || !waiting) return
+    const check = async () => {
+      try {
+        const res = await fetch(`/api/checkout/appmax/status?order=${orderId}`, { cache: "no-store" })
+        const json = await res.json()
+        if (json.paid) {
+          setPaid(true)
+          if (timer.current) clearInterval(timer.current)
+          setTimeout(() => router.push(nextUrl), 1800)
+        }
+      } catch {
+        /* tenta de novo no próximo ciclo */
+      }
+    }
+    check()
+    timer.current = setInterval(check, 4000)
+    return () => {
+      if (timer.current) clearInterval(timer.current)
+    }
+  }, [orderId, waiting, router, nextUrl])
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault()
+    setError(null)
+    setSubmitting(true)
+    try {
+      const [expMonth, expYear] = card.exp.split("/")
+      const res = await fetch("/api/checkout/appmax", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          plan,
+          method,
+          name,
+          cpf,
+          phone,
+          card:
+            method === "card"
+              ? { number: card.number, cvv: card.cvv, expMonth, expYear, holderName: card.holderName || name, holderCpf: cpf }
+              : undefined,
+        }),
+      })
+      const json = await res.json().catch(() => ({}))
+      if (res.status === 401) {
+        router.push(`/login?next=${encodeURIComponent(`/checkout?plan=${plan}`)}`)
+        return
+      }
+      if (!res.ok || !json.ok) {
+        setError(json.error || "Não foi possível concluir o pagamento.")
+        return
+      }
+      setOrderId(json.orderId)
+      if (json.method === "pix") {
+        setPix(json.pix)
+        setWaiting("pix")
+      } else {
+        setWaiting("card")
+      }
+      // Limpa os dados do cartão da memória da tela.
+      setCard({ number: "", exp: "", cvv: "", holderName: "" })
+    } catch {
+      setError("Sem conexão. Tente novamente.")
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  const copyPix = async () => {
+    if (!pix) return
+    try {
+      await navigator.clipboard.writeText(pix.emv)
+      toast.success("Código Pix copiado")
+    } catch {
+      toast.error("Não foi possível copiar. Selecione o código e copie manualmente.")
+    }
+  }
+
+  const current = PLANS[plan]
+
+  return (
+    <div className="min-h-screen bg-background flex flex-col">
+      <header className="border-b border-border bg-background/80 backdrop-blur-sm">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+          <Link href="/" aria-label="Dona da Revenda">
+            <Logo variant="horizontal" className="h-8 w-auto" />
+          </Link>
+          <Link href="/" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <ArrowLeft className="w-4 h-4" /> Voltar ao site
+          </Link>
         </div>
-    )
+      </header>
+
+      <main className="flex-1 px-4 py-8 sm:py-12">
+        <div className="mx-auto w-full max-w-4xl grid gap-8 lg:grid-cols-[1fr_1.1fr] items-start">
+          {/* Resumo e escolha do plano */}
+          <section className="space-y-5">
+            <div>
+              <h1 className="text-3xl font-bold">Assinar a Dona da Revenda</h1>
+              <p className="mt-2 text-muted-foreground">Escolha o plano e a forma de pagamento. Você pode cancelar quando quiser.</p>
+            </div>
+
+            <div className="space-y-3" role="radiogroup" aria-label="Plano">
+              {(Object.keys(PLANS) as PlanId[]).map((id) => {
+                const p = PLANS[id]
+                const active = id === plan
+                return (
+                  <button
+                    key={id}
+                    type="button"
+                    role="radio"
+                    aria-checked={active}
+                    disabled={!!waiting}
+                    onClick={() => setPlan(id)}
+                    className={`relative w-full text-left rounded-2xl border p-4 transition-all disabled:opacity-60 ${
+                      active ? "border-primary bg-brand-quartzo-fundo dark:bg-card ring-2 ring-primary/30" : "border-border bg-card hover:border-primary/40"
+                    }`}
+                  >
+                    {p.badge && (
+                      <span className="absolute -top-2.5 right-4 rounded-full bg-brand-ouro text-brand-tinta px-2.5 py-0.5 text-[11px] font-semibold">
+                        {p.badge}
+                      </span>
+                    )}
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="font-bold">{p.name}</span>
+                      <span className="text-lg font-bold">
+                        R$ {p.price}
+                        <span className="text-xs font-medium text-muted-foreground">/mês</span>
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm text-muted-foreground">{p.billing}</p>
+                  </button>
+                )
+              })}
+            </div>
+
+            <ul className="text-sm text-muted-foreground space-y-2">
+              {["5 assistentes de IA", "PDV, estoque, clientes e fiados", "Catálogo multimarca", "Financeiro e relatórios em Excel"].map((f) => (
+                <li key={f} className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary shrink-0" /> {f}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Pagamento */}
+          <section className="rounded-3xl border border-border bg-card p-5 sm:p-7 shadow-soft">
+            {paid ? (
+              <div className="py-10 text-center space-y-3">
+                <div className="mx-auto h-14 w-14 rounded-full bg-primary/10 text-primary grid place-items-center">
+                  <Check className="w-7 h-7" />
+                </div>
+                <h2 className="text-2xl font-bold">Pagamento confirmado</h2>
+                <p className="text-muted-foreground">Sua assinatura está ativa. Levando você para o sistema...</p>
+              </div>
+            ) : waiting === "pix" && pix ? (
+              <div className="space-y-4 text-center">
+                <h2 className="text-xl font-bold">Pague com Pix</h2>
+                <p className="text-sm text-muted-foreground">Abra o app do seu banco, escolha Pix e leia o código ou use o copia e cola.</p>
+                {pix.qrcode && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={pixImageSrc(pix.qrcode)} alt="QR Code do Pix" className="mx-auto h-52 w-52 rounded-xl border border-border bg-white p-2" />
+                )}
+                <div className="rounded-xl bg-muted p-3 text-xs break-all text-left max-h-24 overflow-auto">{pix.emv}</div>
+                <Button onClick={copyPix} className="w-full h-12 rounded-xl">
+                  <Copy className="w-4 h-4 mr-2" /> Copiar código Pix
+                </Button>
+                <p className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                  <Loader2 className="w-4 h-4 animate-spin" /> Aguardando o pagamento. A tela atualiza sozinha.
+                </p>
+              </div>
+            ) : waiting === "card" ? (
+              <div className="py-10 text-center space-y-3">
+                <Loader2 className="mx-auto w-10 h-10 animate-spin text-primary" />
+                <h2 className="text-xl font-bold">Confirmando seu pagamento</h2>
+                <p className="text-sm text-muted-foreground">Isso costuma levar alguns segundos. Não feche esta página.</p>
+              </div>
+            ) : (
+              <form onSubmit={submit} className="space-y-5">
+                <div>
+                  <h2 className="text-xl font-bold">Pagamento</h2>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Plano {current.name}: R$ {current.price}/mês
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2" role="tablist" aria-label="Forma de pagamento">
+                  {([
+                    ["pix", "Pix", QrCode],
+                    ["card", "Cartão", CreditCard],
+                  ] as const).map(([id, label, Icon]) => (
+                    <button
+                      key={id}
+                      type="button"
+                      role="tab"
+                      aria-selected={method === id}
+                      onClick={() => setMethod(id)}
+                      className={`flex items-center justify-center gap-2 h-12 rounded-xl border text-sm font-semibold transition-colors ${
+                        method === id ? "border-primary bg-primary text-primary-foreground" : "border-border bg-background hover:border-primary/40"
+                      }`}
+                    >
+                      <Icon className="w-4 h-4" /> {label}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="space-y-3">
+                  <div className="space-y-1.5">
+                    <Label htmlFor="name">Nome completo</Label>
+                    <Input id="name" autoComplete="name" required value={name} onChange={(e) => setName(e.target.value)} />
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    <div className="space-y-1.5">
+                      <Label htmlFor="cpf">CPF</Label>
+                      <Input id="cpf" inputMode="numeric" required placeholder="000.000.000-00" value={cpf} onChange={(e) => setCpf(maskCpf(e.target.value))} />
+                    </div>
+                    <div className="space-y-1.5">
+                      <Label htmlFor="phone">Celular</Label>
+                      <Input id="phone" type="tel" autoComplete="tel" inputMode="tel" required placeholder="(11) 99999-9999" value={phone} onChange={(e) => setPhone(maskPhone(e.target.value))} />
+                    </div>
+                  </div>
+
+                  {method === "card" && (
+                    <>
+                      <div className="space-y-1.5">
+                        <Label htmlFor="cc-number">Número do cartão</Label>
+                        <Input id="cc-number" autoComplete="cc-number" inputMode="numeric" required placeholder="0000 0000 0000 0000" value={card.number} onChange={(e) => setCard({ ...card, number: maskCard(e.target.value) })} />
+                      </div>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="space-y-1.5">
+                          <Label htmlFor="cc-exp">Validade</Label>
+                          <Input id="cc-exp" autoComplete="cc-exp" inputMode="numeric" required placeholder="MM/AA" value={card.exp} onChange={(e) => setCard({ ...card, exp: maskExp(e.target.value) })} />
+                        </div>
+                        <div className="space-y-1.5">
+                          <Label htmlFor="cc-cvv">CVV</Label>
+                          <Input id="cc-cvv" autoComplete="cc-csc" inputMode="numeric" required maxLength={4} placeholder="123" value={card.cvv} onChange={(e) => setCard({ ...card, cvv: e.target.value.replace(/\D/g, "") })} />
+                        </div>
+                      </div>
+                      <div className="space-y-1.5">
+                        <Label htmlFor="cc-name">Nome impresso no cartão</Label>
+                        <Input id="cc-name" autoComplete="cc-name" value={card.holderName} placeholder={name || "Como está no cartão"} onChange={(e) => setCard({ ...card, holderName: e.target.value })} />
+                      </div>
+                    </>
+                  )}
+                </div>
+
+                {error && (
+                  <p role="alert" className="rounded-xl bg-destructive/10 text-destructive text-sm px-3 py-2">
+                    {error}
+                  </p>
+                )}
+
+                <Button type="submit" disabled={submitting} className="w-full h-14 rounded-xl text-base font-semibold">
+                  {submitting ? <Loader2 className="w-5 h-5 animate-spin" /> : method === "pix" ? "Gerar Pix" : `Pagar R$ ${current.price}`}
+                </Button>
+
+                <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
+                  <span className="flex items-center gap-1.5">
+                    <Lock className="w-3.5 h-3.5" /> Pagamento seguro
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <ShieldCheck className="w-3.5 h-3.5" /> Processado pela Appmax
+                  </span>
+                </div>
+
+                {isNewUser && (
+                  <p className="text-center text-sm text-muted-foreground">
+                    Prefere testar antes?{" "}
+                    <Link href="/onboarding" className="font-semibold text-primary hover:underline">
+                      Usar 7 dias grátis, sem cartão
+                    </Link>
+                  </p>
+                )}
+              </form>
+            )}
+          </section>
+        </div>
+      </main>
+    </div>
+  )
 }
 
 export default function CheckoutPage() {
-    return (
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><Loader2 className="w-10 h-10 animate-spin text-brand-grena dark:text-brand-quartzo" /></div>}>
-            <CheckoutContent />
-        </Suspense>
-    )
+  return (
+    <Suspense fallback={null}>
+      <CheckoutContent />
+    </Suspense>
+  )
 }

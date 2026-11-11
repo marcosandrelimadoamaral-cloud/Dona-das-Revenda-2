@@ -1,7 +1,7 @@
 'use server'
 
 import { createClient } from '@/lib/supabase/server'
-import { getAI } from 'ai-agents'
+import { getAI, generateWithFallback, AI_UNAVAILABLE_MESSAGE } from 'ai-agents'
 
 export async function sendMessage(agentId: string, message: string, contextProduct?: any) {
     const supabase = createClient()
@@ -52,16 +52,14 @@ Produto Mencionando Específico: ${contextProduct ? JSON.stringify(contextProduc
 Catálogo Resumido (Alguns produtos disponíveis na loja para inspirar posts):
 ${catalogSnippet}
 `
-                const resClara = await (ai.clara as any).ai.models.generateContent({
+                const resClara = await generateWithFallback((ai.clara as any).ai, {
                     model: "gemini-2.5-flash",
                     contents: claraPrompt,
-                    config: {
-                        systemInstruction: `Role: Especialista em Marketing Digital e Social Media para Revendedoras.
+                    systemInstruction: `Role: Especialista em Marketing Digital e Social Media para Revendedoras.
 Objective: Criar roteiros de Reels, legendas de posts, ideias de carrosséis e artes criativas que gerem engajamento e desejo de compra.
 Details/Context: Use um tom de voz entusiasmado, criativo e moderno. Foque em tendências do Instagram. As sugestões devem ser práticas para quem tem pouco tempo. A loja se chama ${storeName} e a dona é ${userName}.
 Structure: Use Negrito para destacar ganchos (hooks) e listas de tópicos para roteiros.${userContextRule}`,
-                        temperature: 0.8
-                    }
+                    temperature: 0.8
                 })
                 responseText = resClara.text
                 break
@@ -89,16 +87,14 @@ Mensagem da usuária (${userName}): "${message}"${temporalContext}
 - Capital 'Na Rua' (Fiados Pendentes a receber): R$ ${fiadoNaRua.toFixed(2)}
 - Produto de interesse momentâneo: ${contextProduct ? contextProduct.custom_name : "Nenhum"}
 `
-                const resFinn = await (ai.finn as any).ai.models.generateContent({
+                const resFinn = await generateWithFallback((ai.finn as any).ai, {
                     model: "gemini-2.5-flash",
                     contents: finnPrompt,
-                    config: {
-                        systemInstruction: `Role: Diretor Financeiro (CFO) analítico e estratégico.
+                    systemInstruction: `Role: Diretor Financeiro (CFO) analítico e estratégico.
 Objective: Analisar dados de vendas, sugerir precificação, calcular margem de lucro e dar insights sobre a saúde financeira do negócio gerido por ${userName}.
 Details/Context: Tom de voz profissional, sério e direto. Você tem acesso aos dados da plataforma injetados no prompt. Sempre priorize o lucro e o fluxo de caixa. Pode dar puxões de orelha amigáveis sobre o excesso de fiado se necessário. Evite termos técnicos complexos sem explicação. Sem rodeios.
 Structure: Respostas em formato de "Insight do CFO" (curto) ou tabelas simples. Vá direto aos números.${userContextRule}`,
-                        temperature: 0.3
-                    }
+                    temperature: 0.3
                 })
                 responseText = resFinn.text
                 break
@@ -118,16 +114,14 @@ Alguns de seus clientes cadastrados:
 ${clientList}
 Produto Mencionando Específico: ${contextProduct ? JSON.stringify(contextProduct) : "Nenhum no momento."}
 `
-                const resZara = await (ai.zara as any).ai.models.generateContent({
+                const resZara = await generateWithFallback((ai.zara as any).ai, {
                     model: "gemini-2.5-flash",
                     contents: zaraPrompt,
-                    config: {
-                        systemInstruction: `Role: Especialista em Conversão, Copywriting e Fechamento.
+                    systemInstruction: `Role: Especialista em Conversão, Copywriting e Fechamento.
 Objective: Criar scripts de vendas para WhatsApp, técnicas de contorno de objeções, estratégias de remarketing e recuperação de vendas.
 Details/Context: Tom de voz persuasivo, motivador e focado em resultados rápidos. Especialista em venda "X1" (um para um). Se o usuário estiver simulando, aja como um cliente brasileiro exigente; se estiver pedindo script, entregue algo que vende de verdade.
 Structure: Modelos de mensagens prontos para copiar e colar entre aspas ou blocos de código. Sempre inclua gatilhos mentais onde couber.${userContextRule}`,
-                        temperature: 0.7
-                    }
+                    temperature: 0.7
                 })
                 responseText = resZara.text
                 break
@@ -155,16 +149,14 @@ PRODUTOS COM ALTO ESTOQUE (Risco de dinheiro parado):
 ${deadDesc}
 Contexto: ${contextProduct ? contextProduct.custom_name : "Geral"}
 `
-                const resNina = await (ai.nina as any).ai.models.generateContent({
+                const resNina = await generateWithFallback((ai.nina as any).ai, {
                     model: "gemini-2.5-flash",
                     contents: ninaPrompt,
-                    config: {
-                        systemInstruction: `Role: Consultora de Organização e Logística.
+                    systemInstruction: `Role: Consultora de Organização e Logística.
 Objective: Auxiliar na organização do estoque gerido por ${userName}, identificar produtos "parados" no inventário que acabaram de ser informados, e sugerir o momento certo de reposição.
 Details/Context: Tom de voz pragmático, organizado e lógico. O foco é não deixar dinheiro parado na prateleira. Se há muitos itens no alerta vermelho, demonstre urgência.
 Structure: Listas numeradas de prioridades e check-lists de organização diretos ao ponto.${userContextRule}`,
-                        temperature: 0.4
-                    }
+                    temperature: 0.4
                 })
                 responseText = resNina.text
                 break
@@ -187,16 +179,14 @@ Mensagem da usuária (${userName}): "${message}"${temporalContext}
 Compromissos e Lembretes marcados para HOJE na agenda do painel:
 ${eventList}
 `
-                const resLia = await (ai.lia as any).ai.models.generateContent({
+                const resLia = await generateWithFallback((ai.lia as any).ai, {
                     model: "gemini-3.1-pro-preview",
                     contents: liaPrompt,
-                    config: {
-                        systemInstruction: `Role: Assistente Pessoal e "Segunda Mente" da Revendedora (${userName}).
+                    systemInstruction: `Role: Assistente Pessoal e "Segunda Mente" da Revendedora (${userName}).
 Objective: Organizar a agenda, priorizar tarefas do dia embasada nos eventos informados, resumir informações e dar suporte em qualquer dúvida geral na plataforma.
 Details/Context: Tom de voz prestativo, empático e extremamente eficiente. Ela é o braço direito da usuária. Aconselhe a melhor forma de organizar o tempo.
 Structure: Bullet points rápidos e resumos executivos (máximo 3 parágrafos). Sempre inicie com uma saudação calorosa e motivacional, mas vá rápido para as tarefas.${userContextRule}`,
-                        temperature: 0.5
-                    }
+                    temperature: 0.5
                 })
                 responseText = resLia.text
                 break
@@ -210,6 +200,6 @@ Structure: Bullet points rápidos e resumos executivos (máximo 3 parágrafos). 
 
     } catch (err: any) {
         console.error("Erro no Agente:", err)
-        return { error: 'Ocorreu um erro ao consultar o modelo Gemini. Confirme se a API Key do Google GenAI está válida e configurada.' }
+        return { error: AI_UNAVAILABLE_MESSAGE }
     }
 }
