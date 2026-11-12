@@ -80,7 +80,7 @@ export default function ExchangesPage() {
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                 <div>
                     <h1 className="text-3xl font-bold tracking-tight flex items-center gap-2">
-                        <ArrowLeftRight className="w-8 h-8 text-orange-500" />
+                        <ArrowLeftRight className="w-8 h-8 text-brand-grena" />
                         Gestão de Trocas
                     </h1>
                     <p className="text-muted-foreground mt-1">
@@ -90,7 +90,7 @@ export default function ExchangesPage() {
 
                 <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                     <DialogTrigger asChild>
-                        <Button className="bg-orange-500 hover:bg-orange-600 text-white shadow-md">
+                        <Button className="bg-brand-grena hover:bg-brand-grena text-white shadow-md">
                             <Plus className="w-4 h-4 mr-2" /> Nova Troca
                         </Button>
                     </DialogTrigger>
@@ -126,7 +126,7 @@ export default function ExchangesPage() {
                                 <Label htmlFor="reason">Motivo</Label>
                                 <Input id="reason" name="reason" placeholder="Ex: Válvula quebrada" required />
                             </div>
-                            <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600" disabled={isSubmitting}>
+                            <Button type="submit" className="w-full bg-brand-grena hover:bg-brand-grena" disabled={isSubmitting}>
                                 {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : null}
                                 {isSubmitting ? "Registrando..." : "Registrar"}
                             </Button>
@@ -170,7 +170,7 @@ export default function ExchangesPage() {
                                     filteredExchanges.map((ex) => (
                                         <div key={ex.id} className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 rounded-2xl border bg-white dark:bg-card hover:shadow-md transition-shadow gap-4">
                                             <div className="flex items-center gap-4">
-                                                <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${ex.type === 'defect' ? 'bg-red-100 text-red-600' : 'bg-orange-100 text-orange-600'}`}>
+                                                <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${ex.type === 'defect' ? 'bg-red-100 text-red-600' : 'bg-brand-quartzo-claro text-brand-grena'}`}>
                                                     {ex.type === 'defect' ? <Package className="w-6 h-6" /> : <ArrowLeftRight className="w-6 h-6" />}
                                                 </div>
                                                 <div>
@@ -205,9 +205,9 @@ export default function ExchangesPage() {
                 </div>
 
                 <div className="space-y-6">
-                    <Card className="bg-gradient-to-br from-orange-500 to-amber-600 text-white border-0 shadow-lg">
+                    <Card className="bg-gradient-to-br from-brand-grena to-brand-grena-escuro text-white border-0 shadow-lg">
                         <CardHeader>
-                            <CardTitle className="text-orange-50 flex items-center gap-2">
+                            <CardTitle className="text-brand-quartzo-fundo flex items-center gap-2">
                                 <Store className="w-5 h-5" />
                                 Resumo do Mês
                             </CardTitle>
@@ -215,12 +215,12 @@ export default function ExchangesPage() {
                         <CardContent>
                             <div className="space-y-4">
                                 <div>
-                                    <p className="text-orange-100 text-sm">Trocas Pendentes</p>
+                                    <p className="text-brand-quartzo-claro text-sm">Trocas Pendentes</p>
                                     <p className="text-3xl font-bold">{pendingCount}</p>
                                 </div>
-                                <div className="pt-4 border-t border-orange-400/30">
-                                    <p className="text-orange-100 text-sm mb-1">Como tratar de defeitos?</p>
-                                    <p className="text-sm text-orange-50">Lembre-se de sempre contatar o foco da marca antes de descartar o produto avariado para garantir seu reembolso de custo.</p>
+                                <div className="pt-4 border-t border-brand-quartzo/30">
+                                    <p className="text-brand-quartzo-claro text-sm mb-1">Como tratar de defeitos?</p>
+                                    <p className="text-sm text-brand-quartzo-fundo">Lembre-se de sempre contatar o foco da marca antes de descartar o produto avariado para garantir seu reembolso de custo.</p>
                                 </div>
                             </div>
                         </CardContent>

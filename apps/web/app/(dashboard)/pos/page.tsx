@@ -556,7 +556,7 @@ export default function PosPage() {
                 </div>
 
                 <Button
-                  className="w-full h-14 text-lg font-bold bg-emerald-600 hover:bg-emerald-700 text-white"
+                  className="w-full h-14 text-lg font-bold bg-brand-grena hover:bg-brand-grena-hover text-white"
                   disabled={cart.length === 0 || isProcessing}
                   onClick={handleFinalizeSale}
                 >
@@ -580,7 +580,7 @@ export default function PosPage() {
       <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
         <DialogContent className="sm:max-w-sm text-center">
           <div className="flex justify-center pt-4 pb-2">
-            <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 bg-brand-quartzo-claro text-emerald-600 rounded-full flex items-center justify-center">
               <CheckCircle2 className="w-8 h-8" />
             </div>
           </div>

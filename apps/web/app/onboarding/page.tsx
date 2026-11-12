@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { completeOnboarding } from "@/app/actions/onboarding/completeOnboarding"
 import { Sparkles, ArrowRight, Check } from "lucide-react"
-import Image from "next/image"
+import { Logo } from "@/components/brand/Logo"
 
 const AVAILABLE_BRANDS = [
     { id: "natura", label: "Natura" },
@@ -60,13 +60,7 @@ export default function OnboardingPage() {
             <div className="w-full max-w-2xl">
                 {/* Logo */}
                 <div className="flex justify-center mb-8">
-                    <div className="flex items-center gap-3">
-                        <Image src="/brand/simbolo-coroa-dourada.svg" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
-                        <div className="flex flex-col leading-none">
-                            <span className="font-black text-lg bg-brand-grena bg-clip-text text-transparent">Dona da</span>
-                            <span className="font-black text-lg bg-brand-grena bg-clip-text text-transparent">Revenda</span>
-                        </div>
-                    </div>
+                    <Logo variant="horizontal" className="h-10 w-auto" priority />
                 </div>
 
                 <Card className="border-0 shadow-xl rounded-2xl overflow-hidden bg-white dark:bg-card backdrop-blur-xl">

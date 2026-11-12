@@ -218,7 +218,7 @@ export default function FinancePage() {
             variant="default"
             onClick={handleExport}
             disabled={isExporting || loading || !!errorMsg || metrics.totalSales === 0}
-            className="gap-2 flex-1 sm:flex-none bg-emerald-600 hover:bg-emerald-700 text-white"
+            className="gap-2 flex-1 sm:flex-none bg-brand-grena hover:bg-brand-grena-hover text-white"
           >
             {isExporting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
             <span className="hidden sm:inline">Exportar</span> Excel
@@ -240,13 +240,13 @@ export default function FinancePage() {
       )}
 
       {!loading && !errorMsg && metrics.totalSales === 0 && (
-        <div className="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900 p-8 rounded-2xl text-center shadow-sm">
+        <div className="bg-brand-quartzo-fundo dark:bg-brand-grena-escuro/20 border border-brand-quartzo-claro dark:border-brand-grena-escuro p-8 rounded-2xl text-center shadow-sm">
           <div className="w-16 h-16 bg-white dark:bg-muted rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
             <ShoppingBag className="w-8 h-8 text-emerald-500" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Nenhuma venda registrada</h3>
           <p className="text-gray-600 dark:text-muted-foreground max-w-md mx-auto mb-6">Seus relatórios financeiros aparecerão aqui automaticamente assim que você realizar a primeira venda pelo seu PDV.</p>
-          <Button asChild className="bg-emerald-600 hover:bg-emerald-700 text-white gap-2">
+          <Button asChild className="bg-brand-grena hover:bg-brand-grena-hover text-white gap-2">
             <Link href="/pos">
               Ir para o PDV
             </Link>
@@ -270,7 +270,7 @@ export default function FinancePage() {
             <CardContent className="flex-1 overflow-auto p-0">
               {pending.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full text-center py-12 px-4">
-                  <div className="w-12 h-12 bg-emerald-50 dark:bg-emerald-950/30 rounded-full flex items-center justify-center mb-3">
+                  <div className="w-12 h-12 bg-brand-quartzo-fundo dark:bg-brand-grena-escuro/30 rounded-full flex items-center justify-center mb-3">
                     <CheckCircle2 className="w-5 h-5 text-emerald-500" />
                   </div>
                   <p className="text-sm font-medium">Nenhum fiado pendente!</p>
@@ -300,7 +300,7 @@ export default function FinancePage() {
                           <Button
                             size="sm"
                             variant="outline"
-                            className="flex-1 h-8 text-xs border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/30"
+                            className="flex-1 h-8 text-xs border-brand-quartzo dark:border-brand-grena-escuro text-emerald-700 dark:text-emerald-400 hover:bg-brand-quartzo-fundo dark:hover:bg-brand-grena-escuro/30"
                             onClick={() => handleCobrar(clientName, sale.amount, sale.dueDate, sale.clientPhone)}>
                             <MessageCircle className="w-3.5 h-3.5 mr-1.5" /> Cobrar
                           </Button>

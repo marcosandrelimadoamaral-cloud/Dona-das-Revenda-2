@@ -111,7 +111,7 @@ export function ChatInterface({ settings }: { settings: any }) {
                     ))}
                 </div>
                 <div className="p-4 border-t text-xs text-center text-muted-foreground">
-                    Usando modelo: Gemini 3.1 Pro
+                    Seus assistentes usam os dados da sua loja para responder.
                 </div>
             </div>
 

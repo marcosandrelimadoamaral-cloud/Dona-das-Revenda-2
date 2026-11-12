@@ -122,7 +122,10 @@ export async function POST(req: Request) {
 
       const { error } = await supabaseAdmin
         .from("subscriptions")
-        .upsert({ user_id: row.user_id, status: "active", current_period_end: periodEnd.toISOString() }, { onConflict: "user_id" })
+        .upsert(
+          { user_id: row.user_id, status: "active", plan_type: row.plan, current_period_end: periodEnd.toISOString() },
+          { onConflict: "user_id" }
+        )
       if (error) {
         console.error("[Appmax Webhook] erro ao ativar assinatura:", error.message)
         return NextResponse.json({ error: "activation failed" }, { status: 500 })

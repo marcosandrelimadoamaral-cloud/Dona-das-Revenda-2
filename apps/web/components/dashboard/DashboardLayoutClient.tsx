@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useTransition, useEffect } from "react"
-import { motion } from "framer-motion"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { useTheme } from "next-themes"
@@ -30,7 +29,8 @@ import {
     ChevronRight,
     PackageOpen,
 } from "lucide-react"
-import Image from "next/image"
+import { Logo } from "@/components/brand/Logo"
+import { TrialLockScreen } from "@/components/dashboard/TrialLockScreen"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
@@ -77,7 +77,6 @@ export function DashboardLayoutClient({
     const pathname = usePathname()
     const router = useRouter()
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-    const [isDraggingFab, setIsDraggingFab] = useState(false)
     const [isPending, startTransition] = useTransition()
     const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
@@ -142,7 +141,7 @@ export function DashboardLayoutClient({
         }
         if (isTrialValid && daysRemaining > 3) {
             return (
-                <div className="flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 rounded-full px-2.5 py-1">
+                <div className="flex items-center gap-1.5 text-xs font-semibold text-brand-grena dark:text-brand-quartzo bg-brand-quartzo-fundo dark:bg-brand-grena-escuro/50 border border-brand-quartzo dark:border-brand-grena-escuro rounded-full px-2.5 py-1">
                     <Clock className="w-3 h-3" />
                     Trial: {daysRemaining}d
                 </div>
@@ -260,18 +259,20 @@ export function DashboardLayoutClient({
 
     const showStickyBanner = !isPro && daysRemaining <= 3 && showTrialBanner
 
+    // Teste grátis acabou e não há assinatura: trava o painel inteiro (só a tela de assinatura fica livre).
+    if (!isPro && !isTrialValid && !pathname.startsWith("/billing")) {
+        const firstName = String(user?.user_metadata?.full_name || user?.user_metadata?.name || "").split(" ")[0]
+        return <TrialLockScreen name={firstName || undefined} />
+    }
+
     return (
         <>
             <div className="flex h-screen bg-gray-50 dark:bg-background overflow-hidden">
                 {/* Sidebar Desktop */}
                 <aside className="hidden lg:flex flex-col w-64 border-r border-gray-200 dark:border-border bg-white dark:bg-card shrink-0">
                     <div className="h-16 flex items-center px-5 border-b border-gray-100 dark:border-border">
-                        <Link href="/" className="flex items-center gap-1">
-                            <Image src="/brand/simbolo-coroa-dourada.svg" alt="Dona da Revenda" width={80} height={80} className="object-contain" />
-                            <div className="flex flex-col leading-none">
-                                <span className="font-black text-sm bg-brand-grena bg-clip-text text-transparent">Dona da</span>
-                                <span className="font-black text-sm bg-brand-grena bg-clip-text text-transparent -mt-0.5">Revenda</span>
-                            </div>
+                        <Link href="/dashboard" className="flex items-center" aria-label="Dona da Revenda">
+                            <Logo variant="horizontal" className="h-8 w-auto" />
                         </Link>
                     </div>
 
@@ -313,7 +314,7 @@ export function DashboardLayoutClient({
                     {showStickyBanner && (
                         <div className={`flex items - center justify - between px - 4 py - 2.5 text - sm font - medium ${daysRemaining <= 1
                             ? "bg-red-600 text-white"
-                            : "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
+                            : "bg-gradient-to-r from-amber-500 to-brand-grena text-white"
                             } `}>
                             <div className="flex items-center gap-2">
                                 <AlertTriangle className="w-4 h-4 shrink-0" />
@@ -347,9 +348,7 @@ export function DashboardLayoutClient({
                                 </SheetTrigger>
                                 <SheetContent side="left" className="w-64 p-0 flex flex-col bg-white dark:bg-card">
                                     <div className="h-16 flex items-center px-5 border-b dark:border-border">
-                                        <span className="text-xl font-bold bg-brand-grena bg-clip-text text-transparent">
-                                            Dona da Revenda
-                                        </span>
+                                        <Logo variant="horizontal" className="h-8 w-auto" />
                                     </div>
                                     <nav className="flex-1 py-4 px-3 space-y-0.5 overflow-y-auto">
                                         <NavLinks />
@@ -372,9 +371,9 @@ export function DashboardLayoutClient({
                                     </div>
                                 </SheetContent>
                             </Sheet>
-                            <span className="text-lg font-black bg-brand-grena bg-clip-text text-transparent lg:hidden ml-1 truncate max-w-[160px]">
-                                Dona da Revenda
-                            </span>
+                            <Link href="/dashboard" className="lg:hidden ml-1" aria-label="Dona da Revenda">
+                                <Logo variant="horizontal" className="h-7 w-auto" />
+                            </Link>
                         </div>
 
                         {/* Right side actions */}
@@ -470,31 +469,6 @@ export function DashboardLayoutClient({
                     </main>
                 </div>
             </div>
-
-            {/* Mobile Floating Action Button (Estoque / Novo Produto) */}
-            {!["/pos", "/ai", "/billing", "/settings", "/clients"].includes(pathname) && (
-                <motion.div
-                    drag
-                    dragMomentum={false}
-                    onDragStart={() => setIsDraggingFab(true)}
-                    onDragEnd={() => {
-                        // Tiny delay to ensure we don't trigger click right after drag finishes
-                        setTimeout(() => setIsDraggingFab(false), 150)
-                    }}
-                    onClick={(e) => {
-                        if (!isDraggingFab) {
-                            router.push('/inventory')
-                        }
-                    }}
-                    className="lg:hidden fixed z-[60] flex items-center justify-center w-14 h-14 rounded-full bg-brand-grena text-white shadow-lg shadow-brand-grena/30 cursor-grab active:cursor-grabbing"
-                    style={{ bottom: 80, right: 16, touchAction: "none" }}
-                >
-                    <PackageOpen className="w-6 h-6 pointer-events-none" />
-                    <div className="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-white dark:border-border rounded-full flex items-center justify-center pointer-events-none">
-                        <span className="text-[10px] font-bold text-white">+</span>
-                    </div>
-                </motion.div>
-            )}
 
             {/* PWA Install Prompt */}
             <InstallPrompt />
