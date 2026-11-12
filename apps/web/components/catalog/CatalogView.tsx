@@ -21,6 +21,7 @@ type CatalogProduct = {
     base_price: number
     suggested_price: number
     attributes: any
+    images?: string[] | null
     popular: boolean
     image_placeholder: string
 }
@@ -176,6 +177,7 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                         {products.map(product => {
                             const brandKey = product.brand?.toLowerCase().replace(/\s/g, '') || 'independentes'
                             const bc = BRAND_COLORS[brandKey] || DEFAULT_BRAND
+                            const costKnown = product.attributes?.cost_known !== false
                             const margin = getMarginPct(product.suggested_price, product.base_price)
                             const isGoodMargin = margin >= 40
 
@@ -183,6 +185,10 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                                 <div key={product.id} className="group flex flex-col bg-white dark:bg-card rounded-2xl border border-gray-100 dark:border-border overflow-hidden shadow-sm hover:shadow-lg hover:border-brand-quartzo dark:hover:border-brand-grena-hover transition-all duration-200">
                                     {/* Product image placeholder — branded gradient */}
                                     <div className={`h-36 bg-gradient-to-br ${bc.bg} flex flex-col items-center justify-center relative overflow-hidden`}>
+                                        {product.images?.[0] && (
+                                            // eslint-disable-next-line @next/next/no-img-element
+                                            <img src={product.images[0]} alt={product.name} loading="lazy" className="absolute inset-0 h-full w-full object-contain bg-white p-2 z-20" onError={(e) => { e.currentTarget.style.display = "none" }} />
+                                        )}
                                         {/* decorative circles */}
                                         <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-white/10" />
                                         <div className="absolute -bottom-6 -left-6 w-28 h-28 rounded-full bg-white/10" />
@@ -213,15 +219,17 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                                             <div className="flex justify-between items-end">
                                                 <div>
                                                     <p className="text-[10px] text-gray-400 uppercase font-semibold">Custo</p>
-                                                    <p className="font-medium text-sm text-gray-700 dark:text-muted-foreground">{formatCurrency(product.base_price)}</p>
+                                                    <p className="font-medium text-sm text-gray-700 dark:text-muted-foreground">{costKnown ? formatCurrency(product.base_price) : "Você define"}</p>
                                                 </div>
                                                 <div className="text-right">
-                                                    <p className="text-[10px] text-gray-400 uppercase font-semibold">Sugestão de Venda</p>
+                                                    <p className="text-[10px] text-gray-400 uppercase font-semibold">{costKnown ? "Sugestão de Venda" : "Preço na marca"}</p>
                                                     <div className="flex items-center gap-1.5 justify-end">
                                                         <p className="font-bold text-sm text-brand-grena dark:text-brand-quartzo">{formatCurrency(product.suggested_price)}</p>
-                                                        <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${isGoodMargin ? 'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-400' : 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400'}`}>
-                                                            +{margin}%
-                                                        </span>
+                                                        {costKnown && (
+                                                            <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${isGoodMargin ? 'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-400' : 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400'}`}>
+                                                                +{margin}%
+                                                            </span>
+                                                        )}
                                                     </div>
                                                 </div>
                                             </div>

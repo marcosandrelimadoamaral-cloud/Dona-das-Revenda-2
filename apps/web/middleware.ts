@@ -76,7 +76,8 @@ export async function middleware(request: NextRequest) {
     pathname.startsWith('/lgpd') ||
     pathname.startsWith('/carreiras') ||
     pathname.startsWith('/contato') ||
-    pathname.startsWith('/api/webhooks') // Webhooks do Stripe/MercadoPago
+    pathname.startsWith('/api/webhooks') || // Webhooks de pagamento
+    pathname.startsWith('/api/cron') // Rotinas agendadas (protegidas por CRON_SECRET)
 
   const isAuthRoute =
     pathname.startsWith('/login') ||

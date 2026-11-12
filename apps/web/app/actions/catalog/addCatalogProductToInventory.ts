@@ -29,14 +29,16 @@ export async function addCatalogProductToInventory(catalogProductId: string) {
             .from('user_products')
             .insert([{
                 user_id: user.id,
-                name: catalogItem.name,
-                brand: catalogItem.brand_display,
-                line: catalogItem.line,
-                category: catalogItem.category,
-                purchase_price: catalogItem.base_price, // Assuming cost goes here
-                sell_price: catalogItem.suggested_price, // Assumindo sugg goes to selling
-                stock_quantity: 0, // Inicia zerado, aguardando pedido/chegada
-                status: 'active'
+                catalog_id: catalogItem.id,
+                custom_name: catalogItem.name,
+                description: catalogItem.description,
+                sku: catalogItem.barcode || catalogItem.sku_code,
+                purchase_price: catalogItem.base_price,
+                sale_price: catalogItem.suggested_price,
+                current_stock: 0, // começa zerado, aguardando o pedido chegar
+                min_stock_alert: 2,
+                status: 'active',
+                images: catalogItem.images ?? [],
             }])
 
         if (insertError) {
