@@ -192,9 +192,9 @@ export default function InventoryPage() {
             return (
               <Card key={product.id} className="overflow-hidden flex flex-col">
                 <div className="h-32 bg-gray-100 dark:bg-muted relative flex items-center justify-center">
-                  {product.catalog_products?.image_url ? (
+                  {(product.images?.[0] || product.catalog_products?.images?.[0]) ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={product.catalog_products.image_url} alt={name} className="h-full object-contain" />
+                    <img src={product.images?.[0] || product.catalog_products?.images?.[0]} alt={name} className="h-full object-contain" />
                   ) : (
                     <PackageOpen className="w-10 h-10 text-gray-300 dark:text-gray-600" />
                   )}

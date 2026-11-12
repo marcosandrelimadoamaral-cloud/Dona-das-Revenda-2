@@ -19,7 +19,7 @@ export async function getCatalog(
 
         console.log("Buscando produtos com filtros:", { searchQuery, brands, categories })
 
-        let query = supabase.from('catalog_products').select('*', { count: 'exact' })
+        let query = supabase.from('catalog_products').select('*', { count: 'exact' }).eq('is_active', true)
 
         // Busca Textual
         if (searchQuery.trim().length > 0) {

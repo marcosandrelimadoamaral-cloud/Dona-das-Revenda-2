@@ -86,7 +86,7 @@ export default function PosPage() {
             name: p.custom_name || product.catalog_products?.name || "Produto sem nome",
             price: p.sale_price,
             stock: p.current_stock,
-            image_url: product.catalog_products?.image_url || null
+            image_url: p.images?.[0] || product.catalog_products?.images?.[0] || null
           }
         })
       setProducts(availableProducts)
