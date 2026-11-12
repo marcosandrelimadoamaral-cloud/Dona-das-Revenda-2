@@ -187,7 +187,7 @@ export function CatalogView({ initialProducts, initialCount }: { initialProducts
                                     <div className={`h-36 bg-gradient-to-br ${bc.bg} flex flex-col items-center justify-center relative overflow-hidden`}>
                                         {product.images?.[0] && (
                                             // eslint-disable-next-line @next/next/no-img-element
-                                            <img src={product.images[0]} alt={product.name} loading="lazy" className="absolute inset-0 h-full w-full object-contain bg-white p-2 z-20" />
+                                            <img src={product.images[0]} alt={product.name} loading="lazy" className="absolute inset-0 h-full w-full object-contain bg-white p-2 z-20" onError={(e) => { e.currentTarget.style.display = "none" }} />
                                         )}
                                         {/* decorative circles */}
                                         <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-white/10" />
